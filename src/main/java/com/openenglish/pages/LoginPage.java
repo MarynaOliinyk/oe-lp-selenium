@@ -1,12 +1,13 @@
 package com.openenglish.pages;
 
 import com.codeborne.selenide.SelenideElement;
+import lombok.Getter;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {
-
+    @Getter
     private SelenideElement email = $(By.id("username")),
                          password = $(By.id("password")),
                       loginButton = $(By.id("login-btn")),
@@ -18,6 +19,4 @@ public class LoginPage {
         continueButton.click();
         loginButton.click();
     }
-
-
 }
