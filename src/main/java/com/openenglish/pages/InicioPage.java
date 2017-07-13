@@ -9,10 +9,8 @@ import static com.codeborne.selenide.Selenide.$;
 
 @Accessors(chain = true)
 public class InicioPage {
-
     @Getter
     private SelenideElement userName = $(By.xpath(".//*[@id='student-info']//div[@class='display-name']")),
                           inicioLink = $(By.id("nav-home"));
-
 
 }
