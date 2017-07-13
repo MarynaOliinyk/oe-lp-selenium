@@ -15,7 +15,9 @@
         <testng.version>6.11</testng.version>
         <webdrivermanager.version>1.7.1</webdrivermanager.version>
         <log4j.version>2.5</log4j.version>
-        <jcl-over-slf4j.version>1.7.18</jcl-over-slf4j.version>
+        <slf4j-log4j2.version>2.5</slf4j-log4j2.version>
+        <jcl-over-slf4j.version>1.7.18</jcl-over-slf4j.version>\
+        <lombok.version>1.16.18</lombok.version>
     </properties>
 
     <dependencies>
@@ -34,6 +36,13 @@
             <artifactId>webdrivermanager</artifactId>
             <version>${webdrivermanager.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- Logging -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -55,6 +64,5 @@
             <artifactId>log4j-slf4j-impl</artifactId>
             <version>${slf4j-log4j2.version}</version>
         </dependency>
-
     </dependencies>
 </project>
