@@ -31,15 +31,17 @@ public class LoginTest extends TestBase {
         InicioPage inicioPage = new InicioPage();
         inicioPage.getInicioLink().shouldHave(text(inicioLink));
         inicioPage.getUserName().shouldHave(text(userName));
+        inicioPage.getAccountButton().click();
+        $(inicioPage.getExitLink()).shouldHave(exactText("salir")).click();
     }
 
     @Test
     public void verifyLinksScenario1Test() {
         open("/");
         LoginPage loginPage = new LoginPage();
-        loginPage.getCloseCookieBannerChevron().click();
-        $ (loginPage.getQuestionIcon().hover().shouldHave(attribute
-                ("class","fa fa-question-circle remember-help")));
+//        loginPage.getCloseCookieBannerChevron().click();
+        loginPage.getQuestionIcon().hover();
+        $ (loginPage.getTooltip()).should(exist);
     }
 
     @Test
@@ -49,10 +51,10 @@ public class LoginTest extends TestBase {
         RecoveryPage recoveryPage = new RecoveryPage();
         loginPage.getPassword()
                 .shouldHave(attribute("type", "password"));
-        loginPage.getCloseCookieBannerChevron().click();
+//        loginPage.getCloseCookieBannerChevron().click();
         loginPage.getPasswordReset().click();
-        recoveryPage.getRequestFormTitle().shouldHave(text(resetPasswordFormTitle));
-        recoveryPage.getEmail().isDisplayed();
+        $ (recoveryPage.getRequestFormTitle()).shouldHave(text(resetPasswordFormTitle));
+        $ (recoveryPage.getEmail()).shouldBe(visible);
     }
 
     @Test
@@ -62,9 +64,9 @@ public class LoginTest extends TestBase {
         OpenenglishPage openenglishPage = new OpenenglishPage();
         loginPage.getPassword()
                 .shouldHave(attribute("type", "password"));
-        loginPage.getCloseCookieBannerChevron().click();
+//        loginPage.getCloseCookieBannerChevron().click();
         loginPage.getSignUp().click();
-        openenglishPage.getRegisterForm().isDisplayed();
+        $ (openenglishPage.getRegisterForm()).shouldBe(visible);
     }
 
 }

@@ -17,6 +17,7 @@ public class LoginPage {
                    continueButton = $(By.xpath(".//*[@id='login_content']//a[@class='black-btn migration-continue-btn']")),
          closeCookieBannerChevron = $(By.xpath(".//*[@id='login_content']/div[1]/div[1]/i")),
                      questionIcon = $(By.xpath(".//*[@id='login_content']/div[3]/div/form/fieldset/div/div/div/div[3]/div[1]/span/i")),
+                          tooltip = $(By.xpath(".//div[@class='tooltipster-base tooltipster-default tooltipster-fade tooltipster-fade-show']")),
                     passwordReset = $(By.xpath(".//*[@id='login_content']/div[3]/div/form/fieldset/div/div/div/div[3]/div[2]/a")),
                            signUp = $(By.id("sign-up"));
 

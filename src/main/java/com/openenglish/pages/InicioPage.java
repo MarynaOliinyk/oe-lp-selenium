@@ -11,6 +11,8 @@ import static com.codeborne.selenide.Selenide.$;
 public class InicioPage {
     @Getter
     private SelenideElement userName = $(By.xpath(".//*[@id='student-info']//div[@class='display-name']")),
-                          inicioLink = $(By.id("nav-home"));
+                          inicioLink = $(By.id("nav-home")),
+                       accountButton = $(By.id("account-menu-nav")),
+                            exitLink = $(By.xpath(".//*[@id='account-menu']/div/ul/li[3]/a"));
 
 }
