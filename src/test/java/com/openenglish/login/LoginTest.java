@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.util.PropertiesCache.getInstance;
 
@@ -21,11 +22,13 @@ public class LoginTest extends TestBase {
     public void loginWithCorrectCredentialsTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
-        loginPage.getPassword()
+        loginPage.getPassword().shouldBe(visible)
                  .shouldHave(attribute("type", "password"));
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getInicioLink().shouldHave(text(inicioLink));
         inicioPage.getUserName().shouldHave(text(userName));
+        inicioPage.getAccountMenu().hover();
+        inicioPage.getLogOutLink().click();
     }
 }
