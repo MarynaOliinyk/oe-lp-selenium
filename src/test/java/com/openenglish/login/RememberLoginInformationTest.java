@@ -17,7 +17,7 @@ public class RememberLoginInformationTest extends TestBase {
     public void rememberLoginInformationTest(){
         open("/");
         LoginPage loginPage = new LoginPage();
-        loginPage.checkForCoockieAndClick();
+        loginPage.cookieBannerVisibility();
         loginPage.getRememberLogin().click();
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();

@@ -3,17 +3,12 @@ package com.openenglish.login;
 import com.openenglish.core.TestBase;
 import com.openenglish.pages.InicioPage;
 import com.openenglish.pages.LoginPage;
-import com.openenglish.pages.OpenenglishPage;
-import com.openenglish.pages.RecoveryPage;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.title;
 import static com.openenglish.util.PropertiesCache.getInstance;
 
 public class LoginTest extends TestBase {
@@ -27,7 +22,7 @@ public class LoginTest extends TestBase {
     public void loginWithCorrectCredentialsTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
-        loginPage.checkForCoockieAndClick();
+        loginPage.cookieBannerVisibility();
         loginPage.getPassword().shouldBe(visible)
                  .shouldHave(attribute("type", "password"));
         loginPage.logIn(email, password);
