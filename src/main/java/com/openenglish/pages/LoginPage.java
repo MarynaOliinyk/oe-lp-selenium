@@ -24,9 +24,13 @@ public class LoginPage {
     public void logIn(String email, String password) {
         this.email.shouldBe(visible).val(email);
         this.password.shouldBe(visible).val(password);
-        if(continueButton.isDisplayed()) {
+        cookieBannerVisibility();
+        loginButton.click();
+    }
+
+    public void cookieBannerVisibility() {
+        if (continueButton.isDisplayed()) {
             continueButton.click();
         }
-        loginButton.click();
     }
 }

@@ -22,7 +22,6 @@ public class LoginTest extends TestBase {
     private String password = getInstance().getProperty("password");
     private String inicioLink = getInstance().getProperty("home.link.text");
     private String userName = getInstance().getProperty("user.name");
-    private String resetPasswordFormTitle = getInstance().getProperty("reset.password.form.title");
 
     @Test
     public void loginWithCorrectCredentialsTest() {
@@ -37,39 +36,4 @@ public class LoginTest extends TestBase {
         inicioPage.getAccountMenu().hover();
         inicioPage.getLogOutLink().click();
     }
-
-    @Test
-    public void verifyLinksScenario1Test() {
-        open("/");
-        LoginPage loginPage = new LoginPage();
-//        loginPage.getCloseCookieBannerChevron().click();
-        loginPage.getQuestionIcon().hover();
-        $ (loginPage.getTooltip()).should(exist);
-    }
-
-    @Test
-    public void verifyLinksScenario2Test() {
-        open("/");
-        LoginPage loginPage = new LoginPage();
-        RecoveryPage recoveryPage = new RecoveryPage();
-        loginPage.getPassword()
-                .shouldHave(attribute("type", "password"));
-//        loginPage.getCloseCookieBannerChevron().click();
-        loginPage.getPasswordReset().click();
-        $ (recoveryPage.getRequestFormTitle()).shouldHave(text(resetPasswordFormTitle));
-        $ (recoveryPage.getEmail()).shouldBe(visible);
-    }
-
-    @Test
-    public void verifyLinksScenario3Test() {
-        open("/");
-        LoginPage loginPage = new LoginPage();
-        OpenenglishPage openenglishPage = new OpenenglishPage();
-        loginPage.getPassword()
-                .shouldHave(attribute("type", "password"));
-//        loginPage.getCloseCookieBannerChevron().click();
-        loginPage.getSignUp().click();
-        $ (openenglishPage.getRegisterForm()).shouldBe(visible);
-    }
-
 }
