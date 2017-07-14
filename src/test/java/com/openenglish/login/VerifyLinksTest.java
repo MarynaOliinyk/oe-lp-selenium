@@ -18,7 +18,7 @@ public class VerifyLinksTest extends TestBase {
     private String resetPasswordFormTitle = getInstance().getProperty("reset.password.form.title");
 
     @Test
-    public void verifyLinksScenario1Test() {
+    public void verifyTooltipIsPresentTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
         loginPage.cookieBannerVisibility();
@@ -27,7 +27,7 @@ public class VerifyLinksTest extends TestBase {
     }
 
     @Test
-    public void verifyLinksScenario2Test() {
+    public void verifyResetPasswordPageIsOpenTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
         loginPage.getPassword()
@@ -41,7 +41,7 @@ public class VerifyLinksTest extends TestBase {
     }
 
     @Test
-    public void verifyLinksScenario3Test() {
+    public void verifyRegisterFormIsOpenTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
         loginPage.getPassword()
