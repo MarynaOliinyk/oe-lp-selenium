@@ -10,9 +10,8 @@ import static com.codeborne.selenide.Selenide.$;
 @Accessors(chain = true)
 public class InicioPage {
     @Getter
-    private SelenideElement userName = $(By.xpath(".//*[@id='student-info']//div[@class='display-name']")),
-                          inicioLink = $(By.id("nav-home")),
-                       accountButton = $(By.id("account-menu-nav")),
-                            exitLink = $(By.xpath(".//*[@id='account-menu']/div/ul/li[3]/a"));
-
+    private SelenideElement userName  =   $(By.xpath(".//*[@id='student-info']//div[@class='display-name']")),
+                          accountMenu =  $(By.xpath(".//*[@id='account-menu-nav']/strong")),
+                          inicioLink  =  $(By.id("nav-home")),
+                          logOutLink  =  $(By.xpath(".//*[@id='account-menu']//a[@href='/j_spring_security_logout']")),
 }
