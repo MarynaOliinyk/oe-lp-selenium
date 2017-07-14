@@ -11,6 +11,8 @@ public class LoginPage {
     private SelenideElement email = $(By.id("username")),
                          password = $(By.id("password")),
                       loginButton = $(By.id("login-btn")),
+                           banner = $(By.xpath("//div[@class='banner-content']")),
+                      bannerTitle = $(By.xpath(".//*[@id='login_content']//div[@class='banner-title']")),
                    continueButton = $(By.xpath(".//*[@id='login_content']//a[@class='black-btn migration-continue-btn']"));
 
     public void logIn(String email, String password) {
