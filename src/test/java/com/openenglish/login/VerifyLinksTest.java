@@ -23,7 +23,7 @@ public class VerifyLinksTest extends TestBase {
         LoginPage loginPage = new LoginPage();
         loginPage.cookieBannerVisibility();
         loginPage.getQuestionIcon().hover();
-        $ (loginPage.getTooltip()).should(exist);
+        loginPage.getTooltip().should(exist);
     }
 
     @Test
@@ -36,8 +36,8 @@ public class VerifyLinksTest extends TestBase {
         loginPage.getPasswordReset().click();
 
         RecoveryPage recoveryPage = new RecoveryPage();
-        $ (recoveryPage.getRequestFormTitle()).shouldHave(text(resetPasswordFormTitle));
-        $ (recoveryPage.getEmail()).shouldBe(visible);
+        recoveryPage.getRequestFormTitle().shouldHave(text(resetPasswordFormTitle));
+        recoveryPage.getEmail().shouldBe(visible);
     }
 
     @Test
@@ -49,7 +49,7 @@ public class VerifyLinksTest extends TestBase {
         loginPage.cookieBannerVisibility();
         loginPage.getSignUp().click();
         OpenenglishPage openenglishPage = new OpenenglishPage();
-        $ (openenglishPage.getRegisterForm()).shouldBe(visible);
+        openenglishPage.getRegisterForm().shouldBe(visible);
     }
 
 }
