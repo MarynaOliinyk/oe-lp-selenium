@@ -6,10 +6,10 @@ import com.openenglish.pages.OpenenglishPage;
 import com.openenglish.pages.RecoveryPage;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Condition.attribute;
+import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.util.PropertiesCache.getInstance;
 
