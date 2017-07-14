@@ -16,6 +16,7 @@ public class IntroduccionVideoTest extends TestBase{
     public void introduccionVideoTest(){
         open("/");
         LoginPage loginPage = new LoginPage();
+        loginPage.checkForCoockieAndClick();
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getAccountMenu().hover();

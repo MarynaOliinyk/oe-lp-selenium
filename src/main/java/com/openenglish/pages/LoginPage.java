@@ -14,14 +14,18 @@ public class LoginPage {
             loginButton = $(By.id("login-btn")),
             banner = $(By.xpath("//div[@class='banner-content']")),
             bannerTitle = $(By.xpath(".//*[@id='login_content']//div[@class='banner-title']")),
+            rememberLogin = $(By.xpath(".//*[@id='login_content']//label[@for='rememberLogin']")),
             continueButton = $(By.xpath(".//*[@id='login_content']//a[@class='black-btn migration-continue-btn']"));
 
     public void logIn(String email, String password) {
         this.email.shouldBe(visible).val(email);
         this.password.shouldBe(visible).val(password);
+        loginButton.click();
+    }
+
+    public void checkForCoockieAndClick() {
         if(continueButton.isDisplayed()) {
             continueButton.click();
         }
-        loginButton.click();
     }
 }
