@@ -15,5 +15,4 @@ public class TestBase {
         Configuration.browser = WebDriverRunner.CHROME;
         Configuration.baseUrl = getInstance().getProperty("base.url");
     }
-
 }

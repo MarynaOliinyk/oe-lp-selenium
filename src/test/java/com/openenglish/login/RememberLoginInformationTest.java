@@ -13,8 +13,9 @@ public class RememberLoginInformationTest extends TestBase {
 
     private String email = getInstance().getProperty("email");
     private String password = getInstance().getProperty("password");
+
     @Test
-    public void rememberLoginInformationTest(){
+    public void rememberLoginInformationTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
         loginPage.cookieBannerVisibility();
