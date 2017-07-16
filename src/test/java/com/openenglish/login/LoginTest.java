@@ -1,4 +1,4 @@
-package com.openenglish.login.intial;
+package com.openenglish.login;
 
 import com.openenglish.core.TestBase;
 import com.openenglish.pages.InicioPage;
