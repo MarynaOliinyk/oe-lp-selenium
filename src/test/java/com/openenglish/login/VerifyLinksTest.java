@@ -1,6 +1,7 @@
 package com.openenglish.login;
 
 import com.openenglish.core.TestBase;
+import com.openenglish.pages.InicioPage;
 import com.openenglish.pages.LoginPage;
 import com.openenglish.pages.OpenenglishPage;
 import com.openenglish.pages.RecoveryPage;
@@ -16,6 +17,8 @@ import static com.openenglish.util.PropertiesCache.getInstance;
 public class VerifyLinksTest extends TestBase {
 
     private String resetPasswordFormTitle = getInstance().getProperty("reset.password.form.title");
+    private String email = getInstance().getProperty("email");
+    private String password = getInstance().getProperty("password");
 
 // TODO Uncomment text verification when their language will be predictable
 
@@ -32,6 +35,10 @@ public class VerifyLinksTest extends TestBase {
     public void verifyResetPasswordPageIsOpenTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
+        loginPage.logIn(email, password);
+        InicioPage inicioPage = new InicioPage();
+        inicioPage.getAccountMenu().hover();
+        inicioPage.getLogOutLink().click();
         loginPage.getPassword()
                 .shouldHave(attribute("type", "password"));
         loginPage.cookieBannerVisibility();

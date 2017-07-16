@@ -23,7 +23,7 @@ public class LoginWithIncorrectCredentialsTest extends TestBase {
     private String tooltipPasswordText = getInstance().getProperty("tooltip.password");
     private String tooltipSecurityCodeText = "Parece que hay un error en la contraseña. Por favor, inténtelo de nuevo.";
 
-    @Test(priority = 0)
+    @Test(priority = 1)
     public void loginWithUnregisteredEmailTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
@@ -36,7 +36,7 @@ public class LoginWithIncorrectCredentialsTest extends TestBase {
         loginPage.getTooltipText().shouldHave(text(tooltipEmailText));
     }
     // TODO Check where it's a bug with security
-    @Test(priority = 1)
+    @Test(priority = 2)
     public void loginWithIncorrectPasswordTest() {
         open("/");
         LoginPage loginPage = new LoginPage();

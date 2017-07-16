@@ -7,13 +7,8 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Condition.not;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
-import static com.openenglish.util.PropertiesCache.getInstance;
 
 public class AvisoTest extends TestBase {
-
-    private String email = getInstance().getProperty("email");
-    private String password = getInstance().getProperty("password");
-
     @Test
     public void avisoSectionTest() {
         open("/");
