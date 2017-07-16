@@ -18,7 +18,7 @@ public class TestBase {
     }
 
     @AfterClass
-    public void teaRDown(){
+    public void tearDown(){
         WebDriverRunner.getWebDriver().quit();
     }
 }

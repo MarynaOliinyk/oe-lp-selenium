@@ -20,8 +20,6 @@ public class VerifyLinksTest extends TestBase {
     private String email = getInstance().getProperty("email");
     private String password = getInstance().getProperty("password");
 
-// TODO Uncomment text verification when their language will be predictable
-
     @Test
     public void verifyTooltipIsPresentTest() {
         open("/");
@@ -40,7 +38,7 @@ public class VerifyLinksTest extends TestBase {
         inicioPage.getAccountMenu().hover();
         inicioPage.getLogOutLink().click();
         loginPage.getPassword()
-                .shouldHave(attribute("type", "password"));
+                 .shouldHave(attribute("type", "password"));
         loginPage.cookieBannerVisibility();
         loginPage.getPasswordReset().click();
 
@@ -54,7 +52,7 @@ public class VerifyLinksTest extends TestBase {
         open("/");
         LoginPage loginPage = new LoginPage();
         loginPage.getPassword()
-                .shouldHave(attribute("type", "password"));
+                 .shouldHave(attribute("type", "password"));
         loginPage.cookieBannerVisibility();
         loginPage.getSignUp().click();
         OpenenglishPage openenglishPage = new OpenenglishPage();

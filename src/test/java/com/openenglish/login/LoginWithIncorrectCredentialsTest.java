@@ -3,11 +3,11 @@ package com.openenglish.login;
 import com.openenglish.core.TestBase;
 import com.openenglish.pages.InicioPage;
 import com.openenglish.pages.LoginPage;
+import java.io.IOException;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.util.PropertiesCache.getInstance;
 
@@ -35,7 +35,7 @@ public class LoginWithIncorrectCredentialsTest extends TestBase {
         loginPage.getTooltip().should(exist);
         loginPage.getTooltipText().shouldHave(text(tooltipEmailText));
     }
-    // TODO Check where it's a bug with security
+
     @Test(priority = 2)
     public void loginWithIncorrectPasswordTest() {
         open("/");
