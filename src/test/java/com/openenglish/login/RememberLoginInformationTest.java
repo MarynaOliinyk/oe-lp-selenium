@@ -5,6 +5,7 @@ import com.openenglish.pages.InicioPage;
 import com.openenglish.pages.LoginPage;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.value;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.util.PropertiesCache.getInstance;
@@ -19,7 +20,7 @@ public class RememberLoginInformationTest extends TestBase {
         open("/");
         LoginPage loginPage = new LoginPage();
         loginPage.cookieBannerVisibility();
-        loginPage.getRememberLogin().click();
+        loginPage.getRememberLogin().should(exist).click();
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getAccountMenu().hover();

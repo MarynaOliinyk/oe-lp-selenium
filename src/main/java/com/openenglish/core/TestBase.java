@@ -3,6 +3,7 @@ package com.openenglish.core;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import static com.openenglish.util.PropertiesCache.getInstance;
@@ -14,5 +15,10 @@ public class TestBase {
         ChromeDriverManager.getInstance().setup();
         Configuration.browser = WebDriverRunner.CHROME;
         Configuration.baseUrl = getInstance().getProperty("base.url");
+    }
+
+    @AfterClass
+    public void teaRDown(){
+        WebDriverRunner.getWebDriver().quit();
     }
 }
