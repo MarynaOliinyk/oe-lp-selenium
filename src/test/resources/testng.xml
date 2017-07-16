@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="login" verbose="1">
+<test name="e2e_tests">
+    <packages>
+        <package name="com.openenglish.login.intial"/>
+        <package name="com.openenglish.login"/>
+    </packages>
+</test>
+</suite>
