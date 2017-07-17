@@ -19,6 +19,8 @@ public class VerifyLinksTest extends TestBase {
     private String resetPasswordFormTitle = getInstance().getProperty("reset.password.form.title");
     private String email = getInstance().getProperty("email");
     private String password = getInstance().getProperty("password");
+    private String wrongPassword = getInstance().getProperty("user.name");
+    private String registeredEmail = getInstance().getProperty("email");
 
     @Test
     public void verifyTooltipIsPresentTest() {
@@ -38,7 +40,7 @@ public class VerifyLinksTest extends TestBase {
         inicioPage.getAccountMenu().hover();
         inicioPage.getLogOutLink().click();
         loginPage.getPassword()
-                 .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute("type", "password"));
         loginPage.cookieBannerVisibility();
         loginPage.getPasswordReset().click();
 
@@ -52,11 +54,46 @@ public class VerifyLinksTest extends TestBase {
         open("/");
         LoginPage loginPage = new LoginPage();
         loginPage.getPassword()
-                 .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute("type", "password"));
         loginPage.cookieBannerVisibility();
         loginPage.getSignUp().click();
         OpenenglishPage openenglishPage = new OpenenglishPage();
         openenglishPage.getRegisterForm().shouldBe(visible);
     }
+
+    @Test
+    public void RecoveryPasswordTest() {
+        open("/");
+        LoginPage loginPage = new LoginPage();
+        loginPage.logIn(email, password);
+        InicioPage inicioPage = new InicioPage();
+        inicioPage.getAccountMenu().hover();
+        inicioPage.getLogOutLink().click();
+        loginPage.cookieBannerVisibility();
+        loginPage.getPasswordReset().should(exist).click();
+        RecoveryPage recoveryPage = new RecoveryPage();
+        recoveryPage.getRequestFormTitle().shouldHave(text(resetPasswordFormTitle));
+        recoveryPage.getEmail().shouldBe(visible);
+    }
+
+        //TODO Bug with chat (Chat page is opened in a new window.)
+        @Test(enabled = true)
+        public void ChatPageIsOpenTest(){
+            open("/");
+            LoginPage loginPage = new LoginPage();
+            loginPage.logIn(email, password);
+            InicioPage inicioPage = new InicioPage();
+            inicioPage.getAccountMenu().hover();
+            inicioPage.getLogOutLink().click();
+            loginPage.logIn(registeredEmail, wrongPassword);
+            loginPage.logIn(registeredEmail, wrongPassword);
+            loginPage.getEmail().val(registeredEmail);
+            loginPage.getPassword().val(password);
+            loginPage.getSecurityField().sendKeys(wrongPassword);
+            loginPage.getLoginButton().click();
+            RecoveryPage recoveryPage = new RecoveryPage();
+            recoveryPage.getChat().shouldBe(visible).click();
+    }
+
 
 }
