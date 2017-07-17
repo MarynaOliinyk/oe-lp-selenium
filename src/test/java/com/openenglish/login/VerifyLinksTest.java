@@ -62,7 +62,7 @@ public class VerifyLinksTest extends TestBase {
     }
 
     @Test
-    public void RecoveryPasswordTest() {
+    public void recoveryPasswordTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
         loginPage.logIn(email, password);
