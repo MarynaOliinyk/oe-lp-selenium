@@ -16,6 +16,7 @@ public class VerifyLinksTest extends TestBase {
     private String password = getInstance().getProperty("password");
     private String inicioLink = getInstance().getProperty("home.link.text");
     private String userName = getInstance().getProperty("user.name");
+    private String resetPasswordFormTitle = getInstance().getProperty( "reset.password.form.title");
     private String resetPasswordFaq = getInstance().getProperty("reset.password.faq");
     private String resetPasswordSingUpText = getInstance().getProperty("reset.password.sing.up");
     private String registrateText = getInstance().getProperty("register.link.text");
@@ -37,7 +38,7 @@ public class VerifyLinksTest extends TestBase {
         loginPage.cookieBannerVisibility();
         loginPage.getPasswordReset().click();
         RecoveryPage recoveryPage = new RecoveryPage();
-//        recoveryPage.getRequestFormTitle().shouldHave(text(resetPasswordFormTitle));
+        recoveryPage.getRequestFormTitle().shouldHave(text(resetPasswordFormTitle));
         recoveryPage.getEmail().shouldBe(visible);
     }
 
