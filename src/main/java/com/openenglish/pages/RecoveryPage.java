@@ -14,6 +14,8 @@ public class RecoveryPage {
                                         chat = $(By.xpath(".//*[@id='login-support-offline']/a")),
                                returnToLogin = $(By.xpath(".//*[@id='login2-return']/strong")),
                                          faq = $(By.id("read-faq")),
-                                      singUp = $(By.id("sign-up"));
+                                      singUp = $(By.id("sign-up")),
+                                   submit = $(By.id("recovery-submit")),
+                                 tooltipText = $(By.xpath(".//div[@class='tooltipster-content']"));
 
 }
