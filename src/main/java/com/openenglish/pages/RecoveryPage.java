@@ -10,5 +10,11 @@ public class RecoveryPage {
 
     @Getter
     private SelenideElement requestFormTitle = $(By.xpath(".//*[@id='requestForm']/div/h3")),
-                                       email = $(By.id("email"));
+                                       email = $(By.id("email")),
+                                        chat = $(By.xpath(".//*[@id='login-support-offline']/a")),
+                               returnToLogin = $(By.xpath(".//*[@id='login2-return']/strong")),
+                                         faq = $(By.id("read-faq")),
+                                      singUp = $(By.id("sign-up"));
+
+
 }
