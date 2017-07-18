@@ -16,5 +16,4 @@ public class RecoveryPage {
                                          faq = $(By.id("read-faq")),
                                       singUp = $(By.id("sign-up"));
 
-
 }

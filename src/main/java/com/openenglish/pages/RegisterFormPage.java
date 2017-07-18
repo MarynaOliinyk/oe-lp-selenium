@@ -12,4 +12,5 @@ public class RegisterFormPage {
     @Getter
     private SelenideElement startNowButton = $(By.id("submit-button")),
                             tooltipWindowClose = $(By.xpath(".//*[@id='popmake-1005']/button"));
+
 }

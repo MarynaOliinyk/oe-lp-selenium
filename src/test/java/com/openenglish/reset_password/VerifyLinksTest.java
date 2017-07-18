@@ -53,7 +53,7 @@ public class VerifyLinksTest extends TestBase {
 
 
     @Test
-    public void FAQpageIsOpened() {
+    public void fAQpageIsOpened() {
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getFaq().shouldBe(visible).shouldHave(text(resetPasswordFaq)).click();
         FAQPage faqPage = new FAQPage();
