@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.util.PropertiesCache.getInstance;
 
 
-public class VerifyRecordarMisDatosCheck extends TestBase {
+public class C143VerifyRecordarMisDatosCheckTest extends TestBase {
     private String email = getInstance().getProperty("email");
     private String password = getInstance().getProperty("password");
 
