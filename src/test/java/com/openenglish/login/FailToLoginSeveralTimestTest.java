@@ -18,9 +18,10 @@ public class FailToLoginSeveralTimestTest extends TestBase {
     private String securityPlaceHolderText = getInstance().getProperty("security.placeholder");
 
     @Test
-    public void logInRequiresSecurityTest(){
+    public void logInRequiresSecurityTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
+        loginPage.cookieBannerVisibility();
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getAccountMenu().hover();

@@ -19,9 +19,10 @@ public class VerifyRegisterTest extends TestBase {
     private String password = getInstance().getProperty("password");
 
     @Test
-    public void redirectedToRegisterPageTest (){
+    public void redirectedToRegisterPageTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
+        loginPage.cookieBannerVisibility();
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getAccountMenu().hover();

@@ -27,6 +27,7 @@ public class VerifyEmailFieldTest extends TestBase {
     public void enterUnregisteredEmailTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
+        loginPage.cookieBannerVisibility();
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getAccountMenu().hover();

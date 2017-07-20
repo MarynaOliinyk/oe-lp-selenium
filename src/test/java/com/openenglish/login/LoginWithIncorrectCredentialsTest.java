@@ -20,13 +20,14 @@ public class LoginWithIncorrectCredentialsTest extends TestBase {
     private String correctPassword = getInstance().getProperty("password");
     private String wrongPassword = getInstance().getProperty("user.name");
     private String tooltipEmailText = getInstance().getProperty("tooltip.email");
-    private String tooltipPasswordText = getInstance().getProperty("tooltip.password");
+    private String tooltipPasswordText = getInstance().getProperty("login.tooltip.text.for.password");
     private String tooltipSecurityCodeText = "Parece que hay un error en la contraseña. Por favor, inténtelo de nuevo.";
 
-    @Test(priority = 1)
+    @Test
     public void loginWithUnregisteredEmailTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
+        loginPage.cookieBannerVisibility();
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getAccountMenu().hover();
@@ -36,10 +37,15 @@ public class LoginWithIncorrectCredentialsTest extends TestBase {
         loginPage.getTooltipText().shouldHave(text(tooltipEmailText));
     }
 
-    @Test(priority = 2)
+    @Test
     public void loginWithIncorrectPasswordTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
+        loginPage.cookieBannerVisibility();
+        loginPage.logIn(email, password);
+        InicioPage inicioPage = new InicioPage();
+        inicioPage.getAccountMenu().hover();
+        inicioPage.getLogOutLink().click();
         loginPage.logIn(registeredEmail, wrongPassword);
         loginPage.getTooltip().should(exist);
         loginPage.getTooltipText().shouldHave(text(tooltipPasswordText));
@@ -50,6 +56,7 @@ public class LoginWithIncorrectCredentialsTest extends TestBase {
     public void loginWithIncorrectSecurityCodeTest() throws IOException {
         open("/");
         LoginPage loginPage = new LoginPage();
+        loginPage.cookieBannerVisibility();
         loginPage.logIn(registeredEmail, wrongPassword);
         loginPage.logIn(registeredEmail, wrongPassword);
         loginPage.getEmail().val(registeredEmail);

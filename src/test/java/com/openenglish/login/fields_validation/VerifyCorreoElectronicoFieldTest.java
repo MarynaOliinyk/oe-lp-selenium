@@ -11,9 +11,6 @@ import static com.codeborne.selenide.Selenide.back;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.util.PropertiesCache.getInstance;
 
-/**
- * Created by so on 7/19/17.
- */
 public class VerifyCorreoElectronicoFieldTest extends TestBase {
     private String emailWithoutATsymbol = getInstance().getProperty("recovery.email.without@");
     private String emailWithoutDotCom = getInstance().getProperty("recovery.email.without.com");
