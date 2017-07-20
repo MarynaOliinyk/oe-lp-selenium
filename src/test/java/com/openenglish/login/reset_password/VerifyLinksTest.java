@@ -1,7 +1,11 @@
-package com.openenglish.reset_password;
+package com.openenglish.login.reset_password;
 
 import com.openenglish.core.TestBase;
-import com.openenglish.pages.*;
+import com.openenglish.pages.FAQPage;
+import com.openenglish.pages.InicioPage;
+import com.openenglish.pages.LoginPage;
+import com.openenglish.pages.RecoveryPage;
+import com.openenglish.pages.RegisterFormPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -16,7 +20,7 @@ public class VerifyLinksTest extends TestBase {
     private String password = getInstance().getProperty("password");
     private String inicioLink = getInstance().getProperty("home.link.text");
     private String userName = getInstance().getProperty("user.name");
-    private String resetPasswordFormTitle = getInstance().getProperty( "reset.password.form.title");
+    private String resetPasswordFormTitle = getInstance().getProperty("reset.password.form.title");
     private String resetPasswordFaq = getInstance().getProperty("reset.password.faq");
     private String resetPasswordSingUpText = getInstance().getProperty("reset.password.sing.up");
     private String registrateText = getInstance().getProperty("register.link.text");
@@ -44,7 +48,7 @@ public class VerifyLinksTest extends TestBase {
 
 
     @Test
-    public void returnToLoginPage() {
+    public void returnToLoginPageTest() {
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getReturnToLogin().shouldBe(visible).click();
         LoginPage loginPage = new LoginPage();
@@ -54,7 +58,7 @@ public class VerifyLinksTest extends TestBase {
 
 
     @Test
-    public void fAQpageIsOpened() {
+    public void fAQpageIsOpenedTest() {
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getFaq().shouldBe(visible).shouldHave(text(resetPasswordFaq)).click();
         FAQPage faqPage = new FAQPage();
@@ -62,7 +66,7 @@ public class VerifyLinksTest extends TestBase {
     }
 
     @Test
-    public void goToRegisterPage() {
+    public void goToRegisterPageTest() {
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getSingUp().shouldBe(visible).shouldHave(text(resetPasswordSingUpText)).click();
         RegisterFormPage registerFormPage = new RegisterFormPage();
