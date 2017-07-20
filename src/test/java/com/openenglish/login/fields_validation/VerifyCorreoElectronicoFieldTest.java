@@ -26,7 +26,6 @@ public class VerifyCorreoElectronicoFieldTest extends TestBase {
     @Test
     public void submitUnregisteredEmailTest() {
         open("/");
-
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getAccountMenu().hover();
