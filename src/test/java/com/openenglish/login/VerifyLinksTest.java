@@ -28,20 +28,20 @@ public class VerifyLinksTest extends TestBase {
         LoginPage loginPage = new LoginPage();
         loginPage.cookieBannerVisibility();
         loginPage.getQuestionIcon().hover();
-        loginPage.getTooltip().should(exist);
+        loginPage.getTooltip().should(visible);
     }
 
     @Test
     public void verifyResetPasswordPageIsOpenTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
+        loginPage.cookieBannerVisibility();
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();
-        inicioPage.getAccountMenu().hover();
+        inicioPage.getAccountMenu().should(exist).hover();
         inicioPage.getLogOutLink().click();
         loginPage.getPassword()
                 .shouldHave(attribute("type", "password"));
-        loginPage.cookieBannerVisibility();
         loginPage.getPasswordReset().click();
 
         RecoveryPage recoveryPage = new RecoveryPage();
@@ -65,35 +65,36 @@ public class VerifyLinksTest extends TestBase {
     public void recoveryPasswordTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
+        loginPage.cookieBannerVisibility();
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();
-        inicioPage.getAccountMenu().hover();
+        inicioPage.getAccountMenu().should(visible).hover();
         inicioPage.getLogOutLink().click();
-        loginPage.cookieBannerVisibility();
         loginPage.getPasswordReset().should(exist).click();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getRequestFormTitle().shouldHave(text(resetPasswordFormTitle));
         recoveryPage.getEmail().shouldBe(visible);
     }
 
-        //TODO Bug with chat (Chat page is opened in a new window.)
-        @Test(enabled = true)
-        public void ChatPageIsOpenTest(){
-            open("/");
-            LoginPage loginPage = new LoginPage();
-            loginPage.logIn(email, password);
-            InicioPage inicioPage = new InicioPage();
-            inicioPage.getAccountMenu().hover();
-            inicioPage.getLogOutLink().click();
-            loginPage.logIn(registeredEmail, wrongPassword);
-            loginPage.logIn(registeredEmail, wrongPassword);
-            loginPage.getEmail().val(registeredEmail);
-            loginPage.getPassword().val(password);
-            loginPage.getSecurityField().sendKeys(wrongPassword);
-            loginPage.getLoginButton().click();
-            RecoveryPage recoveryPage = new RecoveryPage();
-            recoveryPage.getChat().shouldBe(visible).click();
+    //TODO Bug with chat (Chat page is opened in a new window.)
+    @Test
+    public void chatPageIsOpenTest() {
+        open("/");
+        LoginPage loginPage = new LoginPage();
+        loginPage.cookieBannerVisibility();
+        loginPage.logIn(email, password);
+        InicioPage inicioPage = new InicioPage();
+        inicioPage.getAccountMenu().hover();
+        inicioPage.getLogOutLink().click();
+        loginPage.logIn(registeredEmail, wrongPassword);
+        loginPage.getPassword().should(visible).val(wrongPassword);
+        loginPage.getLoginButton().should(visible).click();
+        loginPage.getPassword().should(exist).sendKeys(wrongPassword);
+        loginPage.getLoginButton().should(visible).click();
+        loginPage.getSecurityField().sendKeys(wrongPassword);
+        loginPage.getPassword().should(visible).val(wrongPassword);
+        loginPage.getLoginButton().click();
+        RecoveryPage recoveryPage = new RecoveryPage();
+        recoveryPage.getChat().shouldBe(visible).click();
     }
-
-
 }

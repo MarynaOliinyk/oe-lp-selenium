@@ -14,7 +14,8 @@ import static com.openenglish.util.PropertiesCache.getInstance;
 
 public class IncorrectEmailTest extends TestBase {
     private String email = getInstance().getProperty("email");
-    private String password = getInstance().getProperty("password");;
+    private String password = getInstance().getProperty("password");
+    ;
     private String resetPasswordFormTitle = getInstance().getProperty("reset.password.form.title");
     private String unregisteredEmail = getInstance().getProperty("unregistered.email");
     private String toolTipText = getInstance().getProperty("recovery.toolTip.text");
@@ -23,6 +24,7 @@ public class IncorrectEmailTest extends TestBase {
     public void resetPasswordForIncorrectEmailTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
+        loginPage.cookieBannerVisibility();
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getAccountMenu().hover();

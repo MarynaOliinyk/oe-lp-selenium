@@ -21,19 +21,16 @@ public class LoginPage {
             tooltip = $(By.xpath(".//div[@class='tooltipster-base tooltipster-default tooltipster-fade tooltipster-fade-show']")),
             passwordReset = $(By.xpath(".//*[@id='login_content']/div[3]/div/form/fieldset/div/div/div/div[3]/div[2]/a")),
             signUp = $(By.id("sign-up")),
-            tooltipText =  $(By.xpath("//div[@class='tooltipster-content']")),
+            tooltipText = $(By.xpath("//div[@class='tooltipster-content']")),
             securityField = $(By.id("captcharesponse"));
 
     public void logIn(String email, String password) {
         this.email.shouldBe(visible).val(email);
         this.password.shouldBe(visible).val(password);
-        cookieBannerVisibility();
         loginButton.click();
     }
 
     public void cookieBannerVisibility() {
-        if (continueButton.isDisplayed()) {
-            continueButton.click();
-        }
+        continueButton.should(visible).click();
     }
 }

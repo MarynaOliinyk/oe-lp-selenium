@@ -8,12 +8,12 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.util.PropertiesCache.getInstance;
 
-public class IntroduccionVideoTest extends TestBase{
+public class IntroduccionVideoTest extends TestBase {
     private String email = getInstance().getProperty("email");
     private String password = getInstance().getProperty("password");
 
     @Test
-    public void introduccionVideoTest(){
+    public void introduccionVideoTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
         loginPage.cookieBannerVisibility();
@@ -23,3 +23,5 @@ public class IntroduccionVideoTest extends TestBase{
         inicioPage.getLogOutLink().click();
     }
 }
+
+

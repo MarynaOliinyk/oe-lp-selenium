@@ -24,7 +24,7 @@ public class LoginTest extends TestBase {
         LoginPage loginPage = new LoginPage();
         loginPage.cookieBannerVisibility();
         loginPage.getPassword().shouldBe(visible)
-                 .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute("type", "password"));
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getInicioLink().shouldHave(text(inicioLink));
