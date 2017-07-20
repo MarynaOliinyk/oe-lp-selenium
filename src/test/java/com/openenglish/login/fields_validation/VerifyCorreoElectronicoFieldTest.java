@@ -32,7 +32,7 @@ public class VerifyCorreoElectronicoFieldTest extends TestBase {
         inicioPage.getLogOutLink().click();
         verifyEmail(unregisteredEmail, password);
         verifyEmail(emailWithoutATsymbol, password);
-        verifyEmail(emailWithoutDotCom,password);
+        verifyEmail(emailWithoutDotCom, password);
 
     }
 
