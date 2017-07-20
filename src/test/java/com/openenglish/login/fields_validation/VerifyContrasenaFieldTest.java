@@ -23,7 +23,6 @@ public class VerifyContrasenaFieldTest extends TestBase {
     @Test
     public void submitInvalidPasswordTest() {
         open("/");
-        ;
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getAccountMenu().hover();
