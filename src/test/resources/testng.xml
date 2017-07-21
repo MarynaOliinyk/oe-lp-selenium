@@ -4,9 +4,9 @@
 <test name="e2e_tests">
     <packages>
         <package name="com.openenglish.login"/>
-        <package name="com.openenglish.login.fields_validation"/>
-        <package name="com.openenglish.login.restablecer_contrasena"/>
-        <package name="com.openenglish.login.restablecer_contrasena.fields_validation"/>
+        <package name="com.openenglish.login.fieldsvalidatoin"/>
+        <package name="com.openenglish.login.restablecercontrasena"/>
+        <package name="com.openenglish.login.restablecercontrasena.fieldsvalidation"/>
     </packages>
 </test>
 </suite>

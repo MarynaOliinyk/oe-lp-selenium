@@ -1,4 +1,4 @@
-package com.openenglish.login.restablecer_contrasena;
+package com.openenglish.login.restablecercontrasena;
 
 import com.openenglish.core.TestBase;
 import com.openenglish.pages.RecoveryPage;
