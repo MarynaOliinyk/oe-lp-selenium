@@ -1,4 +1,4 @@
-package com.openenglish.login;
+package com.openenglish.login.restore_password;
 
 import com.openenglish.core.TestBase;
 import com.openenglish.pages.InicioPage;
@@ -8,20 +8,18 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.util.PropertiesCache.getInstance;
 
-public class IntroduccionVideoTest extends TestBase {
+public class VerifyResetPasswordEmailIsSentTest extends TestBase{
     private String email = getInstance().getProperty("email");
     private String password = getInstance().getProperty("password");
 
     @Test
-    public void introduccionVideoTest() {
+    public void verifyResetPasswordEmailIsSentTest() {
         open("/");
         LoginPage loginPage = new LoginPage();
-        loginPage.cookieBannerVisibility();
         loginPage.logIn(email, password);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getAccountMenu().hover();
         inicioPage.getLogOutLink().click();
+        loginPage.getRecoverLink().click();
     }
 }
-
-
