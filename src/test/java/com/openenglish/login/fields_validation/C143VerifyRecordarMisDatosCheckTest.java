@@ -17,14 +17,8 @@ public class C143VerifyRecordarMisDatosCheckTest extends TestBase {
     //TODO BUG doesnt visible password
     @Test
     public void rememberEnteredDataTest() {
-        open("/");
-        LoginPage loginPage = new LoginPage();
-        loginPage.cookieBannerVisibility();
-        loginPage.getRememberLogin().should(exist).click();
-        loginPage.logIn(email, correctPassword);
-        InicioPage inicioPage = new InicioPage();
-        inicioPage.getAccountMenu().hover();
-        inicioPage.getLogOutLink().click();
+        positiveLogIn();
+        logOut();
         loginPage.getEmail().shouldHave(value(email));
 //        loginPage.getPassword().shouldHave(value(password));
     }
