@@ -1,24 +1,45 @@
 package com.openenglish.core;
 
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.WebDriverRunner;
-import io.github.bonigarcia.wdm.ChromeDriverManager;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import com.openenglish.pages.InicioPage;
+import com.openenglish.pages.LoginPage;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.openenglish.util.PropertiesCache.getInstance;
 
-public class TestBase {
+public class TestBase extends DriverBase {
 
-    @BeforeMethod
-    public void setUp() {
-        ChromeDriverManager.getInstance().setup();
-        Configuration.browser = WebDriverRunner.CHROME;
-        Configuration.baseUrl = getInstance().getProperty("base.url");
+    protected String emailWithoutATsymbol = getInstance().getProperty("recovery.email.without@");
+    protected String emailWithoutDotCom = getInstance().getProperty("recovery.email.without.com");
+    protected String notValidEmailText = getInstance().getProperty("recovery.tooltip.not.valid.email");
+    protected String recoveryTooltipEmail = getInstance().getProperty("recovery.tooltip.text");
+
+    protected String resetPasswordFormTitle = getInstance().getProperty("reset.password.form.title");
+    protected String resetPasswordFaq = getInstance().getProperty("reset.password.faq");
+    protected String resetPasswordSingUpText = getInstance().getProperty("reset.password.sing.up");
+    protected String registrateText = getInstance().getProperty("register.link.text");
+
+    protected String faqText = getInstance().getProperty("faq.text");
+    protected String inicioLink = getInstance().getProperty("home.link.text");
+    protected String loginTooltipPassword = getInstance().getProperty("login.tooltip.text.for.password");
+    protected String loginTooltipSecurityCode = getInstance().getProperty("login.tooltip.security.code.text");
+    protected String email = getInstance().getProperty("email");
+    protected String userName = getInstance().getProperty("user.name");
+    protected String registeredEmail = getInstance().getProperty("email");
+    protected String unregisteredEmail = getInstance().getProperty("unregistered.email");
+    protected String correctPassword = getInstance().getProperty("password");
+    protected String invalidPassword = getInstance().getProperty("invalid.password");
+    protected String securityPlaceHolderText = getInstance().getProperty("security.placeholder");
+
+    protected LoginPage loginPage = new LoginPage();
+    protected InicioPage inicioPage = new InicioPage();
+
+    protected void logOut() {
+        inicioPage.getAccountMenu().should(visible).hover();
+        inicioPage.getLogOutLink().click();
     }
 
-    @AfterMethod
-    public void tearDown() {
-        WebDriverRunner.getWebDriver().quit();
+    protected void positiveLogIn(){
+        loginPage.cookieBannerVisibility();
+        loginPage.logIn(email, correctPassword);
     }
 }
