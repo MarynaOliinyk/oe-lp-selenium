@@ -13,8 +13,6 @@ import static com.openenglish.util.PropertiesCache.getInstance;
 
 
 public class C143VerifyRecordarMisDatosCheckTest extends TestBase {
-    private String email = getInstance().getProperty("email");
-    private String password = getInstance().getProperty("password");
 
     //TODO BUG doesnt visible password
     @Test
@@ -23,7 +21,7 @@ public class C143VerifyRecordarMisDatosCheckTest extends TestBase {
         LoginPage loginPage = new LoginPage();
         loginPage.cookieBannerVisibility();
         loginPage.getRememberLogin().should(exist).click();
-        loginPage.logIn(email, password);
+        loginPage.logIn(email, correctPassword);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getAccountMenu().hover();
         inicioPage.getLogOutLink().click();

@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class OpenenglishPage {
+public class OpenEnglishPage {
 
     @Getter
     private SelenideElement registerForm = $(By.id("leadForm"));
