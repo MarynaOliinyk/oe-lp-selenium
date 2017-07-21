@@ -14,7 +14,7 @@ import static com.openenglish.util.PropertiesCache.getInstance;
 
 public class C143VerifyRecordarMisDatosCheckTest extends TestBase {
 
-    //TODO BUG doesnt visible password
+    //TODO BUG LPTRIAGE-170
     @Test
     public void rememberEnteredDataTest() {
         positiveLogIn();
