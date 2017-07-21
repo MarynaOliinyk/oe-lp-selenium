@@ -15,16 +15,10 @@ import static com.openenglish.util.PropertiesCache.getInstance;
 
 public class C144VerifyReestablecerContrasenaTest extends TestBase {
 
-
     @Test
     public void verifyReestablecerContrasenaTest (){
-        open("/");
-        LoginPage loginPage = new LoginPage();
-        loginPage.cookieBannerVisibility();
-        loginPage.logIn(email, correctPassword);
-        InicioPage inicioPage = new InicioPage();
-        inicioPage.getAccountMenu().should(exist).hover();
-        inicioPage.getLogOutLink().click();
+        positiveLogIn();
+        logOut();
         loginPage.getPasswordReset().should(exist).click();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getRequestFormTitle().shouldHave(text(resetPasswordFormTitle));
