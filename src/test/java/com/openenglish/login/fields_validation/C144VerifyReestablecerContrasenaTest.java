@@ -14,16 +14,14 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.util.PropertiesCache.getInstance;
 
 public class C144VerifyReestablecerContrasenaTest extends TestBase {
-    private String email = getInstance().getProperty("email");
-    private String password = getInstance().getProperty("password");
-    private String resetPasswordFormTitle = getInstance().getProperty("reset.password.form.title");
+
 
     @Test
     public void verifyReestablecerContrasenaTest (){
         open("/");
         LoginPage loginPage = new LoginPage();
         loginPage.cookieBannerVisibility();
-        loginPage.logIn(email, password);
+        loginPage.logIn(email, correctPassword);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getAccountMenu().should(exist).hover();
         inicioPage.getLogOutLink().click();
