@@ -10,7 +10,7 @@ public class С9FailToLoginSeveralTimestTest extends TestBase {
     @Test
     public void logInRequiresSecurityTest() {
         positiveLogIn();
-        logOut();;
+        logOut();
         loginPage.logIn(registeredEmail, userName);
         loginPage.logIn(registeredEmail, userName);
         loginPage.getSecurityField().shouldHave(attribute("placeholder", securityPlaceHolderText));
