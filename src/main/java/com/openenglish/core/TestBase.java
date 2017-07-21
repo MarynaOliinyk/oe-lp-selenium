@@ -20,15 +20,20 @@ public class TestBase extends DriverBase {
 
     protected String faqText = getInstance().getProperty("faq.text");
     protected String inicioLink = getInstance().getProperty("home.link.text");
-    protected String loginTooltipPassword = getInstance().getProperty("login.tooltip.text.for.password");
-    protected String loginTooltipSecurityCode = getInstance().getProperty("login.tooltip.security.code.text");
+
     protected String email = getInstance().getProperty("email");
+    protected String password = getInstance().getProperty("password");
     protected String userName = getInstance().getProperty("user.name");
     protected String registeredEmail = getInstance().getProperty("email");
     protected String unregisteredEmail = getInstance().getProperty("unregistered.email");
     protected String correctPassword = getInstance().getProperty("password");
     protected String invalidPassword = getInstance().getProperty("invalid.password");
     protected String securityPlaceHolderText = getInstance().getProperty("security.placeholder");
+
+    protected String loginTooltipPassword = getInstance().getProperty("login.tooltip.text.for.password");
+    protected String loginTooltipSecurityCode = getInstance().getProperty("login.tooltip.invalid.security.text");
+    protected String invalidSecurityCode = getInstance().getProperty("login.invalid.security.code");
+    protected String popUpInvalidSecurityCode = getInstance().getProperty("login.popUp.invalid.security.code");
 
     protected LoginPage loginPage = new LoginPage();
     protected InicioPage inicioPage = new InicioPage();
@@ -38,7 +43,7 @@ public class TestBase extends DriverBase {
         inicioPage.getLogOutLink().click();
     }
 
-    protected void positiveLogIn(){
+    protected void positiveLogIn() {
         loginPage.cookieBannerVisibility();
         loginPage.logIn(email, correctPassword);
     }

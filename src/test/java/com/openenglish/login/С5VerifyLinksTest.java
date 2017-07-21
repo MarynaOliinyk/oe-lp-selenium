@@ -26,7 +26,6 @@ public class С5VerifyLinksTest extends TestBase {
         loginPage.getPassword()
                  .shouldHave(attribute("type", "password"));
         loginPage.getPasswordReset().click();
-
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getRequestFormTitle().shouldHave(text(resetPasswordFormTitle));
         recoveryPage.getEmail().shouldBe(visible);
