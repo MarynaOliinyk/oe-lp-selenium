@@ -2,16 +2,11 @@ package com.openenglish.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 
-import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
-
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
-public class OpenenglishPage {
+public class OpenEnglishPage {
 
     @Getter
     private SelenideElement registerForm = $(By.id("leadForm")),
@@ -24,15 +19,7 @@ public class OpenenglishPage {
 
 
     public void bannerVisibility() {
-        if(banerEscButton.isDisplayed())banerEscButton.click();
-    }
-
-    public String randonNumbers(int length) {
-        return RandomStringUtils.randomNumeric(length);
-    }
-
-    public String randCharacters(int charactersQuantity) {
-        return RandomStringUtils.randomAlphabetic(charactersQuantity);
+        if (banerEscButton.isDisplayed()) banerEscButton.click();
     }
 
 }

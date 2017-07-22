@@ -21,8 +21,12 @@ public class LoginPage {
             tooltip = $(By.xpath(".//div[@class='tooltipster-base tooltipster-default tooltipster-fade tooltipster-fade-show']")),
             passwordReset = $(By.xpath(".//*[@id='login_content']/div[3]/div/form/fieldset/div/div/div/div[3]/div[2]/a")),
             signUp = $(By.id("sign-up")),
-            tooltipText = $(By.xpath("//div[@class='tooltipster-content']")),
-            securityField = $(By.id("captcharesponse"));
+            tooltipText =  $(By.xpath("//div[@class='tooltipster-content']")),
+            recoverLink = $(By.xpath(".//*[@id='login_content']//a[@href='recovery.html']")),
+            securityField = $(By.id("captcharesponse")),
+            popUpTextAfterIncorrectCode = $(By.xpath(".//*[@id='login-support-widget']/div[1]/h3")),
+            popUpCloseAfterIncorrectCode = $(By.xpath("//*[@class='ui-icon ui-icon-closethick']"));
+
 
     public void logIn(String email, String password) {
         this.email.shouldBe(visible).val(email);
