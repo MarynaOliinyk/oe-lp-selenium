@@ -1,4 +1,4 @@
-package com.openenglish.login.fields_validation;
+package com.openenglish.login.fieldsvalidation;
 
 import com.openenglish.core.TestBase;
 import org.testng.annotations.Test;
@@ -7,8 +7,7 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 
-
-public class С142VerifyContrasenaFieldTest extends TestBase {
+public class C145VerifyIngreseTextoDeSeguridad extends TestBase {
 
     @Test
     public void submitInvalidPasswordTest() {
@@ -17,7 +16,12 @@ public class С142VerifyContrasenaFieldTest extends TestBase {
         logInAndCheckText(email, invalidPassword, loginTooltipPassword);
         logInAndCheckText(email, invalidPassword, loginTooltipPassword);
         loginPage.getSecurityField().shouldHave(attribute("placeholder", securityPlaceHolderText));
-
+        loginPage.logIn(email, correctPassword);
+        loginPage.getSecurityField().sendKeys(invalidSecurityCode);
+        loginPage.getLoginButton().click();
+        loginPage.getPopUpTextAfterIncorrectCode().shouldBe(visible).shouldHave(text(popUpInvalidSecurityCode));
+        loginPage.getPopUpCloseAfterIncorrectCode().shouldBe(visible).click();
+        loginPage.getTooltipText().shouldHave(text(loginTooltipSecurityCode));
     }
 
     private void logInAndCheckText(String validEmail, String incorrectPassword, String tooltipTexts) {
@@ -25,3 +29,4 @@ public class С142VerifyContrasenaFieldTest extends TestBase {
         loginPage.getTooltipText().shouldBe(visible).shouldHave(text(tooltipTexts));
     }
 }
+

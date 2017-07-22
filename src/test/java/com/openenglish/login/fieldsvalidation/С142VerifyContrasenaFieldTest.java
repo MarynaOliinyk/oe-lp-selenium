@@ -7,7 +7,6 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 
-
 public class С142VerifyContrasenaFieldTest extends TestBase {
 
     @Test

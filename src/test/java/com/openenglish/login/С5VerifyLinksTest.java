@@ -51,7 +51,7 @@ public class С5VerifyLinksTest extends TestBase {
         recoveryPage.getEmail().shouldBe(visible);
     }
 
-    //TODO Bug with chat (Chat page is opened in a new window.)
+    //TODO Chat is not enabled
     @Test
     public void chatPageIsOpenTestS5() {
         positiveLogIn();
