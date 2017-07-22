@@ -23,7 +23,10 @@ public class LoginPage {
             signUp = $(By.id("sign-up")),
             tooltipText =  $(By.xpath("//div[@class='tooltipster-content']")),
             recoverLink = $(By.xpath(".//*[@id='login_content']//a[@href='recovery.html']")),
-            securityField = $(By.id("captcharesponse"));
+            securityField = $(By.id("captcharesponse")),
+            popUpTextAfterIncorrectCode = $(By.xpath(".//*[@id='login-support-widget']/div[1]/h3")),
+            popUpCloseAfterIncorrectCode = $(By.xpath("//*[@class='ui-icon ui-icon-closethick']"));
+
 
     public void logIn(String email, String password) {
         this.email.shouldBe(visible).val(email);

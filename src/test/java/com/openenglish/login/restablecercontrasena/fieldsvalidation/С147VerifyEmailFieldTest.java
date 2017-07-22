@@ -1,4 +1,4 @@
-package com.openenglish.login.restablecer_contrasena.fields_validation;
+package com.openenglish.login.restablecercontrasena.fieldsvalidation;
 
 import com.openenglish.core.TestBase;
 import com.openenglish.pages.RecoveryPage;

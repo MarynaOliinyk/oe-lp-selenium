@@ -1,4 +1,4 @@
-package com.openenglish.login.restore_password;
+package com.openenglish.login.restablecercontrasena;
 
 import com.openenglish.core.TestBase;
 import com.openenglish.pages.InicioPage;
@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.util.PropertiesCache.getInstance;
 
-public class VerifyResetPasswordEmailIsSentTest extends TestBase{
+public class C10VerifyResetPasswordEmailIsSentTest extends TestBase{
     private String email = getInstance().getProperty("email");
     private String password = getInstance().getProperty("password");
 

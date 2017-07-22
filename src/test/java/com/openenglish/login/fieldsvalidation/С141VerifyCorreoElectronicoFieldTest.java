@@ -1,4 +1,4 @@
-package com.openenglish.login.fields__validatoin;
+package com.openenglish.login.fieldsvalidation;
 
 import com.openenglish.core.TestBase;
 import org.testng.annotations.Test;
