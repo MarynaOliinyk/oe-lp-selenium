@@ -4,7 +4,6 @@ import com.openenglish.core.TestBase;
 import com.openenglish.pages.InicioPage;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 
