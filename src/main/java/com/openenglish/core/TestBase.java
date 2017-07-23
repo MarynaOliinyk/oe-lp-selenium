@@ -33,7 +33,7 @@ public class TestBase extends DriverBase {
     protected String loginTooltipPassword = getInstance().getProperty("login.tooltip.text.for.password");
     protected String loginTooltipSecurityCode = getInstance().getProperty("login.tooltip.invalid.security.text");
     protected String invalidSecurityCode = getInstance().getProperty("login.invalid.security.code");
-    protected String popUpInvalidSecurityCode = getInstance().getProperty("login.popUp.invalid.security.code");
+    protected String popUpInvalidSecurityCode = getInstance().getProperty("login.popup.invalid.security.code");
 
     protected LoginPage loginPage = new LoginPage();
     protected InicioPage inicioPage = new InicioPage();
