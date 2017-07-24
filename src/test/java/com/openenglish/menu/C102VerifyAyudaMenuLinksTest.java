@@ -4,6 +4,7 @@ package com.openenglish.menu;
 import com.openenglish.core.TestBase;
 import com.openenglish.pages.HowToVideosPage;
 import com.openenglish.pages.TalkNowPage;
+import com.openenglish.pages.TestYourSystemPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -17,7 +18,7 @@ public class C102VerifyAyudaMenuLinksTest extends TestBase {
     public void loginWithCorrectCredentialsAndPageInicioIsOpen() {
         loginPage.cookieBannerVisibility();
         loginPage.getPassword().shouldBe(visible)
-                 .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute("type", "password"));
         loginPage.logIn(email, correctPassword);
         inicioPage.getInicioLink().shouldHave(text(inicioLink));
         inicioPage.getUserName().shouldHave(text(userName));
@@ -38,6 +39,14 @@ public class C102VerifyAyudaMenuLinksTest extends TestBase {
         inicioPage.getVideosTutoriales().click();
         HowToVideosPage howToVideosPage = new HowToVideosPage();
         howToVideosPage.getImage().isDisplayed();
+
+    }
+
+    @Test
+    public void verifyVerificaTuSistemaTestS3() {
+        inicioPage.getVerificaTuSistema().click();
+        TestYourSystemPage testYourSystemPage = new TestYourSystemPage();
+        testYourSystemPage.getHeaderText().shouldHave(text(testYourSystemHeaderText));
 
     }
 

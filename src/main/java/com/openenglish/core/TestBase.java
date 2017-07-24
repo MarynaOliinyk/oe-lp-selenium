@@ -47,6 +47,7 @@ public class TestBase extends DriverBase {
     protected String comienzaAhora = getInstance().getProperty("comienza.ahora.button.text");
 
     protected String talkNowHeaderText = getInstance().getProperty("talknow.header.text");
+    protected String testYourSystemHeaderText = getInstance().getProperty("testyoursystem.header.text");
 
 
     protected LoginPage loginPage = new LoginPage();
