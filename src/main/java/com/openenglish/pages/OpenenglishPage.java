@@ -16,7 +16,7 @@ public class OpenEnglishPage {
             nombreFieldNotification = $(By.xpath(".//*[@id='leadForm']/div[1]/div[2]/div/span")),
             appelidoFieldNotification = $(By.xpath(".//*[@id='leadForm']/div[1]/div[3]/div/span")),
             banerEscButton = $(By.xpath(".//*[@id='popmake-1005']/button"));
-
+fgdf
 
     public void bannerVisibility() {
         if (banerEscButton.isDisplayed()) banerEscButton.click();
