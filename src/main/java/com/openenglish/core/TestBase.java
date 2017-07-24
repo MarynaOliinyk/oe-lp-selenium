@@ -12,6 +12,7 @@ public class TestBase extends DriverBase {
     protected String emailWithoutATsymbol = getProperty("recovery.email.without@");
     protected String emailWithoutDotCom = getProperty("recovery.email.without.com");
     protected String notValidEmailText = getProperty("recovery.tooltip.not.valid.email");
+    protected String notValidEmailTextForRegistration = getProperty("field.email.acceptense.message");
     protected String recoveryTooltipEmail = getProperty("recovery.tooltip.text");
     protected String fieldShouldBeCompleted = getProperty("obligatory.field.message");
     protected String inCorrectValue = getProperty("incorrect.field.value.message");
