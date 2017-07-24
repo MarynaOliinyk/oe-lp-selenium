@@ -2,7 +2,7 @@ package com.openenglish.login;
 
 import com.openenglish.core.TestBase;
 import com.openenglish.pages.RecoveryPage;
-import com.openenglish.pages.RegisterFormPage;
+import com.openenglish.pages.RegisterPage;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.attribute;
@@ -37,7 +37,7 @@ public class C5VerifyLinksTest extends TestBase {
                  .shouldHave(attribute("type", "password"));
         loginPage.cookieBannerVisibility();
         loginPage.getSignUp().click();
-        RegisterFormPage regForm = new RegisterFormPage();
+        RegisterPage regForm = new RegisterPage();
         regForm.getRegisterForm().shouldBe(visible);
     }
 

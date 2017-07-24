@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 
-public class C99InicioMenuOptionRedirectsToInicio extends TestBase {
+public class C99InicioMenuOptionRedirectsToInicioTest extends TestBase {
 
     @Test
     public void openEnglishLogoLinkTest() {

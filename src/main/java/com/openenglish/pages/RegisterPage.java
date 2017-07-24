@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class RegisterFormPage {
+public class RegisterPage {
 
     private String registerSectionNotifications = ".//*[@id='%s']/following-sibling::div/span";
 

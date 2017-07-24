@@ -1,7 +1,7 @@
 package com.openenglish.login.restablecercontrasena.fieldsvalidation;
 
 import com.openenglish.core.TestBase;
-import com.openenglish.pages.RegisterFormPage;
+import com.openenglish.pages.RegisterPage;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.visible;
@@ -13,7 +13,7 @@ public class C149VerifyRegisterTest extends TestBase {
         positiveLogIn();
         logOut();
         loginPage.getSignUp().click();
-        RegisterFormPage regForm = new RegisterFormPage();
+        RegisterPage regForm = new RegisterPage();
         regForm.getRegisterForm().shouldBe(visible);
     }
 }

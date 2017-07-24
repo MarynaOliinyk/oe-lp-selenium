@@ -1,20 +1,23 @@
-package com.openenglish.login.fields_validation;
+package com.openenglish.registro.fieldsvalidation;
 
 import com.openenglish.core.TestBase;
-import com.openenglish.pages.RegisterFormPage;
+import com.openenglish.pages.RegisterPage;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.switchTo;
 
-public class C133VerifyCorreoElectronicoFieldTestAtTheStandardForm extends TestBase {
+public class C4415VerifyCorreoElectronicoFieldAtThePopUpTest extends TestBase {
 
     @Test
     public void correoElectronicoFieldNegativeFlowTest() {
         open(oeUrl);
-        RegisterFormPage regForm = new RegisterFormPage();
-        regForm.bannerVisibility();
+        RegisterPage regForm = new RegisterPage();
+
+        switchTo().frame(regForm.getPopUpIdentifier());
+
         regForm.getCorreoElectronFieldNotification().shouldNotBe(visible);
         regForm.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
         regForm.getCorreoElectronFieldNotification().shouldBe(visible).shouldHave(text(fieldShouldBeCompleted));
@@ -31,3 +34,4 @@ public class C133VerifyCorreoElectronicoFieldTestAtTheStandardForm extends TestB
     }
 
 }
+
