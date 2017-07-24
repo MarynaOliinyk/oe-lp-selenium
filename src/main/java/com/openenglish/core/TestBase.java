@@ -18,7 +18,8 @@ public class TestBase extends DriverBase {
     protected String inCorrectValue = getProperty("incorrect.field.value.message");
     protected String lessThenEightyCharacters = getProperty("field.surname.lenth.acceptense.message");
     protected String lessThenFortyCharacters = getProperty("field.name.lenth.acceptense.message");
-    protected String charQuantity = getProperty("char.quantity.surname");
+    protected String charQuantityNombre = getProperty("char.quantity.name");
+    protected String charQuantityAppelido = getProperty("char.quantity.surname");
     protected String numberLength = getProperty("number.length");
     protected String specialCharacters = getProperty("special.characters");
 

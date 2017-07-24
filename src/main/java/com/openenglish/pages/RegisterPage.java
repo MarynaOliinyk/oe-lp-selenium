@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class OpenEnglishPage {
+public class RegisterPage {
 
     private String registerSectionNotifications = ".//*[@id='%s']/following-sibling::div/span";
 
@@ -17,14 +17,13 @@ public class OpenEnglishPage {
             correoElectronField = $(By.id("emailaddress-input")),
             comienzaAhoraButton = $(By.id("submit-button")),
             nombreFieldNotification = $(By.xpath(String.format(registerSectionNotifications, "firstname-input"))),
-            appelidoFieldNotification = $(By.xpath(String.format(registerSectionNotifications,"lastname-input"))),
+            appelidoFieldNotification = $(By.xpath(String.format(registerSectionNotifications, "lastname-input"))),
             correoElectronFieldNotification = $(By.xpath(String.format(registerSectionNotifications, "emailaddress-input"))),
             popUpIdentifier = $(By.xpath("//iframe")),
-            banerEscButton = $(By.xpath(".//*[@id='popmake-1005']/button"));
-
+            tooltipWindowClose = $(By.xpath(".//*[@id='popmake-1005']/button"));
 
     public void bannerVisibility() {
-        if (banerEscButton.isDisplayed()) banerEscButton.click();
+        if (tooltipWindowClose.isDisplayed()) tooltipWindowClose.click();
     }
 
 }
