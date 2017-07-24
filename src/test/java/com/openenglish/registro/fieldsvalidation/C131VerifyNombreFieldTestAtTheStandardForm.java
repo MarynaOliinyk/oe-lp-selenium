@@ -1,4 +1,4 @@
-package com.openenglish.login.fields_validation;
+package com.openenglish.registro.fieldsvalidation;
 
 import com.openenglish.core.TestBase;
 import com.openenglish.pages.RegisterFormPage;
