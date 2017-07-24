@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class C139VerifyEspecificamenteFieldTest extends TestBase {
 
-    // TODO bug LPTRIAGE-291 - There is no "¿Cómo supo de nosotros?" field (https://openenglish.jira.com/secure/RapidBoard.jspa?rapidView=316&projectKey=LPTRIAGE&view=planning&selectedIssue=LPTRIAGE-291&quickFilter=1253)
+    // TODO bug LPTRIAGE-292 - There is no "Específicamente" dropdown field (https://openenglish.jira.com/browse/LPTRIAGE-292)
     @Test
     public void especificamenteFieldVerifyTest() {
 
