@@ -12,6 +12,7 @@ public class TestBase extends DriverBase {
     protected String emailWithoutATsymbol = getInstance().getProperty("recovery.email.without@");
     protected String emailWithoutDotCom = getInstance().getProperty("recovery.email.without.com");
     protected String notValidEmailText = getInstance().getProperty("recovery.tooltip.not.valid.email");
+    protected String notValidEmailTextForRegistration = getInstance().getProperty("field.email.acceptense.message");
     protected String recoveryTooltipEmail = getInstance().getProperty("recovery.tooltip.text");
     protected String fieldShouldBeCompleted = getInstance().getProperty("obligatory.field.message");
     protected String inCorrectValue = getInstance().getProperty("incorrect.field.value.message");
@@ -44,7 +45,7 @@ public class TestBase extends DriverBase {
     protected String popUpInvalidSecurityCode = getInstance().getProperty("login.popup.invalid.security.code");
 
     protected String oeUrl = getInstance().getProperty("base.oe.url");
-    protected String comienzaAhora = getInstance().getProperty("comienza.ahora.button.text");
+    protected String comienzaAhora = getInstance().getProperty("register.link.text");
 
     protected LoginPage loginPage = new LoginPage();
     protected InicioPage inicioPage = new InicioPage();
