@@ -7,16 +7,16 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 
-public class C145VerifyIngreseTextoDeSeguridad extends TestBase {
+public class C145VerifyIngreseTextoDeSeguridadTest extends TestBase {
 
     @Test
     public void submitInvalidPasswordTest() {
         positiveLogIn();
         logOut();
-        logInAndCheckText(email, invalidPassword, loginTooltipPassword);
-        logInAndCheckText(email, invalidPassword, loginTooltipPassword);
+        loginPage.logInAndCheckText(email, invalidPassword, loginTooltipPassword);
+        loginPage.logInAndCheckText(email, invalidPassword, loginTooltipPassword);
         loginPage.getSecurityField().shouldHave(attribute("placeholder", securityPlaceHolderText));
-        loginPage.logIn(email, correctPassword);
+        loginPage.logIn(email, password);
         loginPage.getSecurityField().sendKeys(invalidSecurityCode);
         loginPage.getLoginButton().click();
         loginPage.getPopUpTextAfterIncorrectCode().shouldBe(visible).shouldHave(text(popUpInvalidSecurityCode));
@@ -24,9 +24,6 @@ public class C145VerifyIngreseTextoDeSeguridad extends TestBase {
         loginPage.getTooltipText().shouldHave(text(loginTooltipSecurityCode));
     }
 
-    private void logInAndCheckText(String validEmail, String incorrectPassword, String tooltipTexts) {
-        loginPage.logIn(validEmail, incorrectPassword);
-        loginPage.getTooltipText().shouldBe(visible).shouldHave(text(tooltipTexts));
-    }
+
 }
 

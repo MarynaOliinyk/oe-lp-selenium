@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
 import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -25,7 +26,8 @@ public class LoginPage {
             recoverLink = $(By.xpath(".//*[@id='login_content']//a[@href='recovery.html']")),
             securityField = $(By.id("captcharesponse")),
             popUpTextAfterIncorrectCode = $(By.xpath(".//*[@id='login-support-widget']/div[1]/h3")),
-            popUpCloseAfterIncorrectCode = $(By.xpath("//*[@class='ui-icon ui-icon-closethick']"));
+            popUpCloseAfterIncorrectCode = $(By.xpath("//*[@class='ui-icon ui-icon-closethick']")),
+            popUpResetPassword = $(By.xpath(".//*[@href='recovery.html']"));
 
 
     public void logIn(String email, String password) {
@@ -36,5 +38,9 @@ public class LoginPage {
 
     public void cookieBannerVisibility() {
         continueButton.should(visible).click();
+    }
+    public void logInAndCheckText(String validEmail, String incorrectPassword, String tooltipTexts) {
+        logIn(validEmail, incorrectPassword);
+       getTooltipText().shouldBe(visible).shouldHave(text(tooltipTexts));
     }
 }
