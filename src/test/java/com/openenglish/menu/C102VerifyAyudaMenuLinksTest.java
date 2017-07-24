@@ -2,6 +2,7 @@ package com.openenglish.menu;
 
 
 import com.openenglish.core.TestBase;
+import com.openenglish.pages.HowToVideosPage;
 import com.openenglish.pages.TalkNowPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -31,4 +32,13 @@ public class C102VerifyAyudaMenuLinksTest extends TestBase {
         talkNowPage.getHeaderText().shouldHave(text(talkNowHeaderText));
 
     }
+
+    @Test
+    public void verifyVideosTutorialesTestS2() {
+        inicioPage.getVideosTutoriales().click();
+        HowToVideosPage howToVideosPage = new HowToVideosPage();
+        howToVideosPage.getImage().isDisplayed();
+
+    }
+
 }

@@ -15,6 +15,7 @@ public class InicioPage {
             inicioLink = $(By.id("nav-home")),
             logOutLink = $(By.xpath(".//*[@id='account-menu']//a[@href='/j_spring_security_logout']")),
             ayudaDropDown = $(By.xpath(".//*[@id='nav-help']/strong")),
-            contactenos = $(By.id("nav-talknow"));
+            contactenos = $(By.id("nav-talknow")),
+            videosTutoriales = $(By.id("nav-howto"));
 }
 
