@@ -21,5 +21,4 @@ public class OpenEnglishPage {
     public void bannerVisibility() {
         if (banerEscButton.isDisplayed()) banerEscButton.click();
     }
-
 }

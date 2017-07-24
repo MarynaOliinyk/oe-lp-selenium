@@ -25,7 +25,6 @@ public class C102VerifyAyudaMenuLinksTest extends TestBase {
         inicioPage.getAyudaDropDown().hover();
     }
 
-
     @Test
     public void verifyContactenosTestS1() {
         inicioPage.getContactenos().click();
@@ -49,5 +48,4 @@ public class C102VerifyAyudaMenuLinksTest extends TestBase {
         testYourSystemPage.getHeaderText().shouldHave(text(testYourSystemHeaderText));
 
     }
-
 }
