@@ -14,14 +14,10 @@ public class С142VerifyContrasenaFieldTest extends TestBase {
     public void submitInvalidPasswordTest() {
         positiveLogIn();
         logOut();
-        logInAndCheckText(email, invalidPassword, loginTooltipPassword);
-        logInAndCheckText(email, invalidPassword, loginTooltipPassword);
+        loginPage.logInAndCheckText(email, invalidPassword, loginTooltipPassword);
+        loginPage.logInAndCheckText(email, invalidPassword, loginTooltipPassword);
         loginPage.getSecurityField().shouldHave(attribute("placeholder", securityPlaceHolderText));
-
     }
 
-    private void logInAndCheckText(String validEmail, String incorrectPassword, String tooltipTexts) {
-        loginPage.logIn(validEmail, incorrectPassword);
-        loginPage.getTooltipText().shouldBe(visible).shouldHave(text(tooltipTexts));
-    }
+
 }
