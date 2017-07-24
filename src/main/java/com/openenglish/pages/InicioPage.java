@@ -13,5 +13,8 @@ public class InicioPage {
     private SelenideElement userName = $(By.xpath(".//*[@id='student-info']//div[@class='display-name']")),
             accountMenu = $(By.id("account-menu-nav")),
             inicioLink = $(By.id("nav-home")),
-            logOutLink = $(By.xpath(".//*[@id='account-menu']//a[@href='/j_spring_security_logout']"));
+            logOutLink = $(By.xpath(".//*[@id='account-menu']//a[@href='/j_spring_security_logout']")),
+            ayudaDropDown = $(By.xpath(".//*[@id='nav-help']/strong")),
+            contactenos = $(By.id("nav-talknow"));
 }
+

@@ -46,6 +46,9 @@ public class TestBase extends DriverBase {
     protected String oeUrl = getInstance().getProperty("base.oe.url");
     protected String comienzaAhora = getInstance().getProperty("comienza.ahora.button.text");
 
+    protected String talkNowHeaderText = getInstance().getProperty("talknow.header.text");
+
+
     protected LoginPage loginPage = new LoginPage();
     protected InicioPage inicioPage = new InicioPage();
 
