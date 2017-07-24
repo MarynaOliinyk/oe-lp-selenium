@@ -1,8 +1,8 @@
 package com.openenglish.login;
 
 import com.openenglish.core.TestBase;
-import com.openenglish.pages.OpenEnglishPage;
 import com.openenglish.pages.RecoveryPage;
+import com.openenglish.pages.RegisterFormPage;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.attribute;
@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 
-public class С5VerifyLinksTest extends TestBase {
+public class C5VerifyLinksTest extends TestBase {
 
     @Test
     public void verifyTooltipIsPresentTestS1() {
@@ -37,8 +37,8 @@ public class С5VerifyLinksTest extends TestBase {
                  .shouldHave(attribute("type", "password"));
         loginPage.cookieBannerVisibility();
         loginPage.getSignUp().click();
-        OpenEnglishPage openEnglishPage = new OpenEnglishPage();
-        openEnglishPage.getRegisterForm().shouldBe(visible);
+        RegisterFormPage regForm = new RegisterFormPage();
+        regForm.getRegisterForm().shouldBe(visible);
     }
 
     @Test

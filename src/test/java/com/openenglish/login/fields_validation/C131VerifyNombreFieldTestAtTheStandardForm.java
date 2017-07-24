@@ -1,7 +1,7 @@
 package com.openenglish.login.fields_validation;
 
 import com.openenglish.core.TestBase;
-import com.openenglish.pages.OpenEnglishPage;
+import com.openenglish.pages.RegisterFormPage;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -13,25 +13,25 @@ public class C131VerifyNombreFieldTestAtTheStandardForm extends TestBase {
     @Test
     public void nombreFieldNegativeFlowTest() {
         open(oeUrl);
-        OpenEnglishPage oePage = new OpenEnglishPage();
-        oePage.bannerVisibility();
-        oePage.getNombreFieldNotification().shouldNotBe(visible);
-        oePage.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
-        oePage.getNombreFieldNotification().shouldBe(visible).shouldHave(text(fieldShouldBeCompleted));
+        RegisterFormPage regForm = new RegisterFormPage();
+        regForm.bannerVisibility();
+        regForm.getNombreFieldNotification().shouldNotBe(visible);
+        regForm.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
+        regForm.getNombreFieldNotification().shouldBe(visible).shouldHave(text(fieldShouldBeCompleted));
 
-        oePage.getNombreField().sendKeys(randonNumbers(Integer.parseInt(numberLength)));
-        oePage.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
-        oePage.getNombreFieldNotification().shouldBe(visible).shouldHave(text(inCorrectValue));
-        oePage.getNombreField().clear();
+        regForm.getNombreField().sendKeys(randonNumbers(Integer.parseInt(numberLength)));
+        regForm.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
+        regForm.getNombreFieldNotification().shouldBe(visible).shouldHave(text(inCorrectValue));
+        regForm.getNombreField().clear();
 
-        oePage.getNombreField().sendKeys(specialCharacters);
-        oePage.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
-        oePage.getNombreFieldNotification().shouldBe(visible).shouldHave(text(inCorrectValue));
-        oePage.getNombreField().clear();
+        regForm.getNombreField().sendKeys(specialCharacters);
+        regForm.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
+        regForm.getNombreFieldNotification().shouldBe(visible).shouldHave(text(inCorrectValue));
+        regForm.getNombreField().clear();
 
-        oePage.getNombreField().sendKeys(randCharacters(Integer.parseInt(charQuantity)));
-        oePage.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
-        oePage.getNombreFieldNotification().shouldBe(visible).shouldHave(text(lessThenFortyCharacters));
+        regForm.getNombreField().sendKeys(randCharacters(Integer.parseInt(charQuantity)));
+        regForm.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
+        regForm.getNombreFieldNotification().shouldBe(visible).shouldHave(text(lessThenFortyCharacters));
     }
 
 }

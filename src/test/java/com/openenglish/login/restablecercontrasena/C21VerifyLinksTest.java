@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 
-public class С21VerifyLinksTest extends TestBase {
+public class C21VerifyLinksTest extends TestBase {
 
     @BeforeMethod
     public void userCredetialsAndRecoveryPassword() {
@@ -54,6 +54,6 @@ public class С21VerifyLinksTest extends TestBase {
         recoveryPage.getSingUp().shouldBe(visible).shouldHave(text(resetPasswordSingUpText)).click();
         RegisterFormPage registerFormPage = new RegisterFormPage();
         registerFormPage.getTooltipWindowClose().click();
-        registerFormPage.getStartNowButton().should(visible).should(text(registrateText));
+        registerFormPage.getComienzaAhoraButton().should(visible).should(text(registrateText));
     }
 }

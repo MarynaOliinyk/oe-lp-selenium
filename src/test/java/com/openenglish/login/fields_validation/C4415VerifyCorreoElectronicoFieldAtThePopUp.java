@@ -1,7 +1,7 @@
 package com.openenglish.login.fields_validation;
 
 import com.openenglish.core.TestBase;
-import com.openenglish.pages.OpenEnglishPage;
+import com.openenglish.pages.RegisterFormPage;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -14,23 +14,23 @@ public class C4415VerifyCorreoElectronicoFieldAtThePopUp extends TestBase {
     @Test
     public void correoElectronicoFieldNegativeFlowTest() {
         open(oeUrl);
-        OpenEnglishPage oePage = new OpenEnglishPage();
+        RegisterFormPage regForm = new RegisterFormPage();
 
-        switchTo().frame(oePage.getPopUpIdentifier());
+        switchTo().frame(regForm.getPopUpIdentifier());
 
-        oePage.getCorreoElectronFieldNotification().shouldNotBe(visible);
-        oePage.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
-        oePage.getCorreoElectronFieldNotification().shouldBe(visible).shouldHave(text(fieldShouldBeCompleted));
+        regForm.getCorreoElectronFieldNotification().shouldNotBe(visible);
+        regForm.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
+        regForm.getCorreoElectronFieldNotification().shouldBe(visible).shouldHave(text(fieldShouldBeCompleted));
 
-        oePage.getCorreoElectronField().sendKeys(emailWithoutATsymbol);
-        oePage.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
-        oePage.getCorreoElectronFieldNotification().shouldBe(visible).shouldHave(text(notValidEmailTextForRegistration));
-        oePage.getCorreoElectronField().clear();
+        regForm.getCorreoElectronField().sendKeys(emailWithoutATsymbol);
+        regForm.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
+        regForm.getCorreoElectronFieldNotification().shouldBe(visible).shouldHave(text(notValidEmailTextForRegistration));
+        regForm.getCorreoElectronField().clear();
 
-        oePage.getCorreoElectronField().sendKeys(emailWithoutDotCom);
-        oePage.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
-        oePage.getCorreoElectronFieldNotification().shouldBe(visible).shouldHave(text(notValidEmailTextForRegistration));
-        oePage.getCorreoElectronField().clear();
+        regForm.getCorreoElectronField().sendKeys(emailWithoutDotCom);
+        regForm.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
+        regForm.getCorreoElectronFieldNotification().shouldBe(visible).shouldHave(text(notValidEmailTextForRegistration));
+        regForm.getCorreoElectronField().clear();
     }
 
 }
