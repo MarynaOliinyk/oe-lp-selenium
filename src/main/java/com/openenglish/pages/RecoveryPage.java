@@ -17,7 +17,9 @@ public class RecoveryPage {
             faq = $(By.id("read-faq")),
             singUp = $(By.id("sign-up")),
             submit = $(By.id("recovery-submit")),
-            tooltipText = $(By.xpath(".//div[@class='tooltipster-content']"));
+            tooltipText = $(By.xpath(".//div[@class='tooltipster-content']")),
+            chatButton = $(By.id("no-chat"));
+
 
 
     public void enterEmailAndSubmit(String email) {
