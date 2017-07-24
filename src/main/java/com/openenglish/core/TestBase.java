@@ -35,6 +35,11 @@ public class TestBase extends DriverBase {
     protected String invalidSecurityCode = getInstance().getProperty("login.invalid.security.code");
     protected String popUpInvalidSecurityCode = getInstance().getProperty("login.popUp.invalid.security.code");
 
+    protected String liveClassesHeaderText = getInstance().getProperty("liveclasses.header.text");
+    protected String immersionHeaderText = getInstance().getProperty("immersion.header.text");
+    protected String introdussionHeaderText = getInstance().getProperty("introduction.header.text");
+
+
     protected LoginPage loginPage = new LoginPage();
     protected InicioPage inicioPage = new InicioPage();
 
