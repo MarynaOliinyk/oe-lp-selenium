@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class C137VerifyTelefonoFieldTest extends TestBase {
 
     // TODO bug LPTRIAGE-296 - No attachment in C137 Verify "Teléfono" field (https://openenglish.jira.com/browse/LPTRIAGE-296)
-    @Test
+    @Test(enabled = false)
     public void telefonoFieldVerifyTest() {
 
     }
