@@ -32,6 +32,7 @@ public class TestBase extends DriverBase {
     protected String inicioLink = getProperty("home.link.text");
     protected String mensajesButtonText = getProperty("inicio.mensajes.link.text");
     protected String preferenciasButtonText = getProperty("inicio.preferencias.link.text");
+    protected String salirButtonText = getProperty("inicio.salir.link.text");
     protected String notificationsUrlEndWithText = getProperty("notifications.page.url.endwith");
     protected String preferencesUrlEndWithText = getProperty("preferences.page.url.endwith");
     protected String miPerfilTabText = getProperty("preferences.miperfil.tab.text");
