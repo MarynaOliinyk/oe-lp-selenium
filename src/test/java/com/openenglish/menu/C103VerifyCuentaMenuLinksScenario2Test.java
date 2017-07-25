@@ -20,14 +20,12 @@ public class C103VerifyCuentaMenuLinksScenario2Test extends TestBase {
         loginPage.getPassword().shouldBe(visible)
                 .shouldHave(attribute("type", "password"));
         loginPage.logIn(email, correctPassword);
-        InicioPage inicioPage = new InicioPage();
         inicioPage.getInicioLink().shouldHave(text(inicioLink));
         inicioPage.getUserName().shouldHave(text(userName));
         inicioPage.getAccountMenu().hover();
         inicioPage.getCuentaSuboptions().shouldBe(visible);
         inicioPage.getPreferenciasCuentaSuboptionButton().shouldBe(visible).
                 shouldHave(exactText(preferenciasButtonText)).click();
-        PreferencesPage preferencesPage = new PreferencesPage();
         preferencesPage.getMiPerfilTab().shouldBe(visible).shouldHave(exactText(miPerfilTabText));
         assertTrue(url().endsWith(preferencesUrlEndWithText));
     }
