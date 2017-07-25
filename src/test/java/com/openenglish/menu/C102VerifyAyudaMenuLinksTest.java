@@ -3,15 +3,22 @@ package com.openenglish.menu;
 
 import com.codeborne.selenide.WebDriverRunner;
 import com.openenglish.core.TestBase;
+import com.openenglish.pages.FAQPage;
+import com.openenglish.pages.MeetingTestPage;
 import com.openenglish.pages.HowToVideosPage;
+import com.openenglish.pages.ParticipantsGuidePage;
 import com.openenglish.pages.TalkNowPage;
 import com.openenglish.pages.TestYourSystemPage;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.switchTo;
+import static com.codeborne.selenide.Selenide.title;
+import static org.testng.Assert.assertTrue;
 
 public class C102VerifyAyudaMenuLinksTest extends TestBase {
 
@@ -38,7 +45,7 @@ public class C102VerifyAyudaMenuLinksTest extends TestBase {
     public void verifyVideosTutorialesTestS2() {
         inicioPage.getVideosTutoriales().click();
         HowToVideosPage howToVideosPage = new HowToVideosPage();
-        howToVideosPage.getImage().isDisplayed();
+        howToVideosPage.getImage().shouldBe(visible);
 
     }
 
@@ -53,7 +60,25 @@ public class C102VerifyAyudaMenuLinksTest extends TestBase {
     @Test
     public void verifyAdobeConnectGuiaRapidaTestS4() {
         inicioPage.getAdobeConnectGuiaRapida().click();
-        WebDriverRunner.url().contains(containsPdfFile);
+        switchTo().window(1);
+        ParticipantsGuidePage participantsGuidePage = new ParticipantsGuidePage();
+      assertTrue(participantsGuidePage.getPageTitle().getAttribute("src").contains(containsPdfFile));
 
     }
+
+    @Test
+    public void verifyVerifiqueSuConfiguracionTestS5() {
+        inicioPage.getVerifiqueSuConfiguracion().click();
+        MeetingTestPage meetingTestPage = new MeetingTestPage();
+        switchTo().window(1);
+        meetingTestPage.getText().shouldHave(text(meetingTestText));
+    }
+
+    @Test
+    public void verifyPreguntasFrecuentesTestS6() {
+        inicioPage.getPreguntasFrecuentes().click();
+        FAQPage faqPage = new FAQPage();
+        faqPage.getHeaderText().shouldHave(text(faqHeaderText));
+    }
+
 }

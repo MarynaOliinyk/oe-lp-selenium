@@ -1,12 +1,14 @@
 package com.openenglish.pages;
+
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class AdobeConnectPage {
+public class FAQsPage {
 
     @Getter
-    private SelenideElement text = $(By.xpath(".//*[@id='gecko']/h1"));
+    private SelenideElement faqsText = $(By.xpath("//div[@class='faq-area']/h3"));
+
 }

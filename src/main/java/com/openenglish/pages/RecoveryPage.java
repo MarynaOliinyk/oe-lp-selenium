@@ -8,7 +8,6 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class RecoveryPage {
-
     @Getter
     private SelenideElement requestFormTitle = $(By.xpath(".//*[@id='requestForm']/div/h3")),
             email = $(By.id("email")),

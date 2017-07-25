@@ -8,5 +8,5 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class HowToVideosPage {
     @Getter
-    private SelenideElement image = $(By.id(".//*[@class='heroShot']"));
+    private SelenideElement image = $(By.xpath(".//*[@class='heroShot']"));
 }

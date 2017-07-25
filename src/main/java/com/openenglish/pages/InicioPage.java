@@ -20,5 +20,7 @@ public class InicioPage {
             contactenos = $(By.id("nav-talknow")),
             videosTutoriales = $(By.id("nav-howto")),
             verificaTuSistema = $(By.id("testYourSystem")),
-            adobeConnectGuiaRapida = $(By.id("adobeQuickGuide"));
+            adobeConnectGuiaRapida = $(By.id("adobeQuickGuide")),
+            verifiqueSuConfiguracion = $(By.id("testSetupLink")),
+            preguntasFrecuentes = $(By.xpath(".//*[@id='header']//a[@href='/support/faq.html']"));
 }
