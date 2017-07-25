@@ -30,6 +30,8 @@ public class TestBase extends DriverBase {
 
     protected String faqText = getProperty("faq.text");
     protected String inicioLink = getProperty("home.link.text");
+    protected String mensajesButtonText = getProperty("inicio.mensajes.link.text");
+    protected String notificationsUrlEndWithText = getProperty("notifications.page.url.endwith");
     protected String email = getProperty("email");
     protected String password = getProperty("password");
     protected String userName = getProperty("user.name");
