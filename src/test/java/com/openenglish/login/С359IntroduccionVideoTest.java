@@ -8,7 +8,7 @@ public class С359IntroduccionVideoTest extends TestBase {
     @Test
     public void introduccionVideoTest() {
         positiveLogIn();
-        logOut();;
+        logOut();
     }
 }
 

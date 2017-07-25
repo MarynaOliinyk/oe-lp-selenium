@@ -1,6 +1,7 @@
 package com.openenglish.menu;
 
 
+import com.codeborne.selenide.WebDriverRunner;
 import com.openenglish.core.TestBase;
 import com.openenglish.pages.HowToVideosPage;
 import com.openenglish.pages.TalkNowPage;
@@ -46,6 +47,13 @@ public class C102VerifyAyudaMenuLinksTest extends TestBase {
         inicioPage.getVerificaTuSistema().click();
         TestYourSystemPage testYourSystemPage = new TestYourSystemPage();
         testYourSystemPage.getHeaderText().shouldHave(text(testYourSystemHeaderText));
+
+    }
+
+    @Test
+    public void verifyAdobeConnectGuiaRapidaTestS4() {
+        inicioPage.getAdobeConnectGuiaRapida().click();
+        WebDriverRunner.url().contains(containsPdfFile);
 
     }
 }

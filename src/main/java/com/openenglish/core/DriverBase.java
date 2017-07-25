@@ -7,7 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.openenglish.util.PropertiesCache.getInstance;
+import static com.openenglish.util.PropertiesCache.getProperty;
 
 public class DriverBase {
 
@@ -15,7 +15,7 @@ public class DriverBase {
     public void setUp() {
         ChromeDriverManager.getInstance().setup();
         Configuration.browser = WebDriverRunner.CHROME;
-        Configuration.baseUrl = getInstance().getProperty("base.url");
+        Configuration.baseUrl = getProperty("base.url");
         open("/");
     }
 

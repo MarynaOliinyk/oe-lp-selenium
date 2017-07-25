@@ -1,15 +1,12 @@
 package com.openenglish.pages;
-
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class RegisterFormPage {
+public class AdobeConnectPage {
 
     @Getter
-    private SelenideElement startNowButton = $(By.id("submit-button")),
-            tooltipWindowClose = $(By.xpath(".//*[@id='popmake-1005']/button"));
-
+    private SelenideElement text = $(By.xpath(".//*[@id='gecko']/h1"));
 }

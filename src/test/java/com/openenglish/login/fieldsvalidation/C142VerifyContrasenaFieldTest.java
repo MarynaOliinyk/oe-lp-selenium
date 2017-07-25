@@ -4,11 +4,8 @@ import com.openenglish.core.TestBase;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.attribute;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
 
-
-public class С142VerifyContrasenaFieldTest extends TestBase {
+public class C142VerifyContrasenaFieldTest extends TestBase {
 
     @Test
     public void submitInvalidPasswordTest() {

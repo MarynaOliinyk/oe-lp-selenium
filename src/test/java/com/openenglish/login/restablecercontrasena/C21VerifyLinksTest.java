@@ -4,7 +4,7 @@ import com.openenglish.core.TestBase;
 import com.openenglish.pages.FAQPage;
 import com.openenglish.pages.LoginPage;
 import com.openenglish.pages.RecoveryPage;
-import com.openenglish.pages.RegisterFormPage;
+import com.openenglish.pages.RegisterPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 
-public class С21VerifyLinksTest extends TestBase {
+public class C21VerifyLinksTest extends TestBase {
 
     @BeforeMethod
     public void userCredetialsAndRecoveryPassword() {
@@ -52,8 +52,8 @@ public class С21VerifyLinksTest extends TestBase {
     public void goToRegisterPageTestS3() {
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getSingUp().shouldBe(visible).shouldHave(text(resetPasswordSingUpText)).click();
-        RegisterFormPage registerFormPage = new RegisterFormPage();
-        registerFormPage.getTooltipWindowClose().click();
-        registerFormPage.getStartNowButton().should(visible).should(text(registrateText));
+        RegisterPage registerPage = new RegisterPage();
+        registerPage.getTooltipWindowClose().click();
+        registerPage.getComienzaAhoraButton().should(visible).should(text(registrateText));
     }
 }
