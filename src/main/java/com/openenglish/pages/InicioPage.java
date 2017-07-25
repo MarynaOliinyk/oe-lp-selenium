@@ -19,7 +19,9 @@ public class InicioPage {
                             cursoButton = $(By.id("nav-learn")),
                             clasesEnVivoButton = $(By.id("nav-liveclasses")),
                             unidadesYLeccionesButton = $(By.id("nav-lessons")),
+                            oeLogo = $(By.xpath(".//*[@id='header']//a[@href='/index.html']")),
                             practicaLink = $(By.id("nav-immersion")),
+                            progresoLink = $(By.id("nav-progress")),
                             introdussionLink =  $(By.id("nav-levelzero"));
 
 

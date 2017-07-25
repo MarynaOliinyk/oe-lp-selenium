@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 
-
 public class С20ResetPasswordForIncorrectEmailTest extends TestBase {
 
     @Test
