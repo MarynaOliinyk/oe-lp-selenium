@@ -9,6 +9,5 @@ import static com.codeborne.selenide.Selenide.$;
 public class LessonsPage {
 
     @Getter
-    private SelenideElement lessonTitle = $(By.id("lesson-title")),
-                            beginLessonButton = $(By.xpath(".//*[@class='continue']"));
+    private SelenideElement text = $(By.xpath(".//*[@class='instructions']"));
 }

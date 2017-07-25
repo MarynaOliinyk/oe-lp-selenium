@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 
-public class C101_VerifyCursoMenuLinksTest extends TestBase {
+public class C101VerifyCursoMenuLinksTest extends TestBase {
 
     @BeforeMethod
     public void loginWithCorrectCredentialsAndPageInicioIsOpen() {
@@ -38,7 +38,7 @@ public class C101_VerifyCursoMenuLinksTest extends TestBase {
     public void lessonPageIsOpenedTestS2() {
         inicioPage.getUnidadesYLeccionesButton().click();
         LessonsPage lessonsPage = new LessonsPage();
-        lessonsPage.getLessonTitle().isDisplayed();
+        lessonsPage.getText().should(visible).shouldHave(text(lessonsText));
 
     }
 

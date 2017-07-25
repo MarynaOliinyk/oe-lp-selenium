@@ -47,9 +47,10 @@ public class TestBase extends DriverBase {
     protected String oeUrl = getProperty("base.oe.url");
     protected String comienzaAhora = getProperty("comienza.ahora.button.text");
 
-    protected String liveClassesHeaderText = getInstance().getProperty("liveclasses.header.text");
-    protected String immersionHeaderText = getInstance().getProperty("immersion.header.text");
-    protected String introdussionHeaderText = getInstance().getProperty("introduction.header.text");
+    protected String liveClassesHeaderText = getProperty("liveclasses.header.text");
+    protected String immersionHeaderText = getProperty("immersion.header.text");
+    protected String introdussionHeaderText = getProperty("introduction.header.text");
+    protected String lessonsText = getProperty("lessons.text");
 
 
     protected LoginPage loginPage = new LoginPage();

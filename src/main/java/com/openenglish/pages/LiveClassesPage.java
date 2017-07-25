@@ -9,6 +9,5 @@ import static com.codeborne.selenide.Selenide.$;
 public class LiveClassesPage {
 
     @Getter
-
     private SelenideElement headerText = $(By.xpath(".//*[@id='main']/header/div/h1"));
 }
