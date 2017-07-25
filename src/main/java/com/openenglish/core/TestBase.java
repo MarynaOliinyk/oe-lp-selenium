@@ -2,6 +2,7 @@ package com.openenglish.core;
 
 import com.openenglish.pages.InicioPage;
 import com.openenglish.pages.LoginPage;
+import com.openenglish.pages.PreferencesPage;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import static com.codeborne.selenide.Condition.visible;
@@ -55,6 +56,7 @@ public class TestBase extends DriverBase {
 
     protected LoginPage loginPage = new LoginPage();
     protected InicioPage inicioPage = new InicioPage();
+    protected PreferencesPage preferencesPage = new PreferencesPage();
 
     protected void logOut() {
         inicioPage.getAccountMenu().should(visible).hover();

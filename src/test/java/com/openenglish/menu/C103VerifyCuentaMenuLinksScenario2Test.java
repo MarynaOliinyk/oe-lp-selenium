@@ -20,7 +20,7 @@ public class C103VerifyCuentaMenuLinksScenario2Test extends TestBase {
         loginPage.getPassword().shouldBe(visible)
                 .shouldHave(attribute("type", "password"));
         loginPage.logIn(email, correctPassword);
-        inicioPage.getInicioLink().shouldHave(text(inicioLink));
+        inicioPage.getInicioLink().shouldHave(exactText(inicioLink));
         inicioPage.getUserName().shouldHave(text(userName));
         inicioPage.getAccountMenu().hover();
         inicioPage.getCuentaSuboptions().shouldBe(visible);

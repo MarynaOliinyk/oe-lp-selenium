@@ -4,6 +4,7 @@ import com.openenglish.core.TestBase;
 import com.openenglish.pages.InicioPage;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 
@@ -13,11 +14,11 @@ public class C98OpenEnglishLogoRedirectToInicioTest extends TestBase {
     public void openEnglishLogoLinkTest() {
         positiveLogIn();
         InicioPage inicioPage = new InicioPage();
-        inicioPage.getInicioLink().shouldHave(text(inicioLink));
+        inicioPage.getInicioLink().shouldHave(exactText(inicioLink));
         inicioPage.getUserName().shouldHave(text(userName));
         inicioPage.getProgresoLink().click();
         inicioPage.getOeLogo().shouldBe(visible).click();
-        inicioPage.getInicioLink().shouldHave(text(inicioLink));
+        inicioPage.getInicioLink().shouldHave(exactText(inicioLink));
         inicioPage.getUserName().shouldHave(text(userName));
     }
 
