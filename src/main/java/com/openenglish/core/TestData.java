@@ -56,6 +56,7 @@ public class TestData {
 
     public static class Inicio {
         public static final String inicioLink = getProperty("inicio.link.text");
+        public static final String mensajesButtonText = getProperty("inicio.mensajes.link.text");
     }
 
     public static class LiveClasses {
@@ -88,5 +89,9 @@ public class TestData {
 
     public static class Meeting {
         public static final String meetingTestText = getProperty("meeting.header.text");
+    }
+
+    public static class Notifications {
+        public static final String notificationsUrlEndWithText = getProperty("notifications.page.url.endwith");
     }
 }

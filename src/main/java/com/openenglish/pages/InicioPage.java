@@ -9,12 +9,14 @@ import static com.codeborne.selenide.Selenide.$;
 @Getter
 public class InicioPage {
 
-    private SelenideElement userName = $(By.xpath(".//*[@id='student-info']//div[@class='display-name']")),
+    public SelenideElement userName = $(By.xpath(".//*[@id='student-info']//div[@class='display-name']")),
             accountMenu = $(By.id("account-menu-nav")),
+            mensajesCuentaSuboptionButton = $(By.id("messages")),
             inicioLink = $(By.id("nav-home")),
             videoClickPlay = $(By.xpath(".//*[@id='video-popup']/div[2]/div[2]")),
             videoClickClose = $(By.xpath(".//*[@class='ui-dialog-titlebar-close ui-corner-all']")),
             cursoButton = $(By.id("nav-learn")),
+            cuentaSuboptions = $(By.xpath(".//*[@id='account-menu']/div[@class='drop-slide-wrapper']/ul")),
             ayudaDropDown = $(By.xpath(".//*[@id='nav-help']/strong")),
             contactenos = $(By.id("nav-talknow")),
             videosTutoriales = $(By.id("nav-howto")),
