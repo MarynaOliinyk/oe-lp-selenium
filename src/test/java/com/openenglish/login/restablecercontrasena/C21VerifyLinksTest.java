@@ -2,7 +2,7 @@ package com.openenglish.login.restablecercontrasena;
 
 import com.openenglish.core.DriverBase;
 import com.openenglish.pages.AbstractPage;
-import com.openenglish.pages.FAQPage;
+import com.openenglish.pages.FAQsPage;
 import com.openenglish.pages.RecoveryPage;
 import com.openenglish.pages.RegisterPage;
 import org.testng.annotations.BeforeMethod;
@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
-import static com.openenglish.core.TestData.FAQ.faqText;
+import static com.openenglish.core.TestData.FAQS.faqsText;
 import static com.openenglish.core.TestData.General.lpUrl;
 import static com.openenglish.core.TestData.Inicio.inicioLink;
 import static com.openenglish.core.TestData.Login.correctPassword;
@@ -56,8 +56,8 @@ public class C21VerifyLinksTest extends DriverBase {
     public void fAQpageIsOpenedTestS2() {
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getFaq().shouldBe(visible).shouldHave(text(recoveryPasswordFaq)).click();
-        FAQPage faqPage = new FAQPage();
-        faqPage.getFaqText().shouldBe(visible).should(text(faqText));
+        FAQsPage FAQsPage = new FAQsPage();
+        FAQsPage.getFaqsText().shouldBe(visible).should(text(faqsText));
     }
 
     @Test

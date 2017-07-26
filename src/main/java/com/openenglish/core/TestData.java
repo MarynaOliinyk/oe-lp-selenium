@@ -47,7 +47,11 @@ public class TestData {
     }
 
     public static class FAQ {
-        public static final String faqText = getProperty("faq.text");
+        public static final String faqHeaderText = getProperty("faq.header.text");
+    }
+
+    public static class FAQS {
+        public static final String faqsText = getProperty("faqs.text");
     }
 
     public static class Inicio {
@@ -68,5 +72,21 @@ public class TestData {
 
     public static class Lessons {
         public static final String lessonsText = getProperty("lessons.text");
+    }
+
+    public static class TalkNow {
+        public static final String talkNowHeaderText = getProperty("talknow.header.text");
+    }
+
+    public static class TestYourSystem {
+        public static final String testYourSystemHeaderText = getProperty("testyoursystem.header.text");
+    }
+
+    public static class ParticipantsGuidePage {
+        public static final String containsPdfFile = getProperty("contains.pdf.file");
+    }
+
+    public static class Meeting {
+        public static final String meetingTestText = getProperty("meeting.header.text");
     }
 }

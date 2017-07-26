@@ -1,7 +1,6 @@
 package com.openenglish.registro.fieldsvalidation;
 
 import com.openenglish.core.DriverBase;
-import com.openenglish.pages.AbstractPage;
 import com.openenglish.pages.RegisterPage;
 import org.testng.annotations.Test;
 
