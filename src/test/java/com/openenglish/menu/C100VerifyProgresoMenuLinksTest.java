@@ -1,6 +1,7 @@
 package com.openenglish.menu;
 
 import com.openenglish.core.TestBase;
+import com.openenglish.pages.HistoryPage;
 import com.openenglish.pages.ProfilePage;
 import com.openenglish.pages.TeacherFeedbackPage;
 import org.testng.annotations.BeforeMethod;
@@ -33,9 +34,17 @@ public class C100VerifyProgresoMenuLinksTest extends TestBase {
     public void teacherFeedbackPageIsOpenedTestS2() {
         inicioPage.getSugerenciasDelProfesorLink().click();
         TeacherFeedbackPage teacherFeedbackPage = new TeacherFeedbackPage();
-        teacherFeedbackPage.getSugerenciasParaUserHeaderText().shouldBe(visible).shouldHave(text(teacherFeedbackHeaderText + " " + userName));
+        teacherFeedbackPage.getHeaderText().shouldBe(visible).shouldHave(text(teacherFeedbackHeaderText + " " + userName));
 
     }
 
+    @Test
+    public void historyPageIsOpenedTestS3() {
+        inicioPage.getRegistroLink().click();
+        HistoryPage historyPage = new HistoryPage();
+        historyPage.getHeaderText().shouldBe(visible).shouldHave(text(historyHeaderText + " " + userName));
 
+    }
 }
+
+

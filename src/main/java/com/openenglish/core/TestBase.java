@@ -53,7 +53,8 @@ public class TestBase extends DriverBase {
             introdussionHeaderText = getProperty("introduction.header.text"),
             lessonsText = getProperty("lessons.text"),
             profileHeaderText = getProperty("profile.header.text"),
-            teacherFeedbackHeaderText=getProperty("teacherfeedback.sugerenciasPara.text");
+            teacherFeedbackHeaderText = getProperty("teacherfeedback.header.text"),
+            historyHeaderText = getProperty("history.header.text");
 
 
     protected LoginPage loginPage = new LoginPage();
