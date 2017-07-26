@@ -2,6 +2,7 @@ package com.openenglish.menu;
 
 import com.openenglish.core.TestBase;
 import com.openenglish.pages.HistoryPage;
+import com.openenglish.pages.MyNotebookPage;
 import com.openenglish.pages.ProfilePage;
 import com.openenglish.pages.TeacherFeedbackPage;
 import org.testng.annotations.BeforeMethod;
@@ -43,6 +44,14 @@ public class C100VerifyProgresoMenuLinksTest extends TestBase {
         inicioPage.getRegistroLink().click();
         HistoryPage historyPage = new HistoryPage();
         historyPage.getHeaderText().shouldBe(visible).shouldHave(text(historyHeaderText + " " + userName));
+
+    }
+
+    @Test
+    public void myNotebookPageIsOpenTestS4() {
+        inicioPage.getCuadernoDeNotasLink().click();
+        MyNotebookPage myNotebookPage = new MyNotebookPage();
+        myNotebookPage.getHeaderText().shouldBe(visible).shouldHave(text(myNotebookHeaderText + " " + userName));
 
     }
 }

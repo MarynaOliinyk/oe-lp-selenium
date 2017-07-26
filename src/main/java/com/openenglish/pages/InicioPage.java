@@ -25,7 +25,8 @@ public class InicioPage {
                             introdussionLink =  $(By.id("nav-levelzero")),
                             miProgressoLink = $(By.id("nav-profile")),
                             sugerenciasDelProfesorLink = $(By.id("nav-feedback")),
-                            registroLink = $(By.id("nav-history"));
+                            registroLink = $(By.id("nav-history")),
+                            cuadernoDeNotasLink = $(By.id("nav-notebook"));
 
 
 
