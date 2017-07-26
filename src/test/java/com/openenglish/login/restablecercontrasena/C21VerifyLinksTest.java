@@ -21,7 +21,7 @@ public class C21VerifyLinksTest extends TestBase {
                  .shouldHave(attribute("type", "password"));
         loginPage.logIn(email, correctPassword);
         inicioPage.getInicioLink().shouldHave(text(inicioLink));
-        inicioPage.getUserName().shouldHave(text(userName));
+        inicioPage.getUserName().shouldHave(text(userNickName));
         logOut();
         loginPage.getPasswordReset().click();
         RecoveryPage recoveryPage = new RecoveryPage();

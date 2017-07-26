@@ -32,6 +32,7 @@ public class TestBase extends DriverBase {
             inicioLink = getProperty("home.link.text"),
             email = getProperty("email"),
             password = getProperty("password"),
+            userNickName = getProperty("user.nick.name"),
             userName = getProperty("user.name"),
             registeredEmail = getProperty("email"),
             unregisteredEmail = getProperty("unregistered.email"),
@@ -51,7 +52,8 @@ public class TestBase extends DriverBase {
             immersionHeaderText = getProperty("immersion.header.text"),
             introdussionHeaderText = getProperty("introduction.header.text"),
             lessonsText = getProperty("lessons.text"),
-            profileHeaderText = getProperty("profile.header.text");
+            profileHeaderText = getProperty("profile.header.text"),
+            teacherFeedbackHeaderText=getProperty("teacherfeedback.sugerenciasPara.text");
 
 
     protected LoginPage loginPage = new LoginPage();

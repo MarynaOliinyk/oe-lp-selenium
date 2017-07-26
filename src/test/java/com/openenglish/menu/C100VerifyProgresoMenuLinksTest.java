@@ -2,6 +2,7 @@ package com.openenglish.menu;
 
 import com.openenglish.core.TestBase;
 import com.openenglish.pages.ProfilePage;
+import com.openenglish.pages.TeacherFeedbackPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -17,7 +18,7 @@ public class C100VerifyProgresoMenuLinksTest extends TestBase {
                 .shouldHave(attribute("type", "password"));
         loginPage.logIn(email, correctPassword);
         inicioPage.getInicioLink().shouldHave(text(inicioLink));
-        inicioPage.getUserName().shouldHave(text(userName));
+        inicioPage.getUserName().shouldHave(text(userNickName));
         inicioPage.getProgresoLink().click();
     }
 
@@ -27,4 +28,13 @@ public class C100VerifyProgresoMenuLinksTest extends TestBase {
         ProfilePage profilePage = new ProfilePage();
         profilePage.getHeaderText().should(visible).shouldHave(text(profileHeaderText));
     }
+
+    @Test
+    public  void  teacherFeedbackPageTestS2() {
+        inicioPage.getSugerenciasDelProfesorLink().click();
+        TeacherFeedbackPage teacherFeedbackPage = new TeacherFeedbackPage();
+        teacherFeedbackPage.getSugerenciasParaUserHeaderText().shouldBe(visible).shouldHave(text(teacherFeedbackHeaderText+" "+userName));
+
+    }
+
 }

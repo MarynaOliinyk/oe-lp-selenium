@@ -5,7 +5,6 @@ import com.openenglish.pages.InicioPage;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
 
 public class C99InicioMenuOptionRedirectsToInicioTest extends TestBase {
 
@@ -14,10 +13,10 @@ public class C99InicioMenuOptionRedirectsToInicioTest extends TestBase {
         positiveLogIn();
         InicioPage inicioPage = new InicioPage();
         inicioPage.getInicioLink().shouldHave(text(inicioLink));
-        inicioPage.getUserName().shouldHave(text(userName));
+        inicioPage.getUserName().shouldHave(text(userNickName));
         inicioPage.getProgresoLink().click();
         inicioPage.getInicioLink().shouldHave(text(inicioLink)).click();
         inicioPage.getInicioLink().shouldHave(text(inicioLink));
-        inicioPage.getUserName().shouldHave(text(userName));
+        inicioPage.getUserName().shouldHave(text(userNickName));
     }
 }

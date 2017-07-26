@@ -14,11 +14,11 @@ public class C98OpenEnglishLogoRedirectToInicioTest extends TestBase {
         positiveLogIn();
         InicioPage inicioPage = new InicioPage();
         inicioPage.getInicioLink().shouldHave(text(inicioLink));
-        inicioPage.getUserName().shouldHave(text(userName));
+        inicioPage.getUserName().shouldHave(text(userNickName));
         inicioPage.getProgresoLink().click();
         inicioPage.getOeLogo().shouldBe(visible).click();
         inicioPage.getInicioLink().shouldHave(text(inicioLink));
-        inicioPage.getUserName().shouldHave(text(userName));
+        inicioPage.getUserName().shouldHave(text(userNickName));
     }
 
 

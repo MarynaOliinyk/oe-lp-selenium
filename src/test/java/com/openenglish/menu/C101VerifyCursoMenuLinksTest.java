@@ -22,7 +22,7 @@ public class C101VerifyCursoMenuLinksTest extends TestBase {
                 .shouldHave(attribute("type", "password"));
         loginPage.logIn(email, correctPassword);
         inicioPage.getInicioLink().shouldHave(text(inicioLink));
-        inicioPage.getUserName().shouldHave(text(userName));
+        inicioPage.getUserName().shouldHave(text(userNickName));
         inicioPage.getCursoButton().hover();
     }
 

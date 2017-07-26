@@ -18,7 +18,7 @@ public class C2LoginWithCorrectCredentialsTest extends TestBase {
         loginPage.logIn(email, correctPassword);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getInicioLink().shouldHave(text(inicioLink));
-        inicioPage.getUserName().shouldHave(text(userName));
+        inicioPage.getUserName().shouldHave(text(userNickName));
         inicioPage.getAccountMenu().hover();
         inicioPage.getLogOutLink().click();
     }

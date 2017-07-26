@@ -22,7 +22,7 @@ public class С8LoginWithIncorrectCredentialsTest extends TestBase {
     public void loginWithIncorrectPasswordTestS2() {
         positiveLogIn();
         logOut();
-        loginPage.logIn(registeredEmail, userName);
+        loginPage.logIn(registeredEmail, userNickName);
         loginPage.getTooltip().should(exist);
         loginPage.getTooltipText().shouldHave(text(loginTooltipPassword));
     }
@@ -31,11 +31,11 @@ public class С8LoginWithIncorrectCredentialsTest extends TestBase {
     public void loginWithIncorrectSecurityCodeTestS3() throws IOException {
         positiveLogIn();
         logOut();
-        loginPage.logIn(registeredEmail, userName);
-        loginPage.logIn(registeredEmail, userName);
+        loginPage.logIn(registeredEmail, userNickName);
+        loginPage.logIn(registeredEmail, userNickName);
         loginPage.getEmail().val(registeredEmail);
         loginPage.getPassword().val(correctPassword);
-        loginPage.getSecurityField().sendKeys(userName);
+        loginPage.getSecurityField().sendKeys(userNickName);
         loginPage.getLoginButton().click();
         loginPage.getTooltip().should(exist);
         loginPage.getTooltipText().shouldHave(text(loginTooltipSecurityCode));

@@ -56,13 +56,13 @@ public class C5VerifyLinksTest extends TestBase {
     public void chatPageIsOpenTestS5() {
         positiveLogIn();
         logOut();
-        loginPage.logIn(registeredEmail, userName);
-        loginPage.getPassword().should(visible).val(userName);
+        loginPage.logIn(registeredEmail, userNickName);
+        loginPage.getPassword().should(visible).val(userNickName);
         loginPage.getLoginButton().should(visible).click();
-        loginPage.getPassword().should(exist).sendKeys(userName);
+        loginPage.getPassword().should(exist).sendKeys(userNickName);
         loginPage.getLoginButton().should(visible).click();
-        loginPage.getSecurityField().sendKeys(userName);
-        loginPage.getPassword().should(visible).val(userName);
+        loginPage.getSecurityField().sendKeys(userNickName);
+        loginPage.getPassword().should(visible).val(userNickName);
         loginPage.getLoginButton().click();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getChat().shouldBe(visible).click();

@@ -23,7 +23,9 @@ public class InicioPage {
                             practicaLink = $(By.id("nav-immersion")),
                             progresoLink = $(By.id("nav-progress")),
                             introdussionLink =  $(By.id("nav-levelzero")),
-                            miProgressoLink = $(By.id("nav-profile"));
+                            miProgressoLink = $(By.id("nav-profile")),
+                            sugerenciasDelProfesorLink = $(By.id("nav-feedback"));
+
 
 
 }
