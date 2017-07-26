@@ -17,5 +17,14 @@ public class InicioPage {
             progresoLink = $(By.id("nav-progress")),
             cuentaSuboptions = $(By.xpath(".//*[@id='account-menu']/div[@class='drop-slide-wrapper']/ul")),
             logOutLink = $(By.xpath(".//*[@id='account-menu']//a[@href='/j_spring_security_logout']")),
-            oeLogo = $(By.xpath(".//*[@id='header']//a[@href='/index.html']"));
+            videoClickPlay = $(By.xpath(".//*[@id='video-popup']/div[2]/div[2]")),
+            videoClickClose = $(By.xpath(".//*[@class='ui-dialog-titlebar-close ui-corner-all']")),
+            cursoButton = $(By.id("nav-learn")),
+            clasesEnVivoButton = $(By.id("nav-liveclasses")),
+            unidadesYLeccionesButton = $(By.id("nav-lessons")),
+            oeLogo = $(By.xpath(".//*[@id='header']//a[@href='/index.html']")),
+            practicaLink = $(By.id("nav-immersion")),
+            progresoLink = $(By.id("nav-progress")),
+            introdussionLink = $(By.id("nav-levelzero"));
+  
 }
