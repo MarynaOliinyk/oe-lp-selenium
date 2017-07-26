@@ -9,48 +9,49 @@ import static com.openenglish.util.PropertiesCache.getProperty;
 
 public class TestBase extends DriverBase {
 
-    protected String emailWithoutATsymbol = getProperty("recovery.email.without@");
-    protected String emailWithoutDotCom = getProperty("recovery.email.without.com");
-    protected String notValidEmailText = getProperty("recovery.tooltip.not.valid.email");
-    protected String notValidEmailTextForRegistration = getProperty("field.email.acceptense.message");
-    protected String recoveryTooltipEmail = getProperty("recovery.tooltip.text");
-    protected String fieldShouldBeCompleted = getProperty("obligatory.field.message");
-    protected String inCorrectValue = getProperty("incorrect.field.value.message");
-    protected String lessThenEightyCharacters = getProperty("field.surname.lenth.acceptense.message");
-    protected String lessThenFortyCharacters = getProperty("field.name.lenth.acceptense.message");
-    protected String charQuantityNombre = getProperty("char.quantity.name");
-    protected String charQuantityAppelido = getProperty("char.quantity.surname");
-    protected String numberLength = getProperty("number.length");
-    protected String specialCharacters = getProperty("special.characters");
+    protected String emailWithoutATsymbol = getProperty("recovery.email.without@"),
+            emailWithoutDotCom = getProperty("recovery.email.without.com"),
+            notValidEmailText = getProperty("recovery.tooltip.not.valid.email"),
+            notValidEmailTextForRegistration = getProperty("field.email.acceptense.message"),
+            recoveryTooltipEmail = getProperty("recovery.tooltip.text"),
+            fieldShouldBeCompleted = getProperty("obligatory.field.message"),
+            inCorrectValue = getProperty("incorrect.field.value.message"),
+            lessThenEightyCharacters = getProperty("field.surname.lenth.acceptense.message"),
+            lessThenFortyCharacters = getProperty("field.name.lenth.acceptense.message"),
+            charQuantityNombre = getProperty("char.quantity.name"),
+            charQuantityAppelido = getProperty("char.quantity.surname"),
+            numberLength = getProperty("number.length"),
+            specialCharacters = getProperty("special.characters"),
 
-    protected String resetPasswordFormTitle = getProperty("reset.password.form.title");
-    protected String resetPasswordFaq = getProperty("reset.password.faq");
-    protected String resetPasswordSingUpText = getProperty("reset.password.sing.up");
-    protected String registrateText = getProperty("register.link.text");
+            resetPasswordFormTitle = getProperty("reset.password.form.title"),
+            resetPasswordFaq = getProperty("reset.password.faq"),
+            resetPasswordSingUpText = getProperty("reset.password.sing.up"),
+            registrateText = getProperty("register.link.text"),
 
-    protected String faqText = getProperty("faq.text");
-    protected String inicioLink = getProperty("home.link.text");
-    protected String email = getProperty("email");
-    protected String password = getProperty("password");
-    protected String userName = getProperty("user.name");
-    protected String registeredEmail = getProperty("email");
-    protected String unregisteredEmail = getProperty("unregistered.email");
-    protected String correctPassword = getProperty("password");
-    protected String invalidPassword = getProperty("invalid.password");
-    protected String securityPlaceHolderText = getProperty("security.placeholder");
+            faqsText = getProperty("faqs.text"),
+            inicioLink = getProperty("home.link.text"),
+            email = getProperty("email"),
+            password = getProperty("password"),
+            userName = getProperty("user.name"),
+            registeredEmail = getProperty("email"),
+            unregisteredEmail = getProperty("unregistered.email"),
+            correctPassword = getProperty("password"),
+            invalidPassword = getProperty("invalid.password"),
+            securityPlaceHolderText = getProperty("security.placeholder"),
 
-    protected String loginTooltipPassword = getProperty("login.tooltip.text.for.password");
-    protected String loginTooltipSecurityCode = getProperty("login.tooltip.invalid.security.text");
-    protected String invalidSecurityCode = getProperty("login.invalid.security.code");
-    protected String popUpInvalidSecurityCode = getProperty("login.popup.invalid.security.code");
+            loginTooltipPassword = getProperty("login.tooltip.text.for.password"),
+            loginTooltipSecurityCode = getProperty("login.tooltip.invalid.security.text"),
+            invalidSecurityCode = getProperty("login.invalid.security.code"),
+            popUpInvalidSecurityCode = getProperty("login.popup.invalid.security.code"),
 
-    protected String oeUrl = getProperty("base.oe.url");
-    protected String comienzaAhora = getProperty("comienza.ahora.button.text");
+            oeUrl = getProperty("base.oe.url"),
+            comienzaAhora = getProperty("comienza.ahora.button.text"),
 
-    protected String liveClassesHeaderText = getProperty("liveclasses.header.text");
-    protected String immersionHeaderText = getProperty("immersion.header.text");
-    protected String introdussionHeaderText = getProperty("introduction.header.text");
-    protected String lessonsText = getProperty("lessons.text");
+            liveClassesHeaderText = getProperty("liveclasses.header.text"),
+            immersionHeaderText = getProperty("immersion.header.text"),
+            introdussionHeaderText = getProperty("introduction.header.text"),
+            lessonsText = getProperty("lessons.text"),
+            profileHeaderText = getProperty("profile.header.text");
 
 
     protected LoginPage loginPage = new LoginPage();

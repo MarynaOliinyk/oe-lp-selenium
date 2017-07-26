@@ -22,7 +22,8 @@ public class InicioPage {
                             oeLogo = $(By.xpath(".//*[@id='header']//a[@href='/index.html']")),
                             practicaLink = $(By.id("nav-immersion")),
                             progresoLink = $(By.id("nav-progress")),
-                            introdussionLink =  $(By.id("nav-levelzero"));
+                            introdussionLink =  $(By.id("nav-levelzero")),
+                            miProgressoLink = $(By.id("nav-profile"));
 
 
 }
