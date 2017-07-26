@@ -32,7 +32,7 @@ public class C6VerifyInicioContentTest extends TestBase {
                 .shouldHave(exactText("Plan de estudio"));
         inicioPage.getUserInfoElement().shouldBe(visible).shouldNotBe(empty)
                 .shouldHave(attribute("class", "student-level"));
-        inicioPage.getUserPhoto().shouldBe(visible).shouldNotBe(empty)
+        inicioPage.getUserPhoto().shouldBe(visible)
                 .shouldHave(attribute("class", "photo-frame"));
         inicioPage.getVideoBlock().shouldBe(visible).shouldNotBe(empty);
         inicioPage.getCarouselVideoBlock().shouldBe(visible).shouldNotBe(empty);
