@@ -12,9 +12,10 @@ public class InicioPage {
     @Getter
     private SelenideElement userName = $(By.xpath(".//*[@id='student-info']//div[@class='display-name']")),
             accountMenu = $(By.id("account-menu-nav")),
+            mensajesCuentaSuboptionButton = $(By.id("messages")),
             inicioLink = $(By.id("nav-home")),
-            progresoLink = $(By.id("nav-progress")),
             oeLogo = $(By.xpath(".//*[@id='header']//a[@href='/index.html']")),
+            cuentaSuboptions = $(By.xpath(".//*[@id='account-menu']/div[@class='drop-slide-wrapper']/ul")),
             logOutLink = $(By.xpath(".//*[@id='account-menu']//a[@href='/j_spring_security_logout']")),
             ayudaDropDown = $(By.xpath(".//*[@id='nav-help']/strong")),
             contactenos = $(By.id("nav-talknow")),
@@ -29,5 +30,7 @@ public class InicioPage {
             clasesEnVivoButton = $(By.id("nav-liveclasses")),
             unidadesYLeccionesButton = $(By.id("nav-lessons")),
             practicaLink = $(By.id("nav-immersion")),
-            introdussionLink =  $(By.id("nav-levelzero"));
+            progresoLink = $(By.id("nav-progress")),
+            introdussionLink = $(By.id("nav-levelzero"));
+
 }
