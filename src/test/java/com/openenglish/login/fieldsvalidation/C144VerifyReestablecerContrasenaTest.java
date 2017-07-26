@@ -21,7 +21,7 @@ public class C144VerifyReestablecerContrasenaTest extends DriverBase {
     @Test
     public void verifyReestablecerContrasenaTest() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
         page.loginPage.getPasswordReset().should(exist).click();
         RecoveryPage recoveryPage = new RecoveryPage();

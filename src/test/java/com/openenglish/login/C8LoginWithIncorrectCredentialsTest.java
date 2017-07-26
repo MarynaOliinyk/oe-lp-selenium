@@ -23,7 +23,7 @@ public class C8LoginWithIncorrectCredentialsTest extends DriverBase {
     @Test
     public void loginWithUnregisteredEmailTestS1() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
         page.loginPage.logIn(unregisteredEmail, correctPassword);
         page.loginPage.getTooltip().should(exist);
@@ -33,7 +33,7 @@ public class C8LoginWithIncorrectCredentialsTest extends DriverBase {
     @Test
     public void loginWithIncorrectPasswordTestS2() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
         page.loginPage.logIn(registeredEmail, userName);
         page.loginPage.getTooltip().should(exist);
@@ -43,7 +43,7 @@ public class C8LoginWithIncorrectCredentialsTest extends DriverBase {
     @Test
     public void loginWithIncorrectSecurityCodeTestS3() throws IOException {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
         page.loginPage.logIn(registeredEmail, userName);
         page.loginPage.logIn(registeredEmail, userName);

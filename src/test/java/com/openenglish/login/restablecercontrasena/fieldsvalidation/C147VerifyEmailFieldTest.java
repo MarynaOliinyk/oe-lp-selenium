@@ -23,7 +23,7 @@ public class C147VerifyEmailFieldTest extends DriverBase {
     @Test
     public void enterUnregisteredEmailTest() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
         page.loginPage.getPasswordReset().shouldBe(visible).click();
         RecoveryPage recoveryPage = new RecoveryPage();

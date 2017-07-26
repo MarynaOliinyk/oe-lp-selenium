@@ -16,7 +16,7 @@ public class AbstractPage {
         executeJavaScript(String.format(jsClickQuery, inicioPage.getLogOutLink()));
     }
 
-    public void positiveLogIn(String email, String correctPassword) {
+    public void logIn(String email, String correctPassword) {
         loginPage.cookieBannerVisibility();
         loginPage.logIn(email, correctPassword);
     }

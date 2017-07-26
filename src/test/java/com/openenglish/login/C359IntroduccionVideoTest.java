@@ -15,7 +15,7 @@ public class C359IntroduccionVideoTest extends DriverBase {
     @Test
     public void introduccionVideoTest() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
     }
 }

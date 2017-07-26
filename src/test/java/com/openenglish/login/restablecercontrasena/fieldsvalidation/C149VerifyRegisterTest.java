@@ -18,7 +18,7 @@ public class C149VerifyRegisterTest extends DriverBase {
     @Test
     public void redirectedToRegisterPageTest() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
         page.loginPage.getSignUp().click();
         RegisterPage regForm = new RegisterPage();

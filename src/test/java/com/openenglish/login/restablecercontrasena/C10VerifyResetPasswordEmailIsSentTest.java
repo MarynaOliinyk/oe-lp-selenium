@@ -15,7 +15,7 @@ public class C10VerifyResetPasswordEmailIsSentTest extends DriverBase {
     @Test
     public void verifyResetPasswordEmailIsSentTest() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
     }
 }

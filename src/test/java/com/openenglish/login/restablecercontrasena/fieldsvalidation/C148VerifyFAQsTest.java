@@ -22,7 +22,7 @@ public class C148VerifyFAQsTest extends DriverBase {
     @Test
     public void redirectedToFAQPageTest() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
         page.loginPage.getPasswordReset().should(exist).click();
         RecoveryPage recoveryPage = new RecoveryPage();

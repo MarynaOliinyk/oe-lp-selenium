@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.back;
+import static com.openenglish.core.TestData.Recovery.recoveryTooltipEmail;
 
 public class LoginPage {
     @Getter
@@ -43,5 +45,12 @@ public class LoginPage {
     public void logInAndCheckText(String validEmail, String incorrectPassword, String tooltipTexts) {
         logIn(validEmail, incorrectPassword);
         getTooltipText().shouldBe(visible).shouldHave(text(tooltipTexts));
+    }
+
+    public void verifyEmail(String email, String password) {
+        getEmail().clear();
+        logIn(email, password);
+        getTooltipText().shouldBe(visible).shouldHave(text(recoveryTooltipEmail));
+        back();
     }
 }

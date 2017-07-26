@@ -24,7 +24,7 @@ public class C145VerifyIngreseTextoDeSeguridadTest extends DriverBase {
     @Test
     public void submitInvalidPasswordTest() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
         page.loginPage.logInAndCheckText(registeredEmail, invalidPassword, loginTooltipPassword);
         page.loginPage.logInAndCheckText(registeredEmail, invalidPassword, loginTooltipPassword);

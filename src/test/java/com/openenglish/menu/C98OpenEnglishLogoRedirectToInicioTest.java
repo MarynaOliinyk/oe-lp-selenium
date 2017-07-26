@@ -21,7 +21,7 @@ public class C98OpenEnglishLogoRedirectToInicioTest extends DriverBase {
     @Test
     public void openEnglishLogoLinkTest() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getInicioLink().shouldHave(text(inicioLink));
         inicioPage.getUserName().shouldHave(text(userName));

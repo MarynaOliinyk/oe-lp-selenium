@@ -22,7 +22,7 @@ public class C20ResetPasswordForIncorrectEmailTest extends DriverBase {
     @Test
     public void resetPasswordForIncorrectEmailTest() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
         page.loginPage.getPasswordReset().click();
         RecoveryPage recoveryPage = new RecoveryPage();

@@ -18,7 +18,7 @@ public class C9FailToLoginSeveralTimestTest extends DriverBase {
     @Test
     public void logInRequiresSecurityTest() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
         page.loginPage.logIn(registeredEmail, userName);
         page.loginPage.logIn(registeredEmail, userName);

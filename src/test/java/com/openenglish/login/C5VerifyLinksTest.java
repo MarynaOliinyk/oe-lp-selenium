@@ -32,7 +32,7 @@ public class C5VerifyLinksTest extends DriverBase {
     @Test
     public void verifyResetPasswordPageIsOpenTestS2() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
         page.loginPage.getPassword()
                       .shouldHave(attribute("type", "password"));
@@ -56,7 +56,7 @@ public class C5VerifyLinksTest extends DriverBase {
     @Test
     public void recoveryPasswordTestS4() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
         page.loginPage.getPasswordReset().should(exist).click();
         RecoveryPage recoveryPage = new RecoveryPage();
@@ -68,7 +68,7 @@ public class C5VerifyLinksTest extends DriverBase {
     @Test
     public void chatPageIsOpenTestS5() {
         open(lpUrl);
-        page.positiveLogIn(registeredEmail, correctPassword);
+        page.logIn(registeredEmail, correctPassword);
         page.logOut();
         page.loginPage.logIn(registeredEmail, userName);
         page.loginPage.getPassword().should(visible).val(userName);
