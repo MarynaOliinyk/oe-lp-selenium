@@ -72,6 +72,10 @@ public class TestBase extends DriverBase {
         return RandomStringUtils.randomNumeric(length);
     }
 
+    public static int randomNumber(int max) {
+        return Integer.parseInt(RandomStringUtils.randomNumeric(0, max));
+    }
+
     protected String randCharacters(int charactersQuantity) {
         return RandomStringUtils.randomAlphabetic(charactersQuantity);
     }
