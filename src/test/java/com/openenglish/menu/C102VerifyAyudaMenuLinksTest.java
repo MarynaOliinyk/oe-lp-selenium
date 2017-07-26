@@ -1,41 +1,51 @@
 package com.openenglish.menu;
 
-
-import com.codeborne.selenide.WebDriverRunner;
-import com.openenglish.core.TestBase;
+import com.openenglish.core.DriverBase;
+import com.openenglish.pages.AbstractPage;
 import com.openenglish.pages.FAQPage;
-import com.openenglish.pages.MeetingTestPage;
 import com.openenglish.pages.HowToVideosPage;
+import com.openenglish.pages.MeetingPage;
 import com.openenglish.pages.ParticipantsGuidePage;
 import com.openenglish.pages.TalkNowPage;
 import com.openenglish.pages.TestYourSystemPage;
-import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
-import static com.codeborne.selenide.Selenide.title;
+import static com.openenglish.core.TestData.FAQ.faqHeaderText;
+import static com.openenglish.core.TestData.General.lpUrl;
+import static com.openenglish.core.TestData.Inicio.inicioLink;
+import static com.openenglish.core.TestData.Login.correctPassword;
+import static com.openenglish.core.TestData.Login.registeredEmail;
+import static com.openenglish.core.TestData.Login.userName;
+import static com.openenglish.core.TestData.Meeting.meetingTestText;
+import static com.openenglish.core.TestData.ParticipantsGuidePage.containsPdfFile;
+import static com.openenglish.core.TestData.TalkNow.talkNowHeaderText;
+import static com.openenglish.core.TestData.TestYourSystem.testYourSystemHeaderText;
 import static org.testng.Assert.assertTrue;
 
-public class C102VerifyAyudaMenuLinksTest extends TestBase {
+public class C102VerifyAyudaMenuLinksTest extends DriverBase {
 
-    @BeforeMethod
-    public void loginWithCorrectCredentialsAndPageInicioIsOpen() {
-        loginPage.cookieBannerVisibility();
-        loginPage.getPassword().shouldBe(visible)
-                .shouldHave(attribute("type", "password"));
-        loginPage.logIn(email, correctPassword);
-        inicioPage.getInicioLink().shouldHave(text(inicioLink));
-        inicioPage.getUserName().shouldHave(text(userName));
-        inicioPage.getAyudaDropDown().hover();
+    private AbstractPage page = new AbstractPage();
+
+    private void loginWithCorrectCredentialsAndPageInicioIsOpen() {
+        open(lpUrl);
+        page.loginPage.cookieBannerVisibility();
+        page.loginPage.getPassword().shouldBe(visible)
+                 .shouldHave(attribute("type", "password"));
+        page.loginPage.logIn(registeredEmail, correctPassword);
+        page.inicioPage.getInicioLink().shouldHave(text(inicioLink));
+        page.inicioPage.getUserName().shouldHave(text(userName));
+        page.inicioPage.getAyudaDropDown().hover();
     }
 
     @Test
     public void verifyContactenosTestS1() {
-        inicioPage.getContactenos().click();
+        loginWithCorrectCredentialsAndPageInicioIsOpen();
+        page.inicioPage.getContactenos().click();
         TalkNowPage talkNowPage = new TalkNowPage();
         talkNowPage.getHeaderText().shouldHave(text(talkNowHeaderText));
 
@@ -43,7 +53,8 @@ public class C102VerifyAyudaMenuLinksTest extends TestBase {
 
     @Test
     public void verifyVideosTutorialesTestS2() {
-        inicioPage.getVideosTutoriales().click();
+        loginWithCorrectCredentialsAndPageInicioIsOpen();
+        page.inicioPage.getVideosTutoriales().click();
         HowToVideosPage howToVideosPage = new HowToVideosPage();
         howToVideosPage.getImage().shouldBe(visible);
 
@@ -51,7 +62,8 @@ public class C102VerifyAyudaMenuLinksTest extends TestBase {
 
     @Test
     public void verifyVerificaTuSistemaTestS3() {
-        inicioPage.getVerificaTuSistema().click();
+        loginWithCorrectCredentialsAndPageInicioIsOpen();
+        page.inicioPage.getVerificaTuSistema().click();
         TestYourSystemPage testYourSystemPage = new TestYourSystemPage();
         testYourSystemPage.getHeaderText().shouldHave(text(testYourSystemHeaderText));
 
@@ -59,24 +71,27 @@ public class C102VerifyAyudaMenuLinksTest extends TestBase {
 
     @Test
     public void verifyAdobeConnectGuiaRapidaTestS4() {
-        inicioPage.getAdobeConnectGuiaRapida().click();
+        loginWithCorrectCredentialsAndPageInicioIsOpen();
+        page.inicioPage.getAdobeConnectGuiaRapida().click();
         switchTo().window(1);
         ParticipantsGuidePage participantsGuidePage = new ParticipantsGuidePage();
-      assertTrue(participantsGuidePage.getPageTitle().getAttribute("src").contains(containsPdfFile));
+        assertTrue(participantsGuidePage.getPageTitle().getAttribute("src").contains(containsPdfFile));
 
     }
 
     @Test
     public void verifyVerifiqueSuConfiguracionTestS5() {
-        inicioPage.getVerifiqueSuConfiguracion().click();
-        MeetingTestPage meetingTestPage = new MeetingTestPage();
+        loginWithCorrectCredentialsAndPageInicioIsOpen();
+        page.inicioPage.getVerifiqueSuConfiguracion().click();
+        MeetingPage meetingPage = new MeetingPage();
         switchTo().window(1);
-        meetingTestPage.getText().shouldHave(text(meetingTestText));
+        meetingPage.getText().shouldHave(text(meetingTestText));
     }
 
     @Test
     public void verifyPreguntasFrecuentesTestS6() {
-        inicioPage.getPreguntasFrecuentes().click();
+        loginWithCorrectCredentialsAndPageInicioIsOpen();
+        page.inicioPage.getPreguntasFrecuentes().click();
         FAQPage faqPage = new FAQPage();
         faqPage.getHeaderText().shouldHave(text(faqHeaderText));
     }

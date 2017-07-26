@@ -1,14 +1,21 @@
 package com.openenglish.registro.fieldsvalidation;
 
-import com.openenglish.core.TestBase;
+import com.openenglish.core.DriverBase;
 import com.openenglish.pages.RegisterPage;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
+import static com.openenglish.core.TestData.General.oeUrl;
+import static com.openenglish.core.TestData.Recovery.emailWithoutATsymbol;
+import static com.openenglish.core.TestData.Recovery.emailWithoutDotCom;
+import static com.openenglish.core.TestData.Register.comienzaAhora;
+import static com.openenglish.core.TestData.Register.fieldShouldBeCompleted;
+import static com.openenglish.core.TestData.Register.notValidEmailTextForRegistration;
 
-public class C133VerifyCorreoElectronicoFieldTestAtTheStandardFormTest extends TestBase {
+public class C133VerifyCorreoElectronicoFieldTestAtTheStandardFormTest extends DriverBase {
+
 
     @Test
     public void correoElectronicoFieldNegativeFlowTest() {
