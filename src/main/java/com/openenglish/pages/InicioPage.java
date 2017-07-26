@@ -22,5 +22,12 @@ public class InicioPage {
             verificaTuSistema = $(By.id("testYourSystem")),
             adobeConnectGuiaRapida = $(By.id("adobeQuickGuide")),
             verifiqueSuConfiguracion = $(By.id("testSetupLink")),
-            preguntasFrecuentes = $(By.xpath(".//*[@id='header']//a[@href='/support/faq.html']"));
+            preguntasFrecuentes = $(By.xpath(".//*[@id='header']//a[@href='/support/faq.html']")),
+            videoClickPlay = $(By.xpath(".//*[@id='video-popup']/div[2]/div[2]")),
+            videoClickClose = $(By.xpath(".//*[@class='ui-dialog-titlebar-close ui-corner-all']")),
+            cursoButton = $(By.id("nav-learn")),
+            clasesEnVivoButton = $(By.id("nav-liveclasses")),
+            unidadesYLeccionesButton = $(By.id("nav-lessons")),
+            practicaLink = $(By.id("nav-immersion")),
+            introdussionLink =  $(By.id("nav-levelzero"));
 }

@@ -16,6 +16,7 @@ public class DriverBase {
         ChromeDriverManager.getInstance().setup();
         Configuration.browser = WebDriverRunner.CHROME;
         Configuration.baseUrl = getProperty("base.url");
+        Configuration.timeout = 60000L;
         open("/");
     }
 

@@ -19,8 +19,6 @@ public class RecoveryPage {
             tooltipText = $(By.xpath(".//div[@class='tooltipster-content']")),
             chatButton = $(By.id("no-chat"));
 
-
-
     public void enterEmailAndSubmit(String email) {
         this.email.shouldBe(visible).val(email);
         submit.click();
