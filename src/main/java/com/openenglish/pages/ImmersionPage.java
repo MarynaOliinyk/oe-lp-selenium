@@ -1,12 +1,12 @@
 package com.openenglish.pages;
-
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class FAQPage {
+public class ImmersionPage {
+
     @Getter
-    private SelenideElement headerText = $(By.xpath(".//*[@class='grid_8']/div/h1"));
+    private SelenideElement headerText = $(By.xpath(".//*[@id='content']/div/div[1]/div/h1"));
 }

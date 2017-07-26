@@ -1,7 +1,7 @@
 package com.openenglish.login.restablecercontrasena.fieldsvalidation;
 
 import com.openenglish.core.TestBase;
-import com.openenglish.pages.FAQPage;
+import com.openenglish.pages.FAQsPage;
 import com.openenglish.pages.RecoveryPage;
 import org.testng.annotations.Test;
 
@@ -18,8 +18,8 @@ public class С148VerifyFAQTest extends TestBase {
         loginPage.getPasswordReset().should(exist).click();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getFaq().shouldBe(visible).shouldHave(text(resetPasswordFaq)).click();
-        FAQPage faqPage = new FAQPage();
-        faqPage.getFaqText().shouldBe(visible).should(text(faqText));
+        FAQsPage FAQsPage = new FAQsPage();
+        FAQsPage.getFaqsText().shouldBe(visible).should(text(faqsText));
 
     }
 }

@@ -15,7 +15,21 @@ public class InicioPage {
             mensajesCuentaSuboptionButton = $(By.id("messages")),
             inicioLink = $(By.id("nav-home")),
             progresoLink = $(By.id("nav-progress")),
+            oeLogo = $(By.xpath(".//*[@id='header']//a[@href='/index.html']")),
             cuentaSuboptions = $(By.xpath(".//*[@id='account-menu']/div[@class='drop-slide-wrapper']/ul")),
             logOutLink = $(By.xpath(".//*[@id='account-menu']//a[@href='/j_spring_security_logout']")),
-            oeLogo = $(By.xpath(".//*[@id='header']//a[@href='/index.html']"));
+            ayudaDropDown = $(By.xpath(".//*[@id='nav-help']/strong")),
+            contactenos = $(By.id("nav-talknow")),
+            videosTutoriales = $(By.id("nav-howto")),
+            verificaTuSistema = $(By.id("testYourSystem")),
+            adobeConnectGuiaRapida = $(By.id("adobeQuickGuide")),
+            verifiqueSuConfiguracion = $(By.id("testSetupLink")),
+            preguntasFrecuentes = $(By.xpath(".//*[@id='header']//a[@href='/support/faq.html']")),
+            videoClickPlay = $(By.xpath(".//*[@id='video-popup']/div[2]/div[2]")),
+            videoClickClose = $(By.xpath(".//*[@class='ui-dialog-titlebar-close ui-corner-all']")),
+            cursoButton = $(By.id("nav-learn")),
+            clasesEnVivoButton = $(By.id("nav-liveclasses")),
+            unidadesYLeccionesButton = $(By.id("nav-lessons")),
+            practicaLink = $(By.id("nav-immersion")),
+            introdussionLink =  $(By.id("nav-levelzero"));
 }
