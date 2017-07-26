@@ -9,7 +9,9 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.url;
+import static com.openenglish.core.TestData.General.lpUrl;
 import static com.openenglish.core.TestData.Inicio.inicioLink;
 import static com.openenglish.core.TestData.Inicio.mensajesButtonText;
 import static com.openenglish.core.TestData.Login.correctPassword;
@@ -24,6 +26,7 @@ public class C103VerifyCuentaMenuLinksScenario1Test extends DriverBase {
 
     @Test
     public void mensajesCuentaMenuSuboptionVerificationTest() {
+        open(lpUrl);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
                 .shouldHave(attribute("type", "password"));
