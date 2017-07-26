@@ -30,11 +30,12 @@ public class C100VerifyProgresoMenuLinksTest extends TestBase {
     }
 
     @Test
-    public  void  teacherFeedbackPageTestS2() {
+    public void teacherFeedbackPageIsOpenedTestS2() {
         inicioPage.getSugerenciasDelProfesorLink().click();
         TeacherFeedbackPage teacherFeedbackPage = new TeacherFeedbackPage();
-        teacherFeedbackPage.getSugerenciasParaUserHeaderText().shouldBe(visible).shouldHave(text(teacherFeedbackHeaderText+" "+userName));
+        teacherFeedbackPage.getSugerenciasParaUserHeaderText().shouldBe(visible).shouldHave(text(teacherFeedbackHeaderText + " " + userName));
 
     }
+
 
 }
