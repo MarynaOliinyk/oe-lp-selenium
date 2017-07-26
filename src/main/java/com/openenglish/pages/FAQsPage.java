@@ -6,7 +6,9 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class FAQPage {
+public class FAQsPage {
+
     @Getter
-    private SelenideElement headerText = $(By.xpath(".//*[@class='grid_8']/div/h1"));
+    private SelenideElement faqsText = $(By.xpath("//div[@class='faq-area']/h3"));
+
 }

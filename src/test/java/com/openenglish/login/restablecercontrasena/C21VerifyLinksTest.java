@@ -1,7 +1,7 @@
 package com.openenglish.login.restablecercontrasena;
 
 import com.openenglish.core.TestBase;
-import com.openenglish.pages.FAQPage;
+import com.openenglish.pages.FAQsPage;
 import com.openenglish.pages.LoginPage;
 import com.openenglish.pages.RecoveryPage;
 import com.openenglish.pages.RegisterPage;
@@ -44,8 +44,8 @@ public class C21VerifyLinksTest extends TestBase {
     public void fAQpageIsOpenedTestS2() {
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getFaq().shouldBe(visible).shouldHave(text(resetPasswordFaq)).click();
-        FAQPage faqPage = new FAQPage();
-        faqPage.getFaqText().shouldBe(visible).should(text(faqText));
+        FAQsPage FAQsPage = new FAQsPage();
+        FAQsPage.getFaqsText().shouldBe(visible).should(text(faqsText));
     }
 
     @Test
