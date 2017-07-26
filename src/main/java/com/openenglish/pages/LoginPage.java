@@ -22,7 +22,7 @@ public class LoginPage {
             tooltip = $(By.xpath(".//div[@class='tooltipster-base tooltipster-default tooltipster-fade tooltipster-fade-show']")),
             passwordReset = $(By.xpath(".//*[@id='login_content']/div[3]/div/form/fieldset/div/div/div/div[3]/div[2]/a")),
             signUp = $(By.id("sign-up")),
-            tooltipText =  $(By.xpath("//div[@class='tooltipster-content']")),
+            tooltipText = $(By.xpath("//div[@class='tooltipster-content']")),
             recoverLink = $(By.xpath(".//*[@id='login_content']//a[@href='recovery.html']")),
             securityField = $(By.id("captcharesponse")),
             popUpTextAfterIncorrectCode = $(By.xpath(".//*[@id='login-support-widget']/div[1]/h3")),
@@ -39,8 +39,9 @@ public class LoginPage {
     public void cookieBannerVisibility() {
         continueButton.should(visible).click();
     }
+
     public void logInAndCheckText(String validEmail, String incorrectPassword, String tooltipTexts) {
         logIn(validEmail, incorrectPassword);
-       getTooltipText().shouldBe(visible).shouldHave(text(tooltipTexts));
+        getTooltipText().shouldBe(visible).shouldHave(text(tooltipTexts));
     }
 }
