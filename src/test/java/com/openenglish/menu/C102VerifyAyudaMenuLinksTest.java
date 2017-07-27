@@ -18,9 +18,9 @@ import static com.codeborne.selenide.Selenide.switchTo;
 import static com.openenglish.core.TestData.FAQ.faqHeaderText;
 import static com.openenglish.core.TestData.General.lpUrl;
 import static com.openenglish.core.TestData.Inicio.inicioLink;
+import static com.openenglish.core.TestData.Inicio.userNickName;
 import static com.openenglish.core.TestData.Login.correctPassword;
 import static com.openenglish.core.TestData.Login.registeredEmail;
-import static com.openenglish.core.TestData.Login.userName;
 import static com.openenglish.core.TestData.Meeting.meetingTestText;
 import static com.openenglish.core.TestData.ParticipantsGuidePage.containsPdfFile;
 import static com.openenglish.core.TestData.TalkNow.talkNowHeaderText;
@@ -35,10 +35,10 @@ public class C102VerifyAyudaMenuLinksTest extends DriverBase {
         open(lpUrl);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
-                 .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(registeredEmail, correctPassword);
         page.inicioPage.getInicioLink().shouldHave(text(inicioLink));
-        page.inicioPage.getUserName().shouldHave(text(userName));
+        page.inicioPage.getUserName().shouldHave(text(userNickName));
         page.inicioPage.getAyudaDropDown().hover();
     }
 

@@ -15,9 +15,9 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.FAQS.faqsText;
 import static com.openenglish.core.TestData.General.lpUrl;
 import static com.openenglish.core.TestData.Inicio.inicioLink;
+import static com.openenglish.core.TestData.Inicio.userNickName;
 import static com.openenglish.core.TestData.Login.correctPassword;
 import static com.openenglish.core.TestData.Login.registeredEmail;
-import static com.openenglish.core.TestData.Login.userName;
 import static com.openenglish.core.TestData.Recovery.recoveryPasswordFaq;
 import static com.openenglish.core.TestData.Recovery.recoveryPasswordFormTitle;
 import static com.openenglish.core.TestData.Recovery.recoveryPasswordSingUpText;
@@ -31,10 +31,10 @@ public class C21VerifyLinksTest extends DriverBase {
         open(lpUrl);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
-                      .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(registeredEmail, correctPassword);
         page.inicioPage.getInicioLink().shouldHave(text(inicioLink));
-        page.inicioPage.getUserName().shouldHave(text(userName));
+        page.inicioPage.getUserName().shouldHave(text(userNickName));
         page.logOut();
         page.loginPage.getPasswordReset().click();
         RecoveryPage recoveryPage = new RecoveryPage();
