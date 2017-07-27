@@ -10,9 +10,9 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.lpUrl;
 import static com.openenglish.core.TestData.Inicio.inicioLink;
+import static com.openenglish.core.TestData.Inicio.userNickName;
 import static com.openenglish.core.TestData.Login.correctPassword;
 import static com.openenglish.core.TestData.Login.registeredEmail;
-import static com.openenglish.core.TestData.Login.userName;
 
 public class C98OpenEnglishLogoRedirectToInicioTest extends DriverBase {
 
