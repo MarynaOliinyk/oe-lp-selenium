@@ -57,6 +57,8 @@ public class TestData {
     public static class Inicio {
         public static final String inicioLink = getProperty("inicio.link.text");
         public static final String mensajesButtonText = getProperty("inicio.mensajes.link.text");
+        public static final String preferenciasButtonText = getProperty("inicio.preferencias.link.text");
+        public static final String salirButtonText = getProperty("inicio.salir.link.text");
     }
 
     public static class LiveClasses {
@@ -93,5 +95,10 @@ public class TestData {
 
     public static class Notifications {
         public static final String notificationsUrlEndWithText = getProperty("notifications.page.url.endwith");
+    }
+
+    public static class Preferences {
+        public static final String miPerfilTabText = getProperty("preferences.miperfil.tab.text");
+        public static final String preferencesUrlEndWithText = getProperty("preferences.page.url.endwith");
     }
 }
