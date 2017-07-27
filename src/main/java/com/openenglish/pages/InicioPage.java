@@ -1,20 +1,14 @@
 package com.openenglish.pages;
 
-import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
 import lombok.experimental.Accessors;
 import org.openqa.selenium.By;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
-import static com.openenglish.core.TestBase.randomNumber;
-import static org.apache.commons.lang3.ArrayUtils.toArray;
 
 @Accessors(chain = true)
 public class InicioPage {
