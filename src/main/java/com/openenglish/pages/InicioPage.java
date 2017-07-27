@@ -26,7 +26,6 @@ public class InicioPage {
             planDeEstudioElement = $(By.xpath(".//*[@id='student-info']//div[@class='grid_6']//div")),
             planDeEstudioText = $(By.xpath(".//*[@id='student-info']//div[@class='grid_6']//span")),
             oeLogo = $(By.xpath(".//*[@id='header']//a[@href='/index.html']")),
-            progresoLink = $(By.id("nav-progress")),
             logOutLinkElement = $(By.xpath(".//*[@id='account-menu']//a[@href='/j_spring_security_logout']")),
             ayudaDropDown = $(By.xpath(".//*[@id='nav-help']/strong")),
             contactenos = $(By.id("nav-talknow")),
