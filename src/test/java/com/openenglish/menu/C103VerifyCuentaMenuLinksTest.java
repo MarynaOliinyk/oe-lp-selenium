@@ -70,7 +70,7 @@ public class C103VerifyCuentaMenuLinksTest extends DriverBase {
         page.inicioPage.getUserName().shouldHave(text(userName));
         page.inicioPage.getAccountMenu().hover();
         page.inicioPage.getCuentaSuboptions().shouldBe(visible);
-        page.inicioPage.getLogOutLink().shouldBe(visible).
+        page.inicioPage.getLogOutLinkElement().shouldBe(visible).
                 shouldHave(exactText(salirButtonText)).click();
         page.loginPage.getLoginForm().shouldBe(visible);
         page.inicioPage.getUserName().shouldNotHave(text(userName));
