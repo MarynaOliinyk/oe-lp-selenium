@@ -6,8 +6,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class IntroductionPage {
-
+public class HowToVideosPage {
     @Getter
-    private SelenideElement headerText = $(By.xpath(".//*[@id='content']/div/div[1]/div/h1"));
+    private SelenideElement image = $(By.xpath(".//*[@class='heroShot']"));
 }

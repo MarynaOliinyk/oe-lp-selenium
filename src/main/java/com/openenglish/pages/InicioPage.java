@@ -25,19 +25,30 @@ public class InicioPage {
             headingElement = $(By.id("student-info")),
             planDeEstudioElement = $(By.xpath(".//*[@id='student-info']//div[@class='grid_6']//div")),
             planDeEstudioText = $(By.xpath(".//*[@id='student-info']//div[@class='grid_6']//span")),
-            logOutLink = $(By.xpath(".//*[@id='account-menu']//a[@href='/j_spring_security_logout']")),
+            oeLogo = $(By.xpath(".//*[@id='header']//a[@href='/index.html']")),
+            progresoLink = $(By.id("nav-progress")),
+            logOutLinkElement = $(By.xpath(".//*[@id='account-menu']//a[@href='/j_spring_security_logout']")),
+            ayudaDropDown = $(By.xpath(".//*[@id='nav-help']/strong")),
+            contactenos = $(By.id("nav-talknow")),
+            videosTutoriales = $(By.id("nav-howto")),
+            verificaTuSistema = $(By.id("testYourSystem")),
+            adobeConnectGuiaRapida = $(By.id("adobeQuickGuide")),
+            verifiqueSuConfiguracion = $(By.id("testSetupLink")),
+            preguntasFrecuentes = $(By.xpath(".//*[@id='header']//a[@href='/support/faq.html']")),
             videoClickPlay = $(By.xpath(".//*[@id='video-popup']/div[2]/div[2]")),
             videoClickClose = $(By.xpath(".//*[@class='ui-dialog-titlebar-close ui-corner-all']")),
             cursoButton = $(By.id("nav-learn")),
             clasesEnVivoButton = $(By.id("nav-liveclasses")),
             unidadesYLeccionesButton = $(By.id("nav-lessons")),
-            oeLogo = $(By.xpath(".//*[@id='header']//a[@href='/index.html']")),
             practicaLink = $(By.id("nav-immersion")),
             introdussionLink = $(By.id("nav-levelzero")),
             videoBlock = $(By.id("main")),
             carouselVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='carousel']")),
             lessonVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='lesson']")),
             comenzarButtonVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='lesson']"));
+
+    @Getter
+    public String logOutLink = "a[href='/j_spring_security_logout']";
 
     @Getter
     private By practiceVideosBlocks = By.xpath(".//*[@id='main']//div[@data-show-video='overlay']"),
