@@ -14,7 +14,7 @@ import static org.testng.Assert.assertTrue;
 public class C103VerifyCuentaMenuLinksScenario1Test extends TestBase {
 
     @Test
-    public void cuentaMenuLinksVerificationScenario1Test() {
+    public void mensajesCuentaMenuSuboptionVerificationTest() {
         loginPage.cookieBannerVisibility();
         loginPage.getPassword().shouldBe(visible)
                 .shouldHave(attribute("type", "password"));
