@@ -1,9 +1,11 @@
 package com.openenglish.pages;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
 import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
 @Getter
@@ -50,7 +52,7 @@ public class InicioPage {
     private By practiceVideosBlocks = By.xpath(".//*[@id='main']//div[@data-show-video='overlay']"),
             videoBlocksContainer = By.xpath(".//*[@id='main']//div[@data-show-video='overlay']/following-sibling::div[contains(@class,'item')]");
 
-    public boolean verifyAtLeastOneElementTextIsEqual(Collection<SelenideElement> collection, String xPath, String textToSearch) {
+    public boolean verifyAtLeastOneElementTextIsEqual(ElementsCollection collection, String xPath, String textToSearch) {
         for (SelenideElement element : collection) {
             String textFromTheElement = $(element).hover().$(byXpath(xPath)).getText().toLowerCase();
             if (textToSearch.toLowerCase().equals(textFromTheElement)) return true;
