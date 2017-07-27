@@ -18,7 +18,7 @@ public class InicioPage {
             cuentaSuboptions = $(By.xpath(".//*[@id='account-menu']/div[@class='drop-slide-wrapper']/ul")),
             oeLogo = $(By.xpath(".//*[@id='header']//a[@href='/index.html']")),
             progresoLink = $(By.id("nav-progress")),
-            logOutLink = $(By.xpath(".//*[@id='account-menu']//a[@href='/j_spring_security_logout']")),
+            logOutLinkElement = $(By.xpath(".//*[@id='account-menu']//a[@href='/j_spring_security_logout']")),
             ayudaDropDown = $(By.xpath(".//*[@id='nav-help']/strong")),
             contactenos = $(By.id("nav-talknow")),
             videosTutoriales = $(By.id("nav-howto")),
@@ -33,5 +33,8 @@ public class InicioPage {
             unidadesYLeccionesButton = $(By.id("nav-lessons")),
             practicaLink = $(By.id("nav-immersion")),
             introdussionLink =  $(By.id("nav-levelzero"));
+
+    @Getter
+    public String logOutLink = "a[href='/j_spring_security_logout']";
 
 }
