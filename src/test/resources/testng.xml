@@ -1,13 +1,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="login" verbose="1">
-<test name="e2e_tests">
-    <packages>
-        <package name="com.openenglish.login"/>
-        <package name="com.openenglish.login.fieldsvalidatoin"/>
-        <package name="com.openenglish.login.restablecercontrasena"/>
-        <package name="com.openenglish.login.restablecercontrasena.fieldsvalidation"/>
-        <package name="com.openenglish.registro.fieldsvalidation"/>
-    </packages>
-</test>
+    <test name="e2e_tests">
+        <packages>
+            <package name="com.openenglish.login"/>
+            <package name="com.openenglish.login.fieldsvalidation"/>
+            <package name="com.openenglish.login.restablecercontrasena"/>
+            <package name="com.openenglish.login.restablecercontrasena.fieldsvalidation"/>
+            <package name="com.openenglish.registro.fieldsvalidation"/>
+            <package name="com.openenglish.menu"/>
+        </packages>
+    </test>
 </suite>

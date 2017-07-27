@@ -6,8 +6,9 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class IntroductionPage {
+public class TalkNowPage {
 
     @Getter
-    private SelenideElement headerText = $(By.xpath(".//*[@id='content']/div/div[1]/div/h1"));
+    private SelenideElement headerText = $(By.xpath(".//*[@class='push_1 page-title']/h2"));
+
 }
