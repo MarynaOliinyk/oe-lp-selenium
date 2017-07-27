@@ -9,6 +9,8 @@ public class AbstractPage {
 
     public LoginPage loginPage = new LoginPage();
     public InicioPage inicioPage = new InicioPage();
+    public PreferencesPage preferencesPage = new PreferencesPage();
+
     private String jsClickQuery = "var els = document.querySelectorAll(\"%s\"); els[0].click()";
 
     public void logOut() {

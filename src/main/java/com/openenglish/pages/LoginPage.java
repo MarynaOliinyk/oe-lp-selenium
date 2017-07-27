@@ -29,7 +29,8 @@ public class LoginPage {
             securityField = $(By.id("captcharesponse")),
             popUpTextAfterIncorrectCode = $(By.xpath(".//*[@id='login-support-widget']/div[1]/h3")),
             popUpCloseAfterIncorrectCode = $(By.xpath("//*[@class='ui-icon ui-icon-closethick']")),
-            popUpResetPassword = $(By.xpath(".//*[@href='recovery.html']"));
+            popUpResetPassword = $(By.xpath(".//*[@href='recovery.html']")),
+            loginForm = $(By.xpath(".//*[@id='login_content']//div[@class='login2-wrapper']"));
 
 
     public void logIn(String email, String password) {

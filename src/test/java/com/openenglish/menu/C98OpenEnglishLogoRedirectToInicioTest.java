@@ -5,6 +5,7 @@ import com.openenglish.pages.AbstractPage;
 import com.openenglish.pages.InicioPage;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
@@ -23,11 +24,11 @@ public class C98OpenEnglishLogoRedirectToInicioTest extends DriverBase {
         open(lpUrl);
         page.logIn(registeredEmail, correctPassword);
         InicioPage inicioPage = new InicioPage();
-        inicioPage.getInicioLink().shouldHave(text(inicioLink));
+        inicioPage.getInicioLink().shouldHave(exactText(inicioLink));
         inicioPage.getUserName().shouldHave(text(userNickName));
         inicioPage.getProgresoLink().click();
         inicioPage.getOeLogo().shouldBe(visible).click();
-        inicioPage.getInicioLink().shouldHave(text(inicioLink));
+        inicioPage.getInicioLink().shouldHave(exactText(inicioLink));
         inicioPage.getUserName().shouldHave(text(userNickName));
     }
 
