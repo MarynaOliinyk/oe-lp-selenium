@@ -11,9 +11,9 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.lpUrl;
 import static com.openenglish.core.TestData.Inicio.inicioLink;
+import static com.openenglish.core.TestData.Inicio.userNickName;
 import static com.openenglish.core.TestData.Login.correctPassword;
 import static com.openenglish.core.TestData.Login.registeredEmail;
-import static com.openenglish.core.TestData.Login.userName;
 
 public class C2LoginWithCorrectCredentialsTest extends DriverBase {
 
@@ -24,11 +24,11 @@ public class C2LoginWithCorrectCredentialsTest extends DriverBase {
         open(lpUrl);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
-                      .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(registeredEmail, correctPassword);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getInicioLink().should(visible).shouldHave(text(inicioLink));
-        inicioPage.getUserName().shouldHave(text(userName));
+        inicioPage.getUserName().shouldHave(text(userNickName));
         page.logOut();
     }
 }

@@ -13,8 +13,8 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.lpUrl;
 import static com.openenglish.core.TestData.Login.correctPassword;
+import static com.openenglish.core.TestData.Login.invalidPassword;
 import static com.openenglish.core.TestData.Login.registeredEmail;
-import static com.openenglish.core.TestData.Login.userName;
 import static com.openenglish.core.TestData.Recovery.recoveryPasswordFormTitle;
 
 public class C5VerifyLinksTest extends DriverBase {
@@ -35,7 +35,7 @@ public class C5VerifyLinksTest extends DriverBase {
         page.logIn(registeredEmail, correctPassword);
         page.logOut();
         page.loginPage.getPassword()
-                      .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute("type", "password"));
         page.loginPage.getPasswordReset().click();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getRequestFormTitle().shouldHave(text(recoveryPasswordFormTitle));
@@ -46,7 +46,7 @@ public class C5VerifyLinksTest extends DriverBase {
     public void verifyRegisterFormIsOpenTestS3() {
         open(lpUrl);
         page.loginPage.getPassword()
-                      .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute("type", "password"));
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getSignUp().click();
         RegisterPage regForm = new RegisterPage();
@@ -70,13 +70,13 @@ public class C5VerifyLinksTest extends DriverBase {
         open(lpUrl);
         page.logIn(registeredEmail, correctPassword);
         page.logOut();
-        page.loginPage.logIn(registeredEmail, userName);
-        page.loginPage.getPassword().should(visible).val(userName);
+        page.loginPage.logIn(registeredEmail, invalidPassword);
+        page.loginPage.getPassword().should(visible).val(invalidPassword);
         page.loginPage.getLoginButton().should(visible).click();
-        page.loginPage.getPassword().should(exist).sendKeys(userName);
+        page.loginPage.getPassword().should(exist).sendKeys(invalidPassword);
         page.loginPage.getLoginButton().should(visible).click();
-        page.loginPage.getSecurityField().sendKeys(userName);
-        page.loginPage.getPassword().should(visible).val(userName);
+        page.loginPage.getSecurityField().sendKeys(invalidPassword);
+        page.loginPage.getPassword().should(visible).val(invalidPassword);
         page.loginPage.getLoginButton().click();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getChat().shouldBe(visible).click();
