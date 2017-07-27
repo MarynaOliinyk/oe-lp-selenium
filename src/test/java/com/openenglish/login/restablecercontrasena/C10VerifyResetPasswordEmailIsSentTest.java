@@ -1,13 +1,21 @@
 package com.openenglish.login.restablecercontrasena;
 
-import com.openenglish.core.TestBase;
+import com.openenglish.core.DriverBase;
+import com.openenglish.pages.AbstractPage;
 import org.testng.annotations.Test;
 
-public class C10VerifyResetPasswordEmailIsSentTest extends TestBase{
+import static com.codeborne.selenide.Selenide.open;
+import static com.openenglish.core.TestData.General.lpUrl;
+import static com.openenglish.core.TestData.Login.correctPassword;
+import static com.openenglish.core.TestData.Login.registeredEmail;
+
+public class C10VerifyResetPasswordEmailIsSentTest extends DriverBase {
+    private AbstractPage page = new AbstractPage();
 
     @Test
     public void verifyResetPasswordEmailIsSentTest() {
-       positiveLogIn();
-       logOut();
+        open(lpUrl);
+        page.logIn(registeredEmail, correctPassword);
+        page.logOut();
     }
 }
