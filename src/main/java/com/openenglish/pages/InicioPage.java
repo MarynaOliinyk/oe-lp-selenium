@@ -48,10 +48,8 @@ public class InicioPage {
             lessonVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='lesson']")),
             comenzarButtonVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='lesson']"));
 
-    @Getter
     public String logOutLink = "a[href='/j_spring_security_logout']";
 
-    @Getter
     private By practiceVideosBlocks = By.xpath(".//*[@id='main']//div[@data-show-video='overlay']"),
             videoBlocksContainer = By.xpath(".//*[@id='main']//div[@data-show-video='overlay']/following-sibling::div[contains(@class,'item')]");
 
