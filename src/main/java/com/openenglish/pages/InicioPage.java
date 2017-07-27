@@ -8,7 +8,6 @@ import static com.codeborne.selenide.Selenide.$;
 
 @Getter
 public class InicioPage {
-    @Getter
     private SelenideElement userName = $(By.xpath(".//*[@id='student-info']//div[@class='display-name']")),
             accountMenu = $(By.id("account-menu-nav")),
             mensajesCuentaSuboptionButton = $(By.id("messages")),
@@ -19,6 +18,7 @@ public class InicioPage {
             ayudaDropDown = $(By.xpath(".//*[@id='nav-help']/strong")),
             contactenos = $(By.id("nav-talknow")),
             videosTutoriales = $(By.id("nav-howto")),
+            oeLogo = $(By.xpath(".//*[@id='header']//a[@href='/index.html']")),
             verificaTuSistema = $(By.id("testYourSystem")),
             adobeConnectGuiaRapida = $(By.id("adobeQuickGuide")),
             verifiqueSuConfiguracion = $(By.id("testSetupLink")),
@@ -34,7 +34,7 @@ public class InicioPage {
             miProgressoLink = $(By.id("nav-profile")),
             sugerenciasDelProfesorLink = $(By.id("nav-feedback")),
             registroLink = $(By.id("nav-history")),
-            cuadernoDeNotasLink = $(By.id("nav-notebook"));;
+            cuadernoDeNotasLink = $(By.id("nav-notebook"));
     public String logOutLink = "a[href='/j_spring_security_logout']";
 
 
