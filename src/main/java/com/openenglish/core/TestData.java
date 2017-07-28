@@ -5,45 +5,45 @@ import static com.openenglish.util.PropertiesCache.getProperty;
 public class TestData {
 
     public static class General {
-        public static final String oeUrl = getProperty("base.oe.url");
-        public static final String lpUrl = getProperty("base.lp.url");
+        public static final String oeUrl = getProperty("base.oe.url"),
+                lpUrl = getProperty("base.lp.url");
     }
 
     public static class Login {
-        public static final String loginTooltipPassword = getProperty("login.tooltip.text.for.password");
-        public static final String loginTooltipSecurityCode = getProperty("login.tooltip.invalid.security.text");
-        public static final String invalidSecurityCode = getProperty("login.invalid.security.code");
-        public static final String popUpInvalidSecurityCode = getProperty("login.popup.invalid.security.code");
-        public static final String userName = getProperty("login.user.name");
-        public static final String registeredEmail = getProperty("login.correct.email");
-        public static final String correctPassword = getProperty("login.correct.password");
-        public static final String unregisteredEmail = getProperty("login.unregistered.email");
-        public static final String invalidPassword = getProperty("login.invalid.password");
-        public static final String securityPlaceHolderText = getProperty("login.security.placeholder");
+        public static final String loginTooltipPassword = getProperty("login.tooltip.text.for.password"),
+                loginTooltipSecurityCode = getProperty("login.tooltip.invalid.security.text"),
+                invalidSecurityCode = getProperty("login.invalid.security.code"),
+                popUpInvalidSecurityCode = getProperty("login.popup.invalid.security.code"),
+                userName = getProperty("login.user.name"),
+                registeredEmail = getProperty("login.correct.email"),
+                correctPassword = getProperty("login.correct.password"),
+                unregisteredEmail = getProperty("login.unregistered.email"),
+                invalidPassword = getProperty("login.invalid.password"),
+                securityPlaceHolderText = getProperty("login.security.placeholder");
     }
 
     public static class Recovery {
-        public static final String emailWithoutATsymbol = getProperty("recovery.email.without@");
-        public static final String emailWithoutDotCom = getProperty("recovery.email.without.com");
-        public static final String notValidEmailText = getProperty("recovery.tooltip.not.valid.email");
-        public static final String recoveryTooltipEmail = getProperty("recovery.tooltip.text");
-        public static final String recoveryPasswordFormTitle = getProperty("recovery.password.form.title");
-        public static final String recoveryPasswordFaq = getProperty("recovery.password.faq");
-        public static final String recoveryPasswordSingUpText = getProperty("recovery.password.sing.up");
-        public static final String registrateText = getProperty("recovery.link.text");
+        public static final String emailWithoutATsymbol = getProperty("recovery.email.without@"),
+                emailWithoutDotCom = getProperty("recovery.email.without.com"),
+                notValidEmailText = getProperty("recovery.tooltip.not.valid.email"),
+                recoveryTooltipEmail = getProperty("recovery.tooltip.text"),
+                recoveryPasswordFormTitle = getProperty("recovery.password.form.title"),
+                recoveryPasswordFaq = getProperty("recovery.password.faq"),
+                recoveryPasswordSingUpText = getProperty("recovery.password.sing.up"),
+                registrateText = getProperty("recovery.link.text");
     }
 
     public static class Register {
-        public static final String notValidEmailTextForRegistration = getProperty("register.field.email.acceptense.message");
-        public static final String fieldShouldBeCompleted = getProperty("register.obligatory.field.message");
-        public static final String inCorrectValue = getProperty("register.incorrect.field.value.message");
-        public static final String lessThenEightyCharacters = getProperty("register.field.surname.lenth.acceptense.message");
-        public static final String lessThenFortyCharacters = getProperty("register.field.name.lenthg.acceptense.message");
-        public static final String charQuantityNombre = getProperty("register.char.quantity.name");
-        public static final String charQuantityAppelido = getProperty("register.char.quantity.surname");
-        public static final String numberLength = getProperty("register.number.length");
-        public static final String specialCharacters = getProperty("register.special.characters");
-        public static final String comienzaAhora = getProperty("register.comienza.ahora.button.text");
+        public static final String notValidEmailTextForRegistration = getProperty("register.field.email.acceptense.message"),
+                fieldShouldBeCompleted = getProperty("register.obligatory.field.message"),
+                inCorrectValue = getProperty("register.incorrect.field.value.message"),
+                lessThenEightyCharacters = getProperty("register.field.surname.lenth.acceptense.message"),
+                lessThenFortyCharacters = getProperty("register.field.name.lenthg.acceptense.message"),
+                charQuantityNombre = getProperty("register.char.quantity.name"),
+                charQuantityAppelido = getProperty("register.char.quantity.surname"),
+                numberLength = getProperty("register.number.length"),
+                specialCharacters = getProperty("register.special.characters"),
+                comienzaAhora = getProperty("register.comienza.ahora.button.text");
     }
 
     public static class FAQ {
@@ -55,11 +55,11 @@ public class TestData {
     }
 
     public static class Inicio {
-        public static final String inicioLink = getProperty("inicio.link.text");
-        public static final String mensajesButtonText = getProperty("inicio.mensajes.link.text");
-        public static final String userNickName = getProperty("inicio.nick.user.name");
-        public static final String salirButtonText = getProperty("inicio.salir.link.text");
-        public static final String preferenciasButtonText = getProperty("inicio.preferencias.link.text");
+        public static final String inicioLink = getProperty("inicio.link.text"),
+                mensajesButtonText = getProperty("inicio.mensajes.link.text"),
+                userNickName = getProperty("inicio.nick.user.name"),
+                salirButtonText = getProperty("inicio.salir.link.text"),
+                preferenciasButtonText = getProperty("inicio.preferencias.link.text");
     }
 
     public static class LiveClasses {
@@ -103,9 +103,15 @@ public class TestData {
     }
 
     public static class TeacherFeedback {
-        public static final String teacherFeedbackHeaderText = getProperty("teacherfeedback.header.text");
-    }
+        public static final String teacherFeedbackHeaderText = getProperty("teacherfeedback.header.text"),
+                teacherFeedbackVerElIndiceDelCursoLink = getProperty("teacherfeedback.verelindice.del.curso.link"),
+                teacherFeedbackFechaColumn = getProperty("teacherfeedback.fecha.column"),
+                teacherFeedbackSugerenciaSolicitadaColumn = getProperty("teacherfeedback.sugerencia.solicitada.column"),
+                teacherFeedbackRespuestaDelProfesorColumn = getProperty("teacherfeedback.respuesta.del.profesor.column"),
+                teacherFeedbackTeachersName = getProperty("teacherfeedback.teachers.name");
 
+
+    }
 
     public static class History {
         public static final String historyHeaderText = getProperty("history.header.text");
@@ -114,9 +120,10 @@ public class TestData {
     public static class MyNotebook {
         public static final String myNotebookHeaderText = getProperty("mynotebook.header.text");
     }
+
     public static class Preferences {
-        public static final String miPerfilTabText = getProperty("preferences.miperfil.tab.text");
-        public static final String preferencesUrlEndWithText = getProperty("preferences.page.url.endwith");
+        public static final String miPerfilTabText = getProperty("preferences.miperfil.tab.text"),
+                preferencesUrlEndWithText = getProperty("preferences.page.url.endwith");
     }
 
 }
