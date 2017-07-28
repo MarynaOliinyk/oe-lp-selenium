@@ -9,12 +9,14 @@ import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.lpUrl;
 import static com.openenglish.core.TestData.Inicio.inicioLink;
 import static com.openenglish.core.TestData.Login.correctPassword;
 import static com.openenglish.core.TestData.Login.registeredEmail;
 import static com.openenglish.core.TestData.Login.userName;
+import static org.testng.Assert.assertTrue;
 
 public class C1391CheckThatThePracticeAndLessonsIconsAreLoadedWithNoIssuesTest extends DriverBase {
 
@@ -31,6 +33,9 @@ public class C1391CheckThatThePracticeAndLessonsIconsAreLoadedWithNoIssuesTest e
                 .shouldHave(exactText(inicioLink));
         page.inicioPage.getUserName().shouldBe(visible).shouldNotBe(empty)
                 .shouldHave(text(userName));
+        assertTrue(page.inicioPage.visibilityOfListElements($$(page.inicioPage.getAllThePracticeVideoImgs())));
+        assertTrue(page.inicioPage.visibilityOfListElements($$(page.inicioPage.getAllTheLessonsVideoImgs())));
+        assertTrue(page.inicioPage.visibilityOfListElements($$(page.inicioPage.getAllTheLiveClassesVideoImgs())));
     }
 
 }

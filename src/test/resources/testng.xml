@@ -9,6 +9,7 @@
             <package name="com.openenglish.login.restablecercontrasena.fieldsvalidation"/>
             <package name="com.openenglish.registro.fieldsvalidation"/>
             <package name="com.openenglish.menu"/>
+            <package name="com.openenglish.inicio"/>
         </packages>
     </test>
 </suite>
