@@ -10,12 +10,12 @@ public class TeacherFeedbackPage {
 
     @Getter
     private SelenideElement headerText = $(By.xpath(".//*[@class='grid_8']/div/h1")),
-            verElIndiceDelCursoLink = $(By.cssSelector(".more")),//Ver el índice del curso .//*[@class='more']"))
-            fechaColumn = $(By.xpath(".//*[@class='date']")),//Fecha
-            sugerenciaSolicitadaColumn = $(By.xpath(".//*[@class='feedback']")),//Sugerencia Solicitada
-            respuestaDelProfesorColumn = $(By.xpath(".//*[@class='response']")),//Respuesta del Profesor
+            verElIndiceDelCursoLink = $(By.cssSelector(".more")),
+            fechaColumn = $(By.xpath(".//*[@class='date']")),
+            sugerenciaSolicitadaColumn = $(By.xpath(".//*[@class='feedback']")),
+            respuestaDelProfesorColumn = $(By.xpath(".//*[@class='response']")),
             paginador = $(By.xpath(".//*[@class='paging2']")),//1/1
-            dayAndDateOfMessage = $(By.xpath(".//*[@id='feedback']/tbody/tr[1]/td[1]/span")), //30/06
+            dayAndDateOfMessage = $(By.xpath(".//*[@id='feedback']/tbody/tr[1]/td[1]/span")),
             subjectOfSentQuestion = $(By.xpath(".//*[@class='action']/div[@class='ellipsis-wrapper']")),
             teachersProfilePicture = $(By.xpath("//*[@class='mask']")),
             teachersName = $(By.xpath(".//*[@class='frame']/h4")),
