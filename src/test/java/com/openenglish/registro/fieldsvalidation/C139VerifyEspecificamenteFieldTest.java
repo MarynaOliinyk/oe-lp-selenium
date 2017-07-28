@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class C139VerifyEspecificamenteFieldTest extends DriverBase {
 
-    // TODO bug LPTRIAGE-292 - There is no "Específicamente" dropdown field (https://openenglish.jira.com/browse/LPTRIAGE-292)
+    // TODO bug QAA-209 - There is no "Específicamente" dropdown field (https://openenglish.jira.com/browse/QAA-209)
     @Test(enabled = false)
     public void especificamenteFieldVerifyTest() {
 

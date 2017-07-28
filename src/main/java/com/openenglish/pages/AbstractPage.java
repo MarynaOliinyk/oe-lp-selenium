@@ -27,6 +27,10 @@ public class AbstractPage {
         return RandomStringUtils.randomNumeric(length);
     }
 
+    public int randomNumber(int maxRandomNumber) {
+        return Integer.parseInt(RandomStringUtils.randomNumeric(0, maxRandomNumber));
+    }
+
     public String randCharacters(int charactersQuantity) {
         return RandomStringUtils.randomAlphabetic(charactersQuantity);
     }
