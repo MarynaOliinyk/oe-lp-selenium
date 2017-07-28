@@ -14,7 +14,7 @@ public class TeacherFeedbackPage {
             fechaColumn = $(By.xpath(".//*[@class='date']")),
             sugerenciaSolicitadaColumn = $(By.xpath(".//*[@class='feedback']")),
             respuestaDelProfesorColumn = $(By.xpath(".//*[@class='response']")),
-            paginador = $(By.xpath(".//*[@class='paging2']")),//1/1
+            paginador = $(By.xpath(".//*[@class='paging2']")),
             dayAndDateOfMessage = $(By.xpath(".//*[@id='feedback']/tbody/tr[1]/td[1]/span")),
             subjectOfSentQuestion = $(By.xpath(".//*[@class='action']/div[@class='ellipsis-wrapper']")),
             teachersProfilePicture = $(By.xpath("//*[@class='mask']")),
