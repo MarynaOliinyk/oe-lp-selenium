@@ -10,15 +10,17 @@ import static com.codeborne.selenide.Selenide.$;
 
 @Getter
 public class InicioPage {
-
     private SelenideElement userInfoElement = $(By.xpath(".//*[@id='student-info']//div[@class='student-level']")),
-            userPhoto = $(By.xpath(".//*[@id='student-info']//div[@class='photo-frame']")),
             userName = $(By.xpath(".//*[@id='student-info']//div[@class='display-name']")),
+            userPhoto = $(By.xpath(".//*[@id='student-info']//div[@class='photo-frame']")),
             accountMenu = $(By.id("account-menu-nav")),
             mensajesCuentaSuboptionButton = $(By.id("messages")),
             preferenciasCuentaSuboptionButton = $(By.xpath(".//*[@id='account-menu']//li[@data-name='preferences']/a")),
             inicioLink = $(By.id("nav-home")),
             cuentaSuboptions = $(By.xpath(".//*[@id='account-menu']/div[@class='drop-slide-wrapper']/ul")),
+            headingElement = $(By.id("student-info")),
+            planDeEstudioElement = $(By.xpath(".//*[@id='student-info']//div[@class='grid_6']//div")),
+            planDeEstudioText = $(By.xpath(".//*[@id='student-info']//div[@class='grid_6']//span")),
             logOutLinkElement = $(By.xpath(".//*[@id='account-menu']//a[@href='/j_spring_security_logout']")),
             ayudaDropDown = $(By.xpath(".//*[@id='nav-help']/strong")),
             contactenos = $(By.id("nav-talknow")),
@@ -40,9 +42,6 @@ public class InicioPage {
             sugerenciasDelProfesorLink = $(By.id("nav-feedback")),
             registroLink = $(By.id("nav-history")),
             cuadernoDeNotasLink = $(By.id("nav-notebook")),
-            headingElement = $(By.id("student-info")),
-            planDeEstudioElement = $(By.xpath(".//*[@id='student-info']//div[@class='grid_6']//div")),
-            planDeEstudioText = $(By.xpath(".//*[@id='student-info']//div[@class='grid_6']//span")),
             videoBlock = $(By.id("main")),
             carouselVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='carousel']")),
             lessonVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='lesson']")),
