@@ -55,8 +55,8 @@ public class InicioPage {
     private By practiceVideosBlocks = By.xpath(".//*[@id='main']//div[@data-show-video='overlay']"),
             videoBlocksContainer = By.xpath(".//*[@id='main']//div[@data-show-video='overlay']/following-sibling::div[contains(@class,'item')]"),
             allThePracticeVideoImgs = By.xpath(".//*[@class='block']//div[@data-show-video='overlay']//img"),
-            allTheLessonsVideoImgs = By.xpath(".//div[@class='grid_3 block']//div[@class='lesson']//img"),
-            allTheLiveClassesVideoImgs = By.xpath(".//div[@class='grid_6 block live-class']//div[@class='carousel']//img");
+            allTheLessonsVideoImgs = By.xpath(".//*[@class='grid_3 block']//div[@class='lesson']//img"),
+            allTheLiveClassesVideoImgs = By.xpath(".//*[@class='grid_6 block live-class']//div[@class='carousel']//img");
 
     public boolean verifyAtLeastOneElementTextIsEqual(ElementsCollection collection, String xPath, String textToSearch) {
         for (SelenideElement element : collection) {
