@@ -9,7 +9,6 @@ import static com.codeborne.selenide.Condition.not;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static com.openenglish.core.TestData.Attributes.src;
 import static com.openenglish.core.TestData.General.lpUrl;
 import static com.openenglish.core.TestData.Login.correctPassword;
 import static com.openenglish.core.TestData.Login.registeredEmail;
@@ -38,7 +37,7 @@ public class C1393CheckThatUserCanLoadANewPracticeVideoWhenClickingTheReloadIcon
     }
 
     private String getPracticeVideoText(){
-        return $(page.inicioPage.getAllThePracticeVideoImgs()).shouldBe(visible).getAttribute(src);
+        return $(page.inicioPage.getAllThePracticeVideoImgs()).shouldBe(visible).getAttribute("src");
     }
 
     private String getPracticeVideoTopicText(){
