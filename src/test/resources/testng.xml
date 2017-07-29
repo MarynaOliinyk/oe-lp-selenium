@@ -10,6 +10,7 @@
             <package name="com.openenglish.registro.fieldsvalidation"/>
             <package name="com.openenglish.progreso.sugerenciasdelprofesor"/>
             <package name="com.openenglish.menu"/>
+            <package name="com.openenglish.inicio"/>
         </packages>
     </test>
 </suite>
