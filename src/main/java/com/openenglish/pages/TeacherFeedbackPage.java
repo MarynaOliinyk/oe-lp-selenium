@@ -22,7 +22,25 @@ public class TeacherFeedbackPage {
             teachersMessage = $(By.xpath(".//*[@class='action']/div//div[@class='ellipsis-wrapper']")),
             goodRateFace = $(By.xpath(".//*[@class='happy no-rated']")),
             badRateFace = $(By.xpath(".//*[@class='sad no-rated']")),
-            titleOfSentQuestion = $(By.xpath(".//*[@class='action']/h3"));
+            titleOfSentQuestion = $(By.xpath(".//*[@class='action']/h3")),
+            suggestionLink = $(By.xpath(".//*[@id='feedback']/tbody/tr")),
+            popUp = $(By.xpath(".//*[@id='feed-back']")),
+            popUpHeaderText = $(By.xpath(".//*[@class='heading']/h3")),
+            popUpImage = $(By.xpath(".//*[@class='photo-frame']")),
+            teachersResponseText = $(By.xpath(".//*[@class='teacherResponse']")),
+            closePopUp = $(By.xpath(".//*[@class='ui-icon ui-icon-closethick']")),
+            faceHappyNoRated = $(By.xpath(".//*[@class='happy no-rated']")),
+            faceSadRatedDisabled = $(By.xpath(".//*[@class='sad rated disabled']")),
+            popUpAfterSadFace = $(By.id("survey-popup")),
+            popUpHeaderTextAfterSadFace = $(By.xpath("//*[@id='survey-popup']/div/h3")),
+            faceSadNoRated = $(By.xpath("//*[@class='sad no-rated']")),
+            enviarButtonOnPopUpIsDisabled = $(By.xpath(".//*[@class='orange-btn submit-btn disabled']")),
+            checkboxOnPopUp = $(By.xpath(".//*[@class='option']//*[@data-option='395']")),
+            enviarButtonOnPopUpVisible = $(By.xpath(".//*[@class='orange-btn submit-btn']")),
+            messageOnPopUpSaveSuccsess = $(By.xpath(".//*[@class='message saveSuccess']")),
+            exitButtonOnPopUp = $(By.xpath(".//*[@class='orange-btn exit-btn']"));
+
+
 
 }
 

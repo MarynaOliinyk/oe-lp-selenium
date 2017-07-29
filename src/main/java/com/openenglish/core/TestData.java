@@ -108,9 +108,10 @@ public class TestData {
                 teacherFeedbackFechaColumn = getProperty("teacherfeedback.fecha.column"),
                 teacherFeedbackSugerenciaSolicitadaColumn = getProperty("teacherfeedback.sugerencia.solicitada.column"),
                 teacherFeedbackRespuestaDelProfesorColumn = getProperty("teacherfeedback.respuesta.del.profesor.column"),
-                teacherFeedbackTeachersName = getProperty("teacherfeedback.teachers.name");
-
-
+                teacherFeedbackTeachersName = getProperty("teacherfeedback.teachers.name"),
+                teacherfeedbackPopUpHeaderText = getProperty("teacherfeedback.popup.header.text"),
+                teacherfeedbackPopUpHeaderTextAfterSad = getProperty("teacherfeedback.popup.header.text.sad"),
+                teacherfeedbackPopUpMessage = getProperty("teacherfeedback.popup.message");
     }
 
     public static class History {
