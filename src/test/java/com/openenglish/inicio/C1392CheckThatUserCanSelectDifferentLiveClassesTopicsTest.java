@@ -18,6 +18,7 @@ import static com.openenglish.core.TestData.Inicio.inicioLink;
 import static com.openenglish.core.TestData.Login.correctPassword;
 import static com.openenglish.core.TestData.Login.registeredEmail;
 import static com.openenglish.core.TestData.Login.userName;
+import static com.openenglish.core.TestData.Selenide.waitUntil;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
@@ -40,7 +41,7 @@ public class C1392CheckThatUserCanSelectDifferentLiveClassesTopicsTest extends D
         String firstImageTopic = getLiveClassVideoTopicText();
         assertTrue(page.inicioPage.stringsComparator(firstImageUrlText, firstImageTopic));
         page.inicioPage.getGreaterThenSign().shouldBe(visible).click();
-        page.inicioPage.getTopicLiveClassVideo().waitUntil(not(matchesText(firstImageTopic)), 3000);
+        page.inicioPage.getTopicLiveClassVideo().waitUntil(not(matchesText(firstImageTopic)), waitUntil);
 
         String secondImageUrlText = getLiveClassVideoText();
         String secondImageTopic = getLiveClassVideoTopicText();
@@ -48,7 +49,7 @@ public class C1392CheckThatUserCanSelectDifferentLiveClassesTopicsTest extends D
         assertFalse(firstImageTopic.toLowerCase().equals(secondImageTopic.toLowerCase()));
         assertTrue(page.inicioPage.stringsComparator(secondImageUrlText, secondImageTopic));
         page.inicioPage.getLessThenSign().shouldBe(visible).click();
-        page.inicioPage.getTopicLiveClassVideo().waitUntil(not(matchesText(secondImageTopic)), 3000);
+        page.inicioPage.getTopicLiveClassVideo().waitUntil(not(matchesText(secondImageTopic)), waitUntil);
 
         String thirdImageUrlText = getLiveClassVideoText();
         String thirdImageTopic = getLiveClassVideoTopicText();
