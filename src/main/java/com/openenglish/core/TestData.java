@@ -19,7 +19,8 @@ public class TestData {
                 correctPassword = getProperty("login.correct.password"),
                 unregisteredEmail = getProperty("login.unregistered.email"),
                 invalidPassword = getProperty("login.invalid.password"),
-                securityPlaceHolderText = getProperty("login.security.placeholder");
+                securityPlaceHolderText = getProperty("login.security.placeholder"),
+                passwordText = getProperty("login.password.text");
     }
 
     public static class Recovery {
@@ -59,7 +60,8 @@ public class TestData {
                 mensajesButtonText = getProperty("inicio.mensajes.link.text"),
                 userNickName = getProperty("inicio.nick.user.name"),
                 salirButtonText = getProperty("inicio.salir.link.text"),
-                preferenciasButtonText = getProperty("inicio.preferencias.link.text");
+                preferenciasButtonText = getProperty("inicio.preferencias.link.text"),
+                waitForThreeSec = getProperty("inicio.wait.to.appear");
     }
 
     public static class LiveClasses {
@@ -118,6 +120,11 @@ public class TestData {
     public static class Preferences {
         public static final String miPerfilTabText = getProperty("preferences.miperfil.tab.text"),
                 preferencesUrlEndWithText = getProperty("preferences.page.url.endwith");
+    }
+
+    public static class Attributes {
+        public static final String src = getProperty("attribute.src"),
+                type = getProperty("attribute.type");
     }
 
 }
