@@ -4,9 +4,14 @@ import static com.openenglish.util.PropertiesCache.getProperty;
 
 public class TestData {
 
+    public static class Selenide {
+        public static final long timeout = Long.parseLong(getProperty("selenide.timeout")),
+                waitUntil = Long.parseLong(getProperty("selenide.wait.until"));
+    }
+
     public static class General {
-        public static final String oeUrl = getProperty("base.oe.url");
-        public static final String lpUrl = getProperty("base.lp.url");
+        public static final String oeUrl = getProperty("base.oe.url"),
+                lpUrl = getProperty("base.lp.url");
     }
 
     public static class Login {
@@ -60,8 +65,7 @@ public class TestData {
                 mensajesButtonText = getProperty("inicio.mensajes.link.text"),
                 userNickName = getProperty("inicio.nick.user.name"),
                 salirButtonText = getProperty("inicio.salir.link.text"),
-                preferenciasButtonText = getProperty("inicio.preferencias.link.text"),
-                waitForThreeSec = getProperty("inicio.wait.to.appear");
+                preferenciasButtonText = getProperty("inicio.preferencias.link.text");
     }
 
     public static class LiveClasses {
@@ -105,9 +109,15 @@ public class TestData {
     }
 
     public static class TeacherFeedback {
-        public static final String teacherFeedbackHeaderText = getProperty("teacherfeedback.header.text");
-    }
+        public static final String teacherFeedbackHeaderText = getProperty("teacherfeedback.header.text"),
+                teacherFeedbackVerElIndiceDelCursoLink = getProperty("teacherfeedback.verelindice.del.curso.link"),
+                teacherFeedbackFechaColumn = getProperty("teacherfeedback.fecha.column"),
+                teacherFeedbackSugerenciaSolicitadaColumn = getProperty("teacherfeedback.sugerencia.solicitada.column"),
+                teacherFeedbackRespuestaDelProfesorColumn = getProperty("teacherfeedback.respuesta.del.profesor.column"),
+                teacherFeedbackTeachersName = getProperty("teacherfeedback.teachers.name");
 
+
+    }
 
     public static class History {
         public static final String historyHeaderText = getProperty("history.header.text");
@@ -123,8 +133,7 @@ public class TestData {
     }
 
     public static class Attributes {
-        public static final String src = getProperty("attribute.src"),
-                type = getProperty("attribute.type");
+        public static final String src = getProperty("attribute.src");
     }
 
 }
