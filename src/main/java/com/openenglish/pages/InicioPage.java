@@ -52,7 +52,9 @@ public class InicioPage {
             lessThenSign = $(By.xpath(".//*[@id='main']//div[@class='carousel']//a[@class='next']")),
             topicLiveClassVideo = $(By.xpath(".//*[@id='main']//div[@class='carousel']//h3")),
             topicPracticeVideo = $(By.xpath(".//*[@id='main']//div[@class='immersion']//h3")),
-            reloadPracticeVideoButton = $(By.xpath(".//*[@id='main']//div[@class='grid_3']//a[@class='close']"));
+            topicLessonsVideo = $(By.xpath(".//*[@id='main']//div[@class='grid_3 block']//h3")),
+            reloadPracticeVideoButton = $(By.xpath(".//*[@id='main']//div[@class='grid_3']//a[@class='close']")),
+            reloadLessonsVideoButton = $(By.xpath(".//*[@id='main']/div[@class='grid_3 block']//a[@class='close']"));
 
     public String logOutLink = "a[href='/j_spring_security_logout']";
 
