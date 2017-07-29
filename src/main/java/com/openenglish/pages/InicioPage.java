@@ -1,6 +1,5 @@
 package com.openenglish.pages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
@@ -48,7 +47,10 @@ public class InicioPage {
             videoBlock = $(By.id("main")),
             carouselVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='carousel']")),
             lessonVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='lesson']")),
-            comenzarButtonVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='lesson']"));
+            comenzarButtonVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='lesson']")),
+            greaterThenSign = $(By.xpath(".//*[@id='main']//a[@class='next']")),
+            lessThenSign = $(By.xpath(".//*[@id='main']//div[@class='carousel']//a[@class='next']")),
+            topicLiveClassVideo = $(By.xpath(".//*[@id='main']//div[@class='carousel']//h3"));
 
     public String logOutLink = "a[href='/j_spring_security_logout']";
 
@@ -69,6 +71,15 @@ public class InicioPage {
     public boolean visibilityOfListElements(ElementsCollection collection) {
         for (SelenideElement element : collection) {
             if (!element.is(exist) && !element.is(visible)) return false;
+        }
+        return true;
+    }
+
+    public boolean stringsComparator(String constant, String toSplit) {
+        String[] techString = toSplit.split("\\-");
+        String[] wordsArr = techString[1].split(" ");
+        for (String toCompare: wordsArr) {
+            if (!constant.toLowerCase().contains(toCompare.toLowerCase())) return false;
         }
         return true;
     }

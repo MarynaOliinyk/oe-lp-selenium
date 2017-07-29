@@ -4,6 +4,11 @@ import static com.openenglish.util.PropertiesCache.getProperty;
 
 public class TestData {
 
+    public static class Selenide {
+        public static final long timeout = Long.parseLong(getProperty("selenide.timeout"));
+        public static final long waitUntil = Long.parseLong(getProperty("selenide.wait.until"));
+    }
+
     public static class General {
         public static final String oeUrl = getProperty("base.oe.url"),
                 lpUrl = getProperty("base.lp.url");
