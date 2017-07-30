@@ -24,7 +24,7 @@ import static com.openenglish.core.TestData.TempMail.tempMailUrl;
 import static com.openenglish.core.TestData.TempMail.tempMailWait;
 import static com.openenglish.pages.AbstractPage.openInNewTab;
 
-public class C17SignUpWithValidInformation extends DriverBase {
+public class C14SignUpWithValidInformation extends DriverBase {
 
     @Test
     public void signUpWithValidInformationTest() {
