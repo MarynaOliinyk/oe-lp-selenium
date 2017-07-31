@@ -11,7 +11,7 @@ public class TestData {
 
     public static class General {
         public static final String oeUrl = getProperty("base.oe.url"),
-                lpUrl = getProperty("base.lp.url");
+                                   lpUrl = getProperty("base.lp.url");
     }
 
     public static class Login {
@@ -48,7 +48,16 @@ public class TestData {
                 charQuantityAppelido = getProperty("register.char.quantity.surname"),
                 numberLength = getProperty("register.number.length"),
                 specialCharacters = getProperty("register.special.characters"),
-                comienzaAhora = getProperty("register.comienza.ahora.button.text");
+                comienzaAhora = getProperty("register.comienza.ahora.button.text"),
+                registrateText = getProperty("register.link.text"),
+                firstName = getProperty("register.first.name"),
+                lastName = getProperty("register.last.name"),
+                mobileSectionOne = getProperty("register.mobile.section.one"),
+                mobileSectionTwo = getProperty("register.mobile.section.two"),
+                mobileSectionThree = getProperty("register.mobile.section.three"),
+                age = getProperty("register.age"),
+                thanksText = getProperty("register.thanks.text"),
+                title = getProperty("register.title");
     }
 
     public static class FAQ {
@@ -138,4 +147,10 @@ public class TestData {
                 preferencesUrlEndWithText = getProperty("preferences.page.url.endwith");
     }
 
+    public static class TempMail {
+        public static final String tempMailUrl = getProperty("temp.mail.url"),
+                                   tempMailTitle = getProperty("temp.mail.title"),
+                                   tempMailMessageTitle = getProperty("temp.mail.message.title");
+        public static final long tempMailWait = Long.parseLong(getProperty("temp.mail.wait"));
+    }
 }
