@@ -13,6 +13,10 @@ public class AbstractPage {
 
     private String jsClickQuery = "var els = document.querySelectorAll(\"%s\"); els[0].click()";
 
+    public static void openInNewTab(String url) {
+        executeJavaScript("window.open('" + url + "','_blank');");
+    }
+
     public void logOut() {
         inicioPage.getOeLogo().should(exist);
         executeJavaScript(String.format(jsClickQuery, inicioPage.getLogOutLink()));
