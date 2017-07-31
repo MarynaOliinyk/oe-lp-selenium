@@ -12,33 +12,33 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
-import static com.openenglish.core.TestData.FAQS.faqsText;
-import static com.openenglish.core.TestData.General.lpUrl;
-import static com.openenglish.core.TestData.Inicio.inicioLink;
-import static com.openenglish.core.TestData.Inicio.userNickName;
-import static com.openenglish.core.TestData.Login.correctPassword;
-import static com.openenglish.core.TestData.Login.registeredEmail;
-import static com.openenglish.core.TestData.Recovery.recoveryPasswordFaq;
-import static com.openenglish.core.TestData.Recovery.recoveryPasswordFormTitle;
-import static com.openenglish.core.TestData.Recovery.recoveryPasswordSingUpText;
-import static com.openenglish.core.TestData.Recovery.registrateText;
+import static com.openenglish.core.TestData.FAQS.FAQS_TEXT;
+import static com.openenglish.core.TestData.General.LP_URL;
+import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
+import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
+import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
+import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Recovery.RECOVERY_PASSWORD_FAQ;
+import static com.openenglish.core.TestData.Recovery.RECOVERY_PASSWORD_FORM_TITLE;
+import static com.openenglish.core.TestData.Recovery.RECOVERY_PASSWORD_SING_UP_TEXT;
+import static com.openenglish.core.TestData.Recovery.REGISTRATE_TEXT;
 
 public class C21VerifyLinksTest extends DriverBase {
     private AbstractPage page = new AbstractPage();
 
     @BeforeMethod
     public void userCredetialsAndRecoveryPassword() {
-        open(lpUrl);
+        open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
                 .shouldHave(attribute("type", "password"));
-        page.loginPage.logIn(registeredEmail, correctPassword);
-        page.inicioPage.getInicioLink().shouldHave(text(inicioLink));
-        page.inicioPage.getUserName().shouldHave(text(userNickName));
+        page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
+        page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
+        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
         page.logOut();
         page.loginPage.getPasswordReset().click();
         RecoveryPage recoveryPage = new RecoveryPage();
-        recoveryPage.getRequestFormTitle().shouldHave(text(recoveryPasswordFormTitle));
+        recoveryPage.getRequestFormTitle().shouldHave(text(RECOVERY_PASSWORD_FORM_TITLE));
         recoveryPage.getEmail().shouldBe(visible);
     }
 
@@ -55,17 +55,17 @@ public class C21VerifyLinksTest extends DriverBase {
     @Test
     public void fAQpageIsOpenedTestS2() {
         RecoveryPage recoveryPage = new RecoveryPage();
-        recoveryPage.getFaq().shouldBe(visible).shouldHave(text(recoveryPasswordFaq)).click();
+        recoveryPage.getFaq().shouldBe(visible).shouldHave(text(RECOVERY_PASSWORD_FAQ)).click();
         FAQsPage FAQsPage = new FAQsPage();
-        FAQsPage.getFaqsText().shouldBe(visible).should(text(faqsText));
+        FAQsPage.getFaqsText().shouldBe(visible).should(text(FAQS_TEXT));
     }
 
     @Test
     public void goToRegisterPageTestS3() {
         RecoveryPage recoveryPage = new RecoveryPage();
-        recoveryPage.getSingUp().shouldBe(visible).shouldHave(text(recoveryPasswordSingUpText)).click();
+        recoveryPage.getSingUp().shouldBe(visible).shouldHave(text(RECOVERY_PASSWORD_SING_UP_TEXT)).click();
         RegisterPage registerPage = new RegisterPage();
         registerPage.getTooltipWindowClose().click();
-        registerPage.getComienzaAhoraButton().should(visible).should(text(registrateText));
+        registerPage.getComienzaAhoraButton().should(visible).should(text(REGISTRATE_TEXT));
     }
 }
