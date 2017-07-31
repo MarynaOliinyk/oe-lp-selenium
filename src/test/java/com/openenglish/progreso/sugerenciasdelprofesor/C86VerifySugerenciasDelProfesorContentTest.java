@@ -15,19 +15,19 @@ import static com.openenglish.core.TestData.Inicio.inicioLink;
 import static com.openenglish.core.TestData.Login.correctPassword;
 import static com.openenglish.core.TestData.Login.registeredEmail;
 import static com.openenglish.core.TestData.Login.userName;
-import static com.openenglish.core.TestData.TeacherFeedback.teacherFeedbackFechaColumn;
+import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_FECHA_COLUMN;
 import static com.openenglish.core.TestData.TeacherFeedback.teacherFeedbackHeaderText;
-import static com.openenglish.core.TestData.TeacherFeedback.teacherFeedbackRespuestaDelProfesorColumn;
-import static com.openenglish.core.TestData.TeacherFeedback.teacherFeedbackSugerenciaSolicitadaColumn;
-import static com.openenglish.core.TestData.TeacherFeedback.teacherFeedbackTeachersName;
-import static com.openenglish.core.TestData.TeacherFeedback.teacherFeedbackVerElIndiceDelCursoLink;
+import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN;
+import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN;
+import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_TEACHERS_NAME;
+import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_LINK;
 
 
 public class C86VerifySugerenciasDelProfesorContentTest extends DriverBase {
 
     private AbstractPage page = new AbstractPage();
 
-    @Test
+    @Test(enabled = false)
     public void VerifySugerenciasDelProfesorContentTest() {
         open(lpUrl);
         page.loginPage.cookieBannerVisibility();
@@ -41,15 +41,16 @@ public class C86VerifySugerenciasDelProfesorContentTest extends DriverBase {
         page.inicioPage.getSugerenciasDelProfesorLink().click();
         TeacherFeedbackPage teacherFeedbackPage = new TeacherFeedbackPage();
         teacherFeedbackPage.getHeaderText().shouldBe(visible).shouldHave(text(teacherFeedbackHeaderText + " " + userName));
-        teacherFeedbackPage.getVerElIndiceDelCursoLink().shouldHave(text(teacherFeedbackVerElIndiceDelCursoLink));
-        teacherFeedbackPage.getFechaColumn().shouldHave(text(teacherFeedbackFechaColumn));
-        teacherFeedbackPage.getSugerenciaSolicitadaColumn().shouldBe(visible).shouldHave(text(teacherFeedbackSugerenciaSolicitadaColumn));
-        teacherFeedbackPage.getRespuestaDelProfesorColumn().shouldBe(visible).shouldHave(text(teacherFeedbackRespuestaDelProfesorColumn));
+        teacherFeedbackPage.getVerElIndiceDelCursoLink().shouldHave(text(TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_LINK));
+        teacherFeedbackPage.getFechaColumn().shouldHave(text(TEACHER_FEEDBACK_FECHA_COLUMN));
+        teacherFeedbackPage.getSugerenciaSolicitadaColumn().shouldBe(visible).shouldHave(text(TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN));
+        teacherFeedbackPage.getRespuestaDelProfesorColumn().shouldBe(visible).shouldHave(text(TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN));
         teacherFeedbackPage.getDayAndDateOfMessage().shouldBe(visible);
         teacherFeedbackPage.getTitleOfSentQuestion().shouldBe(exist);
         teacherFeedbackPage.getSubjectOfSentQuestion().shouldBe(exist);
-        teacherFeedbackPage.getTeachersName().shouldHave(text(teacherFeedbackTeachersName));
+        teacherFeedbackPage.getTeachersName().shouldHave(text(TEACHER_FEEDBACK_TEACHERS_NAME));
         teacherFeedbackPage.getTeachersMessage().shouldBe(exist);
+        //TODO BUG QAA-211 https://openenglish.jira.com/browse/QAA-211
         teacherFeedbackPage.getGoodRateFace().shouldBe(visible);
         teacherFeedbackPage.getBadRateFace().shouldBe(visible);
 

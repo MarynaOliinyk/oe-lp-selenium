@@ -104,14 +104,14 @@ public class TestData {
 
     public static class TeacherFeedback {
         public static final String teacherFeedbackHeaderText = getProperty("teacherfeedback.header.text"),
-                teacherFeedbackVerElIndiceDelCursoLink = getProperty("teacherfeedback.verelindice.del.curso.link"),
-                teacherFeedbackFechaColumn = getProperty("teacherfeedback.fecha.column"),
-                teacherFeedbackSugerenciaSolicitadaColumn = getProperty("teacherfeedback.sugerencia.solicitada.column"),
-                teacherFeedbackRespuestaDelProfesorColumn = getProperty("teacherfeedback.respuesta.del.profesor.column"),
-                teacherFeedbackTeachersName = getProperty("teacherfeedback.teachers.name"),
-                teacherfeedbackPopUpHeaderText = getProperty("teacherfeedback.popup.header.text"),
-                teacherfeedbackPopUpHeaderTextAfterSad = getProperty("teacherfeedback.popup.header.text.sad"),
-                teacherfeedbackPopUpMessage = getProperty("teacherfeedback.popup.message");
+                TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("teacherfeedback.verelindice.del.curso.link"),
+                TEACHER_FEEDBACK_FECHA_COLUMN = getProperty("teacherfeedback.fecha.column"),
+                TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN = getProperty("teacherfeedback.sugerencia.solicitada.column"),
+                TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN = getProperty("teacherfeedback.respuesta.del.profesor.column"),
+                TEACHER_FEEDBACK_TEACHERS_NAME = getProperty("teacherfeedback.teachers.name"),
+                TEACHERFEEDBACK_POP_UP_HEADER_TEXT = getProperty("teacherfeedback.popup.header.text"),
+                TEACHERFEEDBACK_POP_UP_HEADER_TEXT_AFTER_SAD = getProperty("teacherfeedback.popup.header.text.sad"),
+                TEACHERFEEDBACK_POP_UP_MESSAGE = getProperty("teacherfeedback.popup.message");
     }
 
     public static class History {
