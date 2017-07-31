@@ -9,35 +9,35 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
-import static com.openenglish.core.TestData.General.oeUrl;
-import static com.openenglish.core.TestData.Register.age;
-import static com.openenglish.core.TestData.Register.firstName;
-import static com.openenglish.core.TestData.Register.lastName;
-import static com.openenglish.core.TestData.Register.mobileSectionOne;
-import static com.openenglish.core.TestData.Register.mobileSectionThree;
-import static com.openenglish.core.TestData.Register.mobileSectionTwo;
-import static com.openenglish.core.TestData.Register.thanksText;
-import static com.openenglish.core.TestData.Register.title;
-import static com.openenglish.core.TestData.TempMail.tempMailMessageTitle;
-import static com.openenglish.core.TestData.TempMail.tempMailTitle;
-import static com.openenglish.core.TestData.TempMail.tempMailUrl;
-import static com.openenglish.core.TestData.TempMail.tempMailWait;
+import static com.openenglish.core.TestData.General.OE_URL;
+import static com.openenglish.core.TestData.Register.AGE;
+import static com.openenglish.core.TestData.Register.FIRST_NAME;
+import static com.openenglish.core.TestData.Register.LAST_NAME;
+import static com.openenglish.core.TestData.Register.MOBILE_SECTION_ONE;
+import static com.openenglish.core.TestData.Register.MOBILE_SECTION_THREE;
+import static com.openenglish.core.TestData.Register.MOBILE_SECTION_TWO;
+import static com.openenglish.core.TestData.Register.THANKS_TEXT;
+import static com.openenglish.core.TestData.Register.TITLE;
+import static com.openenglish.core.TestData.TempMail.TEMP_MAIL_MESSAGE_TITLE;
+import static com.openenglish.core.TestData.TempMail.TEMP_MAIL_TITLE;
+import static com.openenglish.core.TestData.TempMail.TEMP_MAIL_URL;
+import static com.openenglish.core.TestData.TempMail.TEMP_MAIL_WAIT;
 import static com.openenglish.pages.AbstractPage.openInNewTab;
 
 public class C14SignUpWithValidInformation extends DriverBase {
 
     @Test
     public void signUpWithValidInformationTest() {
-        open(tempMailUrl);
+        open(TEMP_MAIL_URL);
         TempMail tempMail = new TempMail();
         String mail = tempMail.getTempMail().val();
-        openInNewTab(oeUrl);
-        switchTo().window(title);
+        openInNewTab(OE_URL);
+        switchTo().window(TITLE);
         RegisterPage regForm = new RegisterPage();
         switchTo().frame(regForm.getPopUpIdentifier());
-        regForm.fillAndSubmitRegistration(firstName, lastName, mail, mobileSectionOne, mobileSectionTwo, mobileSectionThree, age);
-        regForm.getThanksText().shouldHave(text(thanksText));
-        switchTo().window(tempMailTitle);
-        tempMail.getReceivedMail().waitUntil(exist, tempMailWait).should(text(tempMailMessageTitle));
+        regForm.fillAndSubmitRegistration(FIRST_NAME, LAST_NAME, mail, MOBILE_SECTION_ONE, MOBILE_SECTION_TWO, MOBILE_SECTION_THREE, AGE);
+        regForm.getThanksText().shouldHave(text(THANKS_TEXT));
+        switchTo().window(TEMP_MAIL_TITLE);
+        tempMail.getReceivedMail().waitUntil(exist, TEMP_MAIL_WAIT).should(text(TEMP_MAIL_MESSAGE_TITLE));
     }
 }

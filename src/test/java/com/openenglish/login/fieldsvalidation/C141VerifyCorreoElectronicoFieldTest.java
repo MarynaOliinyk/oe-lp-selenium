@@ -5,12 +5,12 @@ import com.openenglish.pages.AbstractPage;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.openenglish.core.TestData.General.lpUrl;
-import static com.openenglish.core.TestData.Login.correctPassword;
-import static com.openenglish.core.TestData.Login.registeredEmail;
-import static com.openenglish.core.TestData.Login.unregisteredEmail;
-import static com.openenglish.core.TestData.Recovery.emailWithoutATsymbol;
-import static com.openenglish.core.TestData.Recovery.emailWithoutDotCom;
+import static com.openenglish.core.TestData.General.LP_URL;
+import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
+import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Login.UNREGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Recovery.EMAIL_WITHOUT_A_TSYMBOL;
+import static com.openenglish.core.TestData.Recovery.EMAIL_WITHOUT_DOT_COM;
 
 public class C141VerifyCorreoElectronicoFieldTest extends DriverBase {
 
@@ -18,12 +18,12 @@ public class C141VerifyCorreoElectronicoFieldTest extends DriverBase {
 
     @Test
     public void submitUnregisteredEmailTest() {
-        open(lpUrl);
-        page.logIn(registeredEmail, correctPassword);
+        open(LP_URL);
+        page.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.logOut();
-        page.loginPage.verifyEmail(unregisteredEmail, correctPassword);
-        page.loginPage.verifyEmail(emailWithoutATsymbol, correctPassword);
-        page.loginPage.verifyEmail(emailWithoutDotCom, correctPassword);
+        page.loginPage.verifyEmail(UNREGISTERED_EMAIL, CORRECT_PASSWORD);
+        page.loginPage.verifyEmail(EMAIL_WITHOUT_A_TSYMBOL, CORRECT_PASSWORD);
+        page.loginPage.verifyEmail(EMAIL_WITHOUT_DOT_COM, CORRECT_PASSWORD);
     }
 
 

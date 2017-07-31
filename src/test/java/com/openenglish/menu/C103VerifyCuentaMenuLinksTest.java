@@ -10,17 +10,17 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.url;
-import static com.openenglish.core.TestData.General.lpUrl;
-import static com.openenglish.core.TestData.Inicio.inicioLink;
-import static com.openenglish.core.TestData.Inicio.mensajesButtonText;
-import static com.openenglish.core.TestData.Inicio.preferenciasButtonText;
-import static com.openenglish.core.TestData.Inicio.salirButtonText;
-import static com.openenglish.core.TestData.Login.correctPassword;
-import static com.openenglish.core.TestData.Login.registeredEmail;
-import static com.openenglish.core.TestData.Login.userName;
-import static com.openenglish.core.TestData.Notifications.notificationsUrlEndWithText;
-import static com.openenglish.core.TestData.Preferences.miPerfilTabText;
-import static com.openenglish.core.TestData.Preferences.preferencesUrlEndWithText;
+import static com.openenglish.core.TestData.General.LP_URL;
+import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
+import static com.openenglish.core.TestData.Inicio.MENSAJES_BUTTON_TEXT;
+import static com.openenglish.core.TestData.Inicio.PREFERENCIAS_BUTTON_TEXT;
+import static com.openenglish.core.TestData.Inicio.SALIR_BUTTON_TEXT;
+import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
+import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Login.USER_NAME;
+import static com.openenglish.core.TestData.Notifications.NOTIFICATIONS_URL_END_WITH_TEXT;
+import static com.openenglish.core.TestData.Preferences.MI_PERFIL_TAB_TEXT;
+import static com.openenglish.core.TestData.Preferences.PREFERENCES_URL_END_WITH_TEXT;
 import static org.testng.Assert.assertTrue;
 
 public class C103VerifyCuentaMenuLinksTest extends DriverBase {
@@ -29,51 +29,51 @@ public class C103VerifyCuentaMenuLinksTest extends DriverBase {
 
     @Test
     public void cuentaMenuLinksVerificationScenario1Test() {
-        open(lpUrl);
+        open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
                 .shouldHave(attribute("type", "password"));
-        page.loginPage.logIn(registeredEmail, correctPassword);
-        page.inicioPage.getInicioLink().shouldHave(exactText(inicioLink));
-        page.inicioPage.getUserName().shouldHave(text(userName));
+        page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
+        page.inicioPage.getInicioLink().shouldHave(exactText(INICIO_LINK));
+        page.inicioPage.getUserName().shouldHave(text(USER_NAME));
         page.inicioPage.getAccountMenu().hover();
         page.inicioPage.getCuentaSuboptions().shouldBe(visible);
-        page.inicioPage.getMensajesCuentaSuboptionButton().shouldBe(visible).shouldHave(exactText(mensajesButtonText)).click();
-        assertTrue(url().endsWith(notificationsUrlEndWithText));
+        page.inicioPage.getMensajesCuentaSuboptionButton().shouldBe(visible).shouldHave(exactText(MENSAJES_BUTTON_TEXT)).click();
+        assertTrue(url().endsWith(NOTIFICATIONS_URL_END_WITH_TEXT));
     }
 
     @Test
     public void preferenciasCuentaMenuSuboptionVerificationScenario2Test() {
-        open(lpUrl);
+        open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
                 .shouldHave(attribute("type", "password"));
-        page.loginPage.logIn(registeredEmail, correctPassword);
-        page.inicioPage.getInicioLink().shouldHave(exactText(inicioLink));
-        page.inicioPage.getUserName().shouldHave(text(userName));
+        page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
+        page.inicioPage.getInicioLink().shouldHave(exactText(INICIO_LINK));
+        page.inicioPage.getUserName().shouldHave(text(USER_NAME));
         page.inicioPage.getAccountMenu().hover();
         page.inicioPage.getCuentaSuboptions().shouldBe(visible);
         page.inicioPage.getPreferenciasCuentaSuboptionButton().shouldBe(visible).
-                shouldHave(exactText(preferenciasButtonText)).click();
-        page.preferencesPage.getMiPerfilTab().shouldBe(visible).shouldHave(exactText(miPerfilTabText));
-        assertTrue(url().endsWith(preferencesUrlEndWithText));
+                shouldHave(exactText(PREFERENCIAS_BUTTON_TEXT)).click();
+        page.preferencesPage.getMiPerfilTab().shouldBe(visible).shouldHave(exactText(MI_PERFIL_TAB_TEXT));
+        assertTrue(url().endsWith(PREFERENCES_URL_END_WITH_TEXT));
     }
 
     @Test
     public void salirCuentaMenuSuboptionVerificationScenario3Test() {
-        open(lpUrl);
+        open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
                 .shouldHave(attribute("type", "password"));
-        page.loginPage.logIn(registeredEmail, correctPassword);
-        page.inicioPage.getInicioLink().shouldHave(exactText(inicioLink));
-        page.inicioPage.getUserName().shouldHave(text(userName));
+        page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
+        page.inicioPage.getInicioLink().shouldHave(exactText(INICIO_LINK));
+        page.inicioPage.getUserName().shouldHave(text(USER_NAME));
         page.inicioPage.getAccountMenu().hover();
         page.inicioPage.getCuentaSuboptions().shouldBe(visible);
         page.inicioPage.getLogOutLinkElement().shouldBe(visible).
-                shouldHave(exactText(salirButtonText)).click();
+                shouldHave(exactText(SALIR_BUTTON_TEXT)).click();
         page.loginPage.getLoginForm().shouldBe(visible);
-        page.inicioPage.getUserName().shouldNotHave(text(userName));
+        page.inicioPage.getUserName().shouldNotHave(text(USER_NAME));
     }
 
 }

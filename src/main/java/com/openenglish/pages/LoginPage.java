@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.back;
-import static com.openenglish.core.TestData.Recovery.recoveryTooltipEmail;
+import static com.openenglish.core.TestData.Recovery.RECOVERY_TOOLTIP_EMAIL;
 
 public class LoginPage {
     @Getter
@@ -51,7 +51,7 @@ public class LoginPage {
     public void verifyEmail(String email, String password) {
         getEmail().clear();
         logIn(email, password);
-        getTooltipText().shouldBe(visible).shouldHave(text(recoveryTooltipEmail));
+        getTooltipText().shouldBe(visible).shouldHave(text(RECOVERY_TOOLTIP_EMAIL));
         back();
     }
 }
