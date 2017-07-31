@@ -50,7 +50,9 @@ public class InicioPage {
             comenzarButtonVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='lesson']")),
             greaterThenSign = $(By.xpath(".//*[@id='main']//a[@class='next']")),
             lessThenSign = $(By.xpath(".//*[@id='main']//div[@class='carousel']//a[@class='next']")),
-            topicLiveClassVideo = $(By.xpath(".//*[@id='main']//div[@class='carousel']//h3"));
+            topicLiveClassVideo = $(By.xpath(".//*[@id='main']//div[@class='carousel']//h3")),
+            topicPracticeVideo = $(By.xpath(".//*[@id='main']//div[@class='immersion']//h3")),
+            reloadPracticeVideoButton = $(By.xpath(".//*[@id='main']//div[@class='grid_3']//a[@class='close']"));
 
     public String logOutLink = "a[href='/j_spring_security_logout']";
 
