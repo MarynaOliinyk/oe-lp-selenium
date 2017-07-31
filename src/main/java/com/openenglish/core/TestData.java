@@ -137,9 +137,9 @@ public class TestData {
 
     public static class MyNotebook {
         public static final String MY_NOTEBOOK_HEADER_TEXT = getProperty("mynotebook.header.text"),
-                myNotebookVerElIndiceDelCursoText = getProperty("mynotebook.verelindice.del.curso.text"),
-                myNotebookVerElIndiceDelCursoLink = getProperty("mynotebook.verelindice.del.curso.link"),
-                myNotebooktextIfNotNotes = getProperty("mynotebook.text.if.not.notes");
+                MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("mynotebook.verelindice.del.curso.text"),
+                MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("mynotebook.verelindice.del.curso.link"),
+                MY_NOTEBOOKTEXT_IF_NOT_NOTES = getProperty("mynotebook.text.if.not.notes");
     }
 
     public static class Preferences {

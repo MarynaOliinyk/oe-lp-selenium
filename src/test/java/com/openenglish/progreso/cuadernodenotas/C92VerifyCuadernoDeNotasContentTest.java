@@ -18,9 +18,9 @@ import static com.openenglish.core.TestData.Login.correctPassword;
 import static com.openenglish.core.TestData.Login.registeredEmail;
 import static com.openenglish.core.TestData.Login.userName;
 import static com.openenglish.core.TestData.MyNotebook.myNotebookHeaderText;
-import static com.openenglish.core.TestData.MyNotebook.myNotebookVerElIndiceDelCursoLink;
-import static com.openenglish.core.TestData.MyNotebook.myNotebookVerElIndiceDelCursoText;
-import static com.openenglish.core.TestData.MyNotebook.myNotebooktextIfNotNotes;
+import static com.openenglish.core.TestData.MyNotebook.MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_LINK;
+import static com.openenglish.core.TestData.MyNotebook.MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_TEXT;
+import static com.openenglish.core.TestData.MyNotebook.MY_NOTEBOOKTEXT_IF_NOT_NOTES;
 import static org.testng.Assert.assertTrue;
 
 public class C92VerifyCuadernoDeNotasContentTest extends DriverBase {
@@ -41,9 +41,9 @@ public class C92VerifyCuadernoDeNotasContentTest extends DriverBase {
         page.inicioPage.getCuadernoDeNotasLink().click();
         MyNotebookPage myNotebookPage = new MyNotebookPage();
         myNotebookPage.getHeaderText().shouldBe(visible).shouldHave(text(myNotebookHeaderText + " " + USER_NAME_WITHOUT_NOTES));
-        assertTrue(myNotebookPage.getVerElIndiceDelCursoLink().should(text(myNotebookVerElIndiceDelCursoText)).getAttribute("href")
-                .contains(myNotebookVerElIndiceDelCursoLink));
-        myNotebookPage.getTextIfNotNotes().should(visible, text(myNotebooktextIfNotNotes));
+        assertTrue(myNotebookPage.getVerElIndiceDelCursoLink().should(text(MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_TEXT)).getAttribute("href")
+                .contains(MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_LINK));
+        myNotebookPage.getTextIfNotNotes().should(visible, text(MY_NOTEBOOKTEXT_IF_NOT_NOTES));
 
     }
 
@@ -61,8 +61,8 @@ public class C92VerifyCuadernoDeNotasContentTest extends DriverBase {
         page.inicioPage.getCuadernoDeNotasLink().click();
         MyNotebookPage myNotebookPage = new MyNotebookPage();
         myNotebookPage.getHeaderText().shouldBe(visible).shouldHave(text(myNotebookHeaderText + " " + userName));
-        assertTrue(myNotebookPage.getVerElIndiceDelCursoLink().should(text(myNotebookVerElIndiceDelCursoText)).getAttribute("href")
-                .contains(myNotebookVerElIndiceDelCursoLink));
+        assertTrue(myNotebookPage.getVerElIndiceDelCursoLink().should(text(MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_TEXT)).getAttribute("href")
+                .contains(MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_LINK));
         myNotebookPage.getPagination().should(visible);
         myNotebookPage.getNotes().should(visible);
         myNotebookPage.getFechaColumn().should(visible);
