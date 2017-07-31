@@ -114,12 +114,11 @@ public class TestData {
                 teacherFeedbackSugerenciaSolicitadaColumn = getProperty("teacherfeedback.sugerencia.solicitada.column"),
                 teacherFeedbackRespuestaDelProfesorColumn = getProperty("teacherfeedback.respuesta.del.profesor.column"),
                 teacherFeedbackTeachersName = getProperty("teacherfeedback.teachers.name");
-
-
     }
 
     public static class History {
-        public static final String historyHeaderText = getProperty("history.header.text");
+        public static final String historyHeaderText = getProperty("history.header.text"),
+                                   borrarTodoText =getProperty("history.borrartodo.text");
     }
 
     public static class MyNotebook {

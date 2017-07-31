@@ -28,7 +28,7 @@ public class C86VerifySugerenciasDelProfesorContentTest extends DriverBase {
     private AbstractPage page = new AbstractPage();
 
     @Test
-    public void VerifySugerenciasDelProfesorContentTest() {
+    public void verifySugerenciasDelProfesorContentTest() {
         open(lpUrl);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
