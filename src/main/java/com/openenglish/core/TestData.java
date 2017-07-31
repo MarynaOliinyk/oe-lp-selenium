@@ -20,11 +20,14 @@ public class TestData {
                 invalidSecurityCode = getProperty("login.invalid.security.code"),
                 popUpInvalidSecurityCode = getProperty("login.popup.invalid.security.code"),
                 userName = getProperty("login.user.name"),
+                USER_NAME_WITHOUT_NOTES = getProperty("login.user.name.without.notes"),
                 registeredEmail = getProperty("login.correct.email"),
                 correctPassword = getProperty("login.correct.password"),
                 unregisteredEmail = getProperty("login.unregistered.email"),
                 invalidPassword = getProperty("login.invalid.password"),
-                securityPlaceHolderText = getProperty("login.security.placeholder");
+                securityPlaceHolderText = getProperty("login.security.placeholder"),
+                EMAIL_WITHOUT_NOTES = getProperty("login.correct.email.without.notes"),
+                PASSWORD_WITHOUT_NOTES = getProperty("login.correct.password.without.notes");
     }
 
     public static class Recovery {
@@ -63,6 +66,7 @@ public class TestData {
         public static final String inicioLink = getProperty("inicio.link.text"),
                 mensajesButtonText = getProperty("inicio.mensajes.link.text"),
                 userNickName = getProperty("inicio.nick.user.name"),
+                USER_NICK_NAME_WITHOUT_NOTES = getProperty("inicio.nick.user.name.without.notes"),
                 salirButtonText = getProperty("inicio.salir.link.text"),
                 preferenciasButtonText = getProperty("inicio.preferencias.link.text");
     }
@@ -109,11 +113,11 @@ public class TestData {
 
     public static class TeacherFeedback {
         public static final String teacherFeedbackHeaderText = getProperty("teacherfeedback.header.text"),
-                teacherFeedbackVerElIndiceDelCursoLink = getProperty("teacherfeedback.verelindice.del.curso.link"),
-                teacherFeedbackFechaColumn = getProperty("teacherfeedback.fecha.column"),
-                teacherFeedbackSugerenciaSolicitadaColumn = getProperty("teacherfeedback.sugerencia.solicitada.column"),
-                teacherFeedbackRespuestaDelProfesorColumn = getProperty("teacherfeedback.respuesta.del.profesor.column"),
-                teacherFeedbackTeachersName = getProperty("teacherfeedback.teachers.name");
+                TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("teacherfeedback.verelindice.del.curso.text"),
+                TEACHER_FEEDBACK_FECHA_COLUMN = getProperty("teacherfeedback.fecha.column"),
+                TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN = getProperty("teacherfeedback.sugerencia.solicitada.column"),
+                TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN = getProperty("teacherfeedback.respuesta.del.profesor.column"),
+                TEACHER_FEEDBACK_TEACHERS_NAME = getProperty("teacherfeedback.teachers.name");
 
 
     }
@@ -123,7 +127,10 @@ public class TestData {
     }
 
     public static class MyNotebook {
-        public static final String myNotebookHeaderText = getProperty("mynotebook.header.text");
+        public static final String myNotebookHeaderText = getProperty("mynotebook.header.text"),
+                myNotebookVerElIndiceDelCursoText = getProperty("mynotebook.verelindice.del.curso.text"),
+                myNotebookVerElIndiceDelCursoLink = getProperty("mynotebook.verelindice.del.curso.link"),
+                myNotebooktextIfNotNotes = getProperty("mynotebook.text.if.not.notes");
     }
 
     public static class Preferences {
