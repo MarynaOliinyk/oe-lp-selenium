@@ -24,8 +24,7 @@ public class TestData {
                 correctPassword = getProperty("login.correct.password"),
                 unregisteredEmail = getProperty("login.unregistered.email"),
                 invalidPassword = getProperty("login.invalid.password"),
-                securityPlaceHolderText = getProperty("login.security.placeholder"),
-                passwordText = getProperty("login.password.text");
+                securityPlaceHolderText = getProperty("login.security.placeholder");
     }
 
     public static class Recovery {
@@ -120,7 +119,14 @@ public class TestData {
     }
 
     public static class History {
-        public static final String historyHeaderText = getProperty("history.header.text");
+        public static final String historyHeaderText = getProperty("history.header.text"),
+                historyHeaderLinkText = getProperty("history.header.link.text"),
+                historyTableHeaderFechaText = getProperty("history.table.header.fecha.text"),
+                historyTableHeaderTipoText = getProperty("history.table.header.tipo.text"),
+                historyTableHeaderTituloText = getProperty("history.table.header.titulo.text"),
+                historyTableHeaderDescripcionText = getProperty("history.table.header.descripcion.text"),
+                historyTableHeaderResultsText = getProperty("history.table.header.results.text"),
+                historyUrlEndsWith = getProperty("history.url.endsWith");
     }
 
     public static class MyNotebook {
