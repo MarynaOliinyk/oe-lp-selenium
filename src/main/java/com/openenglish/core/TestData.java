@@ -132,8 +132,4 @@ public class TestData {
                 preferencesUrlEndWithText = getProperty("preferences.page.url.endwith");
     }
 
-    public static class Attributes {
-        public static final String src = getProperty("attribute.src");
-    }
-
 }

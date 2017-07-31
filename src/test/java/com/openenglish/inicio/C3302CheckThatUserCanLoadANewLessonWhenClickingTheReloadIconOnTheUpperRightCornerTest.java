@@ -15,33 +15,33 @@ import static com.openenglish.core.TestData.Login.registeredEmail;
 import static com.openenglish.core.TestData.Selenide.waitUntil;
 import static org.testng.Assert.assertFalse;
 
-public class C1393CheckThatUserCanLoadANewPracticeVideoWhenClickingTheReloadIconOnTheUpperRightCornerTest extends DriverBase {
+public class C3302CheckThatUserCanLoadANewLessonWhenClickingTheReloadIconOnTheUpperRightCornerTest extends DriverBase {
 
     private AbstractPage page = new AbstractPage();
 
     @Test
-    public void checkThatUserCanLoadANewPracticeVideoWhenClickingTheReloadIconOnTheUpperRightCornerTest() {
+    public void checkThatUserCanLoadANewLessonWhenClickingTheReloadIconOnTheUpperRightCornerTest() {
         open(lpUrl);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.logIn(registeredEmail, correctPassword);
 
-        String firstImageUrlText = getPracticeVideoText();
-        String firstImageTopic = getPracticeVideoTopicText();
-        page.inicioPage.getReloadPracticeVideoButton().shouldBe(visible).click();
-        page.inicioPage.getTopicPracticeVideo().waitUntil(not(matchesText(firstImageTopic)),  waitUntil);
+        String firstImageUrlText = getLessonsVideoText();
+        String firstImageTopic = getLessonsVideoTopicText();
+        page.inicioPage.getReloadLessonsVideoButton().shouldBe(visible).click();
+        page.inicioPage.getTopicLessonsVideo().waitUntil(not(matchesText(firstImageTopic)),  waitUntil);
 
-        String secondImageUrlText = getPracticeVideoText();
-        String secondImageTopic = getPracticeVideoTopicText();
+        String secondImageUrlText = getLessonsVideoText();
+        String secondImageTopic = getLessonsVideoTopicText();
         assertFalse(firstImageUrlText.toLowerCase().equals(secondImageUrlText.toLowerCase()));
         assertFalse(firstImageTopic.toLowerCase().equals(secondImageTopic.toLowerCase()));
     }
 
-    private String getPracticeVideoText(){
-        return $(page.inicioPage.getAllThePracticeVideoImgs()).shouldBe(visible).getAttribute("src");
+    private String getLessonsVideoText(){
+        return $(page.inicioPage.getAllTheLessonsVideoImgs()).shouldBe(visible).getAttribute("src");
     }
 
-    private String getPracticeVideoTopicText(){
-        return page.inicioPage.getTopicPracticeVideo().shouldBe(visible).getText();
+    private String getLessonsVideoTopicText(){
+        return page.inicioPage.getTopicLessonsVideo().shouldBe(visible).getText();
     }
 
 }
