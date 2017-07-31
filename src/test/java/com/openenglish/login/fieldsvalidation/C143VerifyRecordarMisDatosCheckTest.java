@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.value;
 import static com.codeborne.selenide.Selenide.open;
-import static com.openenglish.core.TestData.General.lpUrl;
-import static com.openenglish.core.TestData.Login.correctPassword;
-import static com.openenglish.core.TestData.Login.registeredEmail;
+import static com.openenglish.core.TestData.General.LP_URL;
+import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
+import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 
 
 public class C143VerifyRecordarMisDatosCheckTest extends DriverBase {
@@ -18,12 +18,12 @@ public class C143VerifyRecordarMisDatosCheckTest extends DriverBase {
     //TODO BUG LPTRIAGE-170
     @Test
     public void rememberEnteredDataTest() {
-        open(lpUrl);
+        open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getRememberLogin().click();
-        page.loginPage.logIn(registeredEmail, correctPassword);
+        page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.logOut();
-        page.loginPage.getEmail().shouldHave(value(registeredEmail));
+        page.loginPage.getEmail().shouldHave(value(REGISTERED_EMAIL));
 //        page.loginPage.getPassword().shouldHave(value(password));
     }
 

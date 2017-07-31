@@ -11,11 +11,11 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
-import static com.openenglish.core.TestData.General.lpUrl;
-import static com.openenglish.core.TestData.Login.correctPassword;
-import static com.openenglish.core.TestData.Login.invalidPassword;
-import static com.openenglish.core.TestData.Login.registeredEmail;
-import static com.openenglish.core.TestData.Recovery.recoveryPasswordFormTitle;
+import static com.openenglish.core.TestData.General.LP_URL;
+import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
+import static com.openenglish.core.TestData.Login.INVALID_PASSWORD;
+import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Recovery.RECOVERY_PASSWORD_FORM_TITLE;
 
 public class C5VerifyLinksTest extends DriverBase {
 
@@ -23,7 +23,7 @@ public class C5VerifyLinksTest extends DriverBase {
 
     @Test
     public void verifyTooltipIsPresentTestS1() {
-        open(lpUrl);
+        open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getQuestionIcon().hover();
         page.loginPage.getTooltip().should(visible);
@@ -31,20 +31,20 @@ public class C5VerifyLinksTest extends DriverBase {
 
     @Test
     public void verifyResetPasswordPageIsOpenTestS2() {
-        open(lpUrl);
-        page.logIn(registeredEmail, correctPassword);
+        open(LP_URL);
+        page.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.logOut();
         page.loginPage.getPassword()
                 .shouldHave(attribute("type", "password"));
         page.loginPage.getPasswordReset().click();
         RecoveryPage recoveryPage = new RecoveryPage();
-        recoveryPage.getRequestFormTitle().shouldHave(text(recoveryPasswordFormTitle));
+        recoveryPage.getRequestFormTitle().shouldHave(text(RECOVERY_PASSWORD_FORM_TITLE));
         recoveryPage.getEmail().shouldBe(visible);
     }
 
     @Test
     public void verifyRegisterFormIsOpenTestS3() {
-        open(lpUrl);
+        open(LP_URL);
         page.loginPage.getPassword()
                 .shouldHave(attribute("type", "password"));
         page.loginPage.cookieBannerVisibility();
@@ -55,28 +55,28 @@ public class C5VerifyLinksTest extends DriverBase {
 
     @Test
     public void recoveryPasswordTestS4() {
-        open(lpUrl);
-        page.logIn(registeredEmail, correctPassword);
+        open(LP_URL);
+        page.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.logOut();
         page.loginPage.getPasswordReset().should(exist).click();
         RecoveryPage recoveryPage = new RecoveryPage();
-        recoveryPage.getRequestFormTitle().shouldHave(text(recoveryPasswordFormTitle));
+        recoveryPage.getRequestFormTitle().shouldHave(text(RECOVERY_PASSWORD_FORM_TITLE));
         recoveryPage.getEmail().shouldBe(visible);
     }
 
     //TODO Chat is not enabled
     @Test
     public void chatPageIsOpenTestS5() {
-        open(lpUrl);
-        page.logIn(registeredEmail, correctPassword);
+        open(LP_URL);
+        page.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.logOut();
-        page.loginPage.logIn(registeredEmail, invalidPassword);
-        page.loginPage.getPassword().should(visible).val(invalidPassword);
+        page.loginPage.logIn(REGISTERED_EMAIL, INVALID_PASSWORD);
+        page.loginPage.getPassword().should(visible).val(INVALID_PASSWORD);
         page.loginPage.getLoginButton().should(visible).click();
-        page.loginPage.getPassword().should(exist).sendKeys(invalidPassword);
+        page.loginPage.getPassword().should(exist).sendKeys(INVALID_PASSWORD);
         page.loginPage.getLoginButton().should(visible).click();
-        page.loginPage.getSecurityField().sendKeys(invalidPassword);
-        page.loginPage.getPassword().should(visible).val(invalidPassword);
+        page.loginPage.getSecurityField().sendKeys(INVALID_PASSWORD);
+        page.loginPage.getPassword().should(visible).val(INVALID_PASSWORD);
         page.loginPage.getLoginButton().click();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getChat().shouldBe(visible).click();

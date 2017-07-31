@@ -5,6 +5,8 @@ import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
 import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -45,12 +47,22 @@ public class InicioPage {
             videoBlock = $(By.id("main")),
             carouselVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='carousel']")),
             lessonVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='lesson']")),
-            comenzarButtonVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='lesson']"));
+            comenzarButtonVideoBlock = $(By.xpath(".//*[@id='main']//div[@class='lesson']")),
+            greaterThenSign = $(By.xpath(".//*[@id='main']//a[@class='next']")),
+            lessThenSign = $(By.xpath(".//*[@id='main']//div[@class='carousel']//a[@class='next']")),
+            topicLiveClassVideo = $(By.xpath(".//*[@id='main']//div[@class='carousel']//h3")),
+            topicPracticeVideo = $(By.xpath(".//*[@id='main']//div[@class='immersion']//h3")),
+            topicLessonsVideo = $(By.xpath(".//*[@id='main']//div[@class='grid_3 block']//h3")),
+            reloadPracticeVideoButton = $(By.xpath(".//*[@id='main']//div[@class='grid_3']//a[@class='close']")),
+            reloadLessonsVideoButton = $(By.xpath(".//*[@id='main']/div[@class='grid_3 block']//a[@class='close']"));
 
     public String logOutLink = "a[href='/j_spring_security_logout']";
 
     private By practiceVideosBlocks = By.xpath(".//*[@id='main']//div[@data-show-video='overlay']"),
-            videoBlocksContainer = By.xpath(".//*[@id='main']//div[@data-show-video='overlay']/following-sibling::div[contains(@class,'item')]");
+            videoBlocksContainer = By.xpath(".//*[@id='main']//div[@data-show-video='overlay']/following-sibling::div[contains(@class,'item')]"),
+            allThePracticeVideoImgs = By.xpath(".//*[@class='block']//div[@data-show-video='overlay']//img"),
+            allTheLessonsVideoImgs = By.xpath(".//*[@class='grid_3 block']//div[@class='lesson']//img"),
+            allTheLiveClassesVideoImgs = By.xpath(".//*[@class='grid_6 block live-class']//div[@class='carousel']//img");
 
     public boolean verifyAtLeastOneElementTextIsEqual(ElementsCollection collection, String xPath, String textToSearch) {
         for (SelenideElement element : collection) {
@@ -58,6 +70,22 @@ public class InicioPage {
             if (textToSearch.toLowerCase().equals(textFromTheElement)) return true;
         }
         return false;
+    }
+
+    public boolean visibilityOfListElements(ElementsCollection collection) {
+        for (SelenideElement element : collection) {
+            if (!element.is(exist) && !element.is(visible)) return false;
+        }
+        return true;
+    }
+
+    public boolean stringsComparator(String constant, String toSplit) {
+        String[] techString = toSplit.split("\\-");
+        String[] wordsArr = techString[1].split(" ");
+        for (String toCompare: wordsArr) {
+            if (!constant.toLowerCase().contains(toCompare.toLowerCase())) return false;
+        }
+        return true;
     }
 
 }
