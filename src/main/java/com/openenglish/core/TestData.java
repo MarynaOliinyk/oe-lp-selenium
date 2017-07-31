@@ -5,8 +5,8 @@ import static com.openenglish.util.PropertiesCache.getProperty;
 public class TestData {
 
     public static class Selenide {
-        public static final long timeout = Long.parseLong(getProperty("selenide.timeout"));
-        public static final long waitUntil = Long.parseLong(getProperty("selenide.wait.until"));
+        public static final long timeout = Long.parseLong(getProperty("selenide.timeout")),
+                waitUntil = Long.parseLong(getProperty("selenide.wait.until"));
     }
 
     public static class General {
@@ -24,7 +24,8 @@ public class TestData {
                 correctPassword = getProperty("login.correct.password"),
                 unregisteredEmail = getProperty("login.unregistered.email"),
                 invalidPassword = getProperty("login.invalid.password"),
-                securityPlaceHolderText = getProperty("login.security.placeholder");
+                securityPlaceHolderText = getProperty("login.security.placeholder"),
+                passwordText = getProperty("login.password.text");
     }
 
     public static class Recovery {
