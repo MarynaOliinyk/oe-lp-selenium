@@ -5,17 +5,17 @@ import com.openenglish.pages.AbstractPage;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.openenglish.core.TestData.General.lpUrl;
-import static com.openenglish.core.TestData.Login.correctPassword;
-import static com.openenglish.core.TestData.Login.registeredEmail;
+import static com.openenglish.core.TestData.General.LP_URL;
+import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
+import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 
 public class C10VerifyResetPasswordEmailIsSentTest extends DriverBase {
     private AbstractPage page = new AbstractPage();
 
     @Test
     public void verifyResetPasswordEmailIsSentTest() {
-        open(lpUrl);
-        page.logIn(registeredEmail, correctPassword);
+        open(LP_URL);
+        page.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.logOut();
     }
 }

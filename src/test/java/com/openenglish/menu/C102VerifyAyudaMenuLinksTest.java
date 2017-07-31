@@ -15,16 +15,16 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
-import static com.openenglish.core.TestData.FAQ.faqHeaderText;
-import static com.openenglish.core.TestData.General.lpUrl;
-import static com.openenglish.core.TestData.Inicio.inicioLink;
-import static com.openenglish.core.TestData.Inicio.userNickName;
-import static com.openenglish.core.TestData.Login.correctPassword;
-import static com.openenglish.core.TestData.Login.registeredEmail;
-import static com.openenglish.core.TestData.Meeting.meetingTestText;
-import static com.openenglish.core.TestData.ParticipantsGuidePage.containsPdfFile;
-import static com.openenglish.core.TestData.TalkNow.talkNowHeaderText;
-import static com.openenglish.core.TestData.TestYourSystem.testYourSystemHeaderText;
+import static com.openenglish.core.TestData.FAQ.FAQ_HEADER_TEXT;
+import static com.openenglish.core.TestData.General.LP_URL;
+import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
+import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
+import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
+import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Meeting.MEETING_TEST_TEXT;
+import static com.openenglish.core.TestData.ParticipantsGuidePage.CONTAINS_PDF_FILE;
+import static com.openenglish.core.TestData.TalkNow.TALK_NOW_HEADER_TEXT;
+import static com.openenglish.core.TestData.TestYourSystem.TEST_YOUR_SYSTEM_HEADER_TEXT;
 import static org.testng.Assert.assertTrue;
 
 public class C102VerifyAyudaMenuLinksTest extends DriverBase {
@@ -32,13 +32,13 @@ public class C102VerifyAyudaMenuLinksTest extends DriverBase {
     private AbstractPage page = new AbstractPage();
 
     private void loginWithCorrectCredentialsAndPageInicioIsOpen() {
-        open(lpUrl);
+        open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
                 .shouldHave(attribute("type", "password"));
-        page.loginPage.logIn(registeredEmail, correctPassword);
-        page.inicioPage.getInicioLink().shouldHave(text(inicioLink));
-        page.inicioPage.getUserName().shouldHave(text(userNickName));
+        page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
+        page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
+        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getAyudaDropDown().hover();
     }
 
@@ -47,7 +47,7 @@ public class C102VerifyAyudaMenuLinksTest extends DriverBase {
         loginWithCorrectCredentialsAndPageInicioIsOpen();
         page.inicioPage.getContactenos().click();
         TalkNowPage talkNowPage = new TalkNowPage();
-        talkNowPage.getHeaderText().shouldHave(text(talkNowHeaderText));
+        talkNowPage.getHeaderText().shouldHave(text(TALK_NOW_HEADER_TEXT));
 
     }
 
@@ -65,7 +65,7 @@ public class C102VerifyAyudaMenuLinksTest extends DriverBase {
         loginWithCorrectCredentialsAndPageInicioIsOpen();
         page.inicioPage.getVerificaTuSistema().click();
         TestYourSystemPage testYourSystemPage = new TestYourSystemPage();
-        testYourSystemPage.getHeaderText().shouldHave(text(testYourSystemHeaderText));
+        testYourSystemPage.getHeaderText().shouldHave(text(TEST_YOUR_SYSTEM_HEADER_TEXT));
 
     }
 
@@ -75,7 +75,7 @@ public class C102VerifyAyudaMenuLinksTest extends DriverBase {
         page.inicioPage.getAdobeConnectGuiaRapida().click();
         switchTo().window(1);
         ParticipantsGuidePage participantsGuidePage = new ParticipantsGuidePage();
-        assertTrue(participantsGuidePage.getPageTitle().getAttribute("src").contains(containsPdfFile));
+        assertTrue(participantsGuidePage.getPageTitle().getAttribute("src").contains(CONTAINS_PDF_FILE));
 
     }
 
@@ -85,7 +85,7 @@ public class C102VerifyAyudaMenuLinksTest extends DriverBase {
         page.inicioPage.getVerifiqueSuConfiguracion().click();
         MeetingPage meetingPage = new MeetingPage();
         switchTo().window(1);
-        meetingPage.getText().shouldHave(text(meetingTestText));
+        meetingPage.getText().shouldHave(text(MEETING_TEST_TEXT));
     }
 
     @Test
@@ -93,7 +93,7 @@ public class C102VerifyAyudaMenuLinksTest extends DriverBase {
         loginWithCorrectCredentialsAndPageInicioIsOpen();
         page.inicioPage.getPreguntasFrecuentes().click();
         FAQPage faqPage = new FAQPage();
-        faqPage.getHeaderText().shouldHave(text(faqHeaderText));
+        faqPage.getHeaderText().shouldHave(text(FAQ_HEADER_TEXT));
     }
 
 }

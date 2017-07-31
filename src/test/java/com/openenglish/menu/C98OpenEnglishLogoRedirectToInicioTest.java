@@ -9,11 +9,11 @@ import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
-import static com.openenglish.core.TestData.General.lpUrl;
-import static com.openenglish.core.TestData.Inicio.inicioLink;
-import static com.openenglish.core.TestData.Inicio.userNickName;
-import static com.openenglish.core.TestData.Login.correctPassword;
-import static com.openenglish.core.TestData.Login.registeredEmail;
+import static com.openenglish.core.TestData.General.LP_URL;
+import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
+import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
+import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
+import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 
 public class C98OpenEnglishLogoRedirectToInicioTest extends DriverBase {
 
@@ -21,15 +21,15 @@ public class C98OpenEnglishLogoRedirectToInicioTest extends DriverBase {
 
     @Test
     public void openEnglishLogoLinkTest() {
-        open(lpUrl);
-        page.logIn(registeredEmail, correctPassword);
+        open(LP_URL);
+        page.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         InicioPage inicioPage = new InicioPage();
-        inicioPage.getInicioLink().shouldHave(exactText(inicioLink));
-        inicioPage.getUserName().shouldHave(text(userNickName));
+        inicioPage.getInicioLink().shouldHave(exactText(INICIO_LINK));
+        inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
         inicioPage.getProgresoLink().click();
         inicioPage.getOeLogo().shouldBe(visible).click();
-        inicioPage.getInicioLink().shouldHave(exactText(inicioLink));
-        inicioPage.getUserName().shouldHave(text(userNickName));
+        inicioPage.getInicioLink().shouldHave(exactText(INICIO_LINK));
+        inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
     }
 
 

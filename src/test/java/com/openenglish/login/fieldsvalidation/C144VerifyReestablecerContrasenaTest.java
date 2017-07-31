@@ -9,10 +9,10 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
-import static com.openenglish.core.TestData.General.lpUrl;
-import static com.openenglish.core.TestData.Login.correctPassword;
-import static com.openenglish.core.TestData.Login.registeredEmail;
-import static com.openenglish.core.TestData.Recovery.recoveryPasswordFormTitle;
+import static com.openenglish.core.TestData.General.LP_URL;
+import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
+import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Recovery.RECOVERY_PASSWORD_FORM_TITLE;
 
 public class C144VerifyReestablecerContrasenaTest extends DriverBase {
 
@@ -20,12 +20,12 @@ public class C144VerifyReestablecerContrasenaTest extends DriverBase {
 
     @Test
     public void verifyReestablecerContrasenaTest() {
-        open(lpUrl);
-        page.logIn(registeredEmail, correctPassword);
+        open(LP_URL);
+        page.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.logOut();
         page.loginPage.getPasswordReset().should(exist).click();
         RecoveryPage recoveryPage = new RecoveryPage();
-        recoveryPage.getRequestFormTitle().shouldHave(text(recoveryPasswordFormTitle));
+        recoveryPage.getRequestFormTitle().shouldHave(text(RECOVERY_PASSWORD_FORM_TITLE));
         recoveryPage.getEmail().shouldBe(visible);
     }
 }

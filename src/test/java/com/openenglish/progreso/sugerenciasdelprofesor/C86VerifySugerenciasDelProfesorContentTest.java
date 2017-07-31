@@ -10,17 +10,17 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
-import static com.openenglish.core.TestData.General.lpUrl;
-import static com.openenglish.core.TestData.Inicio.inicioLink;
-import static com.openenglish.core.TestData.Login.correctPassword;
-import static com.openenglish.core.TestData.Login.registeredEmail;
-import static com.openenglish.core.TestData.Login.userName;
+import static com.openenglish.core.TestData.General.LP_URL;
+import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
+import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
+import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Login.USER_NAME;
 import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_FECHA_COLUMN;
-import static com.openenglish.core.TestData.TeacherFeedback.teacherFeedbackHeaderText;
+import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_HEADER_TEXT;
 import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN;
 import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN;
 import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_TEACHERS_NAME;
-import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_TEXT;
+import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_LINK;
 
 
 public class C86VerifySugerenciasDelProfesorContentTest extends DriverBase {
@@ -29,19 +29,19 @@ public class C86VerifySugerenciasDelProfesorContentTest extends DriverBase {
 
     @Test
     public void VerifySugerenciasDelProfesorContentTest() {
-        open(lpUrl);
+        open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
                 .shouldHave(attribute("type", "password"));
-        page.loginPage.logIn(registeredEmail, correctPassword);
-        page.inicioPage.getInicioLink().shouldHave(text(inicioLink));
+        page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
+        page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
         //TODO BUG NSB-65  https://openenglish.jira.com/browse/NSB-65
-//        page.inicioPage.getUserName().shouldHave(text(userNickName));
+//        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getProgresoLink().click();
         page.inicioPage.getSugerenciasDelProfesorLink().click();
         TeacherFeedbackPage teacherFeedbackPage = new TeacherFeedbackPage();
-        teacherFeedbackPage.getHeaderText().shouldBe(visible).shouldHave(text(teacherFeedbackHeaderText + " " + userName));
-        teacherFeedbackPage.getVerElIndiceDelCursoLink().shouldHave(text(TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_TEXT));
+        teacherFeedbackPage.getHeaderText().shouldBe(visible).shouldHave(text(TEACHER_FEEDBACK_HEADER_TEXT + " " + USER_NAME));
+        teacherFeedbackPage.getVerElIndiceDelCursoLink().shouldHave(text(TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_LINK));
         teacherFeedbackPage.getFechaColumn().shouldHave(text(TEACHER_FEEDBACK_FECHA_COLUMN));
         teacherFeedbackPage.getSugerenciaSolicitadaColumn().shouldBe(visible).shouldHave(text(TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN));
         teacherFeedbackPage.getRespuestaDelProfesorColumn().shouldBe(visible).shouldHave(text(TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN));
