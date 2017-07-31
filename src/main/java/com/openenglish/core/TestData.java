@@ -109,16 +109,16 @@ public class TestData {
 
     public static class TeacherFeedback {
         public static final String teacherFeedbackHeaderText = getProperty("teacherfeedback.header.text"),
-                teacherFeedbackVerElIndiceDelCursoLink = getProperty("teacherfeedback.verelindice.del.curso.link"),
-                teacherFeedbackFechaColumn = getProperty("teacherfeedback.fecha.column"),
-                teacherFeedbackSugerenciaSolicitadaColumn = getProperty("teacherfeedback.sugerencia.solicitada.column"),
-                teacherFeedbackRespuestaDelProfesorColumn = getProperty("teacherfeedback.respuesta.del.profesor.column"),
-                teacherFeedbackTeachersName = getProperty("teacherfeedback.teachers.name");
+                TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("teacherfeedback.verelindice.del.curso.link"),
+                TEACHER_FEEDBACK_FECHA_COLUMN = getProperty("teacherfeedback.fecha.column"),
+                TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN = getProperty("teacherfeedback.sugerencia.solicitada.column"),
+                TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN = getProperty("teacherfeedback.respuesta.del.profesor.column"),
+                TEACHER_FEEDBACK_TEACHERS_NAME = getProperty("teacherfeedback.teachers.name");
     }
 
     public static class History {
         public static final String historyHeaderText = getProperty("history.header.text"),
-                                   borrarTodoText =getProperty("history.borrartodo.text");
+                                   BORRAR_TODO_TEXT =getProperty("history.borrartodo.text");
     }
 
     public static class MyNotebook {
