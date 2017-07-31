@@ -6,7 +6,7 @@ import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import static com.openenglish.core.TestData.Selenide.timeout;
+import static com.openenglish.core.TestData.Selenide.TIMEOUT;
 
 public class DriverBase {
 
@@ -14,7 +14,7 @@ public class DriverBase {
     public void setUp() {
         ChromeDriverManager.getInstance().setup();
         Configuration.browser = WebDriverRunner.CHROME;
-        Configuration.timeout = timeout;
+        Configuration.timeout = TIMEOUT;
     }
 
     @AfterMethod
