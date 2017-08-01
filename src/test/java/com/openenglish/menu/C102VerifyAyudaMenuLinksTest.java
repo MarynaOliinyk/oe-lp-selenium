@@ -22,7 +22,7 @@ import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Meeting.MEETING_TEST_TEXT;
-import static com.openenglish.core.TestData.ParticipantsGuidePage.CONTAINS_PDF_FILE;
+import static com.openenglish.core.TestData.ParticipantsGuide.CONTAINS_PDF_FILE;
 import static com.openenglish.core.TestData.TalkNow.TALK_NOW_HEADER_TEXT;
 import static com.openenglish.core.TestData.TestYourSystem.TEST_YOUR_SYSTEM_HEADER_TEXT;
 import static org.testng.Assert.assertTrue;

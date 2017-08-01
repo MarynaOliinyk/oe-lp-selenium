@@ -11,7 +11,7 @@ public class TestData {
 
     public static class General {
         public static final String OE_URL = getProperty("base.oe.url"),
-                                   LP_URL = getProperty("base.lp.url");
+                LP_URL = getProperty("base.lp.url");
     }
 
     public static class Login {
@@ -100,7 +100,7 @@ public class TestData {
         public static final String TEST_YOUR_SYSTEM_HEADER_TEXT = getProperty("testyoursystem.header.text");
     }
 
-    public static class ParticipantsGuidePage {
+    public static class ParticipantsGuide {
         public static final String CONTAINS_PDF_FILE = getProperty("contains.pdf.file");
     }
 
@@ -123,9 +123,9 @@ public class TestData {
                 TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN = getProperty("teacherfeedback.sugerencia.solicitada.column"),
                 TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN = getProperty("teacherfeedback.respuesta.del.profesor.column"),
                 TEACHER_FEEDBACK_TEACHERS_NAME = getProperty("teacherfeedback.teachers.name"),
-                TEACHERFEEDBACK_POP_UP_HEADER_TEXT = getProperty("teacherfeedback.popup.header.text"),
-                TEACHERFEEDBACK_POP_UP_HEADER_TEXT_AFTER_SAD = getProperty("teacherfeedback.popup.header.text.sad"),
-                TEACHERFEEDBACK_POP_UP_MESSAGE = getProperty("teacherfeedback.popup.message");
+                TEACHER_FEEDBACK_POP_UP_HEADER_TEXT = getProperty("teacherfeedback.popup.header.text"),
+                TEACHER_FEEDBACK_POP_UP_HEADER_TEXT_AFTER_SAD = getProperty("teacherfeedback.popup.header.text.sad"),
+                TEACHER_FEEDBACK_POP_UP_MESSAGE = getProperty("teacherfeedback.popup.message");
     }
 
     public static class History {
@@ -143,8 +143,8 @@ public class TestData {
 
     public static class TempMail {
         public static final String TEMP_MAIL_URL = getProperty("temp.mail.url"),
-                                   TEMP_MAIL_TITLE = getProperty("temp.mail.title"),
-                                   TEMP_MAIL_MESSAGE_TITLE = getProperty("temp.mail.message.title");
+                TEMP_MAIL_TITLE = getProperty("temp.mail.title"),
+                TEMP_MAIL_MESSAGE_TITLE = getProperty("temp.mail.message.title");
         public static final long TEMP_MAIL_WAIT = Long.parseLong(getProperty("temp.mail.wait"));
     }
 }
