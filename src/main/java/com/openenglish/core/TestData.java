@@ -25,7 +25,10 @@ public class TestData {
                 UNREGISTERED_EMAIL = getProperty("login.unregistered.email"),
                 INVALID_PASSWORD = getProperty("login.invalid.password"),
                 SECURITY_PLACE_HOLDER_TEXT = getProperty("login.security.placeholder"),
-                PASSWORD_TEXT = getProperty("login.password.text");
+                PASSWORD_TEXT = getProperty("login.password.text"),
+                USER_NAME_WITHOUT_NOTES = getProperty("login.user.name.without.notes"),
+                EMAIL_WITHOUT_NOTES = getProperty("login.correct.email.without.notes"),
+                PASSWORD_WITHOUT_NOTES = getProperty("login.correct.password.without.notes");
     }
 
     public static class Recovery {
@@ -73,6 +76,7 @@ public class TestData {
                 MENSAJES_BUTTON_TEXT = getProperty("inicio.mensajes.link.text"),
                 USER_NICK_NAME = getProperty("inicio.nick.user.name"),
                 SALIR_BUTTON_TEXT = getProperty("inicio.salir.link.text"),
+                USER_NICK_NAME_WITHOUT_NOTES = getProperty("inicio.nick.user.name.without.notes"),
                 PREFERENCIAS_BUTTON_TEXT = getProperty("inicio.preferencias.link.text");
     }
 
@@ -132,7 +136,10 @@ public class TestData {
     }
 
     public static class MyNotebook {
-        public static final String MY_NOTEBOOK_HEADER_TEXT = getProperty("mynotebook.header.text");
+        public static final String MY_NOTEBOOK_HEADER_TEXT = getProperty("mynotebook.header.text"),
+                MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("mynotebook.verelindice.del.curso.text"),
+                MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("mynotebook.verelindice.del.curso.link"),
+                MY_NOTEBOOKTEXT_IF_NOT_NOTES = getProperty("mynotebook.text.if.not.notes");
     }
 
     public static class Preferences {
