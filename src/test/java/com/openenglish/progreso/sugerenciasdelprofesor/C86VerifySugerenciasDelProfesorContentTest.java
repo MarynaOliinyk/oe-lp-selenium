@@ -27,7 +27,7 @@ public class C86VerifySugerenciasDelProfesorContentTest extends DriverBase {
 
     private AbstractPage page = new AbstractPage();
 
-    @Test
+    @Test(enabled = false)
     public void VerifySugerenciasDelProfesorContentTest() {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
@@ -50,6 +50,7 @@ public class C86VerifySugerenciasDelProfesorContentTest extends DriverBase {
         teacherFeedbackPage.getSubjectOfSentQuestion().shouldBe(exist);
         teacherFeedbackPage.getTeachersName().shouldHave(text(TEACHER_FEEDBACK_TEACHERS_NAME));
         teacherFeedbackPage.getTeachersMessage().shouldBe(exist);
+        //TODO BUG QAA-211 https://openenglish.jira.com/browse/QAA-211
         teacherFeedbackPage.getGoodRateFace().shouldBe(visible);
         teacherFeedbackPage.getBadRateFace().shouldBe(visible);
 
