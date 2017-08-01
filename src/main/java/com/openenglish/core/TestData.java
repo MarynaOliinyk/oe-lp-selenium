@@ -134,13 +134,14 @@ public class TestData {
 
     public static class History {
         public static final String HISTORY_HEADER_TEXT = getProperty("history.header.text"),
-                historyHeaderLinkText = getProperty("history.header.link.text"),
-                historyTableHeaderFechaText = getProperty("history.table.header.fecha.text"),
-                historyTableHeaderTipoText = getProperty("history.table.header.tipo.text"),
-                historyTableHeaderTituloText = getProperty("history.table.header.titulo.text"),
-                historyTableHeaderDescripcionText = getProperty("history.table.header.descripcion.text"),
-                historyTableHeaderResultsText = getProperty("history.table.header.results.text"),
-                historyUrlEndsWith = getProperty("history.url.endsWith");
+                HISTORY_HEADER_LINK_TEXT = getProperty("history.header.link.text"),
+                HISTORY_TABLE_HEADER_FECHA_TEXT = getProperty("history.table.header.fecha.text"),
+                HISTORY_TABLE_HEADER_TIPO_TEXT = getProperty("history.table.header.tipo.text"),
+                HISTORY_TABLE_HEADER_TITULO_TEXT = getProperty("history.table.header.titulo.text"),
+                HISTORY_TABLE_HEADER_DESCRIPCION_TEXT = getProperty("history.table.header.descripcion.text"),
+                HISTORY_TABLE_HEADER_RESULTS_TEXT = getProperty("history.table.header.results.text"),
+                HISTORY_URL_ENDS_WITH = getProperty("history.url.endsWith"),
+                HISTORY_TIPO_TEXT = getProperty("history.table.tipo.practice.text");
     }
 
     public static class MyNotebook {
