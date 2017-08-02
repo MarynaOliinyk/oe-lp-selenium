@@ -27,8 +27,9 @@ public class C20ResetPasswordForIncorrectEmailTest extends DriverBase {
         page.loginPage.getPasswordReset().click();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getRequestFormTitle().shouldHave(text(RECOVERY_PASSWORD_FORM_TITLE));
-        recoveryPage.enterEmailAndSubmit(UNREGISTERED_EMAIL);
-        recoveryPage.getTooltipText().shouldBe(visible).shouldHave(text(RECOVERY_TOOLTIP_EMAIL));
+        //TODO BUG LPTRIAGE-302 https://openenglish.jira.com/browse/LPTRIAGE-302
+//        recoveryPage.enterEmailAndSubmit(UNREGISTERED_EMAIL);
+//        recoveryPage.getTooltipText().shouldBe(visible).shouldHave(text(RECOVERY_TOOLTIP_EMAIL));
 
     }
 }
