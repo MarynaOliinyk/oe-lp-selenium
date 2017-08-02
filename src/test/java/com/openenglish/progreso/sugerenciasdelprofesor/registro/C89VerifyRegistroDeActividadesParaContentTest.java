@@ -11,13 +11,13 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.History.HISTORY_HEADER_TEXT;
-import static com.openenglish.core.TestData.History.historyHeaderLinkText;
-import static com.openenglish.core.TestData.History.historyTableHeaderDescripcionText;
-import static com.openenglish.core.TestData.History.historyTableHeaderFechaText;
-import static com.openenglish.core.TestData.History.historyTableHeaderResultsText;
-import static com.openenglish.core.TestData.History.historyTableHeaderTipoText;
-import static com.openenglish.core.TestData.History.historyTableHeaderTituloText;
-import static com.openenglish.core.TestData.History.historyUrlEndsWith;
+import static com.openenglish.core.TestData.History.HISTORY_HEADER_LINK_TEXT;
+import static com.openenglish.core.TestData.History.HISTORY_TABLE_HEADER_DESCRIPCION_TEXT;
+import static com.openenglish.core.TestData.History.HISTORY_TABLE_HEADER_FECHA_TEXT;
+import static com.openenglish.core.TestData.History.HISTORY_TABLE_HEADER_RESULTS_TEXT;
+import static com.openenglish.core.TestData.History.HISTORY_TABLE_HEADER_TIPO_TEXT;
+import static com.openenglish.core.TestData.History.HISTORY_TABLE_HEADER_TITULO_TEXT;
+import static com.openenglish.core.TestData.History.HISTORY_URL_ENDS_WITH;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Login.USER_NAME;
@@ -44,8 +44,8 @@ public class C89VerifyRegistroDeActividadesParaContentTest extends DriverBase {
         historyPage.getHeaderRegistroDeActividadesText().shouldBe(visible)
                 .shouldHave(exactText(HISTORY_HEADER_TEXT + " " + USER_NAME));
         historyPage.getHeaderVerIndiceDelCursoLink().shouldBe(visible)
-                .shouldHave(exactText(historyHeaderLinkText));
-        assertEquals(historyPage.getHeaderVerIndiceDelCursoLink().getAttribute("href"), LP_URL + historyUrlEndsWith);
+                .shouldHave(exactText(HISTORY_HEADER_LINK_TEXT));
+        assertEquals(historyPage.getHeaderVerIndiceDelCursoLink().getAttribute("href"), LP_URL + HISTORY_URL_ENDS_WITH);
 
         historyPage.getPaginationBlock().shouldBe(visible);
 
@@ -54,11 +54,11 @@ public class C89VerifyRegistroDeActividadesParaContentTest extends DriverBase {
         historyPage.getRefinementsBlock().shouldBe(visible);
 
         historyPage.getTableBlock().shouldBe(visible);
-        historyPage.getFechaHeaderCellText().shouldBe(visible).shouldHave(exactText(historyTableHeaderFechaText));
-        historyPage.getTipoHeaderCellText().shouldBe(visible).shouldHave(exactText(historyTableHeaderTipoText));
-        historyPage.getTituloHeaderCellText().shouldBe(visible).shouldHave(exactText(historyTableHeaderTituloText));
-        historyPage.getDescriptionHeaderCellText().shouldBe(visible).shouldHave(exactText(historyTableHeaderDescripcionText));
-        historyPage.getResultsAndActionsHeaderCellText().shouldBe(visible).shouldHave(exactText(historyTableHeaderResultsText));
+        historyPage.getFechaHeaderCellText().shouldBe(visible).shouldHave(exactText(HISTORY_TABLE_HEADER_FECHA_TEXT));
+        historyPage.getTipoHeaderCellText().shouldBe(visible).shouldHave(exactText(HISTORY_TABLE_HEADER_TIPO_TEXT));
+        historyPage.getTituloHeaderCellText().shouldBe(visible).shouldHave(exactText(HISTORY_TABLE_HEADER_TITULO_TEXT));
+        historyPage.getDescriptionHeaderCellText().shouldBe(visible).shouldHave(exactText(HISTORY_TABLE_HEADER_DESCRIPCION_TEXT));
+        historyPage.getResultsAndActionsHeaderCellText().shouldBe(visible).shouldHave(exactText(HISTORY_TABLE_HEADER_RESULTS_TEXT));
 
         historyPage.getDayCompletedAllElements().shouldBe(visible);
         historyPage.getTimeCompletedAllElements().shouldBe(visible);
