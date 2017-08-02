@@ -61,7 +61,7 @@ public class C100VerifyProgresoMenuLinksTest extends DriverBase {
         loginWithCorrectCredentialsAndPageInicioIsOpen();
         page.inicioPage.getRegistroLink().click();
         HistoryPage historyPage = new HistoryPage();
-        historyPage.getHeaderText().shouldBe(visible).shouldHave(text(HISTORY_HEADER_TEXT + " " + USER_NAME));
+        historyPage.getHeaderBlock().shouldBe(visible).shouldHave(text(HISTORY_HEADER_TEXT + " " + USER_NAME));
 
     }
 
