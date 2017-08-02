@@ -9,15 +9,14 @@ import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
-import static com.openenglish.core.TestData.General.lpUrl;
-import static com.openenglish.core.TestData.Inicio.inicioLink;
-import static com.openenglish.core.TestData.Login.correctPassword;
-import static com.openenglish.core.TestData.Login.registeredEmail;
-import static com.openenglish.core.TestData.Login.userName;
+import static com.openenglish.core.TestData.General.LP_URL;
+import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
+import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
+import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Login.USER_NAME;
 import static org.testng.Assert.assertTrue;
 import static org.testng.AssertJUnit.assertFalse;
 
@@ -28,15 +27,15 @@ public class C6VerifyInicioContentTest extends DriverBase {
     // TODO bug LPTRIAGE-298 - No popUp is displayed in C6 Edit Verify "INICIO" content (https://openenglish.jira.com/browse/LPTRIAGE-298)
     @Test(enabled = false)
     public void verifyInicioPageContentTest() {
-        open(lpUrl);
+        open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
                 .shouldHave(attribute("type", "password"));
-        page.loginPage.logIn(registeredEmail, correctPassword);
+        page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldBe(visible).shouldNotBe(empty)
-                .shouldHave(exactText(inicioLink));
+                .shouldHave(exactText(INICIO_LINK));
         page.inicioPage.getUserName().shouldBe(visible).shouldNotBe(empty)
-                .shouldHave(text(userName));
+                .shouldHave(text(USER_NAME));
         page.inicioPage.getHeadingElement().shouldBe(visible).shouldNotBe(empty)
                 .shouldHave(attribute("class", "container_12"));
         page.inicioPage.getPlanDeEstudioElement().shouldBe(visible).shouldNotBe(empty)

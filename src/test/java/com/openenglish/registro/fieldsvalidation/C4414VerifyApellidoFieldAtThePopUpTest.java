@@ -9,14 +9,14 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
-import static com.openenglish.core.TestData.General.oeUrl;
-import static com.openenglish.core.TestData.Register.charQuantityAppelido;
-import static com.openenglish.core.TestData.Register.comienzaAhora;
-import static com.openenglish.core.TestData.Register.fieldShouldBeCompleted;
-import static com.openenglish.core.TestData.Register.inCorrectValue;
-import static com.openenglish.core.TestData.Register.lessThenEightyCharacters;
-import static com.openenglish.core.TestData.Register.numberLength;
-import static com.openenglish.core.TestData.Register.specialCharacters;
+import static com.openenglish.core.TestData.General.OE_URL;
+import static com.openenglish.core.TestData.Register.CHAR_QUANTITY_APPELIDO;
+import static com.openenglish.core.TestData.Register.COMIENZA_AHORA;
+import static com.openenglish.core.TestData.Register.FIELD_SHOULD_BE_COMPLETED;
+import static com.openenglish.core.TestData.Register.IN_CORRECT_VALUE;
+import static com.openenglish.core.TestData.Register.LESS_THEN_EIGHTY_CHARACTERS;
+import static com.openenglish.core.TestData.Register.NUMBER_LENGTH;
+import static com.openenglish.core.TestData.Register.SPECIAL_CHARACTERS;
 
 public class C4414VerifyApellidoFieldAtThePopUpTest extends DriverBase {
 
@@ -24,27 +24,27 @@ public class C4414VerifyApellidoFieldAtThePopUpTest extends DriverBase {
 
     @Test
     public void appelidoFieldNegativeFlowTest() {
-        open(oeUrl);
+        open(OE_URL);
         RegisterPage regForm = new RegisterPage();
 
         switchTo().frame(regForm.getPopUpIdentifier());
         regForm.getAppelidoFieldNotification().shouldNotBe(visible);
-        regForm.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
-        regForm.getAppelidoFieldNotification().shouldBe(visible).shouldHave(text(fieldShouldBeCompleted));
+        regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
+        regForm.getAppelidoFieldNotification().shouldBe(visible).shouldHave(text(FIELD_SHOULD_BE_COMPLETED));
 
-        regForm.getAppelidoField().sendKeys(page.randonNumbers(Integer.parseInt(numberLength)));
-        regForm.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
-        regForm.getAppelidoFieldNotification().shouldBe(visible).shouldHave(text(inCorrectValue));
+        regForm.getAppelidoField().sendKeys(page.randonNumbers(Integer.parseInt(NUMBER_LENGTH)));
+        regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
+        regForm.getAppelidoFieldNotification().shouldBe(visible).shouldHave(text(IN_CORRECT_VALUE));
         regForm.getAppelidoField().clear();
 
-        regForm.getAppelidoField().sendKeys(specialCharacters);
-        regForm.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
-        regForm.getAppelidoFieldNotification().shouldBe(visible).shouldHave(text(inCorrectValue));
+        regForm.getAppelidoField().sendKeys(SPECIAL_CHARACTERS);
+        regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
+        regForm.getAppelidoFieldNotification().shouldBe(visible).shouldHave(text(IN_CORRECT_VALUE));
         regForm.getAppelidoField().clear();
 
-        regForm.getAppelidoField().sendKeys(page.randCharacters(Integer.parseInt(charQuantityAppelido)));
-        regForm.getComienzaAhoraButton().shouldHave(text(comienzaAhora)).click();
-        regForm.getAppelidoFieldNotification().shouldBe(visible).shouldHave(text(lessThenEightyCharacters));
+        regForm.getAppelidoField().sendKeys(page.randCharacters(Integer.parseInt(CHAR_QUANTITY_APPELIDO)));
+        regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
+        regForm.getAppelidoFieldNotification().shouldBe(visible).shouldHave(text(LESS_THEN_EIGHTY_CHARACTERS));
     }
 
 }
