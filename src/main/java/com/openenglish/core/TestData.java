@@ -11,7 +11,7 @@ public class TestData {
 
     public static class General {
         public static final String OE_URL = getProperty("base.oe.url"),
-                                   LP_URL = getProperty("base.lp.url");
+                LP_URL = getProperty("base.lp.url");
     }
 
     public static class Login {
@@ -25,7 +25,10 @@ public class TestData {
                 UNREGISTERED_EMAIL = getProperty("login.unregistered.email"),
                 INVALID_PASSWORD = getProperty("login.invalid.password"),
                 SECURITY_PLACE_HOLDER_TEXT = getProperty("login.security.placeholder"),
-                PASSWORD_TEXT = getProperty("login.password.text");
+                PASSWORD_TEXT = getProperty("login.password.text"),
+                USER_NAME_WITHOUT_NOTES = getProperty("login.user.name.without.notes"),
+                EMAIL_WITHOUT_NOTES = getProperty("login.correct.email.without.notes"),
+                PASSWORD_WITHOUT_NOTES = getProperty("login.correct.password.without.notes");
     }
 
     public static class Recovery {
@@ -74,6 +77,7 @@ public class TestData {
                 MENSAJES_BUTTON_TEXT = getProperty("inicio.mensajes.link.text"),
                 USER_NICK_NAME = getProperty("inicio.nick.user.name"),
                 SALIR_BUTTON_TEXT = getProperty("inicio.salir.link.text"),
+                USER_NICK_NAME_WITHOUT_NOTES = getProperty("inicio.nick.user.name.without.notes"),
                 PREFERENCIAS_BUTTON_TEXT = getProperty("inicio.preferencias.link.text");
     }
 
@@ -101,7 +105,7 @@ public class TestData {
         public static final String TEST_YOUR_SYSTEM_HEADER_TEXT = getProperty("testyoursystem.header.text");
     }
 
-    public static class ParticipantsGuidePage {
+    public static class ParticipantsGuide {
         public static final String CONTAINS_PDF_FILE = getProperty("contains.pdf.file");
     }
 
@@ -123,17 +127,29 @@ public class TestData {
                 TEACHER_FEEDBACK_FECHA_COLUMN = getProperty("teacherfeedback.fecha.column"),
                 TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN = getProperty("teacherfeedback.sugerencia.solicitada.column"),
                 TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN = getProperty("teacherfeedback.respuesta.del.profesor.column"),
-                TEACHER_FEEDBACK_TEACHERS_NAME = getProperty("teacherfeedback.teachers.name");
-
-
+                TEACHER_FEEDBACK_TEACHERS_NAME = getProperty("teacherfeedback.teachers.name"),
+                TEACHER_FEEDBACK_POP_UP_HEADER_TEXT = getProperty("teacherfeedback.popup.header.text"),
+                TEACHER_FEEDBACK_POP_UP_HEADER_TEXT_AFTER_SAD = getProperty("teacherfeedback.popup.header.text.sad"),
+                TEACHER_FEEDBACK_POP_UP_MESSAGE = getProperty("teacherfeedback.popup.message");
     }
 
     public static class History {
-        public static final String HISTORY_HEADER_TEXT = getProperty("history.header.text");
+        public static final String HISTORY_HEADER_TEXT = getProperty("history.header.text"),
+                HISTORY_HEADER_LINK_TEXT = getProperty("history.header.link.text"),
+                HISTORY_TABLE_HEADER_FECHA_TEXT = getProperty("history.table.header.fecha.text"),
+                HISTORY_TABLE_HEADER_TIPO_TEXT = getProperty("history.table.header.tipo.text"),
+                HISTORY_TABLE_HEADER_TITULO_TEXT = getProperty("history.table.header.titulo.text"),
+                HISTORY_TABLE_HEADER_DESCRIPCION_TEXT = getProperty("history.table.header.descripcion.text"),
+                HISTORY_TABLE_HEADER_RESULTS_TEXT = getProperty("history.table.header.results.text"),
+                HISTORY_URL_ENDS_WITH = getProperty("history.url.endsWith"),
+                HISTORY_TIPO_TEXT = getProperty("history.table.tipo.practice.text");
     }
 
     public static class MyNotebook {
-        public static final String MY_NOTEBOOK_HEADER_TEXT = getProperty("mynotebook.header.text");
+        public static final String MY_NOTEBOOK_HEADER_TEXT = getProperty("mynotebook.header.text"),
+                MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("mynotebook.verelindice.del.curso.text"),
+                MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("mynotebook.verelindice.del.curso.link"),
+                MY_NOTEBOOKTEXT_IF_NOT_NOTES = getProperty("mynotebook.text.if.not.notes");
     }
 
     public static class Preferences {
@@ -143,8 +159,8 @@ public class TestData {
 
     public static class TempMail {
         public static final String TEMP_MAIL_URL = getProperty("temp.mail.url"),
-                                   TEMP_MAIL_TITLE = getProperty("temp.mail.title"),
-                                   TEMP_MAIL_MESSAGE_TITLE = getProperty("temp.mail.message.title");
+                TEMP_MAIL_TITLE = getProperty("temp.mail.title"),
+                TEMP_MAIL_MESSAGE_TITLE = getProperty("temp.mail.message.title");
         public static final long TEMP_MAIL_WAIT = Long.parseLong(getProperty("temp.mail.wait"));
     }
 
