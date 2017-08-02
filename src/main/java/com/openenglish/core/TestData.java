@@ -55,11 +55,12 @@ public class TestData {
                 COMIENZA_AHORA = getProperty("register.comienza.ahora.button.text"),
                 FIRST_NAME = getProperty("register.first.name"),
                 LAST_NAME = getProperty("register.last.name"),
+                COUNTRY = getProperty("register.country"),
                 MOBILE_SECTION_ONE = getProperty("register.mobile.section.one"),
                 MOBILE_SECTION_TWO = getProperty("register.mobile.section.two"),
                 MOBILE_SECTION_THREE = getProperty("register.mobile.section.three"),
                 AGE = getProperty("register.age"),
-                THANKS_TEXT = getProperty("register.thanks.text"),
+                THANKS_POPUP_TEXT = getProperty("register.thanks.popup.text"),
                 TITLE = getProperty("register.title");
     }
 
@@ -162,4 +163,10 @@ public class TestData {
                 TEMP_MAIL_MESSAGE_TITLE = getProperty("temp.mail.message.title");
         public static final long TEMP_MAIL_WAIT = Long.parseLong(getProperty("temp.mail.wait"));
     }
+
+    public static class Comenzar {
+        public static final String THANKS_TEXT = getProperty("comenzar.thanks.text");
+    }
+
+
 }
