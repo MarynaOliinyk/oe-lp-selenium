@@ -6,8 +6,7 @@ public class TestData {
 
     public static class Selenide {
         public static final long TIMEOUT = Long.parseLong(getProperty("selenide.timeout")),
-                WAIT_UNTIL = Long.parseLong(getProperty("selenide.wait.until")),
-                WAIT_UNTIL_FOR_VIDEO = Long.parseLong(getProperty("selenide.wait.until.video.appear"));
+                WAIT_UNTIL = Long.parseLong(getProperty("selenide.wait.until"));
     }
 
     public static class General {
@@ -143,6 +142,7 @@ public class TestData {
                 HISTORY_TABLE_HEADER_TITULO_TEXT = getProperty("history.table.header.titulo.text"),
                 HISTORY_TABLE_HEADER_DESCRIPCION_TEXT = getProperty("history.table.header.descripcion.text"),
                 HISTORY_TABLE_HEADER_RESULTS_TEXT = getProperty("history.table.header.results.text"),
+                HISTORY_TABLE_RESULTS_REPRODUCIR_TEXT = getProperty("history.table.results.reproducir.text"),
                 HISTORY_URL_ENDS_WITH = getProperty("history.url.endsWith"),
                 HISTORY_TIPO_TEXT = getProperty("history.table.tipo.practice.text");
     }

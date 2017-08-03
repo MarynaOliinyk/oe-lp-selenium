@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
 import static com.openenglish.core.TestData.General.LP_URL;
+import static com.openenglish.core.TestData.History.HISTORY_TABLE_RESULTS_REPRODUCIR_TEXT;
 import static com.openenglish.core.TestData.History.HISTORY_TIPO_TEXT;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
@@ -43,11 +44,12 @@ public class C2225CheckThatUserCanReplayTestPrepCoursesTest extends DriverBase {
         historyPage.getSearchTypePractice().shouldBe(visible).click();
         historyPage.getAddTypeButton().click();
         assertTrue(historyPage.isAllTheListContainsText($$(By.xpath(historyPage.getTipoTableEllements())), HISTORY_TIPO_TEXT));
-        assertEquals(historyPage.getResultsAndActionsTableAllElements().getText(), "reproducir otra vez");
+        assertEquals(historyPage.getResultsAndActionsTableAllElements().getText(), HISTORY_TABLE_RESULTS_REPRODUCIR_TEXT);
         historyPage.getResultsAndActionsTableAllElements().click();
 
         VideoPopUp videoPopUp = new VideoPopUp();
-        switchTo().frame("ec-activity-app");
+        switchTo().frame(videoPopUp.getVideoIframe());
+        videoPopUp.getPausaButton().waitUntil(visible, WAIT_UNTIL).click();
         videoPopUp.getReproducirButton().waitUntil(visible, WAIT_UNTIL);
     }
 
