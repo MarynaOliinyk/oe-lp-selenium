@@ -6,7 +6,8 @@ public class TestData {
 
     public static class Selenide {
         public static final long TIMEOUT = Long.parseLong(getProperty("selenide.timeout")),
-                WAIT_UNTIL = Long.parseLong(getProperty("selenide.wait.until"));
+                WAIT_UNTIL = Long.parseLong(getProperty("selenide.wait.until")),
+                WAIT_UNTIL_FOR_VIDEO = Long.parseLong(getProperty("selenide.wait.until.video.appear"));
     }
 
     public static class General {
