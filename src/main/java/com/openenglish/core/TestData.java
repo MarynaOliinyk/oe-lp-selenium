@@ -137,7 +137,7 @@ public class TestData {
     public static class History {
         public static final String HISTORY_HEADER_TEXT = getProperty("history.header.text"),
                 HISTORY_HEADER_LINK_TEXT = getProperty("history.header.link.text"),
-                HISTORY_BORRAR_TODO_TEXT =getProperty("history.borrartodo.text"),
+                HISTORY_BORRAR_TODO_TEXT = getProperty("history.borrartodo.text"),
                 HISTORY_TABLE_HEADER_FECHA_TEXT = getProperty("history.table.header.fecha.text"),
                 HISTORY_TABLE_HEADER_TIPO_TEXT = getProperty("history.table.header.tipo.text"),
                 HISTORY_TABLE_HEADER_TITULO_TEXT = getProperty("history.table.header.titulo.text"),
@@ -170,5 +170,8 @@ public class TestData {
         public static final String THANKS_TEXT = getProperty("comenzar.thanks.text");
     }
 
-
+    public static class CourseIndex {
+        public static final String COURSE_INDEX_HEADER_TEXT = getProperty("courseindex.header.text"),
+                COURSE_INDEX_FILTER_TEXT = getProperty("courseindex.filter.text");
+    }
 }
