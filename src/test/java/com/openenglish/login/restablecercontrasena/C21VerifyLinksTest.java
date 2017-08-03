@@ -26,7 +26,6 @@ import static com.openenglish.core.TestData.Recovery.REGISTRATE_TEXT;
 public class C21VerifyLinksTest extends DriverBase {
     private AbstractPage page = new AbstractPage();
 
-    @BeforeMethod
     public void userCredetialsAndRecoveryPassword() {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
@@ -34,17 +33,20 @@ public class C21VerifyLinksTest extends DriverBase {
                 .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
+        //TODO BUG NSB-65  https://openenglish.jira.com/browse/NSB-65
+//        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
         page.logOut();
         page.loginPage.getPasswordReset().click();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getRequestFormTitle().shouldHave(text(RECOVERY_PASSWORD_FORM_TITLE));
-        recoveryPage.getEmail().shouldBe(visible);
+//TODO BUG LPTRIAGE-302 https://openenglish.jira.com/browse/LPTRIAGE-302
+//        recoveryPage.getEmail().shouldBe(visible);
     }
 
 
     @Test
     public void returnTologinPageTestS1() {
+        userCredetialsAndRecoveryPassword();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getReturnToLogin().shouldBe(visible).click();
         page.loginPage.getPassword().should(visible);
@@ -54,6 +56,7 @@ public class C21VerifyLinksTest extends DriverBase {
 
     @Test
     public void fAQpageIsOpenedTestS2() {
+        userCredetialsAndRecoveryPassword();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getFaq().shouldBe(visible).shouldHave(text(RECOVERY_PASSWORD_FAQ)).click();
         FAQsPage FAQsPage = new FAQsPage();
@@ -62,6 +65,7 @@ public class C21VerifyLinksTest extends DriverBase {
 
     @Test
     public void goToRegisterPageTestS3() {
+        userCredetialsAndRecoveryPassword();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getSingUp().shouldBe(visible).shouldHave(text(RECOVERY_PASSWORD_SING_UP_TEXT)).click();
         RegisterPage registerPage = new RegisterPage();

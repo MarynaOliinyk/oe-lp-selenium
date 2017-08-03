@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$;
 @Getter
 public class InicioPage {
     private SelenideElement userInfoElement = $(By.xpath(".//*[@id='student-info']//div[@class='student-level']")),
-            userName = $(By.xpath(".//*[@id='student-info']//div[@class='display-name']")),
+            userNickName = $(By.xpath(".//*[@id='student-info']//div[@class='display-name']")),
             userPhoto = $(By.xpath(".//*[@id='student-info']//div[@class='photo-frame']")),
             accountMenu = $(By.id("account-menu-nav")),
             mensajesCuentaSuboptionButton = $(By.id("messages")),

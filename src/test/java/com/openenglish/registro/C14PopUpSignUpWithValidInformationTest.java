@@ -2,7 +2,7 @@ package com.openenglish.registro;
 
 import com.openenglish.core.DriverBase;
 import com.openenglish.pages.RegisterPage;
-import com.openenglish.pages.TempMail;
+import com.openenglish.pages.TempMailPage;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.exist;
@@ -25,12 +25,12 @@ import static com.openenglish.core.TestData.TempMail.TEMP_MAIL_URL;
 import static com.openenglish.core.TestData.TempMail.TEMP_MAIL_WAIT;
 import static com.openenglish.pages.AbstractPage.openInNewTab;
 
-public class C14PopUpSignUpWithValidInformation extends DriverBase {
+public class C14PopUpSignUpWithValidInformationTest extends DriverBase {
 
     @Test
     public void signUpWithValidInformationTest() {
         open(TEMP_MAIL_URL);
-        TempMail tempMail = new TempMail();
+        TempMailPage tempMail = new TempMailPage();
         String mail = tempMail.getTempMail().val();
         openInNewTab(OE_URL);
         switchTo().window(TITLE);
