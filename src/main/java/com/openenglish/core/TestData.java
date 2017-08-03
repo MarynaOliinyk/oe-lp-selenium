@@ -94,7 +94,13 @@ public class TestData {
     }
 
     public static class Lessons {
-        public static final String LESSONS_TEXT = getProperty("lessons.text");
+        public static final String LESSONS_TEXT = getProperty("lessons.text"),
+                REMINDER_TITLE = getProperty("lessons.reminder.title.text"),
+                REMINDER_BODY = getProperty("lessons.reminder.body.text"),
+                REMINDER_LESSONS_LINK = getProperty("lessons.reminder.lessons.link.text"),
+                REMINDER_PRACTICA_LINK = getProperty("lessons.reminder.practica.link.text"),
+                REMINDER_LIVECLASSES_LINK = getProperty("lessons.reminder.liveclasses.link.text"),
+                BEGIN_LESSON_BUTTON = getProperty("lessons.reminder.begin.button.text");
     }
 
     public static class TalkNow {
