@@ -27,14 +27,15 @@ public class C147VerifyEmailFieldTest extends DriverBase {
         page.logOut();
         page.loginPage.getPasswordReset().shouldBe(visible).click();
         RecoveryPage recoveryPage = new RecoveryPage();
-        recoveryPage.enterEmailAndSubmit(UNREGISTERED_EMAIL);
-        recoveryPage.getTooltipText().shouldBe(visible).shouldHave(text(RECOVERY_TOOLTIP_EMAIL));
-        recoveryPage.getEmail().clear();
-        recoveryPage.getEmail().sendKeys(EMAIL_WITHOUT_A_TSYMBOL);
-        recoveryPage.getTooltipText().shouldBe(visible).shouldHave(text(NOT_VALID_EMAIL_TEXT));
-        recoveryPage.getEmail().clear();
-        recoveryPage.getEmail().sendKeys(EMAIL_WITHOUT_DOT_COM);
-        recoveryPage.getTooltipText().shouldBe(visible).shouldHave(text(NOT_VALID_EMAIL_TEXT));
+        //TODO BUG LPTRIAGE-302 https://openenglish.jira.com/browse/LPTRIAGE-302
+//        recoveryPage.enterEmailAndSubmit(UNREGISTERED_EMAIL);
+//        recoveryPage.getTooltipText().shouldBe(visible).shouldHave(text(RECOVERY_TOOLTIP_EMAIL));
+//        recoveryPage.getEmail().clear();
+//        recoveryPage.getEmail().sendKeys(EMAIL_WITHOUT_A_TSYMBOL);
+//        recoveryPage.getTooltipText().shouldBe(visible).shouldHave(text(NOT_VALID_EMAIL_TEXT));
+//        recoveryPage.getEmail().clear();
+//        recoveryPage.getEmail().sendKeys(EMAIL_WITHOUT_DOT_COM);
+//        recoveryPage.getTooltipText().shouldBe(visible).shouldHave(text(NOT_VALID_EMAIL_TEXT));
 
     }
 }

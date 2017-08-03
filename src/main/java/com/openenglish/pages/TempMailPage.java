@@ -7,8 +7,7 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 
 @Getter
-public class Comenzar {
-
-    private SelenideElement thanksText = $(By.xpath(".//*[@id='hero']//p"));
-
+public class TempMailPage {
+    private SelenideElement tempMail = $(By.id("mail")),
+                            receivedMail = $(By.xpath(".//*[@class='title-subject']"));
 }

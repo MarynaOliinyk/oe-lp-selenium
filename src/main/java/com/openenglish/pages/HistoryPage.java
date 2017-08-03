@@ -7,6 +7,7 @@ import lombok.Getter;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 @Getter
 public class HistoryPage {
@@ -22,6 +23,15 @@ public class HistoryPage {
             paginationBlock = $(By.xpath(table + "//div[@class='history-paging paging2']")),
             searchBlock = $(By.id("twocolumns")),
             refinementsBlock = $(By.xpath(".//*[@id='searchRefinements']//*[@class='refinements']")),
+            typeButton = $(By.xpath(".//*[@class='opener']")),
+            typeList = $(By.xpath(".//*[@class='slide']/ul/li/a")),
+            firstPracticeType = $(By.xpath(".//*[@id='searchRefinements']//li[4]//a")),
+            secondUnitAsessmentType = $(By.xpath(".//*[@id='searchRefinements']//li[6]//a")),
+            borrarTodoText = $(By.xpath(".//*[@class='all']")),
+            selectedTypeInList = $(By.xpath(".//*[@class='refinementSelected']")),
+            deleteOneType = $(By.xpath(".//*[@id='searchRefinements']//a[2]/span")),
+            refinementsIsDeleted = $(By.xpath(".//*[@class='delete']")),
+            historyTable = $(By.xpath(".//*[@id='twocolumns']/div[2]")),
 
     tableBlock = $(By.xpath(table + "//*[@class='historyTable']")),
             fechaHeaderCellText = $(By.xpath(String.format(tableHeaderLine, "date"))),
@@ -39,6 +49,9 @@ public class HistoryPage {
 
     addTypeButton = $(By.xpath(".//*[@id='searchRefinements']//a[@class='opener']/span")),
             searchTypePractice = $(By.xpath(".//*[@id='searchRefinements']//a[text()='Practice']"));
+
+    private ElementsCollection selectedTypeList = $$(By.xpath(".//*[@class='delete']")),
+            selectedTypeInHistory = $$(By.xpath(".//*[@id='table-holder']//tr/td[2]/div"));
 
     public boolean isAllTheListContainsText(ElementsCollection elementsList, String textToCompare) {
         for (SelenideElement element : elementsList) {

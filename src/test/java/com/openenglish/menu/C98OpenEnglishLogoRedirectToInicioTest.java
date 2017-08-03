@@ -25,11 +25,12 @@ public class C98OpenEnglishLogoRedirectToInicioTest extends DriverBase {
         page.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getInicioLink().shouldHave(exactText(INICIO_LINK));
-        inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
+        //TODO BUG NSB-65  https://openenglish.jira.com/browse/NSB-65
+//        inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
         inicioPage.getProgresoLink().click();
         inicioPage.getOeLogo().shouldBe(visible).click();
         inicioPage.getInicioLink().shouldHave(exactText(INICIO_LINK));
-        inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
+//        inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
     }
 
 

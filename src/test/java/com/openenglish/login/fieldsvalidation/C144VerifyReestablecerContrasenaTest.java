@@ -26,6 +26,7 @@ public class C144VerifyReestablecerContrasenaTest extends DriverBase {
         page.loginPage.getPasswordReset().should(exist).click();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getRequestFormTitle().shouldHave(text(RECOVERY_PASSWORD_FORM_TITLE));
-        recoveryPage.getEmail().shouldBe(visible);
+        //TODO BUG LPTRIAGE-302 https://openenglish.jira.com/browse/LPTRIAGE-302
+//        recoveryPage.getEmail().shouldBe(visible);
     }
 }

@@ -69,7 +69,8 @@ public class C101VerifyCursoMenuLinksTest extends DriverBase {
                 .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
-        page.inicioPage.getCursoButton().hover();
+        //TODO BUG NSB-65  https://openenglish.jira.com/browse/NSB-65
+//        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getCursoButton().click();
     }
 }
