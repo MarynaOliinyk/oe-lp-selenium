@@ -37,7 +37,7 @@ public class C86VerifySugerenciasDelProfesorContentTest extends DriverBase {
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
         //TODO BUG NSB-65  https://openenglish.jira.com/browse/NSB-65
-//        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getProgresoLink().click();
         page.inicioPage.getSugerenciasDelProfesorLink().click();
         TeacherFeedbackPage teacherFeedbackPage = new TeacherFeedbackPage();
