@@ -100,7 +100,10 @@ public class TestData {
                 REMINDER_LESSONS_LINK = getProperty("lessons.reminder.lessons.link.text"),
                 REMINDER_PRACTICA_LINK = getProperty("lessons.reminder.practica.link.text"),
                 REMINDER_LIVECLASSES_LINK = getProperty("lessons.reminder.liveclasses.link.text"),
-                BEGIN_LESSON_BUTTON = getProperty("lessons.reminder.begin.button.text");
+                BEGIN_LESSON_BUTTON = getProperty("lessons.reminder.begin.button.text"),
+                MENU_TITLE_TEXT = getProperty("lessons.menu.title.text"),
+                MENU_PROGRESS_TEXT = getProperty("lessons.menu.progress.text"),
+                MENU_LINKBOX_TEXT = getProperty("lessons.menu.dropdown.text");
     }
 
     public static class TalkNow {

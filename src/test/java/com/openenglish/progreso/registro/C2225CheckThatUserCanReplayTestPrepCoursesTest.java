@@ -39,11 +39,11 @@ public class C2225CheckThatUserCanReplayTestPrepCoursesTest extends DriverBase {
         HistoryPage historyPage = new HistoryPage();
         historyPage.getTableBlock().shouldBe(visible);
         historyPage.getSearchTypePractice().shouldNotBe(visible);
-        assertFalse(historyPage.isAllTheListContainsText($$(By.xpath(historyPage.getTipoTableEllements())), HISTORY_TIPO_TEXT));
+        assertFalse(historyPage.isAllTheListContainsText(historyPage.getTipoTableEllements(), HISTORY_TIPO_TEXT));
         historyPage.getAddTypeButton().click();
         historyPage.getSearchTypePractice().shouldBe(visible).click();
         historyPage.getAddTypeButton().click();
-        assertTrue(historyPage.isAllTheListContainsText($$(By.xpath(historyPage.getTipoTableEllements())), HISTORY_TIPO_TEXT));
+        assertTrue(historyPage.isAllTheListContainsText(historyPage.getTipoTableEllements(), HISTORY_TIPO_TEXT));
         assertEquals(historyPage.getResultsAndActionsTableAllElements().getText(), HISTORY_TABLE_RESULTS_REPRODUCIR_TEXT);
         historyPage.getResultsAndActionsTableAllElements().click();
 

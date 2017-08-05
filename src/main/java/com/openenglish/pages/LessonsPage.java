@@ -5,6 +5,8 @@ import lombok.Getter;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.openenglish.core.TestData.Lessons.REMINDER_BODY;
+import static org.testng.Assert.assertTrue;
 
 public class LessonsPage {
 
@@ -20,7 +22,14 @@ public class LessonsPage {
             lessonContentBlock = $(By.xpath(".//*[@class='learning-player-wrapper']")),
             beginLessonButton = $(By.xpath(".//button[@class='continue']")),
             lessonMenu = $(By.xpath(".//*[@id='content']//div[@class='row']")),
-            lessonMenuTitle = $(By.id("lesson-title")),
+            lessonMenuTitle = $(By.xpath(".//*[@id='lesson-menu']//*[@id='lesson-title']")),
             lessonMenuProgress = $(By.id("progress")),
             lessonMenuLinkBox = $(By.xpath(".//*[@id='content']//div[@class='link-box']"));
+
+    public static void main(String[] arg) {
+                                 String text = "MOSTRAR MENÚ\n" +
+                                         "+";
+        System.out.println(text.matches("Ha completado .* Unidades. Pase al siguiente Nivel haciendo .* m\\u00E1s"));
+    }
+
 }

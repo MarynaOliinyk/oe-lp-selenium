@@ -14,6 +14,9 @@ import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
 import static com.openenglish.core.TestData.Lessons.BEGIN_LESSON_BUTTON;
 import static com.openenglish.core.TestData.Lessons.LESSONS_TEXT;
+import static com.openenglish.core.TestData.Lessons.MENU_LINKBOX_TEXT;
+import static com.openenglish.core.TestData.Lessons.MENU_PROGRESS_TEXT;
+import static com.openenglish.core.TestData.Lessons.MENU_TITLE_TEXT;
 import static com.openenglish.core.TestData.Lessons.REMINDER_BODY;
 import static com.openenglish.core.TestData.Lessons.REMINDER_LESSONS_LINK;
 import static com.openenglish.core.TestData.Lessons.REMINDER_LIVECLASSES_LINK;
@@ -22,6 +25,7 @@ import static com.openenglish.core.TestData.Lessons.REMINDER_TITLE;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
 
@@ -30,13 +34,12 @@ public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
 
     @Test
     public void lessonAreaSectionTest() {
-        loginCxecutingC2AndExecutingC101Scenario2();
+        loginExecutingC2AndExecutingC101Scenario2();
         lessonsPage.getReminderTab().shouldBe(visible).hover();
         lessonsPage.getReminderTabTitle().shouldBe(visible);
         assertEquals(lessonsPage.getReminderTabTitle().getText(), REMINDER_TITLE);
         lessonsPage.getReminderTabBody().shouldBe(visible);
-        //TODO fing out how to replace char by any char simbol
-        assertEquals(lessonsPage.getReminderTabBody().getText(), REMINDER_BODY);
+        assertTrue(lessonsPage.getReminderTabBody().getText().matches(REMINDER_BODY));
         lessonsPage.getReminderTabLessonsLink().shouldBe(visible);
         //TODO check if there must be a LECCIONES link or Índice del Curso
         assertEquals(lessonsPage.getReminderTabLessonsLink().getText(), REMINDER_LESSONS_LINK);
@@ -52,19 +55,21 @@ public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
         switchTo().defaultContent();
         lessonsPage.getLessonMenu().shouldBe(visible);
         lessonsPage.getLessonMenuTitle().shouldBe(visible);
-        //TODO fing out how to replace char by any char simbol
-        assertEquals(lessonsPage.getLessonMenuTitle().getText(), "Nivel 1 • Unit 1 • Lecci\u00F3n 2");
+        assertTrue(lessonsPage.getLessonMenuTitle().getText().matches(MENU_TITLE_TEXT));
 
         lessonsPage.getLessonMenuProgress().shouldBe(visible);
-        //TODO fing out how to replace char by any char simbol
-        assertEquals(lessonsPage.getLessonMenuProgress().getText(), "0% Completo");
+        System.out.println(lessonsPage.getLessonMenuProgress().getText());
+        System.out.println(MENU_PROGRESS_TEXT);
+        assertTrue(lessonsPage.getLessonMenuProgress().getText().matches(MENU_PROGRESS_TEXT));
 
         lessonsPage.getLessonMenuLinkBox().shouldBe(visible);
         //TODO check if there must be a MEnu link or mostrar menú
-        assertEquals(lessonsPage.getLessonMenuLinkBox().getText(), "mostrar men\u00FA");
+        System.out.println(lessonsPage.getLessonMenuLinkBox().getText());
+        System.out.println(MENU_LINKBOX_TEXT);
+        assertEquals(lessonsPage.getLessonMenuLinkBox().getText(), MENU_LINKBOX_TEXT);
     }
 
-    private void loginCxecutingC2AndExecutingC101Scenario2() {
+    private void loginExecutingC2AndExecutingC101Scenario2() {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
@@ -77,6 +82,9 @@ public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
         page.inicioPage.getUnidadesYLeccionesButton().click();
         lessonsPage.getText().should(visible).shouldHave(text(LESSONS_TEXT));
     }
+
+
+
 
 
 }
