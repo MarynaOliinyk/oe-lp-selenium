@@ -26,10 +26,4 @@ public class LessonsPage {
             lessonMenuProgress = $(By.id("progress")),
             lessonMenuLinkBox = $(By.xpath(".//*[@id='content']//div[@class='link-box']"));
 
-    public static void main(String[] arg) {
-                                 String text = "MOSTRAR MENÚ\n" +
-                                         "+";
-        System.out.println(text.matches("Ha completado .* Unidades. Pase al siguiente Nivel haciendo .* m\\u00E1s"));
-    }
-
 }
