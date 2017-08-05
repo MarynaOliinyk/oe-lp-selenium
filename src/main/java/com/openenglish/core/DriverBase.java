@@ -17,8 +17,8 @@ public class DriverBase {
         Configuration.timeout = TIMEOUT;
     }
 
-//    @AfterMethod
-//    public void tearDown() {
-//        WebDriverRunner.getWebDriver().quit();
-//    }
+    @AfterMethod
+    public void tearDown() {
+        WebDriverRunner.getWebDriver().quit();
+    }
 }
