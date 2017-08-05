@@ -1,4 +1,4 @@
-package com.openenglish.progreso.sugerenciasdelprofesor.registro;
+package com.openenglish.progreso.registro;
 
 import com.openenglish.core.DriverBase;
 import com.openenglish.pages.AbstractPage;
