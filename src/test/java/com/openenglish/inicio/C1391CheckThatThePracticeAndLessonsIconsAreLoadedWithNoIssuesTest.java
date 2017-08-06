@@ -34,9 +34,9 @@ public class C1391CheckThatThePracticeAndLessonsIconsAreLoadedWithNoIssuesTest e
         //TODO BUG NSB-65  https://openenglish.jira.com/browse/NSB-65
 //        page.inicioPage.getUserNickName().shouldBe(visible).shouldNotBe(empty)
 //                .shouldHave(text(USER_NICK_NAME));
-        assertTrue(page.inicioPage.visibilityOfListElements($$(page.inicioPage.getAllThePracticeVideoImgs())));
-        assertTrue(page.inicioPage.visibilityOfListElements($$(page.inicioPage.getAllTheLessonsVideoImgs())));
-        assertTrue(page.inicioPage.visibilityOfListElements($$(page.inicioPage.getAllTheLiveClassesVideoImgs())));
+        assertTrue(page.inicioPage.visibilityOfListElements(page.inicioPage.getAllThePracticeVideoImgs()));
+        assertTrue(page.inicioPage.visibilityOfListElements(page.inicioPage.getAllTheLessonsVideoImgs()));
+        assertTrue(page.inicioPage.visibilityOfListElements(page.inicioPage.getAllTheLiveClassesVideoImgs()));
     }
 
 }
