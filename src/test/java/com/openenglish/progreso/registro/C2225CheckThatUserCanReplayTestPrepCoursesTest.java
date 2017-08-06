@@ -49,6 +49,7 @@ public class C2225CheckThatUserCanReplayTestPrepCoursesTest extends DriverBase {
 
         VideoPopUp videoPopUp = new VideoPopUp();
         switchTo().frame(videoPopUp.getVideoIframe());
+        videoPopUp.getVideoWindow().hover();
         videoPopUp.getPausaButton().waitUntil(visible, WAIT_UNTIL).click();
         videoPopUp.getReproducirButton().waitUntil(visible, WAIT_UNTIL);
     }

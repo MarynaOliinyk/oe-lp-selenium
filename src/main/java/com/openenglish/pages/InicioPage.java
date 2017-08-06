@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 @Getter
 public class InicioPage {
@@ -65,18 +66,11 @@ public class InicioPage {
             allTheLiveClassesVideoImgs = By.xpath(".//*[@class='grid_6 block live-class']//div[@class='carousel']//img");
 
     public boolean verifyAtLeastOneElementTextIsEqual(ElementsCollection collection, String xPath, String textToSearch) {
-        for (SelenideElement element : collection) {
-            String textFromTheElement = $(element).hover().$(byXpath(xPath)).getText().toLowerCase();
-            if (textToSearch.toLowerCase().equals(textFromTheElement)) return true;
-        }
-        return false;
+        return collection.stream().anyMatch(element -> $(element).hover().$(byXpath(xPath)).getText().equalsIgnoreCase(textToSearch));
     }
 
-    public boolean visibilityOfListElements(ElementsCollection collection) {
-        for (SelenideElement element : collection) {
-            if (!element.is(exist) && !element.is(visible)) return false;
-        }
-        return true;
+    public boolean visibilityOfListElements(By paramsToSearch) {
+        return $$(paramsToSearch).stream().allMatch(element -> element.is(exist) & element.is(visible));
     }
 
     public boolean stringsComparator(String constant, String toSplit) {

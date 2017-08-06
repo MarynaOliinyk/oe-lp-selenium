@@ -54,13 +54,7 @@ public class HistoryPage {
             selectedTypeInHistory = $$(By.xpath(".//*[@id='table-holder']//tr/td[2]/div"));
 
     public boolean isAllTheListContainsText(String elToSearch, String textToCompare) {
-        ElementsCollection elementsList = $$(By.xpath(elToSearch));
-        for (SelenideElement element : elementsList) {
-            if (!element.getText().equals(textToCompare)) {
-                return false;
-            }
-        }
-        return true;
+        return $$(By.xpath(elToSearch)).stream().allMatch(element -> element.hover().getText().equalsIgnoreCase(textToCompare));
     }
 
 }
