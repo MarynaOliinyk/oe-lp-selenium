@@ -61,7 +61,8 @@ public class TestData {
                 MOBILE_SECTION_THREE = getProperty("register.mobile.section.three"),
                 AGE = getProperty("register.age"),
                 THANKS_POPUP_TEXT = getProperty("register.thanks.popup.text"),
-                TITLE = getProperty("register.title");
+                TITLE = getProperty("register.title"),
+                WARNING_MESSAGES = getProperty("register.warnings.messages");
     }
 
     public static class FAQ {
