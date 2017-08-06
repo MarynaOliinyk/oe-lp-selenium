@@ -62,7 +62,7 @@ public class TestData {
                 AGE = getProperty("register.age"),
                 THANKS_POPUP_TEXT = getProperty("register.thanks.popup.text"),
                 TITLE = getProperty("register.title"),
-                WARNING_MESSAGES = getProperty("register.warnings.messages");
+                WARNING_MESSAGE = getProperty("register.warning.message");
     }
 
     public static class FAQ {

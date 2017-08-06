@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
 import static com.openenglish.core.TestData.General.OE_URL;
-import static com.openenglish.core.TestData.Register.WARNING_MESSAGES;
+import static com.openenglish.core.TestData.Register.WARNING_MESSAGE;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class C15PopUpVerifyMandatoryFieldsTest extends DriverBase {
@@ -19,6 +19,6 @@ public class C15PopUpVerifyMandatoryFieldsTest extends DriverBase {
         switchTo().frame(regForm.getPopUpIdentifier());
         regForm.getStartNowButton().click();
         //TODO bug https://openenglish.jira.com/browse/LPTRIAGE-306
-        assertTrue(regForm.getWarningMessages().stream().allMatch(elem -> elem.getText().equals(WARNING_MESSAGES)));
+        assertTrue(regForm.getWarningMessages().stream().allMatch(elem -> elem.getText().equals(WARNING_MESSAGE)));
     }
 }
