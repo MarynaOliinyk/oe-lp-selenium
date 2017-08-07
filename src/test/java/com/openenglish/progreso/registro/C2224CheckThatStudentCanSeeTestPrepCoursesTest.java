@@ -1,4 +1,4 @@
-package com.openenglish.progreso.sugerenciasdelprofesor.registro;
+package com.openenglish.progreso.registro;
 
 import com.openenglish.core.DriverBase;
 import com.openenglish.pages.HistoryPage;
@@ -35,11 +35,11 @@ public class C2224CheckThatStudentCanSeeTestPrepCoursesTest extends DriverBase {
         HistoryPage historyPage = new HistoryPage();
         historyPage.getTableBlock().shouldBe(visible);
         historyPage.getSearchTypePractice().shouldNotBe(visible);
-        assertFalse(historyPage.isAllTheListContainsText($$(By.xpath(historyPage.getTipoTableEllements())), HISTORY_TIPO_TEXT));
+        assertFalse(historyPage.isAllTheListContainsText(historyPage.getTipoTableEllements(), HISTORY_TIPO_TEXT));
         historyPage.getAddTypeButton().click();
         historyPage.getSearchTypePractice().shouldBe(visible).click();
         historyPage.getAddTypeButton().click();
-        assertTrue(historyPage.isAllTheListContainsText($$(By.xpath(historyPage.getTipoTableEllements())), HISTORY_TIPO_TEXT));
+        assertTrue(historyPage.isAllTheListContainsText(historyPage.getTipoTableEllements(), HISTORY_TIPO_TEXT));
         assertFalse($$(By.xpath(historyPage.getTituloTableEllements())).isEmpty());
     }
 }
