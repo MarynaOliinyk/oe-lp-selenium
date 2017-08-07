@@ -134,12 +134,16 @@ public class TestData {
     }
 
     public static class Profile {
-        public static final String PROFILE_HEADER_TEXT = getProperty("profile.header.text");
+        public static final String PROFILE_HEADER_TEXT = getProperty("profile.header.text"),
+                PROFILE_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("profile.verelindice.del.curso.link"),
+                PROFILE_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("profile.verelindice.del.curso.text"),
+                PROFILE_LESSONS_HEADER_TEXT = getProperty("profile.lessons.header.text"),
+                PROFILE_TOMAR_PRUEBA_DE_NIVEL_BUTTON = getProperty("profile.tomar.prueba.de.nivel.button.text");
     }
 
     public static class TeacherFeedback {
         public static final String TEACHER_FEEDBACK_HEADER_TEXT = getProperty("teacherfeedback.header.text"),
-                TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("teacherfeedback.verelindice.del.curso.link"),
+                TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("teacherfeedback.verelindice.del.curso.text"),
                 TEACHER_FEEDBACK_FECHA_COLUMN = getProperty("teacherfeedback.fecha.column"),
                 TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN = getProperty("teacherfeedback.sugerencia.solicitada.column"),
                 TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN = getProperty("teacherfeedback.respuesta.del.profesor.column"),
