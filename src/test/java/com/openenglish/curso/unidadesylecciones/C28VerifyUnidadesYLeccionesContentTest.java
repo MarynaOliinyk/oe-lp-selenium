@@ -30,7 +30,7 @@ import static org.testng.Assert.assertTrue;
 public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
 
     private AbstractPage page = new AbstractPage();
-    LessonsPage lessonsPage = new LessonsPage();
+    private LessonsPage lessonsPage = new LessonsPage();
 
     @Test
     public void lessonAreaSectionTest() {
@@ -58,14 +58,10 @@ public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
         assertTrue(lessonsPage.getLessonMenuTitle().getText().matches(MENU_TITLE_TEXT));
 
         lessonsPage.getLessonMenuProgress().shouldBe(visible);
-        System.out.println(lessonsPage.getLessonMenuProgress().getText());
-        System.out.println(MENU_PROGRESS_TEXT);
         assertTrue(lessonsPage.getLessonMenuProgress().getText().matches(MENU_PROGRESS_TEXT));
 
         lessonsPage.getLessonMenuLinkBox().shouldBe(visible);
         //TODO check if there must be a MEnu link or mostrar menú
-        System.out.println(lessonsPage.getLessonMenuLinkBox().getText());
-        System.out.println(MENU_LINKBOX_TEXT);
         assertEquals(lessonsPage.getLessonMenuLinkBox().getText(), MENU_LINKBOX_TEXT);
     }
 
