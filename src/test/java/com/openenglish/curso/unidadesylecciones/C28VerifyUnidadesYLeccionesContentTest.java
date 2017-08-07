@@ -20,7 +20,7 @@ import static com.openenglish.core.TestData.Lessons.ASK_TEACHER_HEADER_TEXT;
 import static com.openenglish.core.TestData.Lessons.ASK_TEACHER_SUBMIT_TEXT;
 import static com.openenglish.core.TestData.Lessons.BEGIN_LESSON_BUTTON;
 import static com.openenglish.core.TestData.Lessons.LESSONS_TEXT;
-import static com.openenglish.core.TestData.Lessons.MENU_LINKBOX_TEXT;
+import static com.openenglish.core.TestData.Lessons.MENU_MONSTRAR_TEXT;
 import static com.openenglish.core.TestData.Lessons.MENU_PROGRESS_TEXT;
 import static com.openenglish.core.TestData.Lessons.MENU_TITLE_TEXT;
 import static com.openenglish.core.TestData.Lessons.MY_NOTES_GUARDAR_TEXT;
@@ -69,9 +69,9 @@ public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
         lessonsPage.getLessonMenuProgress().shouldBe(visible);
         assertTrue(lessonsPage.getLessonMenuProgress().getText().matches(MENU_PROGRESS_TEXT));
 
-        lessonsPage.getLessonMenuLinkBox().shouldBe(visible);
+        lessonsPage.getLessonMostrarMenu().shouldBe(visible);
         //TODO check if there must be a MEnu link or mostrar menú
-        assertEquals(lessonsPage.getLessonMenuLinkBox().getText(), MENU_LINKBOX_TEXT);
+        assertEquals(lessonsPage.getLessonMostrarMenu().getText(), MENU_MONSTRAR_TEXT);
     }
 
     @Test
