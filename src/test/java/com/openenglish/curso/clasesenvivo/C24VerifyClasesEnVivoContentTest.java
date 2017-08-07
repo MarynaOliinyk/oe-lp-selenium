@@ -45,8 +45,7 @@ public class C24VerifyClasesEnVivoContentTest extends DriverBase {
         liveClassesPage.getHeaderText().shouldBe(visible).shouldHave(text(LIVE_CLASSES_HEADER_TEXT));
         liveClassesPage.getDropBlock().click();
         liveClassesPage.getDropBlockHeaderText().should(visible, text(LIVE_CLASSES_DROP_BLOCK_HEADER_TEXT));
-        String message = liveClassesPage.getDropBlockMessage().getText();
-        assertTrue(message.equals(LIVE_CLASSES_DROP_BLOCK_MESSAGE));
+        assertTrue(liveClassesPage.getDropBlockMessage().getText().matches(LIVE_CLASSES_DROP_BLOCK_MESSAGE));
         assertTrue(page.findElementByJS(liveClassesPage.getDropBlockLessonLinkID()).getAttribute(liveClassesPage.getAttribute()).contains(LIVE_CLASSES_DROP_BLOCK_LESSON_LINK));
         assertTrue(page.findElementByJS(liveClassesPage.getDropBlockImmersionLinkID()).getAttribute(liveClassesPage.getAttribute()).contains(LIVE_CLASSES_DROP_BLOCK_IMMERSION_LINK));
         liveClassesPage.getCarousel().should(visible);
@@ -58,7 +57,5 @@ public class C24VerifyClasesEnVivoContentTest extends DriverBase {
         liveClassesPage.getContentText().should(text(LIVE_CLASSES_CONTENT_TEXT));
         liveClassesPage.getDates().should(visible);
         liveClassesPage.getImageOnVideo().should(visible);
-
-
     }
 }
