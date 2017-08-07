@@ -4,8 +4,7 @@ import com.openenglish.core.DriverBase;
 import com.openenglish.pages.HistoryPage;
 import com.openenglish.pages.InicioPage;
 import com.openenglish.pages.LoginPage;
-import com.openenglish.pages.VideoPopUp;
-import org.openqa.selenium.By;
+import com.openenglish.pages.VideoPopUpPage;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.visible;
@@ -47,7 +46,7 @@ public class C2225CheckThatUserCanReplayTestPrepCoursesTest extends DriverBase {
         assertEquals(historyPage.getResultsAndActionsTableAllElements().getText(), HISTORY_TABLE_RESULTS_REPRODUCIR_TEXT);
         historyPage.getResultsAndActionsTableAllElements().click();
 
-        VideoPopUp videoPopUp = new VideoPopUp();
+        VideoPopUpPage videoPopUp = new VideoPopUpPage();
         switchTo().frame(videoPopUp.getVideoIframe());
         videoPopUp.getVideoWindow().hover();
         videoPopUp.getPausaButton().waitUntil(visible, WAIT_UNTIL).click();
