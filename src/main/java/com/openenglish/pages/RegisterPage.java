@@ -1,17 +1,18 @@
 package com.openenglish.pages;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
-
+import static com.codeborne.selenide.Selenide.$$;
+@Getter
 public class RegisterPage {
 
     private String registerSectionNotifications = ".//*[@id='%s']/following-sibling::div/span";
     private String mobileSection = ".//*[@id='phone-inputs']/input[%s]";
-    @Getter
     private SelenideElement registerForm = $(By.id("leadForm")),
             nombreField = $(By.id("firstname-input")),
             appelidoField = $(By.id("lastname-input")),
@@ -33,6 +34,7 @@ public class RegisterPage {
             thanksPopUpText = $(By.xpath("//p[@class='text-center']")),
             popUpCloseButton = $(By.xpath(".//button[@type='button'][@class='pum-close popmake-close']"));
 
+    private ElementsCollection warningMessages = $$(By.xpath(".//*[@id='leadForm']//span"));
 
 
     public void bannerVisibility() {
