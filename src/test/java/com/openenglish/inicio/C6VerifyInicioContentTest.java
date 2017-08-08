@@ -35,9 +35,8 @@ public class C6VerifyInicioContentTest extends DriverBase {
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldBe(visible).shouldNotBe(empty)
                 .shouldHave(exactText(INICIO_LINK));
-        //TODO BUG NSB-65  https://openenglish.jira.com/browse/NSB-65
-//        page.inicioPage.getUserNickName().shouldBe(visible).shouldNotBe(empty)
-//                .shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserNickName().shouldBe(visible).shouldNotBe(empty)
+                .shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getHeadingElement().shouldBe(visible).shouldNotBe(empty)
                 .shouldHave(attribute("class", "container_12"));
         page.inicioPage.getPlanDeEstudioElement().shouldBe(visible).shouldNotBe(empty)

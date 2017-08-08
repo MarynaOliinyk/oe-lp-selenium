@@ -1,6 +1,8 @@
 package com.openenglish.pages;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WebElement;
 
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
@@ -15,6 +17,12 @@ public class AbstractPage {
 
     public static void openInNewTab(String url) {
         executeJavaScript("window.open('" + url + "','_blank');");
+    }
+
+    public WebElement findElementByJS(String id){
+        // returns the right WebElement
+// it's the same as driver.findElement(By.id("someId"))
+       return executeJavaScript("return document.getElementById('" + id +  "');");
     }
 
     public static void scroll() {
