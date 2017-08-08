@@ -25,9 +25,9 @@ public class TestData {
                 UNREGISTERED_EMAIL = getProperty("login.unregistered.email"),
                 INVALID_PASSWORD = getProperty("login.invalid.password"),
                 SECURITY_PLACE_HOLDER_TEXT = getProperty("login.security.placeholder"),
-                USER_NAME_WITH_NOTES = getProperty("login.user.name.without.notes"),
-                EMAIL_WITH_NOTES = getProperty("login.correct.email.without.notes"),
-                PASSWORD_WITH_NOTES = getProperty("login.correct.password.without.notes");
+                USER_NAME_WITH_NOTES = getProperty("login.user.name.with.notes"),
+                EMAIL_WITH_NOTES = getProperty("login.correct.email.with.notes"),
+                PASSWORD_WITH_NOTES = getProperty("login.correct.password.with.notes");
     }
 
     public static class Recovery {
@@ -77,7 +77,7 @@ public class TestData {
                 MENSAJES_BUTTON_TEXT = getProperty("inicio.mensajes.link.text"),
                 USER_NICK_NAME = getProperty("inicio.nick.user.name"),
                 SALIR_BUTTON_TEXT = getProperty("inicio.salir.link.text"),
-                USER_NICK_NAME_WITH_NOTES = getProperty("inicio.nick.user.name.without.notes"),
+                USER_NICK_NAME_WITH_NOTES = getProperty("inicio.nick.user.name.with.notes"),
                 PREFERENCIAS_BUTTON_TEXT = getProperty("inicio.preferencias.link.text");
     }
 
