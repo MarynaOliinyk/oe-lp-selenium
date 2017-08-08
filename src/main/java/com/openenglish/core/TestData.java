@@ -61,7 +61,8 @@ public class TestData {
                 MOBILE_SECTION_THREE = getProperty("register.mobile.section.three"),
                 AGE = getProperty("register.age"),
                 THANKS_POPUP_TEXT = getProperty("register.thanks.popup.text"),
-                TITLE = getProperty("register.title");
+                TITLE = getProperty("register.title"),
+                WARNING_MESSAGE = getProperty("register.warning.message");
     }
 
     public static class FAQ {
@@ -94,7 +95,26 @@ public class TestData {
     }
 
     public static class Lessons {
-        public static final String LESSONS_TEXT = getProperty("lessons.text");
+        public static final String LESSONS_TEXT = getProperty("lessons.text"),
+                REMINDER_TITLE = getProperty("lessons.reminder.title.text"),
+                REMINDER_BODY = getProperty("lessons.reminder.body.text"),
+                REMINDER_LESSONS_LINK = getProperty("lessons.reminder.lessons.link.text"),
+                REMINDER_PRACTICA_LINK = getProperty("lessons.reminder.practica.link.text"),
+                REMINDER_LIVECLASSES_LINK = getProperty("lessons.reminder.liveclasses.link.text"),
+                BEGIN_LESSON_BUTTON = getProperty("lessons.reminder.begin.button.text"),
+                MENU_TITLE_TEXT = getProperty("lessons.menu.title.text"),
+                MENU_PROGRESS_TEXT = getProperty("lessons.menu.progress.text"),
+                MENU_MONSTRAR_TEXT = getProperty("lessons.menu.monstrar.text"),
+                MENU_OCULTAR_TEXT = getProperty("lessons.menu.ocultar.text"),
+                CONTINUAR_LESSON_TEXT = getProperty("lessons.continuar.lesson.link.text"),
+                LESSONS_MENU_TEXT = getProperty("lessons.menu.header.text"),
+                ASK_TEACHER_HEADER_CLASS = getProperty("lessons.ask.teacher.header.class"),
+                ASK_TEACHER_HEADER_TEXT = getProperty("lessons.ask.teacher.header.text"),
+                ASK_TEACHER_SUBMIT_TEXT = getProperty("lessons.ask.teacher.submit.button.text"),
+                MY_NOTES_HEADER_TEXT = getProperty("lessons.mis.notes.header.text"),
+                MY_NOTES_LIST_HEADER_TEXT = getProperty("lessons.mis.notes.list.header.text"),
+                MY_NOTES_GUARDAR_TEXT = getProperty("lessons.mis.notes.guardar.nota.button.text"),
+                INDICE_DEL_CURSO_URL = getProperty("lessons.indice.del.curso.url");
     }
 
     public static class TalkNow {
@@ -136,12 +156,13 @@ public class TestData {
     public static class History {
         public static final String HISTORY_HEADER_TEXT = getProperty("history.header.text"),
                 HISTORY_HEADER_LINK_TEXT = getProperty("history.header.link.text"),
-                HISTORY_BORRAR_TODO_TEXT =getProperty("history.borrartodo.text"),
+                HISTORY_BORRAR_TODO_TEXT = getProperty("history.borrartodo.text"),
                 HISTORY_TABLE_HEADER_FECHA_TEXT = getProperty("history.table.header.fecha.text"),
                 HISTORY_TABLE_HEADER_TIPO_TEXT = getProperty("history.table.header.tipo.text"),
                 HISTORY_TABLE_HEADER_TITULO_TEXT = getProperty("history.table.header.titulo.text"),
                 HISTORY_TABLE_HEADER_DESCRIPCION_TEXT = getProperty("history.table.header.descripcion.text"),
                 HISTORY_TABLE_HEADER_RESULTS_TEXT = getProperty("history.table.header.results.text"),
+                HISTORY_TABLE_RESULTS_REPRODUCIR_TEXT = getProperty("history.table.results.reproducir.text"),
                 HISTORY_URL_ENDS_WITH = getProperty("history.url.endsWith"),
                 HISTORY_TIPO_TEXT = getProperty("history.table.tipo.practice.text");
     }
@@ -169,5 +190,8 @@ public class TestData {
         public static final String THANKS_TEXT = getProperty("comenzar.thanks.text");
     }
 
-
+    public static class CourseIndex {
+        public static final String COURSE_INDEX_HEADER_TEXT = getProperty("courseindex.header.text"),
+                COURSE_INDEX_FILTER_TEXT = getProperty("courseindex.filter.text");
+    }
 }
