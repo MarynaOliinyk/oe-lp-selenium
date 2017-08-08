@@ -33,7 +33,6 @@ public class C101VerifyCursoMenuLinksTest extends DriverBase {
         page.inicioPage.getClasesEnVivoButton().click();
         LiveClassesPage liveClassesPage = new LiveClassesPage();
         liveClassesPage.getHeaderText().shouldBe(visible).shouldHave(text(LIVE_CLASSES_HEADER_TEXT));
-
     }
 
     @Test
@@ -42,7 +41,6 @@ public class C101VerifyCursoMenuLinksTest extends DriverBase {
         page.inicioPage.getUnidadesYLeccionesButton().click();
         LessonsPage lessonsPage = new LessonsPage();
         lessonsPage.getText().should(visible).shouldHave(text(LESSONS_TEXT));
-
     }
 
     @Test
@@ -51,7 +49,6 @@ public class C101VerifyCursoMenuLinksTest extends DriverBase {
         page.inicioPage.getPracticaLink().click();
         ImmersionPage immersionPage = new ImmersionPage();
         immersionPage.getHeaderText().shouldBe(visible).shouldHave(text(IMMERSION_HEADER_TEXT));
-
     }
 
     @Test
@@ -69,8 +66,7 @@ public class C101VerifyCursoMenuLinksTest extends DriverBase {
                 .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        //TODO BUG NSB-65  https://openenglish.jira.com/browse/NSB-65
-//        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getCursoButton().click();
     }
 }

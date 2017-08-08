@@ -28,8 +28,7 @@ public class C2LoginWithCorrectCredentialsTest extends DriverBase {
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         InicioPage inicioPage = new InicioPage();
         inicioPage.getInicioLink().should(visible).shouldHave(text(INICIO_LINK));
-        //TODO BUG NSB-65  https://openenglish.jira.com/browse/NSB-65
-//        inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
+        inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
         page.logOut();
     }
 }

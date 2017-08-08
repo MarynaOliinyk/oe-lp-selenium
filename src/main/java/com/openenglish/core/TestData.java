@@ -25,10 +25,9 @@ public class TestData {
                 UNREGISTERED_EMAIL = getProperty("login.unregistered.email"),
                 INVALID_PASSWORD = getProperty("login.invalid.password"),
                 SECURITY_PLACE_HOLDER_TEXT = getProperty("login.security.placeholder"),
-                PASSWORD_TEXT = getProperty("login.password.text"),
-                USER_NAME_WITHOUT_NOTES = getProperty("login.user.name.without.notes"),
-                EMAIL_WITHOUT_NOTES = getProperty("login.correct.email.without.notes"),
-                PASSWORD_WITHOUT_NOTES = getProperty("login.correct.password.without.notes");
+                USER_NAME_WITH_NOTES = getProperty("login.user.name.with.notes"),
+                EMAIL_WITH_NOTES = getProperty("login.correct.email.with.notes"),
+                PASSWORD_WITH_NOTES = getProperty("login.correct.password.with.notes");
     }
 
     public static class Recovery {
@@ -78,12 +77,19 @@ public class TestData {
                 MENSAJES_BUTTON_TEXT = getProperty("inicio.mensajes.link.text"),
                 USER_NICK_NAME = getProperty("inicio.nick.user.name"),
                 SALIR_BUTTON_TEXT = getProperty("inicio.salir.link.text"),
-                USER_NICK_NAME_WITHOUT_NOTES = getProperty("inicio.nick.user.name.without.notes"),
+                USER_NICK_NAME_WITH_NOTES = getProperty("inicio.nick.user.name.with.notes"),
                 PREFERENCIAS_BUTTON_TEXT = getProperty("inicio.preferencias.link.text");
     }
 
     public static class LiveClasses {
-        public static final String LIVE_CLASSES_HEADER_TEXT = getProperty("liveclasses.header.text");
+        public static final String LIVE_CLASSES_HEADER_TEXT = getProperty("liveclasses.header.text"),
+                LIVE_CLASSES_DROP_BLOCK_MESSAGE = getProperty("liveclasses.dropblock.message"),
+                LIVE_CLASSES_DROP_BLOCK_HEADER_TEXT = getProperty("liveclasses.dropblock.header.text"),
+                LIVE_CLASSES_DROP_BLOCK_LESSON_LINK = getProperty("liveclasses.dropblock.lesson.link"),
+                LIVE_CLASSES_DROP_BLOCK_IMMERSION_LINK = getProperty("liveclasses.dropblock.immersionlink"),
+                LIVE_CLASSES_TITLE_TEXT = getProperty("liveclasses.title.text"),
+                LIVE_CLASSES_CONTENT_TEXT = getProperty("liveclasses.content.text");
+
     }
 
     public static class Immersion {
