@@ -29,5 +29,9 @@ public class ProfilePage {
             pruebaDeNivelColumn = $(By.xpath(".//*[@class='item-list']/li[3]//strong")),
             ultimoIngresoColumn = $(By.xpath(".//*[@class='item-list']/li[4]//strong")),
             statisticsGraph = $(By.id("graph-wrapper")),
-            pruebaDeNivelButton = $(By.id("opt-out"));
+            pruebaDeNivelButton = $(By.id("opt-out")),
+            certificatesCarousel = $(By.id("certificates-carousel")),
+            messageOverActualCertificate = $(By.xpath(".//*[@class='slide-text-overlay always-on']/span")),
+            prevButton = $(By.xpath(".//*[@class='carousel-prev-button']")),
+            nextButton = $(By.xpath(".//*[@class='carousel-next-button']"));
 }

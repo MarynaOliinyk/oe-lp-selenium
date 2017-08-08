@@ -144,7 +144,8 @@ public class TestData {
                 PROFILE_ULTIMO_NIVEL_COMPLETADO_COLUMN = getProperty("profile.ultimo.nivel.completado.column"),
                 PROFILE_PRUEBA_DE_NIVEL_COLUMN = getProperty("profile.prueba.de.nivel.column"),
                 PROFILE_ULTIMO_INGRESO_COLUMN = getProperty("profile.ultimo.ingreso.column"),
-                PROFILE_PRUEBA_DE_NIVEL_BUTTON = getProperty("profile.prueba.de.nivel.button");
+                PROFILE_PRUEBA_DE_NIVEL_BUTTON = getProperty("profile.prueba.de.nivel.button"),
+                PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE = getProperty("profile.message.over.actual.certificate");
     }
 
     public static class TeacherFeedback {

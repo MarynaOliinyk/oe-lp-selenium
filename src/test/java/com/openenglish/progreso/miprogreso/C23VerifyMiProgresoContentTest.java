@@ -18,6 +18,7 @@ import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Profile.PROFILE_ESTADISTICAS_HEADER_TEXT;
 import static com.openenglish.core.TestData.Profile.PROFILE_HEADER_TEXT;
 import static com.openenglish.core.TestData.Profile.PROFILE_LESSONS_HEADER_TEXT;
+import static com.openenglish.core.TestData.Profile.PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE;
 import static com.openenglish.core.TestData.Profile.PROFILE_NIVEL_ACTUAL_COLUMN;
 import static com.openenglish.core.TestData.Profile.PROFILE_PRUEBA_DE_NIVEL_BUTTON;
 import static com.openenglish.core.TestData.Profile.PROFILE_PRUEBA_DE_NIVEL_COLUMN;
@@ -68,11 +69,20 @@ public class C23VerifyMiProgresoContentTest extends DriverBase {
         profilePage.getMesTimeBlock().should(visible);
         profilePage.getPrevArrowButton().should(visible);
         profilePage.getItemList().should(visible);
-        profilePage.getNivelActualColumn().should(visible,text(PROFILE_NIVEL_ACTUAL_COLUMN));
+        profilePage.getNivelActualColumn().should(visible, text(PROFILE_NIVEL_ACTUAL_COLUMN));
         profilePage.getUltimoNivelCompletadoColumn().should(visible, text(PROFILE_ULTIMO_NIVEL_COMPLETADO_COLUMN));
         profilePage.getPruebaDeNivelColumn().should(visible, text(PROFILE_PRUEBA_DE_NIVEL_COLUMN));
         profilePage.getUltimoIngresoColumn().should(visible, text(PROFILE_ULTIMO_INGRESO_COLUMN));
         profilePage.getStatisticsGraph().should(visible);
         profilePage.getPruebaDeNivelButton().should(visible, text(PROFILE_PRUEBA_DE_NIVEL_BUTTON));
+    }
+
+    @Test
+    public void certificatesTestS3() {
+        loginWithCorrectCredentialsAndProfilePageIsOpen();
+        profilePage.getCertificatesCarousel().should(visible);
+        profilePage.getMessageOverActualCertificate().should(visible).getText().matches(PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE);
+        profilePage.getPrevButton().should(visible);
+        profilePage.getNextButton().should(visible);
     }
 }
