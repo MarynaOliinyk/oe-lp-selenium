@@ -9,6 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import static com.codeborne.selenide.Selenide.$;
 import static com.openenglish.core.TestData.Lessons.REMINDER_BODY;
 import static org.testng.Assert.assertTrue;
+
 @Getter
 public class LessonsPage {
 
@@ -21,10 +22,13 @@ public class LessonsPage {
             reminderTabLiveClassesLink = $(By.id("liveClassLink")),
             lessonIFrame = $(By.id("lesson")),
             lessonContentBlock = $(By.xpath(".//*[@class='learning-player-wrapper']")),
+            lessonNameHeader = $(By.xpath(".//div[@class='title-slide']//hgroup//h1")),
+            lessonContentHeader = $(By.xpath(".//div[@class='title-slide']//hgroup//h2")),
             beginLessonButton = $(By.xpath(".//button[@class='continue']")),
             lessonMenu = $(By.xpath(".//*[@id='content']//div[@class='row']")),
             lessonMenuTitle = $(By.xpath(".//*[@id='lesson-menu']//*[@id='lesson-title']")),
             lessonMenuProgress = $(By.id("progress")),
+            lessonsFirstNotActiveLesson = $(By.xpath(".//*[@id='menu-area']//ul[@class='lesson-menu']//li[@class='lesson-link']/a")),
             lessonMostrarMenu = $(By.xpath(".//*[@id='content']//div[@class='link-box']")),
             lessonOcultarMenu = $(By.xpath(".//*[@id='menu-area']//a[@class='hide-link']")),
             continuarLeccionLink = $(By.xpath(".//*[@id='menu-area']//a[@class='resume-link']")),

@@ -17,8 +17,12 @@ public class AbstractPage {
         executeJavaScript("window.open('" + url + "','_blank');");
     }
 
-    public static void scroll() {
+    public static void scrollDown() {
         executeJavaScript("window.scrollBy(0,250)", "");
+    }
+
+    public static void scrollUp() {
+        executeJavaScript("window.scrollBy(0, -250)", "");
     }
 
     public void logOut() {
