@@ -110,7 +110,17 @@ public class TestData {
                 BEGIN_LESSON_BUTTON = getProperty("lessons.reminder.begin.button.text"),
                 MENU_TITLE_TEXT = getProperty("lessons.menu.title.text"),
                 MENU_PROGRESS_TEXT = getProperty("lessons.menu.progress.text"),
-                MENU_LINKBOX_TEXT = getProperty("lessons.menu.dropdown.text");
+                MENU_MONSTRAR_TEXT = getProperty("lessons.menu.monstrar.text"),
+                MENU_OCULTAR_TEXT = getProperty("lessons.menu.ocultar.text"),
+                CONTINUAR_LESSON_TEXT = getProperty("lessons.continuar.lesson.link.text"),
+                LESSONS_MENU_TEXT = getProperty("lessons.menu.header.text"),
+                ASK_TEACHER_HEADER_CLASS = getProperty("lessons.ask.teacher.header.class"),
+                ASK_TEACHER_HEADER_TEXT = getProperty("lessons.ask.teacher.header.text"),
+                ASK_TEACHER_SUBMIT_TEXT = getProperty("lessons.ask.teacher.submit.button.text"),
+                MY_NOTES_HEADER_TEXT = getProperty("lessons.mis.notes.header.text"),
+                MY_NOTES_LIST_HEADER_TEXT = getProperty("lessons.mis.notes.list.header.text"),
+                MY_NOTES_GUARDAR_TEXT = getProperty("lessons.mis.notes.guardar.nota.button.text"),
+                INDICE_DEL_CURSO_URL = getProperty("lessons.indice.del.curso.url");
     }
 
     public static class TalkNow {
