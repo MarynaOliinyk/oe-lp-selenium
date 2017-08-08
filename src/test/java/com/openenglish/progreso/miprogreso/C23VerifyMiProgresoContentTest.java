@@ -15,9 +15,15 @@ import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
 import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Profile.PROFILE_ESTADISTICAS_HEADER_TEXT;
 import static com.openenglish.core.TestData.Profile.PROFILE_HEADER_TEXT;
 import static com.openenglish.core.TestData.Profile.PROFILE_LESSONS_HEADER_TEXT;
+import static com.openenglish.core.TestData.Profile.PROFILE_NIVEL_ACTUAL_COLUMN;
+import static com.openenglish.core.TestData.Profile.PROFILE_PRUEBA_DE_NIVEL_BUTTON;
+import static com.openenglish.core.TestData.Profile.PROFILE_PRUEBA_DE_NIVEL_COLUMN;
 import static com.openenglish.core.TestData.Profile.PROFILE_TOMAR_PRUEBA_DE_NIVEL_BUTTON;
+import static com.openenglish.core.TestData.Profile.PROFILE_ULTIMO_INGRESO_COLUMN;
+import static com.openenglish.core.TestData.Profile.PROFILE_ULTIMO_NIVEL_COMPLETADO_COLUMN;
 import static com.openenglish.core.TestData.Profile.PROFILE_VER_EL_INDICE_DEL_CURSO_LINK;
 import static com.openenglish.core.TestData.Profile.PROFILE_VER_EL_INDICE_DEL_CURSO_TEXT;
 import static org.testng.Assert.assertTrue;
@@ -51,5 +57,22 @@ public class C23VerifyMiProgresoContentTest extends DriverBase {
         profilePage.getLiveClassesProgress().should(visible);
         profilePage.getUnitsProgress().should(visible);
         profilePage.getTomarPruabaDeNivelButton().should(text(PROFILE_TOMAR_PRUEBA_DE_NIVEL_BUTTON), disabled);
+    }
+
+    @Test
+    public void estadisticasTestS2() {
+        loginWithCorrectCredentialsAndProfilePageIsOpen();
+        profilePage.getEstadisticasHeaderText().should(visible, text(PROFILE_ESTADISTICAS_HEADER_TEXT));
+        profilePage.getVerPorMesButton().should(visible);
+        profilePage.getVerPorSemanaButton().should(visible);
+        profilePage.getMesTimeBlock().should(visible);
+        profilePage.getPrevArrowButton().should(visible);
+        profilePage.getItemList().should(visible);
+        profilePage.getNivelActualColumn().should(visible,text(PROFILE_NIVEL_ACTUAL_COLUMN));
+        profilePage.getUltimoNivelCompletadoColumn().should(visible, text(PROFILE_ULTIMO_NIVEL_COMPLETADO_COLUMN));
+        profilePage.getPruebaDeNivelColumn().should(visible, text(PROFILE_PRUEBA_DE_NIVEL_COLUMN));
+        profilePage.getUltimoIngresoColumn().should(visible, text(PROFILE_ULTIMO_INGRESO_COLUMN));
+        profilePage.getStatisticsGraph().should(visible);
+        profilePage.getPruebaDeNivelButton().should(visible, text(PROFILE_PRUEBA_DE_NIVEL_BUTTON));
     }
 }

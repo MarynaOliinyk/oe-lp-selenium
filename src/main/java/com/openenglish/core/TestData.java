@@ -138,7 +138,13 @@ public class TestData {
                 PROFILE_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("profile.verelindice.del.curso.link"),
                 PROFILE_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("profile.verelindice.del.curso.text"),
                 PROFILE_LESSONS_HEADER_TEXT = getProperty("profile.lessons.header.text"),
-                PROFILE_TOMAR_PRUEBA_DE_NIVEL_BUTTON = getProperty("profile.tomar.prueba.de.nivel.button.text");
+                PROFILE_TOMAR_PRUEBA_DE_NIVEL_BUTTON = getProperty("profile.tomar.prueba.de.nivel.button.text"),
+                PROFILE_ESTADISTICAS_HEADER_TEXT = getProperty("profile.estadisticas.header.text"),
+                PROFILE_NIVEL_ACTUAL_COLUMN = getProperty("profile.nivel.actual.column"),
+                PROFILE_ULTIMO_NIVEL_COMPLETADO_COLUMN = getProperty("profile.ultimo.nivel.completado.column"),
+                PROFILE_PRUEBA_DE_NIVEL_COLUMN = getProperty("profile.prueba.de.nivel.column"),
+                PROFILE_ULTIMO_INGRESO_COLUMN = getProperty("profile.ultimo.ingreso.column"),
+                PROFILE_PRUEBA_DE_NIVEL_BUTTON = getProperty("profile.prueba.de.nivel.button");
     }
 
     public static class TeacherFeedback {
