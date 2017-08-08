@@ -2,6 +2,7 @@ package com.openenglish.pages;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WebElement;
 
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
@@ -22,6 +23,10 @@ public class AbstractPage {
         // returns the right WebElement
 // it's the same as driver.findElement(By.id("someId"))
        return executeJavaScript("return document.getElementById('" + id +  "');");
+    }
+
+    public static void scroll() {
+        executeJavaScript("window.scrollBy(0,250)", "");
     }
 
     public void logOut() {
