@@ -17,6 +17,10 @@ public class AbstractPage {
         executeJavaScript("window.open('" + url + "','_blank');");
     }
 
+    public static void scroll() {
+        executeJavaScript("window.scrollBy(0,250)", "");
+    }
+
     public void logOut() {
         inicioPage.getOeLogo().should(exist);
         executeJavaScript(String.format(jsClickQuery, inicioPage.getLogOutLink()));
