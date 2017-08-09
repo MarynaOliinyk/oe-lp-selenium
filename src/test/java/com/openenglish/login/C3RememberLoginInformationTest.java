@@ -22,7 +22,6 @@ public class C3RememberLoginInformationTest extends DriverBase {
         page.loginPage.getRememberLogin().should(exist).click();
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.logOut();
-        //TODO BUG LPTRIAGE-302 https://openenglish.jira.com/browse/LPTRIAGE-302
-//        page.loginPage.getEmail().shouldHave(value(REGISTERED_EMAIL));
+        page.loginPage.getEmail().shouldHave(value(REGISTERED_EMAIL));
     }
 }
