@@ -18,14 +18,14 @@ public class AbstractPage {
         executeJavaScript("window.open('" + url + "','_blank');");
     }
 
-    public static void scroll() {
-        executeJavaScript("window.scrollBy(0,250)", "");
-    }
-
     public WebElement findElementByJS(String id){
         // returns the right WebElement
 // it's the same as driver.findElement(By.id("someId"))
        return executeJavaScript("return document.getElementById('" + id +  "');");
+    }
+
+    public static void scroll() {
+        executeJavaScript("window.scrollBy(0,250)", "");
     }
 
     public void logOut() {
