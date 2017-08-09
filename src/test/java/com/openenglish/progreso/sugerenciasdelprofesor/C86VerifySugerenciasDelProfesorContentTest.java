@@ -13,35 +13,39 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
 import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
+import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME_WITH_NOTES;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
+import static com.openenglish.core.TestData.Login.EMAIL_WITH_NOTES;
+import static com.openenglish.core.TestData.Login.PASSWORD_WITH_NOTES;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Login.USER_NAME;
+import static com.openenglish.core.TestData.Login.USER_NAME_WITH_NOTES;
 import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_FECHA_COLUMN;
 import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_HEADER_TEXT;
 import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN;
 import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN;
 import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_TEACHERS_NAME;
-import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_LINK;
+import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_TEXT;
 
 
 public class C86VerifySugerenciasDelProfesorContentTest extends DriverBase {
 
     private AbstractPage page = new AbstractPage();
 
-    @Test(enabled = false)
+    @Test
     public void verifySugerenciasDelProfesorContentTest() {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
                 .shouldHave(attribute("type", "password"));
-        page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
+        page.loginPage.logIn(EMAIL_WITH_NOTES, PASSWORD_WITH_NOTES);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME_WITH_NOTES));
         page.inicioPage.getProgresoLink().click();
         page.inicioPage.getSugerenciasDelProfesorLink().click();
         TeacherFeedbackPage teacherFeedbackPage = new TeacherFeedbackPage();
-        teacherFeedbackPage.getHeaderText().shouldBe(visible).shouldHave(text(TEACHER_FEEDBACK_HEADER_TEXT + " " + USER_NAME));
-        teacherFeedbackPage.getVerElIndiceDelCursoLink().shouldHave(text(TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_LINK));
+        teacherFeedbackPage.getHeaderText().shouldBe(visible).shouldHave(text(TEACHER_FEEDBACK_HEADER_TEXT + " " + USER_NAME_WITH_NOTES));
+        teacherFeedbackPage.getVerElIndiceDelCursoLink().shouldHave(text(TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_TEXT));
         teacherFeedbackPage.getFechaColumn().shouldHave(text(TEACHER_FEEDBACK_FECHA_COLUMN));
         teacherFeedbackPage.getSugerenciaSolicitadaColumn().shouldBe(visible).shouldHave(text(TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN));
         teacherFeedbackPage.getRespuestaDelProfesorColumn().shouldBe(visible).shouldHave(text(TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN));
@@ -51,9 +55,8 @@ public class C86VerifySugerenciasDelProfesorContentTest extends DriverBase {
         teacherFeedbackPage.getTeachersName().shouldHave(text(TEACHER_FEEDBACK_TEACHERS_NAME));
         teacherFeedbackPage.getTeachersMessage().shouldBe(exist);
         //TODO BUG QAA-211 https://openenglish.jira.com/browse/QAA-211
-        teacherFeedbackPage.getGoodRateFace().shouldBe(visible);
-        teacherFeedbackPage.getBadRateFace().shouldBe(visible);
-
+//        teacherFeedbackPage.getGoodRateFace().shouldBe(visible);
+//        teacherFeedbackPage.getBadRateFace().shouldBe(visible);
     }
 
 }

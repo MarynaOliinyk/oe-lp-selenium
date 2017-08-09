@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 
 @Getter
-public class VideoPopUp {
+public class VideoPopUpPage {
 
     private SelenideElement videoIframe = $(By.xpath(".//div[@id='ec-player']//iframe")),
             videoWindow = $(By.xpath(".//*[@class='vjs-text-track-display']")),

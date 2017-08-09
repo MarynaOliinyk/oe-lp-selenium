@@ -2,7 +2,6 @@ package com.openenglish.pages;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WebElement;
 
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
