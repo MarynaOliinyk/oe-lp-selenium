@@ -16,6 +16,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
+import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
 import static com.openenglish.core.TestData.Lessons.LESSONS_MENU_TEXT;
 import static com.openenglish.core.TestData.Lessons.LESSONS_TEXT;
 import static com.openenglish.core.TestData.Lessons.MENU_OCULTAR_TEXT;
@@ -38,8 +39,7 @@ public class C112ChangeLessonTest extends DriverBase {
                 .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        //TODO BUG NSB-65  https://openenglish.jira.com/browse/NSB-65
-//        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getCursoButton().click();
         page.inicioPage.getUnidadesYLeccionesButton().click();
         lessonsPage.getText().should(visible, text(LESSONS_TEXT));

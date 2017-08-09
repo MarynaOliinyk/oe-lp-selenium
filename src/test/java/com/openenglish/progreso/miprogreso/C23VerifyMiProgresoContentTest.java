@@ -30,7 +30,7 @@ import static com.openenglish.core.TestData.Profile.PROFILE_VER_EL_INDICE_DEL_CU
 import static org.testng.Assert.assertTrue;
 
 public class C23VerifyMiProgresoContentTest extends DriverBase {
-    ProfilePage profilePage = new ProfilePage();
+    private ProfilePage profilePage = new ProfilePage();
     private AbstractPage page = new AbstractPage();
 
     private void loginWithCorrectCredentialsAndProfilePageIsOpen() {
