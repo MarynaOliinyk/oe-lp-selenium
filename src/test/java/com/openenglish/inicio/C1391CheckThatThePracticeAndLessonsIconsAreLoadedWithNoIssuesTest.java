@@ -31,12 +31,10 @@ public class C1391CheckThatThePracticeAndLessonsIconsAreLoadedWithNoIssuesTest e
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldBe(visible).shouldNotBe(empty)
                 .shouldHave(exactText(INICIO_LINK));
-        //TODO BUG NSB-65  https://openenglish.jira.com/browse/NSB-65
-//        page.inicioPage.getUserNickName().shouldBe(visible).shouldNotBe(empty)
-//                .shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserNickName().shouldBe(visible).shouldNotBe(empty)
+                .shouldHave(text(USER_NICK_NAME));
         assertTrue(page.inicioPage.visibilityOfListElements(page.inicioPage.getAllThePracticeVideoImgs()));
         assertTrue(page.inicioPage.visibilityOfListElements(page.inicioPage.getAllTheLessonsVideoImgs()));
         assertTrue(page.inicioPage.visibilityOfListElements(page.inicioPage.getAllTheLiveClassesVideoImgs()));
     }
-
 }

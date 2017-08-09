@@ -19,7 +19,7 @@ public class C146VerifyTieneProblemasDeIngresoPopUpTest extends DriverBase {
 
     private AbstractPage page = new AbstractPage();
 
-    //TODO Chat is not enabled
+    //TODO LPTRIAGE-299 https://openenglish.jira.com/browse/LPTRIAGE-299
     @Test
     public void verifyTieneProblemasDeIngresoPopUpTest() {
         open(LP_URL);

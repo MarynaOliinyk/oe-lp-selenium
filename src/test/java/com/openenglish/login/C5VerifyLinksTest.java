@@ -39,8 +39,7 @@ public class C5VerifyLinksTest extends DriverBase {
         page.loginPage.getPasswordReset().click();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getRequestFormTitle().shouldHave(text(RECOVERY_PASSWORD_FORM_TITLE));
-        //TODO BUG LPTRIAGE-302 https://openenglish.jira.com/browse/LPTRIAGE-302
-//        recoveryPage.getEmail().shouldBe(visible);
+        recoveryPage.getEmail().shouldBe(visible);
     }
 
     @Test
@@ -61,12 +60,11 @@ public class C5VerifyLinksTest extends DriverBase {
         page.logOut();
         page.loginPage.getPasswordReset().should(exist).click();
         RecoveryPage recoveryPage = new RecoveryPage();
-        //TODO BUG LPTRIAGE-302 https://openenglish.jira.com/browse/LPTRIAGE-302
-//        recoveryPage.getRequestFormTitle().shouldHave(text(RECOVERY_PASSWORD_FORM_TITLE));
-//        recoveryPage.getEmail().shouldBe(visible);
+        recoveryPage.getRequestFormTitle().shouldHave(text(RECOVERY_PASSWORD_FORM_TITLE));
+        recoveryPage.getEmail().shouldBe(visible);
     }
 
-    //TODO Chat is not enabled
+    //TODO LPTRIAGE-299 https://openenglish.jira.com/browse/LPTRIAGE-299
     @Test
     public void chatPageIsOpenTestS5() {
         open(LP_URL);
