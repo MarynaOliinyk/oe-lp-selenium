@@ -27,7 +27,6 @@ public class AbstractPage {
     public static void scroll() {
         executeJavaScript("window.scrollBy(0,250)", "");
     }
-
     public void logOut() {
         inicioPage.getOeLogo().should(exist);
         executeJavaScript(String.format(jsClickQuery,
