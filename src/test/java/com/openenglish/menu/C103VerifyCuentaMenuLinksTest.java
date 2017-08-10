@@ -18,7 +18,6 @@ import static com.openenglish.core.TestData.Inicio.SALIR_BUTTON_TEXT;
 import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
-import static com.openenglish.core.TestData.Login.USER_NAME;
 import static com.openenglish.core.TestData.Notifications.NOTIFICATIONS_URL_END_WITH_TEXT;
 import static com.openenglish.core.TestData.Preferences.MI_PERFIL_TAB_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_URL_END_WITH_TEXT;
@@ -36,7 +35,7 @@ public class C103VerifyCuentaMenuLinksTest extends DriverBase {
                 .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(exactText(INICIO_LINK));
-        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getAccountMenu().hover();
         page.inicioPage.getCuentaSuboptions().shouldBe(visible);
         page.inicioPage.getMensajesCuentaSuboptionButton().shouldBe(visible).shouldHave(exactText(MENSAJES_BUTTON_TEXT)).click();
@@ -51,7 +50,7 @@ public class C103VerifyCuentaMenuLinksTest extends DriverBase {
                 .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(exactText(INICIO_LINK));
-        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getAccountMenu().hover();
         page.inicioPage.getCuentaSuboptions().shouldBe(visible);
         page.inicioPage.getPreferenciasCuentaSuboptionButton().shouldBe(visible).
@@ -68,13 +67,13 @@ public class C103VerifyCuentaMenuLinksTest extends DriverBase {
                 .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(exactText(INICIO_LINK));
-        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getAccountMenu().hover();
         page.inicioPage.getCuentaSuboptions().shouldBe(visible);
         page.inicioPage.getLogOutLinkElement().shouldBe(visible).
                 shouldHave(exactText(SALIR_BUTTON_TEXT)).click();
         page.loginPage.getLoginForm().shouldBe(visible);
-        page.inicioPage.getUserNickName().shouldNotHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserName().shouldNotHave(text(USER_NICK_NAME));
     }
 
 }
