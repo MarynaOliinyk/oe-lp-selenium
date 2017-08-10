@@ -17,6 +17,7 @@ import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
 import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Login.USER_NAME;
 import static com.openenglish.core.TestData.Recovery.RECOVERY_PASSWORD_FAQ;
 import static com.openenglish.core.TestData.Recovery.RECOVERY_PASSWORD_FORM_TITLE;
 import static com.openenglish.core.TestData.Recovery.RECOVERY_PASSWORD_SING_UP_TEXT;
@@ -32,7 +33,7 @@ public class C21VerifyLinksTest extends DriverBase {
                 .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserName().shouldHave(text(USER_NAME));
         page.logOut();
         page.loginPage.getPasswordReset().click();
         RecoveryPage recoveryPage = new RecoveryPage();

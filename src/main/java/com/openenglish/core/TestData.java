@@ -74,6 +74,8 @@ public class TestData {
 
     public static class Inicio {
         public static final String INICIO_LINK = getProperty("inicio.link.text"),
+                HEADER_TEXT = getProperty("inicio.header.text"),
+                COMENZAR_TEXT = getProperty("inicio.comenzar.text.on.video"),
                 MENSAJES_BUTTON_TEXT = getProperty("inicio.mensajes.link.text"),
                 USER_NICK_NAME = getProperty("inicio.nick.user.name"),
                 SALIR_BUTTON_TEXT = getProperty("inicio.salir.link.text"),
