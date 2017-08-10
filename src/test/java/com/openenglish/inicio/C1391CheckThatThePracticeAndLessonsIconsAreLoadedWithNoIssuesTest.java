@@ -31,7 +31,7 @@ public class C1391CheckThatThePracticeAndLessonsIconsAreLoadedWithNoIssuesTest e
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldBe(visible).shouldNotBe(empty)
                 .shouldHave(exactText(INICIO_LINK));
-        page.inicioPage.getUserNickName().shouldBe(visible).shouldNotBe(empty)
+        page.inicioPage.getUserName().shouldBe(visible).shouldNotBe(empty)
                 .shouldHave(text(USER_NICK_NAME));
         assertTrue(page.inicioPage.visibilityOfListElements(page.inicioPage.getAllThePracticeVideoImgs()));
         assertTrue(page.inicioPage.visibilityOfListElements(page.inicioPage.getAllTheLessonsVideoImgs()));
