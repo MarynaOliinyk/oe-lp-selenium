@@ -5,7 +5,6 @@ import com.openenglish.pages.AbstractPage;
 import com.openenglish.pages.LessonsPage;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.exist;
@@ -13,8 +12,6 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
-import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
-import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
 import static com.openenglish.core.TestData.Lessons.ALLERT_BODY_TEXT;
 import static com.openenglish.core.TestData.Lessons.ALLERT_CERRAR_TEXT;
 import static com.openenglish.core.TestData.Lessons.ALLERT_HEADER_TEXT;
@@ -43,6 +40,7 @@ public class C32EnviarUnaPreguntaAUnProfesorSendsMessageTest extends DriverBase 
 
         lessonsPage.getAskTeacherTabHeader().click();
         lessonsPage.getAskTeacherTabStoryBlock().should(exist, visible, empty).sendKeys(SOME_TEXT_FOR_TEST);
+        scrollDown();
         lessonsPage.getEnviarButton().shouldBe(exist, visible, exactText(ASK_TEACHER_SUBMIT_TEXT)).click();
 
         lessonsPage.getAllertBlock().shouldBe(exist, visible);

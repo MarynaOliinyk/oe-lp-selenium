@@ -9,5 +9,5 @@ import static com.codeborne.selenide.Selenide.$;
 public class ImmersionPage {
 
     @Getter
-    private SelenideElement headerText = $(By.xpath(".//*[@id='content']/div/div[1]/div/h1"));
+    private SelenideElement headerText = $(By.xpath(".//*[@class='title-bar']//h1"));
 }

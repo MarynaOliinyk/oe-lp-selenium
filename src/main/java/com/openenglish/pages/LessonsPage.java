@@ -38,7 +38,7 @@ public class LessonsPage {
             askTeacherTabInstructions = $(By.xpath(".//*[@id='ask-a-teacher-content']//p[@class='instructions']")),
             askTeacherTabStoryBlock = $(By.id("storyText")),
             askTeacherTabSubmitButton = $(By.id("askTeacherSubmit")),
-            enviarButton = $(By.id(".//*[@id='askTeacherSubmit']")),
+            enviarButton = $(By.id("askTeacherSubmit")),
             allertBlock = $(By.id("alert")),
             allertHeader = $(By.xpath(".//*[@id='alert']//div[@class='heading']//h3")),
             allertBody = $(By.xpath(".//*[@id='alert']//div[@class='alert-txt']")),

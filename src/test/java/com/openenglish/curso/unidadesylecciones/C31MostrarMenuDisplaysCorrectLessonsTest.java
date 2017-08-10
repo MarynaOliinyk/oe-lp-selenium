@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.not;
@@ -21,8 +20,6 @@ import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
 import static com.openenglish.core.TestData.General.LP_URL;
-import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
-import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
 import static com.openenglish.core.TestData.Lessons.CONTINUAR_LESSON_TEXT;
 import static com.openenglish.core.TestData.Lessons.INDICE_DEL_CURSO_URL;
 import static com.openenglish.core.TestData.Lessons.LESSONS_MENU_TEXT;
@@ -44,11 +41,7 @@ public class C31MostrarMenuDisplaysCorrectLessonsTest extends DriverBase {
     public void correctLessonsDisplaysTest() {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
-        page.loginPage.getPassword().shouldBe(visible)
-                .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
-        page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getCursoButton().click();
         page.inicioPage.getUnidadesYLeccionesButton().click();
 
@@ -76,8 +69,6 @@ public class C31MostrarMenuDisplaysCorrectLessonsTest extends DriverBase {
         lessonsPage.getLessonOcultarMenu().click();
         lessonsPage.getLessonOcultarMenu().waitUntil(not(visible), WAIT_UNTIL);
         lessonsPage.getLessonMostrarMenu().shouldHave(exactText(MENU_MONSTRAR_TEXT));
-
-
     }
 
     private List<String> listCreation(By pathToSearch) {
