@@ -40,6 +40,6 @@ public class C2224CheckThatStudentCanSeeTestPrepCoursesTest extends DriverBase {
         historyPage.getSearchTypePractice().shouldBe(visible).click();
         historyPage.getAddTypeButton().click();
         assertTrue(historyPage.isAllTheListContainsText(historyPage.getTipoTableEllements(), HISTORY_TIPO_TEXT));
-        assertFalse($$(By.xpath(historyPage.getTituloTableEllements())).isEmpty());
+        assertTrue($$(By.xpath(historyPage.getTituloTableEllements())).isEmpty());
     }
 }

@@ -15,6 +15,7 @@ import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
 import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Login.USER_NAME;
 import static com.openenglish.core.TestData.Profile.PROFILE_ESTADISTICAS_HEADER_TEXT;
 import static com.openenglish.core.TestData.Profile.PROFILE_HEADER_TEXT;
 import static com.openenglish.core.TestData.Profile.PROFILE_LESSONS_HEADER_TEXT;
@@ -40,10 +41,10 @@ public class C23VerifyMiProgresoContentTest extends DriverBase {
                 .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserName().shouldHave(text(USER_NAME));
         page.inicioPage.getProgresoLink().click();
         page.inicioPage.getMiProgressoLink().click();
-        profilePage.getHeaderText().should(visible).shouldHave(text(PROFILE_HEADER_TEXT));
+         profilePage.getHeaderText().should(visible.text(PROFILE_HEADER_TEXT));
     }
 
     @Test
