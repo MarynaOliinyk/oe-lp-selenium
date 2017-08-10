@@ -101,7 +101,8 @@ public class TestData {
     }
 
     public static class Lessons {
-        public static final String LESSONS_TEXT = getProperty("lessons.text"),
+        public static final String LESSONS_PAGE_TITLE = getProperty("lessons.page.header.title.text"),
+                LESSONS_TEXT = getProperty("lessons.text"),
                 REMINDER_TITLE = getProperty("lessons.reminder.title.text"),
                 REMINDER_BODY = getProperty("lessons.reminder.body.text"),
                 REMINDER_LESSONS_LINK = getProperty("lessons.reminder.lessons.link.text"),
@@ -117,10 +118,14 @@ public class TestData {
                 ASK_TEACHER_HEADER_CLASS = getProperty("lessons.ask.teacher.header.class"),
                 ASK_TEACHER_HEADER_TEXT = getProperty("lessons.ask.teacher.header.text"),
                 ASK_TEACHER_SUBMIT_TEXT = getProperty("lessons.ask.teacher.submit.button.text"),
+                ALLERT_HEADER_TEXT = getProperty("lessons.ask.teacher.allert.header.text"),
+                ALLERT_BODY_TEXT = getProperty("lessons.ask.teacher.allert.body.text"),
+                ALLERT_CERRAR_TEXT = getProperty("lessons.ask.teacher.cerrar.button.text"),
                 MY_NOTES_HEADER_TEXT = getProperty("lessons.mis.notes.header.text"),
                 MY_NOTES_LIST_HEADER_TEXT = getProperty("lessons.mis.notes.list.header.text"),
                 MY_NOTES_GUARDAR_TEXT = getProperty("lessons.mis.notes.guardar.nota.button.text"),
-                INDICE_DEL_CURSO_URL = getProperty("lessons.indice.del.curso.url");
+                INDICE_DEL_CURSO_URL = getProperty("lessons.indice.del.curso.url"),
+                SOME_TEXT_FOR_TEST = getProperty("base.sentence.for.some.text.test");
     }
 
     public static class TalkNow {

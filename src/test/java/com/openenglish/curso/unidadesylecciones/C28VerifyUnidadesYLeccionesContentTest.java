@@ -80,8 +80,8 @@ public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
     public void questionsNotesSectionTest() {
         loginExecutingC2AndExecutingC101Scenario2();
         scrollDown();
-        lessonsPage.getAskTeacherTabHeader().should(exist).shouldBe(visible).
-                shouldHave(attribute("class")).shouldHave(exactText(ASK_TEACHER_HEADER_CLASS));
+        lessonsPage.getAskTeacherTabHeader().should(exist, visible).
+                shouldHave(attribute("class",ASK_TEACHER_HEADER_CLASS));
         lessonsPage.getAskTeacherTabHeader().shouldHave(exactText(ASK_TEACHER_HEADER_TEXT));
         lessonsPage.getAskTeacherTabInstructions().should(exist).shouldBe(visible).shouldNotBe(empty);
         lessonsPage.getAskTeacherTabStoryBlock().should(exist, visible, empty);
@@ -97,14 +97,9 @@ public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
     private void loginExecutingC2AndExecutingC101Scenario2() {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
-        page.loginPage.getPassword().shouldBe(visible)
-                .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
-        page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getCursoButton().click();
         page.inicioPage.getUnidadesYLeccionesButton().click();
-        lessonsPage.getText().should(visible, text(LESSONS_TEXT));
     }
 
 }

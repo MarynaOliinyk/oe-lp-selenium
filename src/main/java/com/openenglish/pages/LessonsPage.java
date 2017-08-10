@@ -14,6 +14,7 @@ import static org.testng.Assert.assertTrue;
 public class LessonsPage {
 
     private SelenideElement text = $(By.xpath(".//*[@class='instructions']")),
+            nameOfThePage = $(By.xpath(".//*[@id='main-content']//div[@class='container']//h1")),
             reminderTab = $(By.xpath(".//div[@class='reminder']")),
             reminderTabTitle = $(By.xpath(".//*[@id='progressCheck']//strong[@class='title']")),
             reminderTabBody = $(By.id("msg")),
@@ -37,6 +38,11 @@ public class LessonsPage {
             askTeacherTabInstructions = $(By.xpath(".//*[@id='ask-a-teacher-content']//p[@class='instructions']")),
             askTeacherTabStoryBlock = $(By.id("storyText")),
             askTeacherTabSubmitButton = $(By.id("askTeacherSubmit")),
+            enviarButton = $(By.id(".//*[@id='askTeacherSubmit']")),
+            allertBlock = $(By.id("alert")),
+            allertHeader = $(By.xpath(".//*[@id='alert']//div[@class='heading']//h3")),
+            allertBody = $(By.xpath(".//*[@id='alert']//div[@class='alert-txt']")),
+            allertCerrarButton = $(By.xpath(".//*[@id='alert']//div[@class='alert-btn-holder']//a")),
             myNotesTabHeader = $(By.id("tab-notes-anchor")),
             myNotesTabTextBlock = $(By.xpath(".//*[@id='tab-notes']//div[@class='text-block']")),
             myNotesTabNotesListHeader = $(By.xpath(".//ul[@class='notes-list']//a")),
