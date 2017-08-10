@@ -40,7 +40,7 @@ public class C23VerifyMiProgresoContentTest extends DriverBase {
                 .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getProgresoLink().click();
         page.inicioPage.getMiProgressoLink().click();
         profilePage.getHeaderText().should(visible).shouldHave(text(PROFILE_HEADER_TEXT));

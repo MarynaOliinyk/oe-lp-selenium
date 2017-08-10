@@ -14,12 +14,12 @@ import static com.codeborne.selenide.Selenide.$$;
 @Getter
 public class InicioPage {
     private SelenideElement userInfoElement = $(By.xpath(".//*[@id='student-info']//div[@class='student-level']")),
-            userNickName = $(By.xpath(".//*[@id='student-info']//div[@class='display-name']")),
+            userName = $(By.xpath(".//*[@class='student-greeting']/h3/span")),
             userPhoto = $(By.xpath(".//*[@id='student-info']//div[@class='photo-frame']")),
             accountMenu = $(By.id("account-menu-nav")),
             mensajesCuentaSuboptionButton = $(By.id("messages")),
             preferenciasCuentaSuboptionButton = $(By.xpath(".//*[@id='account-menu']//li[@data-name='preferences']/a")),
-            inicioLink = $(By.id("nav-home")),
+            inicioLink = $(By.xpath(".//*[@class='page-links collapse']/ul/li[1]/a")),
             cuentaSuboptions = $(By.xpath(".//*[@id='account-menu']/div[@class='drop-slide-wrapper']/ul")),
             headingElement = $(By.id("student-info")),
             planDeEstudioElement = $(By.xpath(".//*[@id='student-info']//div[@class='grid_6']//div")),
@@ -28,7 +28,7 @@ public class InicioPage {
             ayudaDropDown = $(By.xpath(".//*[@id='nav-help']/strong")),
             contactenos = $(By.id("nav-talknow")),
             videosTutoriales = $(By.id("nav-howto")),
-            oeLogo = $(By.xpath(".//*[@id='header']//a[@href='/index.html']")),
+            oeLogo = $(By.xpath(".//*[@class='navbar-brand']")),
             verificaTuSistema = $(By.id("testYourSystem")),
             adobeConnectGuiaRapida = $(By.id("adobeQuickGuide")),
             verifiqueSuConfiguracion = $(By.id("testSetupLink")),

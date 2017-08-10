@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.switchTo;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.INVALID_PASSWORD;
@@ -31,5 +32,7 @@ public class C146VerifyTieneProblemasDeIngresoPopUpTest extends DriverBase {
         page.loginPage.getPopUpResetPassword().shouldBe(visible).click();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getChatButton().shouldBe(visible).click();
+        switchTo().window(1).close();
+
     }
 }

@@ -3,9 +3,7 @@ package com.openenglish.curso.unidadesylecciones;
 import com.openenglish.core.DriverBase;
 import com.openenglish.pages.AbstractPage;
 import com.openenglish.pages.IndiceDelCursoPage;
-import com.openenglish.pages.InicioPage;
 import com.openenglish.pages.LessonsPage;
-import com.openenglish.pages.LoginPage;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
@@ -49,7 +47,7 @@ public class C31MostrarMenuDisplaysCorrectLessonsTest extends DriverBase {
                 .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getCursoButton().click();
         page.inicioPage.getUnidadesYLeccionesButton().click();
 

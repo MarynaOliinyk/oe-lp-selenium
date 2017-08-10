@@ -30,7 +30,8 @@ public class AbstractPage {
 
     public void logOut() {
         inicioPage.getOeLogo().should(exist);
-        executeJavaScript(String.format(jsClickQuery, inicioPage.getLogOutLink()));
+        executeJavaScript(String.format(jsClickQuery,
+                inicioPage.getLogOutLink()));
     }
 
     public void logIn(String email, String correctPassword) {
