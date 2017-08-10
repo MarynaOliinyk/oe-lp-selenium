@@ -20,7 +20,6 @@ public class C146VerifyTieneProblemasDeIngresoPopUpTest extends DriverBase {
 
     private AbstractPage page = new AbstractPage();
 
-    //TODO LPTRIAGE-299 https://openenglish.jira.com/browse/LPTRIAGE-299
     @Test
     public void verifyTieneProblemasDeIngresoPopUpTest() {
         open(LP_URL);
@@ -32,7 +31,6 @@ public class C146VerifyTieneProblemasDeIngresoPopUpTest extends DriverBase {
         page.loginPage.getPopUpResetPassword().shouldBe(visible).click();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getChatButton().shouldBe(visible).click();
-        switchTo().window(1).close();
-
+        switchTo().window(0).close();
     }
 }

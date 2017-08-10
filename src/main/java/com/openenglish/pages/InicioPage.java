@@ -15,16 +15,14 @@ import static com.codeborne.selenide.Selenide.$$;
 public class InicioPage {
     private SelenideElement userInfoElement = $(By.xpath(".//*[@id='student-info']//div[@class='student-level']")),
             userName = $(By.xpath(".//*[@class='student-greeting']/h3/span")),
-            userPhoto = $(By.xpath(".//*[@id='student-info']//div[@class='photo-frame']")),
+            userPhoto = $(By.xpath(".//*[@class='rounded-circle img-thumbnail']")),
             accountMenu = $(By.id("account-menu-nav")),
             mensajesCuentaSuboptionButton = $(By.id("messages")),
             preferenciasCuentaSuboptionButton = $(By.xpath(".//*[@id='account-menu']//li[@data-name='preferences']/a")),
             inicioLink = $(By.xpath(".//*[@class='page-links collapse']/ul/li[1]/a")),
             cuentaSuboptions = $(By.xpath(".//*[@id='account-menu']/div[@class='drop-slide-wrapper']/ul")),
-            headingElement = $(By.id("student-info")),
-            planDeEstudioElement = $(By.xpath(".//*[@id='student-info']//div[@class='grid_6']//div")),
-            planDeEstudioText = $(By.xpath(".//*[@id='student-info']//div[@class='grid_6']//span")),
-            logOutLinkElement = $(By.xpath(".//*[@id='account-menu']//a[@href='/j_spring_security_logout']")),
+            planDeEstudioText = $(By.xpath(".//*[@id='index-holder']/lp2-title-bar/div/div/h1")),
+            logOutLinkElement = $(By.xpath(".//*[@id='index-holder']/.//a[@href='/j_spring_security_logout']")),
             ayudaDropDown = $(By.xpath(".//*[@id='nav-help']/strong")),
             contactenos = $(By.id("nav-talknow")),
             videosTutoriales = $(By.id("nav-howto")),
@@ -35,11 +33,11 @@ public class InicioPage {
             preguntasFrecuentes = $(By.xpath(".//*[@id='header']//a[@href='/support/faq.html']")),
             videoClickPlay = $(By.xpath(".//*[@id='video-popup']/div[2]/div[2]")),
             videoClickClose = $(By.xpath(".//*[@class='ui-dialog-titlebar-close ui-corner-all']")),
-            cursoButton = $(By.id("nav-learn")),
+            cursoButton = $(By.xpath(".//*[@id='nav-home'][text() = 'Curso']")),
             clasesEnVivoButton = $(By.id("nav-liveclasses")),
             unidadesYLeccionesButton = $(By.id("nav-lessons")),
             practicaLink = $(By.id("nav-immersion")),
-            progresoLink = $(By.id("nav-progress")),
+            progresoLink = $(By.xpath(".//*[@id='nav-home'][text() = 'Progreso']")),
             introdussionLink = $(By.id("nav-levelzero")),
             miProgressoLink = $(By.id("nav-profile")),
             sugerenciasDelProfesorLink = $(By.id("nav-feedback")),
@@ -57,7 +55,7 @@ public class InicioPage {
             reloadPracticeVideoButton = $(By.xpath(".//*[@id='main']//div[@class='grid_3']//a[@class='close']")),
             reloadLessonsVideoButton = $(By.xpath(".//*[@id='main']/div[@class='grid_3 block']//a[@class='close']"));
 
-    public String logOutLink = "a[href='/j_spring_security_logout']";
+    private String logOutLink = "a[href='/j_spring_security_logout']";
 
     private By practiceVideosBlocks = By.xpath(".//*[@id='main']//div[@data-show-video='overlay']"),
             videoBlocksContainer = By.xpath(".//*[@id='main']//div[@data-show-video='overlay']/following-sibling::div[contains(@class,'item')]"),

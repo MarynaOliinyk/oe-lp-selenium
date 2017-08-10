@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class LiveClassesPage {
 
 
-    private SelenideElement headerText = $(By.xpath(".//*[@id='main']/header/div/h1")),
+    private SelenideElement headerText = $(By.xpath(".//div[@class='title-bar']//h1")),
             dropBlock = $(By.xpath(".//*[@class='reminder-opener']")),
             dropBlockHeaderText = $(By.xpath(".//*[@class='reminder-drop']/strong")),
             dropBlockMessage = $(By.id("msg")),

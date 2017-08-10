@@ -47,11 +47,11 @@ public class C1392CheckThatUserCanSelectDifferentLiveClassesTopicsTest extends D
         assertTrue(page.inicioPage.stringsComparator(thirdImageUrlText, thirdImageTopic));
     }
 
-    private String getLiveClassVideoText(){
+    private String getLiveClassVideoText() {
         return $(page.inicioPage.getAllTheLiveClassesVideoImgs()).getAttribute("src");
     }
 
-    private String getLiveClassVideoTopicText(){
+    private String getLiveClassVideoTopicText() {
         return page.inicioPage.getTopicLiveClassVideo().getText();
     }
 }
