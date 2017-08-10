@@ -33,6 +33,7 @@ import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Selenide.WAIT_UNTIL;
 import static com.openenglish.pages.AbstractPage.openInNewTab;
+import static com.openenglish.pages.AbstractPage.scrollDown;
 import static org.testng.Assert.assertTrue;
 
 public class C31MostrarMenuDisplaysCorrectLessonsTest extends DriverBase {
@@ -53,7 +54,7 @@ public class C31MostrarMenuDisplaysCorrectLessonsTest extends DriverBase {
 
         LessonsPage lessonsPage = new LessonsPage();
         lessonsPage.getText().should(visible).shouldHave(text(LESSONS_TEXT));
-        page.scroll();
+        scrollDown();
         lessonsPage.getLessonMostrarMenu().shouldHave(exactText(MENU_MONSTRAR_TEXT));
         lessonsPage.getLessonMostrarMenu().click();
 

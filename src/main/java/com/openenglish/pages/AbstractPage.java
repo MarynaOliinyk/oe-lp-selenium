@@ -24,13 +24,17 @@ public class AbstractPage {
        return executeJavaScript("return document.getElementById('" + id +  "');");
     }
 
-    public static void scroll() {
+    public static void scrollDown() {
         executeJavaScript("window.scrollBy(0,250)", "");
     }
+
+    public static void scrollUp() {
+        executeJavaScript("window.scrollBy(0, -250)", "");
+    }
+
     public void logOut() {
         inicioPage.getOeLogo().should(exist);
-        executeJavaScript(String.format(jsClickQuery,
-                inicioPage.getLogOutLink()));
+        executeJavaScript(String.format(jsClickQuery, inicioPage.getLogOutLink()));
     }
 
     public void logIn(String email, String correctPassword) {

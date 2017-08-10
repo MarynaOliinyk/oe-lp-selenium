@@ -34,6 +34,7 @@ import static com.openenglish.core.TestData.Lessons.REMINDER_PRACTICA_LINK;
 import static com.openenglish.core.TestData.Lessons.REMINDER_TITLE;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.pages.AbstractPage.scrollDown;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -78,20 +79,19 @@ public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
     @Test
     public void questionsNotesSectionTest() {
         loginExecutingC2AndExecutingC101Scenario2();
-        page.scroll();
+        scrollDown();
         lessonsPage.getAskTeacherTabHeader().should(exist).shouldBe(visible).
                 shouldHave(attribute("class")).shouldHave(exactText(ASK_TEACHER_HEADER_CLASS));
         lessonsPage.getAskTeacherTabHeader().shouldHave(exactText(ASK_TEACHER_HEADER_TEXT));
         lessonsPage.getAskTeacherTabInstructions().should(exist).shouldBe(visible).shouldNotBe(empty);
-        lessonsPage.getAskTeacherTabStoryBlock().should(exist).shouldBe(visible).shouldBe(empty);
-        lessonsPage.getAskTeacherTabSubmitButton().should(exist).shouldBe(visible).shouldHave(exactText(ASK_TEACHER_SUBMIT_TEXT));
+        lessonsPage.getAskTeacherTabStoryBlock().should(exist, visible, empty);
+        lessonsPage.getAskTeacherTabSubmitButton().should(exist, visible, exactText(ASK_TEACHER_SUBMIT_TEXT));
         lessonsPage.getMyNotesTabHeader().click();
-        lessonsPage.getMyNotesTabHeader().should(exist).shouldBe(visible).shouldHave(exactText(MY_NOTES_HEADER_TEXT));
-        lessonsPage.getMyNotesTabTextBlock().should(exist).shouldBe(visible).shouldNotBe(empty);
-        lessonsPage.getMyNotesTabNotesListHeader().should(exist).shouldBe(visible).shouldNotBe(empty).
-                shouldHave(exactText(MY_NOTES_LIST_HEADER_TEXT));
-        lessonsPage.getMyNotesTabGuardarNotaButton().should(exist).shouldBe(visible).
-                shouldHave(exactText(MY_NOTES_GUARDAR_TEXT));
+        lessonsPage.getMyNotesTabHeader().should(exist, visible, exactText(MY_NOTES_HEADER_TEXT));
+        lessonsPage.getMyNotesTabTextBlock().should(exist, visible).shouldNotBe(empty);
+        lessonsPage.getMyNotesTabNotesListHeader().should(exist, visible, exactText(MY_NOTES_LIST_HEADER_TEXT)).
+                shouldNotBe(empty);
+        lessonsPage.getMyNotesTabGuardarNotaButton().should(exist, visible, exactText(MY_NOTES_GUARDAR_TEXT));
     }
 
     private void loginExecutingC2AndExecutingC101Scenario2() {
@@ -104,11 +104,7 @@ public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
         page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getCursoButton().click();
         page.inicioPage.getUnidadesYLeccionesButton().click();
-        lessonsPage.getText().should(visible).shouldHave(text(LESSONS_TEXT));
+        lessonsPage.getText().should(visible, text(LESSONS_TEXT));
     }
-
-
-
-
 
 }
