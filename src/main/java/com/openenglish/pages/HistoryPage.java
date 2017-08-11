@@ -31,7 +31,7 @@ public class HistoryPage {
             selectedTypeInList = $(By.xpath(".//*[@class='refinementSelected']")),
             deleteOneType = $(By.xpath(".//*[@id='searchRefinements']//a[2]/span")),
             refinementsIsDeleted = $(By.xpath(".//*[@class='delete']")),
-            historyTable = $(By.xpath(".//*[@id=istoryPage.getT'twocolumns']/div[2]")),
+            historyTable = $(By.xpath(".//*[@id='twocolumns']/div[2]")),
 
     tableBlock = $(By.xpath(table + "//*[@class='historyTable']")),
             fechaHeaderCellText = $(By.xpath(String.format(tableHeaderLine, "date"))),
