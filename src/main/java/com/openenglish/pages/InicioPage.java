@@ -57,7 +57,7 @@ public class InicioPage {
             reloadPracticeVideoButton = $(By.xpath(".//*[@id='main']//div[@class='grid_3']//a[@class='close']")),
             reloadLessonsVideoButton = $(By.xpath(".//*[@id='main']/div[@class='grid_3 block']//a[@class='close']"));
 
-    public String logOutLink = "a[href='/j_spring_security_logout']";
+    private String logOutLink = "a[href='/j_spring_security_logout']";
 
     private By practiceVideosBlocks = By.xpath(".//*[@id='main']//div[@data-show-video='overlay']"),
             videoBlocksContainer = By.xpath(".//*[@id='main']//div[@data-show-video='overlay']/following-sibling::div[contains(@class,'item')]"),

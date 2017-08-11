@@ -19,6 +19,7 @@ import static com.openenglish.core.TestData.Lessons.LESSONS_TEXT;
 import static com.openenglish.core.TestData.Lessons.MENU_OCULTAR_TEXT;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Login.USER_NAME;
 import static com.openenglish.pages.AbstractPage.scrollDown;
 import static com.openenglish.pages.AbstractPage.scrollUp;
 import static org.testng.Assert.assertNotEquals;
