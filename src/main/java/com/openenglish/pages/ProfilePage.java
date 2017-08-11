@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class ProfilePage {
 
     @Getter
-    private SelenideElement headerText = $(By.xpath(".//*[@id='page-content']//h1")),
+    private SelenideElement headerText = $(By.xpath(".//*[@class='title-bar']//h1")),
             levels = $(By.id("levels")),
             verElIndiceDelCursoLink = $(By.xpath(".//*[@class='more']")),
             profilePicture = $(By.xpath(".//*[@class='photo-block']")),

@@ -5,15 +5,12 @@ import com.openenglish.pages.AbstractPage;
 import com.openenglish.pages.LiveClassesPage;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
-import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
-import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
 import static com.openenglish.core.TestData.LiveClasses.LIVE_CLASSES_CONTENT_TEXT;
 import static com.openenglish.core.TestData.LiveClasses.LIVE_CLASSES_DROP_BLOCK_HEADER_TEXT;
 import static com.openenglish.core.TestData.LiveClasses.LIVE_CLASSES_DROP_BLOCK_IMMERSION_LINK;
@@ -33,11 +30,7 @@ public class C24VerifyClasesEnVivoContentTest extends DriverBase {
     public void verifyClasesEnVivoContentTest() {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
-        page.loginPage.getPassword().shouldBe(visible)
-                .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
-        page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getCursoButton().click();
         page.inicioPage.getClasesEnVivoButton().click();
         //TODO BUG LPTRIAGE-307 https://openenglish.jira.com/browse/LPTRIAGE-307

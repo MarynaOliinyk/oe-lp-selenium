@@ -19,12 +19,10 @@ public class C99InicioMenuOptionRedirectsToInicioTest extends DriverBase {
     private AbstractPage page = new AbstractPage();
 
     @Test
-    public void openEnglishLogoLinkTest() {
+    public void inicioMenuOptionRedirectsToInicioTest() {
         open(LP_URL);
         page.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         InicioPage inicioPage = new InicioPage();
-        inicioPage.getInicioLink().shouldHave(exactText(INICIO_LINK));
-        inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
         inicioPage.getProgresoLink().click();
         inicioPage.getInicioLink().shouldHave(exactText(INICIO_LINK)).click();
         inicioPage.getInicioLink().shouldHave(exactText(INICIO_LINK));

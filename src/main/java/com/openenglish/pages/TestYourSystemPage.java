@@ -9,5 +9,5 @@ import static com.codeborne.selenide.Selenide.$;
 public class TestYourSystemPage {
 
     @Getter
-    private SelenideElement headerText = $(By.xpath(".//*[@id='system-test']/div/h3"));
+    private SelenideElement headerText = $(By.xpath(".//*[@class='title-bar']//h1"));
 }
