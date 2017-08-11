@@ -36,7 +36,7 @@ public class C86VerifySugerenciasDelProfesorContentTest extends DriverBase {
                 .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(EMAIL_WITH_NOTES, PASSWORD_WITH_NOTES);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME_WITH_NOTES));
+        page.inicioPage.getUserName().shouldHave(text(USER_NAME_WITH_NOTES));
         page.inicioPage.getProgresoLink().click();
         page.inicioPage.getSugerenciasDelProfesorLink().click();
         TeacherFeedbackPage teacherFeedbackPage = new TeacherFeedbackPage();

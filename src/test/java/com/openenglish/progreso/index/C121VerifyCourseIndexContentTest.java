@@ -1,6 +1,7 @@
 package com.openenglish.progreso.index;
 
 
+import com.openenglish.core.DriverBase;
 import com.openenglish.pages.AbstractPage;
 import com.openenglish.pages.CourseIndexPage;
 import com.openenglish.pages.MyNotebookPage;
@@ -23,7 +24,7 @@ import static com.openenglish.core.TestData.MyNotebook.MY_NOTEBOOK_VER_EL_INDICE
 import static com.openenglish.core.TestData.MyNotebook.MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_TEXT;
 import static org.testng.Assert.assertTrue;
 
-public class C121VerifyCourseIndexContentTest {
+public class C121VerifyCourseIndexContentTest extends DriverBase{
     private AbstractPage page = new AbstractPage();
 
     @Test
@@ -34,7 +35,7 @@ public class C121VerifyCourseIndexContentTest {
                 .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        page.inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
+        page.inicioPage.getUserName().shouldHave(text(USER_NAME));
         page.inicioPage.getProgresoLink().click();
         page.inicioPage.getCuadernoDeNotasLink().click();
         MyNotebookPage myNotebookPage = new MyNotebookPage();
