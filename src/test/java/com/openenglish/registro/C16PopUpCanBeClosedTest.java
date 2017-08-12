@@ -11,7 +11,7 @@ import static com.openenglish.core.TestData.General.OE_URL;
 import static com.openenglish.core.TestData.Register.TITLE;
 import static org.testng.AssertJUnit.assertTrue;
 
-public class C163PopUpCanBeClosedTest extends DriverBase {
+public class C16PopUpCanBeClosedTest extends DriverBase {
 
     @Test
     public void popUpCanBeClosedTest() {

@@ -12,7 +12,7 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class C18VerifyMandatoryFieldsTest extends DriverBase {
 
-    @Test
+    @Test(enabled = false)
     public void verifyWarningMessagesForMandatoryFieldsTest() {
         open(OE_URL);
         RegisterPage regForm = new RegisterPage();
