@@ -5,6 +5,7 @@ import com.openenglish.pages.AbstractPage;
 import com.openenglish.pages.RegisterPage;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
@@ -25,24 +26,24 @@ public class C131VerifyNombreFieldTestAtTheStandardFormTest extends DriverBase {
     public void nombreFieldNegativeFlowTest() {
         open(OE_URL);
         RegisterPage regForm = new RegisterPage();
-        regForm.bannerVisibility();
+        regForm.getPopUpCloseButton().should(exist).click();
         regForm.getNombreFieldNotification().shouldNotBe(visible);
-        regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
-        regForm.getNombreFieldNotification().shouldBe(visible).shouldHave(text(FIELD_SHOULD_BE_COMPLETED));
+        regForm.getComienzaAhoraButton().should(visible,text(COMIENZA_AHORA)).click();
+        regForm.getNombreFieldNotification().should(visible, text(FIELD_SHOULD_BE_COMPLETED));
 
         regForm.getNombreField().sendKeys(page.randonNumbers(Integer.parseInt(NUMBER_LENGTH)));
         regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
-        regForm.getNombreFieldNotification().shouldBe(visible).shouldHave(text(IN_CORRECT_VALUE));
+        regForm.getNombreFieldNotification().should(visible,text(IN_CORRECT_VALUE));
         regForm.getNombreField().clear();
 
         regForm.getNombreField().sendKeys(SPECIAL_CHARACTERS);
-        regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
-        regForm.getNombreFieldNotification().shouldBe(visible).shouldHave(text(IN_CORRECT_VALUE));
+        regForm.getComienzaAhoraButton().should(text(COMIENZA_AHORA)).click();
+        regForm.getNombreFieldNotification().should(visible,text(IN_CORRECT_VALUE));
         regForm.getNombreField().clear();
 
         regForm.getNombreField().sendKeys(page.randCharacters(Integer.parseInt(CHAR_QUANTITY_NOMBRE)));
-        regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
-        regForm.getNombreFieldNotification().shouldBe(visible).shouldHave(text(LESS_THEN_FORTY_CHARACTERS));
+        regForm.getComienzaAhoraButton().should(text(COMIENZA_AHORA)).click();
+        regForm.getNombreFieldNotification().should(visible,text(LESS_THEN_FORTY_CHARACTERS));
     }
 
 }
