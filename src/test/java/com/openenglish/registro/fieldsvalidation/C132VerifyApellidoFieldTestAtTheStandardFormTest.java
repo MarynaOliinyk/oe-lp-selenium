@@ -5,6 +5,7 @@ import com.openenglish.pages.AbstractPage;
 import com.openenglish.pages.RegisterPage;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
@@ -25,7 +26,7 @@ public class C132VerifyApellidoFieldTestAtTheStandardFormTest extends DriverBase
     public void appelidoFieldNegativeFlowTest() {
         open(OE_URL);
         RegisterPage regForm = new RegisterPage();
-        regForm.bannerVisibility();
+        regForm.getPopUpCloseButton().should(exist).click();
         regForm.getAppelidoFieldNotification().shouldNotBe(visible);
         regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
         regForm.getAppelidoFieldNotification().shouldBe(visible).shouldHave(text(FIELD_SHOULD_BE_COMPLETED));

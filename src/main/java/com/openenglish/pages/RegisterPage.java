@@ -36,13 +36,6 @@ public class RegisterPage {
 
     private ElementsCollection warningMessages = $$(By.xpath(".//*[@id='leadForm']//span"));
 
-
-    public void bannerVisibility() {
-        if (tooltipWindowClose.isDisplayed()) {
-            tooltipWindowClose.click();
-        }
-    }
-
     public void fillAndSubmitRegistration(String firstName, String lastName, String email, String country,
                                           String mobileSectionOne, String mobileSectionTwo,
                                           String mobileSectionThree, String age) {

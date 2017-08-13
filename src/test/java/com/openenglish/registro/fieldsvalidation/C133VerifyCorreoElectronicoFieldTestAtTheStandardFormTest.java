@@ -4,6 +4,7 @@ import com.openenglish.core.DriverBase;
 import com.openenglish.pages.RegisterPage;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
@@ -21,7 +22,7 @@ public class C133VerifyCorreoElectronicoFieldTestAtTheStandardFormTest extends D
     public void correoElectronicoFieldNegativeFlowTest() {
         open(OE_URL);
         RegisterPage regForm = new RegisterPage();
-        regForm.bannerVisibility();
+        regForm.getPopUpCloseButton().should(exist).click();
         regForm.getCorreoElectronFieldNotification().shouldNotBe(visible);
         regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
         regForm.getCorreoElectronFieldNotification().shouldBe(visible).shouldHave(text(FIELD_SHOULD_BE_COMPLETED));
