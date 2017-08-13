@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.security.Key;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -31,7 +32,7 @@ public class C113VerifyEndLessonNotificationTest extends DriverBase {
     private LessonsPage lessonsPage = new LessonsPage();
 
     @Test
-    public void lessonAreaSectionTest() throws InterruptedException {
+    public void lessonAreaSectionTest() throws InterruptedException, AWTException {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
@@ -41,11 +42,66 @@ public class C113VerifyEndLessonNotificationTest extends DriverBase {
         switchTo().frame(lessonsPage.getLessonIFrame());
         lessonsPage.getBeginLessonButton().shouldBe(visible, text(BEGIN_LESSON_BUTTON)).click();
         Thread.sleep(3000);
-        openInNewTab("TCAPI.rate(5)");
-//        $("#lst-ib").val("qwertyuiop");
-//        $("#lst-ib").sendKeys(Keys.chord(Keys.CONTROL, Keys.SHIFT, "j"));
-//        $("#lst-ib").sendKeys(Keys.valueOf("TCAPI.rate(5)"));
-//        $("#lst-ib").sendKeys(Keys.ENTER);
+//        openInNewTab("TCAPI.rate(5)");
+
+//        Actions kpress = new Actions(getWebDriver());
+//        kpress.sendKeys(Keys.CONTROL,Keys.SHIFT, "J").perform();
+//        kpress.sendKeys(Keys.ENTER).perform();
+
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_SHIFT);
+        robot.keyPress(KeyEvent.VK_J);
+        robot.keyPress(KeyEvent.VK_ENTER);
+
+        Thread.sleep(3000);
+
+//        robot.keyPress(KeyEvent.VK_SHIFT);
+
+        robot.keyPress(KeyEvent.VK_T);
+        robot.keyRelease(KeyEvent.VK_T);
+        Thread.sleep(1000);
+
+        robot.keyPress(KeyEvent.VK_C);
+        robot.keyRelease(KeyEvent.VK_C);
+        Thread.sleep(1000);
+
+        robot.keyPress(KeyEvent.VK_A);
+        robot.keyRelease(KeyEvent.VK_A);
+        Thread.sleep(1000);
+
+        robot.keyPress(KeyEvent.VK_P);
+        robot.keyRelease(KeyEvent.VK_P);
+        Thread.sleep(1000);
+
+        robot.keyPress(KeyEvent.VK_I);
+        robot.keyRelease(KeyEvent.VK_I);
+        Thread.sleep(1000);
+
+        robot.keyPress(KeyEvent.VK_PERIOD);
+        robot.keyRelease(KeyEvent.VK_PERIOD);
+        Thread.sleep(1000);
+
+        robot.keyRelease(KeyEvent.VK_SHIFT);
+
+        robot.keyPress(KeyEvent.VK_R);
+        robot.keyRelease(KeyEvent.VK_R);
+        Thread.sleep(1000);
+
+        robot.keyPress(KeyEvent.VK_A);
+        robot.keyRelease(KeyEvent.VK_A);
+        Thread.sleep(1000);
+
+        robot.keyPress(KeyEvent.VK_T);
+        robot.keyRelease(KeyEvent.VK_T);
+        Thread.sleep(1000);
+
+        robot.keyPress(KeyEvent.VK_E);
+        robot.keyRelease(KeyEvent.VK_E);
+        Thread.sleep(1000);
+
+        robot.keyPress(KeyEvent.VK_ENTER);
+        Thread.sleep(1000);
 
         page.inicioPage.getUnidadesYLeccionesButton().click();
 
