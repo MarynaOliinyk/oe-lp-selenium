@@ -23,7 +23,6 @@ import static com.openenglish.core.TestData.Profile.PROFILE_POP_UP_CANCEL_BUTTON
 import static com.openenglish.core.TestData.Profile.PROFILE_POP_UP_CONTINUE_BUTTON_TEXT;
 import static com.openenglish.core.TestData.Profile.PROFILE_POP_UP_HEADER_TEXT;
 import static com.openenglish.core.TestData.Profile.PROFILE_PREVIOUS_MONTH;
-import static com.openenglish.pages.AbstractPage.scrollDown;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class C83VerifyEstadisticasTest extends DriverBase {
@@ -39,7 +38,7 @@ public class C83VerifyEstadisticasTest extends DriverBase {
         page.inicioPage.getMiProgressoLink().click();
         ProfilePage profilePage = new ProfilePage();
         profilePage.getHeaderText().should(visible, text(PROFILE_HEADER_TEXT));
-        scrollDown();
+        profilePage.getEstadisticasHeaderText().scrollTo();
         profilePage.getMesTimeBlock().should(visible);
         profilePage.getMonthInEstradisticas().should(visible, text(PROFILE_ACTUAL_MONTH));
         profilePage.getPrevArrowButton().should(visible).click();
@@ -51,8 +50,7 @@ public class C83VerifyEstadisticasTest extends DriverBase {
         profilePage.getVerPorSemanaButton().should(visible).click();
         profilePage.getOverSemanaText().shouldHave(text(PROFILE_OVER_SEMANA_TEXT));
         File semana = profilePage.getCanvasGraph().should(visible).screenshot();
-        assertEquals(Result.Matched, CompareUtil.CompareImage(mes.getAbsolutePath(), semana.getAbsolutePath()));
-        scrollDown();
+        assertEquals(Result.PixelMismatch, CompareUtil.CompareImage(mes.getAbsolutePath(), semana.getAbsolutePath()));
         profilePage.getPruebaDeNivelButton().should(visible).click();
         profilePage.getPopUpHeaderText().should(visible, text(PROFILE_POP_UP_HEADER_TEXT));
         profilePage.getPopUpInstuction().should(visible);

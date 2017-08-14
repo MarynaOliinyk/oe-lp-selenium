@@ -33,6 +33,8 @@ public class ProfilePage {
             pruebaDeNivelButton = $(By.id("opt-out")),
             certificatesCarousel = $(By.id("certificates-carousel")),
             messageOverActualCertificate = $(By.xpath(".//*[@class='slide-text-overlay always-on']/span")),
+            actualCertificate = $(By.xpath(".//*[@class='carousel-animation-wrapper']/div[1]/img")),
+            prevCertificate = $(By.xpath(".//*[@class='carousel-animation-wrapper']/div[8]/img")),
             prevButton = $(By.xpath(".//*[@class='carousel-prev-button']")),
             nextButton = $(By.xpath(".//*[@class='carousel-next-button']")),
             monthInEstradisticas = $(By.xpath(".//*[@class='month']")),
