@@ -35,7 +35,7 @@ public class InicioPage {
             preguntasFrecuentes = $(By.xpath(".//*[@class='dropdown-menu dropdown-menu-center']//a[@href='/support/faq.html']")),
             videoClickPlay = $(By.xpath(".//*[@id='video-popup']/div[2]/div[2]")),
             videoClickClose = $(By.xpath(".//*[@class='ui-dialog-titlebar-close ui-corner-all']")),
-            cursoButton = $(By.xpath(".//*[@id='nav-home'][text() = 'Curso']")),
+            cursoButton = $(By.id("nav-learn")),
             clasesEnVivoButton = $(By.id("nav-liveclasses")),
             unidadesYLeccionesButton = $(By.id("nav-lessons")),
             practicaLink = $(By.id("nav-immersion")),

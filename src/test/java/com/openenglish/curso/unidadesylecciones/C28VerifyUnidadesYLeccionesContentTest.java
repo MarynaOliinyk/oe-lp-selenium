@@ -84,9 +84,9 @@ public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
         lessonsPage.getAskTeacherTabStoryBlock().should(exist, visible, empty);
         lessonsPage.getAskTeacherTabSubmitButton().should(exist, visible, exactText(ASK_TEACHER_SUBMIT_TEXT));
         scrollDown();
-        lessonsPage.getMyNotesTabHeader().click();
-        lessonsPage.getMyNotesTabHeader().should(exist, visible, exactText(MY_NOTES_HEADER_TEXT));
-        lessonsPage.getMyNotesTabTextBlock().should(exist, visible, not(empty));
+        lessonsPage.getMyNotesTab().click();
+        lessonsPage.getMyNotesTab().should(exist, visible, exactText(MY_NOTES_HEADER_TEXT));
+        lessonsPage.getMyNotesTabWholeBlock().should(exist, visible, not(empty));
         lessonsPage.getMyNotesTabNotesListHeader().should(exist, visible, exactText(MY_NOTES_LIST_HEADER_TEXT)).
                 shouldNotBe(empty);
         lessonsPage.getMyNotesTabGuardarNotaButton().should(exist, visible, exactText(MY_NOTES_GUARDAR_TEXT));
