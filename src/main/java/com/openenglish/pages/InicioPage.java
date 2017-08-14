@@ -39,7 +39,7 @@ public class InicioPage {
             clasesEnVivoButton = $(By.id("nav-liveclasses")),
             unidadesYLeccionesButton = $(By.id("nav-lessons")),
             practicaLink = $(By.id("nav-immersion")),
-            progresoLink = $(By.xpath(".//*[@id='nav-home'][text() = 'Progreso']")),
+            progresoLink = $(By.xpath(".//*[@id='index-holder']/lp2-header/nav/div/div[2]/ul/li[2]/a")),
             introdussionLink = $(By.id("nav-levelzero")),
             miProgressoLink = $(By.id("nav-profile")),
             sugerenciasDelProfesorLink = $(By.id("nav-feedback")),

@@ -162,7 +162,13 @@ public class TestData {
                 PROFILE_PRUEBA_DE_NIVEL_COLUMN = getProperty("profile.prueba.de.nivel.column"),
                 PROFILE_ULTIMO_INGRESO_COLUMN = getProperty("profile.ultimo.ingreso.column"),
                 PROFILE_PRUEBA_DE_NIVEL_BUTTON = getProperty("profile.prueba.de.nivel.button"),
-                PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE = getProperty("profile.message.over.actual.certificate");
+                PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE = getProperty("profile.message.over.actual.certificate"),
+                PROFILE_ACTUAL_MONTH = getProperty("profile.actual.month"),
+                PROFILE_PREVIOUS_MONTH = getProperty("profile.previous.month"),
+                PROFILE_POP_UP_HEADER_TEXT = getProperty("profile.popup.header.text"),
+                PROFILE_POP_UP_CANCEL_BUTTON_TEXT = getProperty("profile.popup.cancel.button.text"),
+                PROFILE_POP_UP_CONTINUE_BUTTON_TEXT = getProperty("profile.popup.continue.button.text"),
+                PROFILE_OVER_SEMANA_TEXT = getProperty("profile.over.semana.text");
     }
 
     public static class TeacherFeedback {
