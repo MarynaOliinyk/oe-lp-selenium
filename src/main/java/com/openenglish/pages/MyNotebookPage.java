@@ -23,6 +23,4 @@ public class MyNotebookPage {
             lessonTitleData = $(By.xpath(".//*[@class='noteLessonTitle']")),
             noteColumn = $(By.xpath(".//*[@class='description']")),
             noteDescription = $(By.xpath(".//*[@class='noteText']"));
-
-
 }
