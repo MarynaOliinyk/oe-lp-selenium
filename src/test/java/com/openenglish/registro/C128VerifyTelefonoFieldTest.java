@@ -22,8 +22,8 @@ public class C128VerifyTelefonoFieldTest extends DriverBase {
         open(OE_URL);
         RegisterPage regForm = new RegisterPage();
         switchTo().frame(regForm.getPopUpIdentifier());
-        assertTrue(regForm.getCellular().getAttribute("class").contains("active"));
-        regForm.getFijo().should(visible);
+        assertTrue(regForm.getCellularButton().getAttribute("class").contains("active"));
+        regForm.getFijoButton().should(visible);
         regForm.getMobileSectionOne().val(MOBILE_SECTION_ONE_INCORRECT);
         regForm.getMobileSectionTwo().val(MOBILE_SECTION_TWO);
         regForm.getMobileSectionThree().val(MOBILE_SECTION_THREE);
