@@ -31,7 +31,7 @@ public class C132VerifyApellidoFieldTestAtTheStandardFormTest extends DriverBase
         regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
         regForm.getAppelidoFieldNotification().shouldBe(visible).shouldHave(text(FIELD_SHOULD_BE_COMPLETED));
 
-        regForm.getAppelidoField().sendKeys(page.randonNumbers(Integer.parseInt(NUMBER_LENGTH)));
+        regForm.getAppelidoField().sendKeys(page.randomNumbers(Integer.parseInt(NUMBER_LENGTH)));
         regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
         regForm.getAppelidoFieldNotification().shouldBe(visible).shouldHave(text(IN_CORRECT_VALUE));
         regForm.getAppelidoField().clear();

@@ -18,10 +18,8 @@ public class AbstractPage {
         executeJavaScript("window.open('" + url + "','_blank');");
     }
 
-    public WebElement findElementByJS(String id){
-        // returns the right WebElement
-// it's the same as driver.findElement(By.id("someId"))
-       return executeJavaScript("return document.getElementById('" + id +  "');");
+    public WebElement findElementByJS(String id) {
+        return executeJavaScript("return document.getElementById('" + id + "');");
     }
 
     public static void scrollDown() {
@@ -42,7 +40,7 @@ public class AbstractPage {
         loginPage.logIn(email, correctPassword);
     }
 
-    public String randonNumbers(int length) {
+    public String randomNumbers(int length) {
         return RandomStringUtils.randomNumeric(length);
     }
 
