@@ -32,6 +32,7 @@ public class LessonsPage {
             lessonsFirstNotActiveLesson = $(By.xpath(".//*[@id='menu-area']//ul[@class='lesson-menu']//li[@class='lesson-link']/a")),
             lessonMostrarMenu = $(By.xpath(".//*[@id='content']//div[@class='link-box']")),
             lessonOcultarMenu = $(By.xpath(".//*[@id='menu-area']//a[@class='hide-link']")),
+            lessonGreaterThenElement = $(By.xpath(".//div[@class='slide-controls']/span[@class='next']")),
             continuarLeccionLink = $(By.xpath(".//*[@id='menu-area']//a[@class='resume-link']")),
             lessonsMenuHeader = $(By.xpath(".//*[@id='menu-area']//div[@class='menu-block']//h2")),
             askTeacherTabHeader = $(By.id("tab-askateacher-anchor")),
@@ -43,10 +44,21 @@ public class LessonsPage {
             allertHeader = $(By.xpath(".//*[@id='alert']//div[@class='heading']//h3")),
             allertBody = $(By.xpath(".//*[@id='alert']//div[@class='alert-txt']")),
             allertCerrarButton = $(By.xpath(".//*[@id='alert']//div[@class='alert-btn-holder']//a")),
-            myNotesTabHeader = $(By.id("tab-notes-anchor")),
-            myNotesTabTextBlock = $(By.xpath(".//*[@id='tab-notes']//div[@class='text-block']")),
+            myNotesTab = $(By.id("tab-notes-anchor")),
+            myNotesTabWholeBlock = $(By.xpath(".//*[@id='tab-notes']//div[@class='text-block']")),
+            myNotesTabTextInputBlock = $(By.xpath(".//*[@class='text-block']/textarea")),
             myNotesTabNotesListHeader = $(By.xpath(".//ul[@class='notes-list']//a")),
-            myNotesTabGuardarNotaButton = $(By.xpath(".//a[@class='orange-btn btn-note disabled save']"));
+            myNotesTabGuardarNotaButton = $(By.xpath(".//a[@class='orange-btn btn-note disabled save']")),
+            popUpLoLogroTitle = $(By.xpath(".//*[@id='congratulations']//div[@class='heading']//h3")),
+            popUpLoLogroProfilePhoto = $(By.xpath(".//*[@id='congratulations']//div[@class='photo-frame']//img")),
+            popUpLoLogroUserName = $(By.xpath(".//*[@id='congratulations']//div[@class='student-name']")),
+            popUpLoLogroLessonName = $(By.xpath(".//*[@id='congratulations']//h3[@class='title']")),
+            popUpLoLogroLessonDescription = $(By.xpath(".//*[@id='congratulations']//div[@class='text-block']//p")),
+            popUpLoLogroCompartaSusLogros = $(By.xpath(".//*[@id='social-share']//div[@class='social-share']//h2")),
+            popUpLoLogroTwitterLogo = $(By.xpath(".//*[@id='social-share']//a[@class='social-icon-button twitter']")),
+            popUpLoLogroFacebookLogo = $(By.xpath(".//*[@id='social-share']//a[@class='social-icon-button facebook']")),
+            popUpLoLogroGoogleLogo = $(By.xpath(".//*[@id='social-share']//a[@class='social-icon-button google']")),
+            popUpLoLogroProximaLessonButton = $(By.xpath(".//*[@id='congratulations']//a[@class='orange-btn home']"));
 
     private By allTheLessonsFromOcultarMenu = By.xpath(".//*[@id='menu-area']//ul[@class='lesson-menu']//a");
 
