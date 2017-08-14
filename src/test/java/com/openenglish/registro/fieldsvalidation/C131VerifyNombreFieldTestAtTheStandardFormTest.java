@@ -31,7 +31,7 @@ public class C131VerifyNombreFieldTestAtTheStandardFormTest extends DriverBase {
         regForm.getComienzaAhoraButton().should(visible,text(COMIENZA_AHORA)).click();
         regForm.getNombreFieldNotification().should(visible, text(FIELD_SHOULD_BE_COMPLETED));
 
-        regForm.getNombreField().sendKeys(page.randonNumbers(Integer.parseInt(NUMBER_LENGTH)));
+        regForm.getNombreField().sendKeys(page.randomNumbers(Integer.parseInt(NUMBER_LENGTH)));
         regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
         regForm.getNombreFieldNotification().should(visible,text(IN_CORRECT_VALUE));
         regForm.getNombreField().clear();

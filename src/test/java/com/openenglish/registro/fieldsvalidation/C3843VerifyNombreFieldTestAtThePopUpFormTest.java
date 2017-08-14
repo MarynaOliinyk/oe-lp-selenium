@@ -31,7 +31,7 @@ public class C3843VerifyNombreFieldTestAtThePopUpFormTest extends DriverBase {
         regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
         regForm.getNombreFieldNotification().waitUntil(visible, 3000).shouldHave(text(FIELD_SHOULD_BE_COMPLETED));
 
-        regForm.getNombreField().sendKeys(page.randonNumbers(Integer.parseInt(NUMBER_LENGTH)));
+        regForm.getNombreField().sendKeys(page.randomNumbers(Integer.parseInt(NUMBER_LENGTH)));
         regForm.getComienzaAhoraButton().shouldHave(text(COMIENZA_AHORA)).click();
         regForm.getNombreFieldNotification().shouldBe(visible).shouldHave(text(IN_CORRECT_VALUE));
         regForm.getNombreField().clear();

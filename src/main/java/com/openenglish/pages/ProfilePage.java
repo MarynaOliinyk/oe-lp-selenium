@@ -23,6 +23,7 @@ public class ProfilePage {
             verPorSemanaButton = $(By.xpath(".//*[@class='byWeek']")),
             mesTimeBlock = $(By.xpath(".//*[@class='time-block']")),
             prevArrowButton = $(By.xpath(".//*[@class='btn-link-prev']")),
+            nextArrowButton = $(By.xpath(".//*[@class='btn-link-next ']")),
             itemList = $(By.xpath(".//*[@class='item-list']")),
             nivelActualColumn = $(By.xpath(".//*[@class='item-list']/li[1]//strong")),
             ultimoNivelCompletadoColumn = $(By.xpath(".//*[@class='item-list']/li[2]//strong")),
@@ -33,5 +34,13 @@ public class ProfilePage {
             certificatesCarousel = $(By.id("certificates-carousel")),
             messageOverActualCertificate = $(By.xpath(".//*[@class='slide-text-overlay always-on']/span")),
             prevButton = $(By.xpath(".//*[@class='carousel-prev-button']")),
-            nextButton = $(By.xpath(".//*[@class='carousel-next-button']"));
+            nextButton = $(By.xpath(".//*[@class='carousel-next-button']")),
+            monthInEstradisticas = $(By.xpath(".//*[@class='month']")),
+            popUpHeaderText = $(By.xpath(".//*[@id='optOutPopup']/div[1]/h3")),
+            popUpInstuction = $(By.xpath(".//*[@id='optOutPopup']/div[2]/p")),
+            closePopupButton = $(By.xpath(".//*[@class='black-btn closePopupButton']")),
+            continuePopupButton = $(By.xpath(".//*[@class='orange-btn continuePopupButton']")),
+            closeIcon = $(By.xpath(".//*[@class='ui-icon ui-icon-closethick']")),
+            canvasGraph = $(By.tagName("canvas")),
+            overSemanaText = $(By.xpath(".//*[@class='week']"));
 }
