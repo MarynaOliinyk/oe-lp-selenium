@@ -13,7 +13,6 @@ import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Profile.PROFILE_HEADER_TEXT;
 import static com.openenglish.core.TestData.Profile.PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE;
-import static com.openenglish.pages.AbstractPage.scrollDown;
 
 public class C84CheckCertificadosCarouselTest extends DriverBase {
 
