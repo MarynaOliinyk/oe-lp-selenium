@@ -20,15 +20,9 @@ public class CompareUtil {
             int[] baseImageData = null;
             int[] actualImageData = null;
             if (baseImageGrab.grabPixels()) {
-                int width = baseImageGrab.getWidth();
-                int height = baseImageGrab.getHeight();
-                baseImageData = new int[width * height];
                 baseImageData = (int[]) baseImageGrab.getPixels();
             }
             if (actualImageGrab.grabPixels()) {
-                int width = actualImageGrab.getWidth();
-                int height = actualImageGrab.getHeight();
-                actualImageData = new int[width * height];
                 actualImageData = (int[]) actualImageGrab.getPixels();
             }
             LOG.info(baseImageGrab.getHeight() + "<>" +
