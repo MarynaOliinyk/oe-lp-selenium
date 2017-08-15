@@ -17,7 +17,8 @@ public class C85VerifyEnvieSuHistoriaSectionTest extends DriverBase {
 
     private AbstractPage page = new AbstractPage();
 
-    @Test
+    //TODO https://openenglish.jira.com/browse/LPTRIAGE-315
+    @Test(enabled = false)
     public void verifyEnvieSuHistoriaSectionTest() {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
@@ -26,6 +27,5 @@ public class C85VerifyEnvieSuHistoriaSectionTest extends DriverBase {
         page.inicioPage.getMiProgressoLink().click();
         ProfilePage profilePage = new ProfilePage();
         profilePage.getHeaderText().should(visible, text(PROFILE_HEADER_TEXT));
-        //TODO https://openenglish.jira.com/browse/LPTRIAGE-315
     }
 }
