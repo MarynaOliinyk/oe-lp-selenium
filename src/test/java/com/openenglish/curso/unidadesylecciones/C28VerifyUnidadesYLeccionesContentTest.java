@@ -89,7 +89,7 @@ public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
         lessonsPage.getMyNotesTabWholeBlock().should(exist, visible, not(empty));
         lessonsPage.getMyNotesTabNotesListHeader().should(exist, visible, exactText(MY_NOTES_LIST_HEADER_TEXT)).
                 shouldNotBe(empty);
-        lessonsPage.getMyNotesTabGuardarNotaButton().should(exist, visible, exactText(MY_NOTES_GUARDAR_TEXT));
+        lessonsPage.getMyNotesTabGuardarNotaDisabledButton().should(exist, visible, exactText(MY_NOTES_GUARDAR_TEXT));
     }
 
     private void loginExecutingC2AndExecutingC101Scenario2() {
