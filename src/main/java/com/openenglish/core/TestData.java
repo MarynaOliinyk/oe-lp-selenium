@@ -61,6 +61,9 @@ public class TestData {
                 AGE = getProperty("register.age"),
                 THANKS_POPUP_TEXT = getProperty("register.thanks.popup.text"),
                 TITLE = getProperty("register.title"),
+                MOBILE_SECTION_ONE_INCORRECT = getProperty("register.mobile.section.one.incorrect"),
+                MOBILE_AREA_CODES_MESSAGE = getProperty("register.mobile.area.codes.message"),
+                MOBILE_AREA_CODES_PATTERN = getProperty("register.mobile.area.codes.pattern"),
                 WARNING_MESSAGE = getProperty("register.warning.message");
     }
 

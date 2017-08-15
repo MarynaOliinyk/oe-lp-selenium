@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
+
 @Getter
 public class RegisterPage {
 
@@ -26,15 +27,19 @@ public class RegisterPage {
             startNowButton = $(By.id("submit-button")),
             iframe = $(By.xpath("//iframe")),
             countrySelect = $(By.id("country-select")),
+            cellularButton = $(By.xpath(".//div[@id='phone-format-selector']/label[1]")),
+            fijoButton = $(By.xpath(".//div[@id='phone-format-selector']/label[2]")),
             mobileSectionOne = $(By.xpath(String.format(mobileSection, "1"))),
             mobileSectionTwo = $(By.xpath(String.format(mobileSection, "2"))),
             mobileSectionThree = $(By.xpath(String.format(mobileSection, "3"))),
+            mobileAreaCodes = $(By.xpath(".//*[@id='phone-input']/div[4]/span/a")),
             ageOptions = $(By.xpath(".//*[@id='isforme-radio']/label[1]")),
             ageRangeSelect = $(By.id("agerange-select")),
             thanksPopUpText = $(By.xpath("//p[@class='text-center']")),
             popUpCloseButton = $(By.xpath(".//button[@type='button'][@class='pum-close popmake-close']"));
 
-    private ElementsCollection warningMessages = $$(By.xpath(".//*[@id='leadForm']//span"));
+    private ElementsCollection warningMessages = $$(By.xpath(".//*[@id='leadForm']//span")),
+                               formatosPermitidos = $$(By.xpath(".//*[@id='format-modal']/div/div/p"));
 
     public void fillAndSubmitRegistration(String firstName, String lastName, String email, String country,
                                           String mobileSectionOne, String mobileSectionTwo,
