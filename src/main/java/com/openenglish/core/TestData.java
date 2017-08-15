@@ -25,9 +25,9 @@ public class TestData {
                 UNREGISTERED_EMAIL = getProperty("login.unregistered.email"),
                 INVALID_PASSWORD = getProperty("login.invalid.password"),
                 SECURITY_PLACE_HOLDER_TEXT = getProperty("login.security.placeholder"),
-                USER_NAME_WITH_NOTES = getProperty("login.user.name.with.notes"),
-                EMAIL_WITH_NOTES = getProperty("login.correct.email.with.notes"),
-                PASSWORD_WITH_NOTES = getProperty("login.correct.password.with.notes");
+                USER_NAME_WITHOUT_NOTES = getProperty("login.user.name.without.notes"),
+                EMAIL_WITHOUT_NOTES = getProperty("login.correct.email.without.notes"),
+                PASSWORD_WITHOUT_NOTES = getProperty("login.correct.password.without.notes");
     }
 
     public static class Recovery {

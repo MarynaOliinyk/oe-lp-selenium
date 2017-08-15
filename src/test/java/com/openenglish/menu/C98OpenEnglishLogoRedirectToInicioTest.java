@@ -11,9 +11,9 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
-import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Login.USER_NAME;
 
 public class C98OpenEnglishLogoRedirectToInicioTest extends DriverBase {
 
@@ -27,8 +27,6 @@ public class C98OpenEnglishLogoRedirectToInicioTest extends DriverBase {
         inicioPage.getProgresoLink().click();
         inicioPage.getOeLogo().shouldBe(visible).click();
         inicioPage.getInicioLink().shouldHave(exactText(INICIO_LINK));
-        inicioPage.getUserName().shouldHave(text(USER_NICK_NAME));
+        inicioPage.getUserName().shouldHave(text(USER_NAME));
     }
-
-
 }
