@@ -35,14 +35,11 @@ public class C32EnviarUnaPreguntaAUnProfesorSendsMessageTest extends DriverBase 
         page.inicioPage.getCursoButton().click();
         page.inicioPage.getUnidadesYLeccionesButton().click();
         lessonsPage.getNameOfThePage().should(visible, text(LESSONS_PAGE_TITLE));
-
         scrollDown();
-
         lessonsPage.getAskTeacherTabHeader().click();
         lessonsPage.getAskTeacherTabStoryBlock().should(exist, visible, empty).sendKeys(SOME_TEXT_FOR_TEST);
         scrollDown();
         lessonsPage.getEnviarButton().shouldBe(exist, visible, exactText(ASK_TEACHER_SUBMIT_TEXT)).click();
-
         lessonsPage.getAllertBlock().shouldBe(exist, visible);
         lessonsPage.getAllertHeader().shouldBe(exist, visible, exactText(ALLERT_HEADER_TEXT));
         lessonsPage.getAllertBody().shouldBe(exist, visible, exactText(ALLERT_BODY_TEXT));

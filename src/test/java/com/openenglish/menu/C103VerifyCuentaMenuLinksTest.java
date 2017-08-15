@@ -59,5 +59,4 @@ public class C103VerifyCuentaMenuLinksTest extends DriverBase {
         page.loginPage.getLoginForm().shouldBe(visible);
         page.inicioPage.getUserName().shouldNotHave(text(USER_NICK_NAME));
     }
-
 }
