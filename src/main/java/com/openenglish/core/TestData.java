@@ -61,6 +61,9 @@ public class TestData {
                 AGE = getProperty("register.age"),
                 THANKS_POPUP_TEXT = getProperty("register.thanks.popup.text"),
                 TITLE = getProperty("register.title"),
+                MOBILE_SECTION_ONE_INCORRECT = getProperty("register.mobile.section.one.incorrect"),
+                MOBILE_AREA_CODES_MESSAGE = getProperty("register.mobile.area.codes.message"),
+                MOBILE_AREA_CODES_PATTERN = getProperty("register.mobile.area.codes.pattern"),
                 WARNING_MESSAGE = getProperty("register.warning.message");
     }
 
@@ -104,6 +107,7 @@ public class TestData {
 
     public static class Lessons {
         public static final String LESSONS_PAGE_TITLE = getProperty("lessons.page.header.title.text"),
+                LESSONS_PAGE_HEADER_TITLE = getProperty("lessons.page.header.text"),
                 LESSONS_TEXT = getProperty("lessons.text"),
                 REMINDER_TITLE = getProperty("lessons.reminder.title.text"),
                 REMINDER_BODY = getProperty("lessons.reminder.body.text"),
@@ -127,7 +131,13 @@ public class TestData {
                 MY_NOTES_LIST_HEADER_TEXT = getProperty("lessons.mis.notes.list.header.text"),
                 MY_NOTES_GUARDAR_TEXT = getProperty("lessons.mis.notes.guardar.nota.button.text"),
                 INDICE_DEL_CURSO_URL = getProperty("lessons.indice.del.curso.url"),
-                SOME_TEXT_FOR_TEST = getProperty("base.sentence.for.some.text.test");
+                SOME_TEXT_FOR_TEST = getProperty("base.sentence.for.some.text.test"),
+                LO_LOGRO_TITLE_TEXT = getProperty("lessons.popup.lo.logro.title.text"),
+                LO_LOGRO_SUS_LOGROS_TEXT = getProperty("lessons.popup.lo.logro.comparta.sus.logros.text"),
+                LO_LOGRO_TWITTER_BUTTON_URL = getProperty("lessons.popup.lo.logro.twitter.button.url"),
+                LO_LOGRO_FACEBOOK_BUTTON_URL = getProperty("lessons.popup.lo.logro.facebook.button.url"),
+                LO_LOGRO_GOOGLE_BUTTON_URL = getProperty("lessons.popup.lo.logro.google.button.url"),
+                LO_LOGRO_PROXIMA_BUTTON = getProperty("lessons.popup.lo.logro.proxima.button.text");
     }
 
     public static class TalkNow {
