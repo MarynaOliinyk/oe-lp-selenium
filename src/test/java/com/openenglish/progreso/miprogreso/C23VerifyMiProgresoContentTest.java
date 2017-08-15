@@ -12,7 +12,6 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
-import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Login.USER_NAME;
@@ -44,7 +43,7 @@ public class C23VerifyMiProgresoContentTest extends DriverBase {
         page.inicioPage.getUserName().shouldHave(text(USER_NAME));
         page.inicioPage.getProgresoLink().click();
         page.inicioPage.getMiProgressoLink().click();
-         profilePage.getHeaderText().should(visible.text(PROFILE_HEADER_TEXT));
+        profilePage.getHeaderText().should(visible.text(PROFILE_HEADER_TEXT));
     }
 
     @Test
@@ -52,7 +51,7 @@ public class C23VerifyMiProgresoContentTest extends DriverBase {
         loginWithCorrectCredentialsAndProfilePageIsOpen();
         assertTrue(profilePage.getVerElIndiceDelCursoLink().should(text(PROFILE_VER_EL_INDICE_DEL_CURSO_TEXT)).getAttribute("href")
                 .contains(PROFILE_VER_EL_INDICE_DEL_CURSO_LINK));
-        profilePage.getLevels().should(visible).getText().matches(PROFILE_LESSONS_HEADER_TEXT);
+        assertTrue(profilePage.getLevels().should(visible).getText().matches(PROFILE_LESSONS_HEADER_TEXT));
         profilePage.getProfilePicture().should(visible);
         profilePage.getInfoBlock().should(visible);
         profilePage.getPracticeProgress().should(visible);
@@ -82,7 +81,7 @@ public class C23VerifyMiProgresoContentTest extends DriverBase {
     public void certificatesTestS3() {
         loginWithCorrectCredentialsAndProfilePageIsOpen();
         profilePage.getCertificatesCarousel().should(visible);
-        profilePage.getMessageOverActualCertificate().should(visible).getText().matches(PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE);
+        assertTrue(profilePage.getMessageOverActualCertificate().should(visible).getText().matches(PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE));
         profilePage.getPrevButton().should(visible);
         profilePage.getNextButton().should(visible);
     }

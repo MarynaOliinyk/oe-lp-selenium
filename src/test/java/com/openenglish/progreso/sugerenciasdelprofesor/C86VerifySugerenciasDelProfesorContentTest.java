@@ -12,10 +12,9 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
-import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME_WITH_NOTES;
-import static com.openenglish.core.TestData.Login.EMAIL_WITH_NOTES;
-import static com.openenglish.core.TestData.Login.PASSWORD_WITH_NOTES;
-import static com.openenglish.core.TestData.Login.USER_NAME_WITH_NOTES;
+import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
+import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.core.TestData.Login.USER_NAME;
 import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_FECHA_COLUMN;
 import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_HEADER_TEXT;
 import static com.openenglish.core.TestData.TeacherFeedback.TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN;
@@ -34,13 +33,13 @@ public class C86VerifySugerenciasDelProfesorContentTest extends DriverBase {
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
                 .shouldHave(attribute("type", "password"));
-        page.loginPage.logIn(EMAIL_WITH_NOTES, PASSWORD_WITH_NOTES);
+        page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        page.inicioPage.getUserName().shouldHave(text(USER_NAME_WITH_NOTES));
+        page.inicioPage.getUserName().shouldHave(text(USER_NAME));
         page.inicioPage.getProgresoLink().click();
         page.inicioPage.getSugerenciasDelProfesorLink().click();
         TeacherFeedbackPage teacherFeedbackPage = new TeacherFeedbackPage();
-        teacherFeedbackPage.getHeaderText().shouldBe(visible).shouldHave(text(TEACHER_FEEDBACK_HEADER_TEXT + " " + USER_NAME_WITH_NOTES));
+        teacherFeedbackPage.getHeaderText().shouldBe(visible).shouldHave(text(TEACHER_FEEDBACK_HEADER_TEXT + " " + USER_NAME));
         teacherFeedbackPage.getVerElIndiceDelCursoLink().shouldHave(text(TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_TEXT));
         teacherFeedbackPage.getFechaColumn().shouldHave(text(TEACHER_FEEDBACK_FECHA_COLUMN));
         teacherFeedbackPage.getSugerenciaSolicitadaColumn().shouldBe(visible).shouldHave(text(TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN));
@@ -54,5 +53,4 @@ public class C86VerifySugerenciasDelProfesorContentTest extends DriverBase {
 //        teacherFeedbackPage.getGoodRateFace().shouldBe(visible);
 //        teacherFeedbackPage.getBadRateFace().shouldBe(visible);
     }
-
 }

@@ -25,9 +25,9 @@ public class TestData {
                 UNREGISTERED_EMAIL = getProperty("login.unregistered.email"),
                 INVALID_PASSWORD = getProperty("login.invalid.password"),
                 SECURITY_PLACE_HOLDER_TEXT = getProperty("login.security.placeholder"),
-                USER_NAME_WITH_NOTES = getProperty("login.user.name.with.notes"),
-                EMAIL_WITH_NOTES = getProperty("login.correct.email.with.notes"),
-                PASSWORD_WITH_NOTES = getProperty("login.correct.password.with.notes");
+                USER_NAME_WITHOUT_NOTES = getProperty("login.user.name.without.notes"),
+                EMAIL_WITHOUT_NOTES = getProperty("login.correct.email.without.notes"),
+                PASSWORD_WITHOUT_NOTES = getProperty("login.correct.password.without.notes");
     }
 
     public static class Recovery {
@@ -61,6 +61,9 @@ public class TestData {
                 AGE = getProperty("register.age"),
                 THANKS_POPUP_TEXT = getProperty("register.thanks.popup.text"),
                 TITLE = getProperty("register.title"),
+                MOBILE_SECTION_ONE_INCORRECT = getProperty("register.mobile.section.one.incorrect"),
+                MOBILE_AREA_CODES_MESSAGE = getProperty("register.mobile.area.codes.message"),
+                MOBILE_AREA_CODES_PATTERN = getProperty("register.mobile.area.codes.pattern"),
                 WARNING_MESSAGE = getProperty("register.warning.message");
     }
 

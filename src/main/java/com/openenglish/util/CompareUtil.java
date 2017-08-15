@@ -2,8 +2,13 @@ package com.openenglish.util;
 
 import java.awt.*;
 import java.awt.image.PixelGrabber;
+import java.lang.invoke.MethodHandles;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class CompareUtil {
+    private static final Logger LOG = LogManager.getLogger(MethodHandles.lookup().lookupClass());
+
     public static Result CompareImage(String baseFile, String actualFile) {
         Result compareResult = Result.PixelMismatch;
         Image baseImage = Toolkit.getDefaultToolkit().getImage(baseFile);
@@ -20,9 +25,9 @@ public class CompareUtil {
             if (actualImageGrab.grabPixels()) {
                 actualImageData = (int[]) actualImageGrab.getPixels();
             }
-            System.out.println(baseImageGrab.getHeight() + "<>" +
+            LOG.info(baseImageGrab.getHeight() + "<>" +
                     actualImageGrab.getHeight());
-            System.out.println(baseImageGrab.getWidth() + "<>" +
+            LOG.info(baseImageGrab.getWidth() + "<>" +
                     actualImageGrab.getWidth());
             if ((baseImageGrab.getHeight() != actualImageGrab.getHeight()) || (baseImageGrab.getWidth() != actualImageGrab.getWidth())) {
                 compareResult = Result.SizeMismatch;

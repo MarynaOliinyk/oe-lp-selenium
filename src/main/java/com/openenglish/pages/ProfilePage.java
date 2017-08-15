@@ -10,7 +10,7 @@ public class ProfilePage {
 
     @Getter
     private SelenideElement headerText = $(By.xpath(".//*[@class='title-bar']//h1")),
-            levels = $(By.id("levels")),
+            levels = $(By.xpath(".//*[@id='levels']/span")),
             verElIndiceDelCursoLink = $(By.xpath(".//*[@class='more']")),
             profilePicture = $(By.xpath(".//*[@class='photo-block']")),
             infoBlock = $(By.xpath(".//*[@class='info']")),
@@ -33,6 +33,7 @@ public class ProfilePage {
             pruebaDeNivelButton = $(By.id("opt-out")),
             certificatesCarousel = $(By.id("certificates-carousel")),
             messageOverActualCertificate = $(By.xpath(".//*[@class='slide-text-overlay always-on']/span")),
+            prevCertificate = $(By.xpath(".//*[@class='carousel-animation-wrapper']/div[8]/img")),
             prevButton = $(By.xpath(".//*[@class='carousel-prev-button']")),
             nextButton = $(By.xpath(".//*[@class='carousel-next-button']")),
             monthInEstradisticas = $(By.xpath(".//*[@class='month']")),

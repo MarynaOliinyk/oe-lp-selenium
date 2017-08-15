@@ -39,7 +39,7 @@ public class InicioPage {
             clasesEnVivoButton = $(By.id("nav-liveclasses")),
             unidadesYLeccionesButton = $(By.id("nav-lessons")),
             practicaLink = $(By.id("nav-immersion")),
-            progresoLink = $(By.xpath(".//*[@id='index-holder']/lp2-header/nav/div/div[2]/ul/li[2]/a")),
+            progresoLink = $(By.id("nav-progress")),
             introdussionLink = $(By.id("nav-levelzero")),
             miProgressoLink = $(By.id("nav-profile")),
             sugerenciasDelProfesorLink = $(By.id("nav-feedback")),
@@ -76,7 +76,7 @@ public class InicioPage {
     public boolean stringsComparator(String constant, String toSplit) {
         String[] techString = toSplit.split("\\-");
         String[] wordsArr = techString[1].split(" ");
-        for (String toCompare: wordsArr) {
+        for (String toCompare : wordsArr) {
             if (!constant.toLowerCase().contains(toCompare.toLowerCase())) return false;
         }
         return true;
