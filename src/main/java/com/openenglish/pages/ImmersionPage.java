@@ -17,6 +17,7 @@ public class ImmersionPage {
             categoryFilterSection = $(By.xpath(".//*[@id='immersionRefinements']//span[contains(text(), 'Category')]")),
             typeFilterSection = $(By.xpath(".//*[@id='immersionRefinements']//span[contains(text(), 'Type')]")),
             holderForSelectedFilters = $(By.xpath(".//*[@id='immersionRefinements']//div[@class='holder']")),
+            videoWithComenzarText = $(By.xpath(".//*[@id='immersionResultsTable']//img[@alt='comenzar']")),
             borrarTodoButton = $(By.xpath(".//*[@id='immersionRefinements']//a[@class='all']"));
     @Getter
     private ElementsCollection allTheActiveFiltersValues = $$(By.xpath(".//*[@id='immersionRefinements']//li[@class='open-close active']//li/a")),
