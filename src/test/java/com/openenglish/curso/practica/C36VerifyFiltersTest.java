@@ -105,7 +105,7 @@ public class C36VerifyFiltersTest extends DriverBase {
         immersionPage.getBorrarTodoButton().shouldBe(exist, visible, exactText("borrar todo"));
         immersionPage.getTypeFilterSection().click();
         immersionPage.getAllTheActiveFiltersValues().forEach(element -> element.shouldBe(empty));
-        List<SelenideElement> displayedVideoBlocksList = immersionPage.getAllTheSelectedFiltersValues();
+        List<SelenideElement> displayedVideoBlocksList = immersionPage.getAllTheDisplayedVideoBlocks();
         displayedVideoBlocksList.forEach(element -> element.shouldBe(exist, visible, not(empty)));
         scrollUp();
         selectedFiltersValuesList.get(0).click();
@@ -113,7 +113,7 @@ public class C36VerifyFiltersTest extends DriverBase {
         assertTrue(selectedFiltersValuesListAfterDeletingFirst.stream().allMatch(element ->
                 element.getText().equals(secondSelectedFilter)));
         immersionPage.getBorrarTodoButton().click();
-        List<SelenideElement> displayedVideoBlocksListAfterFilterDeleting = immersionPage.getAllTheSelectedFiltersValues();
+        List<SelenideElement> displayedVideoBlocksListAfterFilterDeleting = immersionPage.getAllTheDisplayedVideoBlocks();
         displayedVideoBlocksListAfterFilterDeleting.forEach(element -> element.shouldBe(exist, visible, not(empty)));
     }
 
