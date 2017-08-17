@@ -5,6 +5,8 @@ import com.openenglish.pages.AbstractPage;
 import com.openenglish.pages.ProfilePage;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Condition.empty;
+import static com.codeborne.selenide.Condition.matchText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
@@ -13,6 +15,7 @@ import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Profile.PROFILE_HEADER_TEXT;
 import static com.openenglish.core.TestData.Profile.PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE;
+import static org.testng.Assert.assertTrue;
 
 public class C84CheckCertificadosCarouselTest extends DriverBase {
 
@@ -27,12 +30,12 @@ public class C84CheckCertificadosCarouselTest extends DriverBase {
         page.inicioPage.getMiProgressoLink().click();
         ProfilePage profilePage = new ProfilePage();
         profilePage.getHeaderText().should(visible, text(PROFILE_HEADER_TEXT));
-        profilePage.getCertificatesCarousel().should(visible);
-        profilePage.getMessageOverActualCertificate().should(visible).getText().matches(PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE);
-        profilePage.getPrevButton().scrollTo().should(visible).click();
-        profilePage.getPrevCertificate().should(visible);
+        profilePage.getCertificatesCarousel().scrollTo().should(visible);
+        assertTrue(profilePage.getMessageOverActualCertificate().should(visible).getText().matches(PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE));
+        profilePage.getPrevButton().should(visible).click();
+        profilePage.getPrevCertificate().should(visible,empty);
         profilePage.getNextButton().should(visible).click();
-        profilePage.getActualCertificate().should(visible).getText().matches(PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE);
+        assertTrue(profilePage.getMessageOverActualCertificate().should(visible).getText().matches(PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE));
     }
 }
 

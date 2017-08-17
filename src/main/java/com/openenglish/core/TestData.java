@@ -106,8 +106,11 @@ public class TestData {
                 INTRODUSSION_DROP_BLOCK_HEADER_TEXT = getProperty("introduction.dropblock.header.text"),
                 INTRODUSSION_DROP_BLOCK_LESSON_LINK = getProperty("introduction.dropblock.lesson.link"),
                 INTRODUSSION_DROP_BLOCK_CLASSES_EN_VIVO_LINK = getProperty("introduction.dropblock.classesenvivo.link"),
+                INTRODUSSION_LESSON = getProperty("introduction.lesson"),
                 INTRODUSSION_LESSON_AND_NUMBER = getProperty("introduction.lesson.and.number"),
-                INTRODUSSION_DESCRIPTION_OF_EACH_LESSON = getProperty("introduccion.description.of.each.lesson");
+                INTRODUSSION_DESCRIPTION_OF_EACH_LESSON = getProperty("introduccion.description.of.each.lesson"),
+                INTRODUSSION_DESCRIPTION_CENTRE_LESSON = getProperty("introduccion.description.centre.lesson"),
+                INTRODUSSION_COMENZAR_BUTTON = getProperty("introduccion.comenzar.button.text");
     }
 
     public static class Lessons {

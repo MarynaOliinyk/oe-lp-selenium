@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
+import static com.openenglish.core.Attribute.HREF;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Introduction.INTRODUSSION_DESCRIPTION_OF_EACH_LESSON;
 import static com.openenglish.core.TestData.Introduction.INTRODUSSION_DROP_BLOCK_CLASSES_EN_VIVO_LINK;
@@ -31,16 +32,17 @@ public class C38VerifyIntroduccionContentTest extends DriverBase {
         introductionPage.getDropBlock().click();
         introductionPage.getDropBlockHeaderText().should(visible, text(INTRODUSSION_DROP_BLOCK_HEADER_TEXT));
         assertTrue(introductionPage.getDropBlockMessage().getText().matches(INTRODUSSION_DROP_BLOCK_MESSAGE));
-        assertTrue(page.findElementByJS(introductionPage.getDropBlockLessonLinkID()).getAttribute(introductionPage.getAttributeForLink()).contains(INTRODUSSION_DROP_BLOCK_LESSON_LINK));
-        assertTrue(page.findElementByJS(introductionPage.getDropBlockClasesEnVivoLinkID()).getAttribute(introductionPage.getAttributeForLink()).contains(INTRODUSSION_DROP_BLOCK_CLASSES_EN_VIVO_LINK));
+        assertTrue(page.findElementByJS(introductionPage.getDropBlockLessonLinkID()).getAttribute(HREF).contains(INTRODUSSION_DROP_BLOCK_LESSON_LINK));
+        assertTrue(page.findElementByJS(introductionPage.getDropBlockClasesEnVivoLinkID()).getAttribute(HREF).contains(INTRODUSSION_DROP_BLOCK_CLASSES_EN_VIVO_LINK));
         introductionPage.getPrevButton().should(visible);
         introductionPage.getNextButton().should(visible);
         //TODO https://openenglish.jira.com/browse/LPTRIAGE-319
         introductionPage.getLeftLessonsImage().should(visible);
         introductionPage.getRightLessonsImage().should(visible);
         introductionPage.getCentreLessonsImage().should(visible);
-        assertTrue(introductionPage.getLessonAndNumber().should(visible).getText().matches(INTRODUSSION_LESSON_AND_NUMBER));
+        assertTrue(introductionPage.getLessonThirdOnCarousel().should(visible).getText().matches(INTRODUSSION_LESSON_AND_NUMBER));
     }
+
     @Test
     public void verifyIntroduccionContentTestS2LessonsSection() {
         loginWithCorrectCredentialsAndPageIntroductionIsOpen();
@@ -50,7 +52,6 @@ public class C38VerifyIntroduccionContentTest extends DriverBase {
         assertTrue(introductionPage.getNumberOfEachLesson().should(visible).getText().matches(INTRODUSSION_LESSON_AND_NUMBER));
         assertTrue(introductionPage.getDescriptionOfEachLesson().should(visible).getText().matches(INTRODUSSION_DESCRIPTION_OF_EACH_LESSON));
     }
-
 
     private void loginWithCorrectCredentialsAndPageIntroductionIsOpen() {
         open(LP_URL);
