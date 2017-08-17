@@ -57,6 +57,7 @@ public class C112ChangeLessonTest extends DriverBase {
         lessonsPage.getText().should(visible, text(LESSONS_TEXT));
         switchTo().frame(lessonsPage.getLessonIFrame().waitUntil(visible, WAIT_UNTIL));
         lessonsPage.getLessonNameHeader().shouldHave(visible);
+        //TODO NSB-191 Different lesson title (name) at page header and lessons list ([QAA-108] C112) (https://openenglish.jira.com/browse/NSB-191)
         assertTrue(lessonNameToSelect.contains(lessonsPage.getLessonNameHeader().getText().toLowerCase()));
         lessonsPage.getLessonContentHeader().shouldHave(exist, visible, not(empty));
     }
