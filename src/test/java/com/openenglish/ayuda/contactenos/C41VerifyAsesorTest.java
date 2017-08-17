@@ -17,7 +17,7 @@ import static com.openenglish.core.TestData.TalkNow.TALK_NOW_ASESOR_HOVER_TEXT;
 public class C41VerifyAsesorTest extends DriverBase {
 
     @Test
-    public void verifyContactenosContentTest() {
+    public void verifyAsesorTest() {
         open(LP_URL);
         LoginPage lp = new LoginPage();
         lp.cookieBannerVisibility();
