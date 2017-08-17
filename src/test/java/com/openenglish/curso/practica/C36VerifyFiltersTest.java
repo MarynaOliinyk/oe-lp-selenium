@@ -16,6 +16,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
+import static com.openenglish.core.TestData.History.HISTORY_BORRAR_TODO_TEXT;
 import static com.openenglish.core.TestData.Immersion.IMMERSION_HEADER_TEXT;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
@@ -57,7 +58,7 @@ public class C36VerifyFiltersTest extends DriverBase {
                 element.getText().equals(firstSelectedFilter) || element.getText().equals(secondSelectedFilter)));
         // TODO: Expected Result of Step 3 Category Scenario need to be update: "Videos of categories selected are displayed"
 
-        immersionPage.getBorrarTodoButton().shouldBe(exist, visible, exactText("borrar todo"));
+        immersionPage.getBorrarTodoButton().shouldBe(exist, visible, exactText(HISTORY_BORRAR_TODO_TEXT));
         immersionPage.getCategoryFilterSection().click();
         immersionPage.getAllTheActiveFiltersValues().forEach(element -> element.shouldBe(empty));
         List<SelenideElement> displayedVideoBlocksList = immersionPage.getAllTheSelectedFiltersValues();
@@ -102,7 +103,7 @@ public class C36VerifyFiltersTest extends DriverBase {
                 element.getText().equals(firstSelectedFilter) || element.getText().equals(secondSelectedFilter)));
         // TODO: Expected Result of Step 3 Typo Scenario need to be update: "Videos of categories selected are displayed"
 
-        immersionPage.getBorrarTodoButton().shouldBe(exist, visible, exactText("borrar todo"));
+        immersionPage.getBorrarTodoButton().shouldBe(exist, visible, exactText(HISTORY_BORRAR_TODO_TEXT));
         immersionPage.getTypeFilterSection().click();
         immersionPage.getAllTheActiveFiltersValues().forEach(element -> element.shouldBe(empty));
         List<SelenideElement> displayedVideoBlocksList = immersionPage.getAllTheDisplayedVideoBlocks();
@@ -116,6 +117,5 @@ public class C36VerifyFiltersTest extends DriverBase {
         List<SelenideElement> displayedVideoBlocksListAfterFilterDeleting = immersionPage.getAllTheDisplayedVideoBlocks();
         displayedVideoBlocksListAfterFilterDeleting.forEach(element -> element.shouldBe(exist, visible, not(empty)));
     }
-
 
 }
