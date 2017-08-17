@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
+import static com.openenglish.core.TestData.Introduction.INTRODUSSION_DESCRIPTION_OF_EACH_LESSON;
 import static com.openenglish.core.TestData.Introduction.INTRODUSSION_DROP_BLOCK_CLASSES_EN_VIVO_LINK;
 import static com.openenglish.core.TestData.Introduction.INTRODUSSION_DROP_BLOCK_HEADER_TEXT;
 import static com.openenglish.core.TestData.Introduction.INTRODUSSION_DROP_BLOCK_LESSON_LINK;
@@ -25,7 +26,7 @@ public class C38VerifyIntroduccionContentTest extends DriverBase {
     private IntroductionPage introductionPage = new IntroductionPage();
 
     @Test
-    public void verifyIntroduccionContentTestS1() {
+    public void verifyIntroduccionContentTestS1CarouselSection() {
         loginWithCorrectCredentialsAndPageIntroductionIsOpen();
         introductionPage.getDropBlock().click();
         introductionPage.getDropBlockHeaderText().should(visible, text(INTRODUSSION_DROP_BLOCK_HEADER_TEXT));
@@ -40,6 +41,16 @@ public class C38VerifyIntroduccionContentTest extends DriverBase {
         introductionPage.getCentreLessonsImage().should(visible);
         assertTrue(introductionPage.getLessonAndNumber().should(visible).getText().matches(INTRODUSSION_LESSON_AND_NUMBER));
     }
+    @Test
+    public void verifyIntroduccionContentTestS2LessonsSection() {
+        loginWithCorrectCredentialsAndPageIntroductionIsOpen();
+        introductionPage.getTitleAllLessons().should(visible, text(INTRODUSSION_HEADER_TEXT));
+        //TODO https://openenglish.jira.com/browse/LPTRIAGE-319
+        introductionPage.getImageOfEachLesson().should(visible);
+        assertTrue(introductionPage.getNumberOfEachLesson().should(visible).getText().matches(INTRODUSSION_LESSON_AND_NUMBER));
+        assertTrue(introductionPage.getDescriptionOfEachLesson().should(visible).getText().matches(INTRODUSSION_DESCRIPTION_OF_EACH_LESSON));
+    }
+
 
     private void loginWithCorrectCredentialsAndPageIntroductionIsOpen() {
         open(LP_URL);

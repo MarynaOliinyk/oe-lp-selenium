@@ -106,7 +106,8 @@ public class TestData {
                 INTRODUSSION_DROP_BLOCK_HEADER_TEXT = getProperty("introduction.dropblock.header.text"),
                 INTRODUSSION_DROP_BLOCK_LESSON_LINK = getProperty("introduction.dropblock.lesson.link"),
                 INTRODUSSION_DROP_BLOCK_CLASSES_EN_VIVO_LINK = getProperty("introduction.dropblock.classesenvivo.link"),
-                INTRODUSSION_LESSON_AND_NUMBER = getProperty("introduction.lesson.and.number");
+                INTRODUSSION_LESSON_AND_NUMBER = getProperty("introduction.lesson.and.number"),
+                INTRODUSSION_DESCRIPTION_OF_EACH_LESSON = getProperty("introduccion.description.of.each.lesson");
     }
 
     public static class Lessons {
