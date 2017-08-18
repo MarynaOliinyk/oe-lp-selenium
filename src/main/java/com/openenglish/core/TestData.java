@@ -141,7 +141,9 @@ public class TestData {
     }
 
     public static class TalkNow {
-        public static final String TALK_NOW_HEADER_TEXT = getProperty("talknow.header.text");
+        public static final String TALK_NOW_HEADER_TEXT = getProperty("talknow.header.text"),
+                TALK_NOW_ASESOR_TEXT = getProperty("talknow.asesor.text"),
+                TALK_NOW_PROFESOR_TEXT = getProperty("talknow.profesor.text");
     }
 
     public static class TestYourSystem {
