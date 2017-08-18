@@ -82,7 +82,6 @@ public class TestData {
                 MENSAJES_BUTTON_TEXT = getProperty("inicio.mensajes.link.text"),
                 USER_NICK_NAME = getProperty("inicio.nick.user.name"),
                 SALIR_BUTTON_TEXT = getProperty("inicio.salir.link.text"),
-                USER_NICK_NAME_WITH_NOTES = getProperty("inicio.nick.user.name.with.notes"),
                 PREFERENCIAS_BUTTON_TEXT = getProperty("inicio.preferencias.link.text");
     }
 
@@ -94,15 +93,24 @@ public class TestData {
                 LIVE_CLASSES_DROP_BLOCK_IMMERSION_LINK = getProperty("liveclasses.dropblock.immersionlink"),
                 LIVE_CLASSES_TITLE_TEXT = getProperty("liveclasses.title.text"),
                 LIVE_CLASSES_CONTENT_TEXT = getProperty("liveclasses.content.text");
-
     }
 
     public static class Immersion {
         public static final String IMMERSION_HEADER_TEXT = getProperty("immersion.header.text");
+
     }
 
     public static class Introduction {
-        public static final String INTRODUSSION_HEADER_TEXT = getProperty("introduction.header.text");
+        public static final String INTRODUSSION_HEADER_TEXT = getProperty("introduction.header.text"),
+                INTRODUSSION_DROP_BLOCK_MESSAGE = getProperty("introduction.dropblock.message"),
+                INTRODUSSION_DROP_BLOCK_HEADER_TEXT = getProperty("introduction.dropblock.header.text"),
+                INTRODUSSION_DROP_BLOCK_LESSON_LINK = getProperty("introduction.dropblock.lesson.link"),
+                INTRODUSSION_DROP_BLOCK_CLASSES_EN_VIVO_LINK = getProperty("introduction.dropblock.classesenvivo.link"),
+                INTRODUSSION_LESSON = getProperty("introduction.lesson"),
+                INTRODUSSION_LESSON_AND_NUMBER = getProperty("introduction.lesson.and.number"),
+                INTRODUSSION_DESCRIPTION_OF_EACH_LESSON = getProperty("introduccion.description.of.each.lesson"),
+                INTRODUSSION_DESCRIPTION_CENTRE_LESSON = getProperty("introduccion.description.centre.lesson"),
+                INTRODUSSION_COMENZAR_BUTTON = getProperty("introduccion.comenzar.button.text");
     }
 
     public static class Lessons {
@@ -137,7 +145,8 @@ public class TestData {
                 LO_LOGRO_TWITTER_BUTTON_URL = getProperty("lessons.popup.lo.logro.twitter.button.url"),
                 LO_LOGRO_FACEBOOK_BUTTON_URL = getProperty("lessons.popup.lo.logro.facebook.button.url"),
                 LO_LOGRO_GOOGLE_BUTTON_URL = getProperty("lessons.popup.lo.logro.google.button.url"),
-                LO_LOGRO_PROXIMA_BUTTON = getProperty("lessons.popup.lo.logro.proxima.button.text");
+                LO_LOGRO_PROXIMA_BUTTON = getProperty("lessons.popup.lo.logro.proxima.button.text"),
+                TEXT_FOR_SPECIFIC_LESSON = getProperty("lessons.specific.text");
     }
 
     public static class TalkNow {

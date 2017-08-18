@@ -20,7 +20,7 @@ public class LessonsPage {
             lessonIFrame = $(By.id("lesson")),
             lessonContentBlock = $(By.xpath(".//*[@class='learning-player-wrapper']")),
             lessonNameHeader = $(By.xpath(".//*[@class='title-slide']/hgroup/h1")),
-            lessonContentHeader = $(By.xpath(".//div[@class='title-slide']//hgroup//h2")),
+            lessonContentHeader = $(By.xpath(".//*[@class='title-slide']/hgroup/h2")),
             beginLessonButton = $(By.xpath(".//button[@class='continue']")),
             lessonMenu = $(By.xpath(".//*[@id='content']//div[@class='row']")),
             lessonMenuTitle = $(By.xpath(".//*[@id='lesson-menu']//*[@id='lesson-title']")),
