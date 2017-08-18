@@ -32,7 +32,9 @@ public class IntroductionPage {
             lessonCentreHolder = $(By.xpath(".//*[@id='immersionCarousel']/div/div/div/div[12]/div/div[1]")),
             descriptionCentreLesson = $(By.xpath(".//*[@id='immersionCarousel']/div/div/div/div[12]/div/div[2]/span")),
             nameAndNumberCenterLesson = $(By.xpath(".//*[@id='immersionCarousel']/div/div/div/div[12]/div/div[1]/strong")),
-            comenzarButtonCentreLesson = $(By.xpath(".//*[@id='immersionCarousel']/div/div/div/div[12]/div/div[2]/div/a"));
+            comenzarButtonCentreLesson = $(By.xpath(".//*[@id='immersionCarousel']/div/div/div/div[12]/div/div[2]/div/a")),
+            lessonHolder = $(By.xpath(".//*[@id='practice_5317']")),
+            anyLesson = $(By.xpath(".//*[@id='practice_5317']/div[1]/span"));
 
     private String dropBlockLessonLinkID = "lessonLink",
             dropBlockClasesEnVivoLinkID = "liveClassLink";

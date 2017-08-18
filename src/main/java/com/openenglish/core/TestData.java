@@ -145,7 +145,8 @@ public class TestData {
                 LO_LOGRO_TWITTER_BUTTON_URL = getProperty("lessons.popup.lo.logro.twitter.button.url"),
                 LO_LOGRO_FACEBOOK_BUTTON_URL = getProperty("lessons.popup.lo.logro.facebook.button.url"),
                 LO_LOGRO_GOOGLE_BUTTON_URL = getProperty("lessons.popup.lo.logro.google.button.url"),
-                LO_LOGRO_PROXIMA_BUTTON = getProperty("lessons.popup.lo.logro.proxima.button.text");
+                LO_LOGRO_PROXIMA_BUTTON = getProperty("lessons.popup.lo.logro.proxima.button.text"),
+                TEXT_FOR_SPECIFIC_LESSON = getProperty("lessons.specific.text");
     }
 
     public static class TalkNow {
