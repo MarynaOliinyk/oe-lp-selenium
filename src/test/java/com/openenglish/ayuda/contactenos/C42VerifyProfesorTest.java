@@ -12,12 +12,12 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
-import static com.openenglish.core.TestData.TalkNow.TALK_NOW_ASESOR_HOVER_TEXT;
+import static com.openenglish.core.TestData.TalkNow.TALK_NOW_PROFESOR_HOVER_TEXT;
 
-public class C41VerifyAsesorTest extends DriverBase {
+public class C42VerifyProfesorTest extends DriverBase {
 
     @Test
-    public void verifyAsesorTest() {
+    public void verifyProfesorTest() {
         open(LP_URL);
         LoginPage lp = new LoginPage();
         lp.cookieBannerVisibility();
@@ -28,7 +28,7 @@ public class C41VerifyAsesorTest extends DriverBase {
         ip.getContactenos().click();
 
         TalkNowPage talkNowPage = new TalkNowPage();
-        talkNowPage.getAsesorImg().hover();
-        talkNowPage.getAsesorImgHoverText().shouldBe(visible, exactText(TALK_NOW_ASESOR_HOVER_TEXT));
+        talkNowPage.getProfesorImg().hover();
+        talkNowPage.getProfesorImgHoverText().shouldBe(visible, exactText(TALK_NOW_PROFESOR_HOVER_TEXT));
     }
 }

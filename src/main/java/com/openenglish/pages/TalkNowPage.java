@@ -14,6 +14,7 @@ public class TalkNowPage {
             profesorText = $(By.xpath(".//*[@id='main']//div[@class='grid_3 user push_4']//strong")),
             asesorImg = $(By.xpath(".//*[@id='main']//div[@class='grid_3 user push_2']//img[1]")),
             asesorImgHoverText = $(By.xpath(".//*[@id='main']//div[@class='grid_3 user push_2']//span")),
-            profesorImg = $(By.xpath(".//*[@id='main']//div[@class='grid_3 user push_4']//img[1]"));
+            profesorImg = $(By.xpath(".//*[@id='main']//div[@class='grid_3 user push_4']//img[1]")),
+            profesorImgHoverText = $(By.xpath(".//*[@id='main']//div[@class='grid_3 user push_4']//span"));
 
 }
