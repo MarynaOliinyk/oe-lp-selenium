@@ -10,7 +10,8 @@ import static com.codeborne.selenide.Selenide.$;
 public class IntroductionPage {
     public String lessonNumber = ".//*[@class='slideset']/div[%s]/div/div[1]/strong",
             lessonsImage = ".//*[@id='immersionCarousel']/div/div/div/div[%s]/span",
-            immersionResultsTable = ".//*[@id='immersionResultsTable']//ul/li/div[%s]";
+            immersionResultsTable = ".//*[@id='immersionResultsTable']//ul/li/div[%s]",
+            immersionCarousel = ".//*[@id='immersionCarousel']/div/div/div/div[12]/div/div[%s]";
     private SelenideElement headerText = $(By.xpath(".//*[@class='title-bar']//h1")),
             dropBlock = $(By.xpath(".//*[@class='reminder-opener']")),
             dropBlockHeaderText = $(By.xpath(".//*[@class='reminder-drop']/strong")),
@@ -29,10 +30,12 @@ public class IntroductionPage {
             imageOfEachLesson = $(By.xpath(String.format(immersionResultsTable, 1))),
             numberOfEachLesson = $(By.xpath(String.format(immersionResultsTable, 2))),
             descriptionOfEachLesson = $(By.xpath(String.format(immersionResultsTable, 3))),
-            lessonCentreHolder = $(By.xpath(".//*[@id='immersionCarousel']/div/div/div/div[12]/div/div[1]")),
-            descriptionCentreLesson = $(By.xpath(".//*[@id='immersionCarousel']/div/div/div/div[12]/div/div[2]/span")),
-            nameAndNumberCenterLesson = $(By.xpath(".//*[@id='immersionCarousel']/div/div/div/div[12]/div/div[1]/strong")),
-            comenzarButtonCentreLesson = $(By.xpath(".//*[@id='immersionCarousel']/div/div/div/div[12]/div/div[2]/div/a"));
+            lessonCentreHolder = $(By.xpath(String.format(immersionCarousel, 1))),
+            descriptionCentreLesson = $(By.xpath(String.format(immersionCarousel, 2) + "/span")),
+            nameAndNumberCenterLesson = $(By.xpath(String.format(immersionCarousel, 1) + "/strong")),
+            comenzarButtonCentreLesson = $(By.xpath(String.format(immersionCarousel, 2) + "/div/a")),
+            lessonHolder = $(By.xpath(".//*[@id='practice_5317']")),
+            anyLesson = $(By.xpath(".//*[@id='practice_5317']/div[1]/span"));
 
     private String dropBlockLessonLinkID = "lessonLink",
             dropBlockClasesEnVivoLinkID = "liveClassLink";

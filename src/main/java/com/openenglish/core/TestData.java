@@ -145,11 +145,16 @@ public class TestData {
                 LO_LOGRO_TWITTER_BUTTON_URL = getProperty("lessons.popup.lo.logro.twitter.button.url"),
                 LO_LOGRO_FACEBOOK_BUTTON_URL = getProperty("lessons.popup.lo.logro.facebook.button.url"),
                 LO_LOGRO_GOOGLE_BUTTON_URL = getProperty("lessons.popup.lo.logro.google.button.url"),
-                LO_LOGRO_PROXIMA_BUTTON = getProperty("lessons.popup.lo.logro.proxima.button.text");
+                LO_LOGRO_PROXIMA_BUTTON = getProperty("lessons.popup.lo.logro.proxima.button.text"),
+                TEXT_FOR_SPECIFIC_LESSON = getProperty("lessons.specific.text");
     }
 
     public static class TalkNow {
-        public static final String TALK_NOW_HEADER_TEXT = getProperty("talknow.header.text");
+        public static final String TALK_NOW_HEADER_TEXT = getProperty("talknow.header.text"),
+                TALK_NOW_ASESOR_TEXT = getProperty("talknow.asesor.text"),
+                TALK_NOW_ASESOR_HOVER_TEXT = getProperty("talknow.asesor.img.hover.text"),
+                TALK_NOW_PROFESOR_TEXT = getProperty("talknow.profesor.text"),
+                TALK_NOW_PROFESOR_HOVER_TEXT = getProperty("talknow.profesor.img.hover.text");
     }
 
     public static class TestYourSystem {
