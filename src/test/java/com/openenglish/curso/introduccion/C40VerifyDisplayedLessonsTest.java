@@ -27,15 +27,16 @@ import static org.testng.Assert.assertTrue;
 public class C40VerifyDisplayedLessonsTest extends DriverBase {
 
     private AbstractPage page = new AbstractPage();
+    private LessonsPage lessonsPage = new LessonsPage();
+    private IntroductionPage introductionPage = new IntroductionPage();
 
     @Test
-    public void verifyCarouselLessonsTest() {
+    public void verifyDisplayedLessonsTest() {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getCursoButton().click();
         page.inicioPage.getIntrodussionLink().click();
-        IntroductionPage introductionPage = new IntroductionPage();
         introductionPage.getHeaderText().shouldBe(visible).should(text(INTRODUSSION_HEADER_TEXT));
         //TODO https://openenglish.jira.com/browse/LPTRIAGE-319
         introductionPage.getImageOfEachLesson().should(visible);
@@ -43,7 +44,6 @@ public class C40VerifyDisplayedLessonsTest extends DriverBase {
         assertTrue(introductionPage.getDescriptionOfEachLesson().should(visible).getText().matches(INTRODUSSION_DESCRIPTION_OF_EACH_LESSON));
         introductionPage.getLessonHolder().should(appear).hover();
         introductionPage.getAnyLesson().should(attribute(CLASS, HOVER_MASK), visible, text(INTRODUSSION_COMENZAR_BUTTON)).click();
-        LessonsPage lessonsPage = new LessonsPage();
         lessonsPage.getNameOfThePage().should(visible, text(LESSONS_PAGE_HEADER_TITLE));
         lessonsPage.getLessonMenuTitle().should(visible, text(TEXT_FOR_SPECIFIC_LESSON));
     }

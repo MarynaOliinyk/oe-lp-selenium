@@ -22,6 +22,7 @@ public class C39VerifyCarouselLessonsTest extends DriverBase {
 
     private AbstractPage page = new AbstractPage();
     private IntroductionPage introductionPage = new IntroductionPage();
+    private LessonsPage lessonsPage = new LessonsPage();
 
     @Test
     public void verifyCarouselLessonsTest() {
@@ -43,7 +44,6 @@ public class C39VerifyCarouselLessonsTest extends DriverBase {
         introductionPage.getDescriptionCentreLesson().should(visible, text(INTRODUSSION_DESCRIPTION_CENTRE_LESSON));
         introductionPage.getNameAndNumberCenterLesson().should(visible, text(INTRODUSSION_LESSON + " 4"));
         introductionPage.getComenzarButtonCentreLesson().should(visible, text(INTRODUSSION_COMENZAR_BUTTON)).click();
-        LessonsPage lessonsPage = new LessonsPage();
         lessonsPage.getNameOfThePage().should(text(LESSONS_PAGE_HEADER_TITLE)).hover();
         lessonsPage.getLessonContentHeader().waitWhile(text(INTRODUSSION_DESCRIPTION_CENTRE_LESSON), 1000);
     }
