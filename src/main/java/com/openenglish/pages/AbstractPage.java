@@ -35,6 +35,10 @@ public class AbstractPage {
         executeJavaScript(String.format(jsClickQuery, inicioPage.getLogOutLink()));
     }
 
+    public void jsCSSClick(String locator){
+        executeJavaScript(String.format(jsClickQuery, locator));
+    }
+
     public void logIn(String email, String correctPassword) {
         loginPage.cookieBannerVisibility();
         loginPage.logIn(email, correctPassword);
