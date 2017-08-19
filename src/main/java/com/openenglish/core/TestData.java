@@ -223,6 +223,11 @@ public class TestData {
                 MY_NOTEBOOKTEXT_IF_NOT_NOTES = getProperty("mynotebook.text.if.not.notes");
     }
 
+    public static class HowToVideos {
+        public static final String HOW_TO_VIDEOS_VIDEOS_TITLE_TEXT = getProperty("howtovideos.videos.title.text"),
+                HOW_TO_VIDEOS_VIDEOS_DESCRIPTION_TEXT = getProperty("howtovideos.videos.description.text");
+    }
+
     public static class Preferences {
         public static final String MI_PERFIL_TAB_TEXT = getProperty("preferences.miperfil.tab.text"),
                 PREFERENCES_URL_END_WITH_TEXT = getProperty("preferences.page.url.endwith");

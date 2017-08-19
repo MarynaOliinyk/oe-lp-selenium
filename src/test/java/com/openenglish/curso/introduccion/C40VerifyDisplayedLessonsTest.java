@@ -24,7 +24,7 @@ import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static org.testng.Assert.assertTrue;
 
-public class C40VerifyDisplayedLessons extends DriverBase {
+public class C40VerifyDisplayedLessonsTest extends DriverBase {
 
     private AbstractPage page = new AbstractPage();
 
