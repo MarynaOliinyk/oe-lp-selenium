@@ -5,7 +5,6 @@ import com.openenglish.pages.AbstractPage;
 import com.openenglish.pages.HowToVideosPage;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
@@ -18,11 +17,11 @@ import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 
 public class C44VerifyVideosTest extends DriverBase {
 
-    private AbstractPage page = new AbstractPage();
-    private HowToVideosPage howToVideosPage = new HowToVideosPage();
+        private AbstractPage page = new AbstractPage();
+        private HowToVideosPage howToVideosPage = new HowToVideosPage();
 
-    @Test
-    public void verifyVideosTest() {
+        @Test
+        public void verifyVideosTest() {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
@@ -39,9 +38,9 @@ public class C44VerifyVideosTest extends DriverBase {
         page.jsCSSClick("div[class='play-btn']");
         howToVideosPage.getPlayButtonOnPopUp().should(attribute(STYLE, DISPLAY_NONE));
         howToVideosPage.getPauseButtonPopUp().should(attribute(STYLE, DISPLAY_BLOCK)).click();
-        howToVideosPage.getPlayButtonOnPopUp().should(visible,attribute(STYLE, DISPLAY_BLOCK));
+        howToVideosPage.getPlayButtonOnPopUp().should(visible, attribute(STYLE, DISPLAY_BLOCK));
         howToVideosPage.getForwardButtonPopUp().should(visible).click();
         howToVideosPage.getBackwardButtonPopUp().should(visible).click();
 
-}
     }
+}
