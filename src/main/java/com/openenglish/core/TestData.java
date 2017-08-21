@@ -154,7 +154,11 @@ public class TestData {
                 TALK_NOW_ASESOR_TEXT = getProperty("talknow.asesor.text"),
                 TALK_NOW_ASESOR_HOVER_TEXT = getProperty("talknow.asesor.img.hover.text"),
                 TALK_NOW_PROFESOR_TEXT = getProperty("talknow.profesor.text"),
-                TALK_NOW_PROFESOR_HOVER_TEXT = getProperty("talknow.profesor.img.hover.text");
+                TALK_NOW_PROFESOR_HOVER_TEXT = getProperty("talknow.profesor.img.hover.text"),
+                ENVIAR_UNA_PREGUNTA_TEXT = getProperty("talknow.enviar.una.pregunta.link.text"),
+                PREGUNTE_A_UN_PROFESOR_TEXT = getProperty("talknow.popup.pregunta.title.text"),
+                PREGUNTE_POPUP_INSTRUCTIONS_TEXT = getProperty("talknow.popup.pregunta.instructions.text"),
+                PREGUNTE_POPUP_MESSAGE_PLACEHOLDER_TEXT = getProperty("talknow.popup.pregunta.message.placeholder.text");
     }
 
     public static class TestYourSystem {
