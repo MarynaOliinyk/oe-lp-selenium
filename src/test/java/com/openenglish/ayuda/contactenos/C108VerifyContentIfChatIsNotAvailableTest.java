@@ -34,6 +34,7 @@ public class C108VerifyContentIfChatIsNotAvailableTest extends DriverBase {
         tNP.getHeaderText().shouldHave(visible, exactText(TALK_NOW_HEADER_TEXT));
         tNP.getAsesorImg().click();
         tNP.getProfesorImg().click();
+        // TODO find out is it possible to automate
     }
 
 }
