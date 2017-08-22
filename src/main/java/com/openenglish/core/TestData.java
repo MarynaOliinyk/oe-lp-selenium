@@ -259,4 +259,12 @@ public class TestData {
         public static final String COURSE_INDEX_HEADER_TEXT = getProperty("courseindex.header.text"),
                 COURSE_INDEX_FILTER_TEXT = getProperty("courseindex.filter.text");
     }
+
+    public static class MensajesPage {
+        public static final String SIN_LEER = getProperty("mensajes.sin.leer.text"),
+                FECHA_HORA = getProperty("mensajes.fecha.hora.text"),
+                ENVIADO_POR = getProperty("mensajes.enviado.por.text"),
+                AVISO = getProperty("mensajes.aviso.text");
+    }
+
 }
