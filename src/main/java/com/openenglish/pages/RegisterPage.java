@@ -12,8 +12,8 @@ import static com.codeborne.selenide.Selenide.$$;
 @Getter
 public class RegisterPage {
 
-    private String registerSectionNotifications = ".//*[@id='%s']/following-sibling::div/span";
-    private String mobileSection = ".//*[@id='phone-inputs']/input[%s]";
+    private String registerSectionNotifications = ".//*[@id='%s']/following-sibling::div/span",
+            mobileSection = ".//*[@id='phone-inputs']/input[%s]";
     private SelenideElement registerForm = $(By.id("leadForm")),
             nombreField = $(By.id("firstname-input")),
             appelidoField = $(By.id("lastname-input")),
@@ -30,7 +30,7 @@ public class RegisterPage {
             cellularButton = $(By.xpath(".//div[@id='phone-format-selector']/label[1]")),
             fijoButton = $(By.xpath(".//div[@id='phone-format-selector']/label[2]")),
             mobileSectionOne = $(By.xpath(String.format(mobileSection, "1"))),
-            mobileSectionTwo = $(By.xpath(String.format(mobileSection, "2"))),
+            mobileSectionTwo = $(By.xpath(String.format(mobileSection,"2"))),
             mobileSectionThree = $(By.xpath(String.format(mobileSection, "3"))),
             mobileAreaCodes = $(By.xpath(".//*[@id='phone-input']/div[4]/span/a")),
             ageOptions = $(By.xpath(".//*[@id='isforme-radio']/label[1]")),

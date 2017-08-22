@@ -5,9 +5,8 @@ import lombok.Getter;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
-
+@Getter
 public class CourseIndexPage {
-    @Getter
     private SelenideElement headerText = $(By.xpath(".//*[@id='body-content']//h1")),
             filterText = $(By.xpath(".//*[@class='show-all']")),
             lessonContent = $(By.xpath(".//*[@id='twocolumns']")),

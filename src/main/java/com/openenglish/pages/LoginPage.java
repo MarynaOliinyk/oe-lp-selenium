@@ -32,7 +32,6 @@ public class LoginPage {
             popUpResetPassword = $(By.xpath(".//*[@href='recovery.html']")),
             loginForm = $(By.xpath(".//*[@id='login_content']//div[@class='login2-wrapper']"));
 
-
     public void logIn(String email, String password) {
         this.email.shouldBe(visible).val(email);
         this.password.shouldBe(visible).val(password);
