@@ -6,10 +6,8 @@ import lombok.experimental.Accessors;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
-
+@Getter
 @Accessors(chain = true)
 public class PreferencesPage {
-
-    @Getter
     private SelenideElement miPerfilTab = $(By.xpath(".//*[@id='submenu']//li[@class='active']/a"));
 }

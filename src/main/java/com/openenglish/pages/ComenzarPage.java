@@ -8,7 +8,5 @@ import static com.codeborne.selenide.Selenide.$;
 
 @Getter
 public class ComenzarPage {
-
     private SelenideElement thanksText = $(By.xpath(".//*[@id='hero']//p"));
-
 }
