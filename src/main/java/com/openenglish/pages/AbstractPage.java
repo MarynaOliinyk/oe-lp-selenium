@@ -35,7 +35,7 @@ public class AbstractPage {
         executeJavaScript(String.format(jsClickQuery, inicioPage.getLogOutLink()));
     }
 
-    public void jsCSSClick(String locator){
+    public void jsCSSClick(String locator) {
         executeJavaScript(String.format(jsClickQuery, locator));
     }
 

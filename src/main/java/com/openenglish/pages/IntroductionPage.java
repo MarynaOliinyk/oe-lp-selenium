@@ -12,6 +12,7 @@ public class IntroductionPage {
             lessonsImage = ".//*[@id='immersionCarousel']/div/div/div/div[%s]/span",
             immersionResultsTable = ".//*[@id='immersionResultsTable']//ul/li/div[%s]",
             immersionCarousel = ".//*[@id='immersionCarousel']/div/div/div/div[12]/div/div[%s]";
+
     private SelenideElement headerText = $(By.xpath(".//*[@class='title-bar']//h1")),
             dropBlock = $(By.xpath(".//*[@class='reminder-opener']")),
             dropBlockHeaderText = $(By.xpath(".//*[@class='reminder-drop']/strong")),
