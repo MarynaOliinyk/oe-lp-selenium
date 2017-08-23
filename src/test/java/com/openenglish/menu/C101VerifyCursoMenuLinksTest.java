@@ -1,6 +1,5 @@
 package com.openenglish.menu;
 
-
 import com.openenglish.core.DriverBase;
 import com.openenglish.pages.AbstractPage;
 import com.openenglish.pages.ImmersionPage;
@@ -9,14 +8,11 @@ import com.openenglish.pages.LessonsPage;
 import com.openenglish.pages.LiveClassesPage;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Immersion.IMMERSION_HEADER_TEXT;
-import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
-import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
 import static com.openenglish.core.TestData.Introduction.INTRODUSSION_HEADER_TEXT;
 import static com.openenglish.core.TestData.Lessons.LESSONS_TEXT;
 import static com.openenglish.core.TestData.LiveClasses.LIVE_CLASSES_HEADER_TEXT;
@@ -62,11 +58,7 @@ public class C101VerifyCursoMenuLinksTest extends DriverBase {
     private void loginWithCorrectCredentialsAndPageInicioIsOpen() {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
-        page.loginPage.getPassword().shouldBe(visible)
-                .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
-        page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getCursoButton().click();
     }
 }

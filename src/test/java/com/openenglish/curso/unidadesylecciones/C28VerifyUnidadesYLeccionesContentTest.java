@@ -9,17 +9,15 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.exist;
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.not;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
 import static com.openenglish.core.TestData.General.LP_URL;
-import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
 import static com.openenglish.core.TestData.Lessons.ASK_TEACHER_HEADER_CLASS;
 import static com.openenglish.core.TestData.Lessons.ASK_TEACHER_HEADER_TEXT;
 import static com.openenglish.core.TestData.Lessons.ASK_TEACHER_SUBMIT_TEXT;
 import static com.openenglish.core.TestData.Lessons.BEGIN_LESSON_BUTTON;
-import static com.openenglish.core.TestData.Lessons.LESSONS_TEXT;
 import static com.openenglish.core.TestData.Lessons.MENU_MONSTRAR_TEXT;
 import static com.openenglish.core.TestData.Lessons.MENU_PROGRESS_TEXT;
 import static com.openenglish.core.TestData.Lessons.MENU_TITLE_TEXT;
@@ -33,6 +31,7 @@ import static com.openenglish.core.TestData.Lessons.REMINDER_PRACTICA_LINK;
 import static com.openenglish.core.TestData.Lessons.REMINDER_TITLE;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
+import static com.openenglish.pages.AbstractPage.scrollDown;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -77,38 +76,28 @@ public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
     @Test
     public void questionsNotesSectionTest() {
         loginExecutingC2AndExecutingC101Scenario2();
-        page.scroll();
-        lessonsPage.getAskTeacherTabHeader().should(exist).shouldBe(visible).
-                shouldHave(attribute("class")).shouldHave(exactText(ASK_TEACHER_HEADER_CLASS));
+        scrollDown();
+        lessonsPage.getAskTeacherTabHeader().should(exist, visible).
+                shouldHave(attribute("class",ASK_TEACHER_HEADER_CLASS));
         lessonsPage.getAskTeacherTabHeader().shouldHave(exactText(ASK_TEACHER_HEADER_TEXT));
         lessonsPage.getAskTeacherTabInstructions().should(exist).shouldBe(visible).shouldNotBe(empty);
-        lessonsPage.getAskTeacherTabStoryBlock().should(exist).shouldBe(visible).shouldBe(empty);
-        lessonsPage.getAskTeacherTabSubmitButton().should(exist).shouldBe(visible).shouldHave(exactText(ASK_TEACHER_SUBMIT_TEXT));
-        lessonsPage.getMyNotesTabHeader().click();
-        lessonsPage.getMyNotesTabHeader().should(exist).shouldBe(visible).shouldHave(exactText(MY_NOTES_HEADER_TEXT));
-        lessonsPage.getMyNotesTabTextBlock().should(exist).shouldBe(visible).shouldNotBe(empty);
-        lessonsPage.getMyNotesTabNotesListHeader().should(exist).shouldBe(visible).shouldNotBe(empty).
-                shouldHave(exactText(MY_NOTES_LIST_HEADER_TEXT));
-        lessonsPage.getMyNotesTabGuardarNotaButton().should(exist).shouldBe(visible).
-                shouldHave(exactText(MY_NOTES_GUARDAR_TEXT));
+        lessonsPage.getAskTeacherTabStoryBlock().should(exist, visible, empty);
+        lessonsPage.getAskTeacherTabSubmitButton().should(exist, visible, exactText(ASK_TEACHER_SUBMIT_TEXT));
+        scrollDown();
+        lessonsPage.getMyNotesTab().click();
+        lessonsPage.getMyNotesTab().should(exist, visible, exactText(MY_NOTES_HEADER_TEXT));
+        lessonsPage.getMyNotesTabWholeBlock().should(exist, visible, not(empty));
+        lessonsPage.getMyNotesTabNotesListHeader().should(exist, visible, exactText(MY_NOTES_LIST_HEADER_TEXT)).
+                shouldNotBe(empty);
+        lessonsPage.getMyNotesTabGuardarNotaDisabledButton().should(exist, visible, exactText(MY_NOTES_GUARDAR_TEXT));
     }
 
     private void loginExecutingC2AndExecutingC101Scenario2() {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
-        page.loginPage.getPassword().shouldBe(visible)
-                .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
-        page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
-        //TODO BUG NSB-65  https://openenglish.jira.com/browse/NSB-65
-//        page.inicioPage.getUserNickName().shouldHave(text(USER_NICK_NAME));
         page.inicioPage.getCursoButton().click();
         page.inicioPage.getUnidadesYLeccionesButton().click();
-        lessonsPage.getText().should(visible).shouldHave(text(LESSONS_TEXT));
     }
-
-
-
-
 
 }

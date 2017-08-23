@@ -8,5 +8,5 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class FAQPage {
     @Getter
-    private SelenideElement headerText = $(By.xpath(".//*[@class='grid_8']/div/h1"));
+    private SelenideElement headerText = $(By.xpath(".//*[@class='title-bar']//h1"));
 }

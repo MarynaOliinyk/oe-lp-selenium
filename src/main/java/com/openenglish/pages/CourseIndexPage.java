@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class CourseIndexPage {
     @Getter
-    private SelenideElement headerText = $(By.xpath(".//*[@class='heading']/div//h1")),
+    private SelenideElement headerText = $(By.xpath(".//*[@id='body-content']//h1")),
             filterText = $(By.xpath(".//*[@class='show-all']")),
             lessonContent = $(By.xpath(".//*[@id='twocolumns']")),
             nextArrowButton = $(By.xpath(".//*[@class='next']")),

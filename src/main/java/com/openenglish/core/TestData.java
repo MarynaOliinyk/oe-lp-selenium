@@ -25,9 +25,9 @@ public class TestData {
                 UNREGISTERED_EMAIL = getProperty("login.unregistered.email"),
                 INVALID_PASSWORD = getProperty("login.invalid.password"),
                 SECURITY_PLACE_HOLDER_TEXT = getProperty("login.security.placeholder"),
-                USER_NAME_WITH_NOTES = getProperty("login.user.name.with.notes"),
-                EMAIL_WITH_NOTES = getProperty("login.correct.email.with.notes"),
-                PASSWORD_WITH_NOTES = getProperty("login.correct.password.with.notes");
+                USER_NAME_WITHOUT_NOTES = getProperty("login.user.name.without.notes"),
+                EMAIL_WITHOUT_NOTES = getProperty("login.correct.email.without.notes"),
+                PASSWORD_WITHOUT_NOTES = getProperty("login.correct.password.without.notes");
     }
 
     public static class Recovery {
@@ -61,6 +61,9 @@ public class TestData {
                 AGE = getProperty("register.age"),
                 THANKS_POPUP_TEXT = getProperty("register.thanks.popup.text"),
                 TITLE = getProperty("register.title"),
+                MOBILE_SECTION_ONE_INCORRECT = getProperty("register.mobile.section.one.incorrect"),
+                MOBILE_AREA_CODES_MESSAGE = getProperty("register.mobile.area.codes.message"),
+                MOBILE_AREA_CODES_PATTERN = getProperty("register.mobile.area.codes.pattern"),
                 WARNING_MESSAGE = getProperty("register.warning.message");
     }
 
@@ -74,10 +77,11 @@ public class TestData {
 
     public static class Inicio {
         public static final String INICIO_LINK = getProperty("inicio.link.text"),
+                HEADER_TEXT = getProperty("inicio.header.text"),
+                COMENZAR_TEXT = getProperty("inicio.comenzar.text.on.video"),
                 MENSAJES_BUTTON_TEXT = getProperty("inicio.mensajes.link.text"),
                 USER_NICK_NAME = getProperty("inicio.nick.user.name"),
                 SALIR_BUTTON_TEXT = getProperty("inicio.salir.link.text"),
-                USER_NICK_NAME_WITH_NOTES = getProperty("inicio.nick.user.name.with.notes"),
                 PREFERENCIAS_BUTTON_TEXT = getProperty("inicio.preferencias.link.text");
     }
 
@@ -89,19 +93,30 @@ public class TestData {
                 LIVE_CLASSES_DROP_BLOCK_IMMERSION_LINK = getProperty("liveclasses.dropblock.immersionlink"),
                 LIVE_CLASSES_TITLE_TEXT = getProperty("liveclasses.title.text"),
                 LIVE_CLASSES_CONTENT_TEXT = getProperty("liveclasses.content.text");
-
     }
 
     public static class Immersion {
         public static final String IMMERSION_HEADER_TEXT = getProperty("immersion.header.text");
+
     }
 
     public static class Introduction {
-        public static final String INTRODUSSION_HEADER_TEXT = getProperty("introduction.header.text");
+        public static final String INTRODUSSION_HEADER_TEXT = getProperty("introduction.header.text"),
+                INTRODUSSION_DROP_BLOCK_MESSAGE = getProperty("introduction.dropblock.message"),
+                INTRODUSSION_DROP_BLOCK_HEADER_TEXT = getProperty("introduction.dropblock.header.text"),
+                INTRODUSSION_DROP_BLOCK_LESSON_LINK = getProperty("introduction.dropblock.lesson.link"),
+                INTRODUSSION_DROP_BLOCK_CLASSES_EN_VIVO_LINK = getProperty("introduction.dropblock.classesenvivo.link"),
+                INTRODUSSION_LESSON = getProperty("introduction.lesson"),
+                INTRODUSSION_LESSON_AND_NUMBER = getProperty("introduction.lesson.and.number"),
+                INTRODUSSION_DESCRIPTION_OF_EACH_LESSON = getProperty("introduccion.description.of.each.lesson"),
+                INTRODUSSION_DESCRIPTION_CENTRE_LESSON = getProperty("introduccion.description.centre.lesson"),
+                INTRODUSSION_COMENZAR_BUTTON = getProperty("introduccion.comenzar.button.text");
     }
 
     public static class Lessons {
-        public static final String LESSONS_TEXT = getProperty("lessons.text"),
+        public static final String LESSONS_PAGE_TITLE = getProperty("lessons.page.header.title.text"),
+                LESSONS_PAGE_HEADER_TITLE = getProperty("lessons.page.header.text"),
+                LESSONS_TEXT = getProperty("lessons.text"),
                 REMINDER_TITLE = getProperty("lessons.reminder.title.text"),
                 REMINDER_BODY = getProperty("lessons.reminder.body.text"),
                 REMINDER_LESSONS_LINK = getProperty("lessons.reminder.lessons.link.text"),
@@ -117,14 +132,36 @@ public class TestData {
                 ASK_TEACHER_HEADER_CLASS = getProperty("lessons.ask.teacher.header.class"),
                 ASK_TEACHER_HEADER_TEXT = getProperty("lessons.ask.teacher.header.text"),
                 ASK_TEACHER_SUBMIT_TEXT = getProperty("lessons.ask.teacher.submit.button.text"),
+                ALLERT_HEADER_TEXT = getProperty("lessons.ask.teacher.allert.header.text"),
+                ALLERT_BODY_TEXT = getProperty("lessons.ask.teacher.allert.body.text"),
+                ALLERT_CERRAR_TEXT = getProperty("lessons.ask.teacher.cerrar.button.text"),
                 MY_NOTES_HEADER_TEXT = getProperty("lessons.mis.notes.header.text"),
                 MY_NOTES_LIST_HEADER_TEXT = getProperty("lessons.mis.notes.list.header.text"),
                 MY_NOTES_GUARDAR_TEXT = getProperty("lessons.mis.notes.guardar.nota.button.text"),
-                INDICE_DEL_CURSO_URL = getProperty("lessons.indice.del.curso.url");
+                INDICE_DEL_CURSO_URL = getProperty("lessons.indice.del.curso.url"),
+                SOME_TEXT_FOR_TEST = getProperty("base.sentence.for.some.text.test"),
+                LO_LOGRO_TITLE_TEXT = getProperty("lessons.popup.lo.logro.title.text"),
+                LO_LOGRO_SUS_LOGROS_TEXT = getProperty("lessons.popup.lo.logro.comparta.sus.logros.text"),
+                LO_LOGRO_TWITTER_BUTTON_URL = getProperty("lessons.popup.lo.logro.twitter.button.url"),
+                LO_LOGRO_FACEBOOK_BUTTON_URL = getProperty("lessons.popup.lo.logro.facebook.button.url"),
+                LO_LOGRO_GOOGLE_BUTTON_URL = getProperty("lessons.popup.lo.logro.google.button.url"),
+                LO_LOGRO_PROXIMA_BUTTON = getProperty("lessons.popup.lo.logro.proxima.button.text"),
+                TEXT_FOR_SPECIFIC_LESSON = getProperty("lessons.specific.text");
     }
 
     public static class TalkNow {
-        public static final String TALK_NOW_HEADER_TEXT = getProperty("talknow.header.text");
+        public static final String TALK_NOW_HEADER_TEXT = getProperty("talknow.header.text"),
+                TALK_NOW_ASESOR_TEXT = getProperty("talknow.asesor.text"),
+                TALK_NOW_ASESOR_HOVER_TEXT = getProperty("talknow.asesor.img.hover.text"),
+                TALK_NOW_PROFESOR_TEXT = getProperty("talknow.profesor.text"),
+                TALK_NOW_PROFESOR_HOVER_TEXT = getProperty("talknow.profesor.img.hover.text"),
+                LIVEAGENT_ONLINE_TEXT = getProperty("talknow.liveagent.online.message.text"),
+                LIVEAGENT_OFFLINE_TEXT = getProperty("talknow.liveagent.offline.message.text"),
+                LIVEAGENT_PHONE = getProperty("talknow.liveagent.phone.nember"),
+                ENVIAR_UNA_PREGUNTA_TEXT = getProperty("talknow.enviar.una.pregunta.link.text"),
+                PREGUNTE_A_UN_PROFESOR_TEXT = getProperty("talknow.popup.pregunta.title.text"),
+                PREGUNTE_POPUP_INSTRUCTIONS_TEXT = getProperty("talknow.popup.pregunta.instructions.text"),
+                PREGUNTE_POPUP_MESSAGE_PLACEHOLDER_TEXT = getProperty("talknow.popup.pregunta.message.placeholder.text");
     }
 
     public static class TestYourSystem {
@@ -144,12 +181,29 @@ public class TestData {
     }
 
     public static class Profile {
-        public static final String PROFILE_HEADER_TEXT = getProperty("profile.header.text");
+        public static final String PROFILE_HEADER_TEXT = getProperty("profile.header.text"),
+                PROFILE_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("profile.verelindice.del.curso.link"),
+                PROFILE_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("profile.verelindice.del.curso.text"),
+                PROFILE_LESSONS_HEADER_TEXT = getProperty("profile.lessons.header.text"),
+                PROFILE_TOMAR_PRUEBA_DE_NIVEL_BUTTON = getProperty("profile.tomar.prueba.de.nivel.button.text"),
+                PROFILE_ESTADISTICAS_HEADER_TEXT = getProperty("profile.estadisticas.header.text"),
+                PROFILE_NIVEL_ACTUAL_COLUMN = getProperty("profile.nivel.actual.column"),
+                PROFILE_ULTIMO_NIVEL_COMPLETADO_COLUMN = getProperty("profile.ultimo.nivel.completado.column"),
+                PROFILE_PRUEBA_DE_NIVEL_COLUMN = getProperty("profile.prueba.de.nivel.column"),
+                PROFILE_ULTIMO_INGRESO_COLUMN = getProperty("profile.ultimo.ingreso.column"),
+                PROFILE_PRUEBA_DE_NIVEL_BUTTON = getProperty("profile.prueba.de.nivel.button"),
+                PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE = getProperty("profile.message.over.actual.certificate"),
+                PROFILE_ACTUAL_MONTH = getProperty("profile.actual.month"),
+                PROFILE_PREVIOUS_MONTH = getProperty("profile.previous.month"),
+                PROFILE_POP_UP_HEADER_TEXT = getProperty("profile.popup.header.text"),
+                PROFILE_POP_UP_CANCEL_BUTTON_TEXT = getProperty("profile.popup.cancel.button.text"),
+                PROFILE_POP_UP_CONTINUE_BUTTON_TEXT = getProperty("profile.popup.continue.button.text"),
+                PROFILE_OVER_SEMANA_TEXT = getProperty("profile.over.semana.text");
     }
 
     public static class TeacherFeedback {
         public static final String TEACHER_FEEDBACK_HEADER_TEXT = getProperty("teacherfeedback.header.text"),
-                TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("teacherfeedback.verelindice.del.curso.link"),
+                TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("teacherfeedback.verelindice.del.curso.text"),
                 TEACHER_FEEDBACK_FECHA_COLUMN = getProperty("teacherfeedback.fecha.column"),
                 TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN = getProperty("teacherfeedback.sugerencia.solicitada.column"),
                 TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN = getProperty("teacherfeedback.respuesta.del.profesor.column"),
@@ -178,6 +232,11 @@ public class TestData {
                 MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("mynotebook.verelindice.del.curso.text"),
                 MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("mynotebook.verelindice.del.curso.link"),
                 MY_NOTEBOOKTEXT_IF_NOT_NOTES = getProperty("mynotebook.text.if.not.notes");
+    }
+
+    public static class HowToVideos {
+        public static final String HOW_TO_VIDEOS_VIDEOS_TITLE_TEXT = getProperty("howtovideos.videos.title.text"),
+                HOW_TO_VIDEOS_VIDEOS_DESCRIPTION_TEXT = getProperty("howtovideos.videos.description.text");
     }
 
     public static class Preferences {
