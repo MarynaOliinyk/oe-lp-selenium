@@ -39,5 +39,6 @@ public class C47VerifyLinksTest extends DriverBase {
         executeJavaScript("document.getElementById('video').pause();");
         Thread.sleep(3000);
         testYourSystemPage.getClosePopupButton().should(visible).click();
+        testYourSystemPage.getHeaderText().should(visible);
     }
 }

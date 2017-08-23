@@ -19,5 +19,4 @@ public class TestYourSystemPage {
             closePopupButton = $(By.xpath(".//*[@class='ui-icon ui-icon-closethick']")),
             verificacionDeEquipoLinkOnOtros = $(By.id("checkEquipment")),
             macLinkOnOtros = $(By.xpath(".//*[@data-device='mac']"));
-    ;
 }
