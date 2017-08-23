@@ -15,7 +15,6 @@ public class Attribute {
                     ORANGE_BTN_DISABLED = ORANGE_BTN + " disabled",
                     ORANGE_BTN_CLOSE = ORANGE_BTN + " close-btn";
         }
-
     }
 }
 
