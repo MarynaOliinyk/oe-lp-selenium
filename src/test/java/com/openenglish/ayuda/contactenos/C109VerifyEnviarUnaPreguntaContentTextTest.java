@@ -14,9 +14,9 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.Attribute.CLASS;
 import static com.openenglish.core.Attribute.PLACEHOLDER;
-import static com.openenglish.core.Attribute.Value.TalkNowPage.ORANGE_BTN;
-import static com.openenglish.core.Attribute.Value.TalkNowPage.ORANGE_BTN_CLOSE;
-import static com.openenglish.core.Attribute.Value.TalkNowPage.ORANGE_BTN_DISABLED;
+import static com.openenglish.core.AttributeValue.TalkNowPage.ORANGE_BTN;
+import static com.openenglish.core.AttributeValue.TalkNowPage.ORANGE_BTN_CLOSE;
+import static com.openenglish.core.AttributeValue.TalkNowPage.ORANGE_BTN_DISABLED;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Lessons.LESSONS_ALLERT_CERRAR_TEXT;
 import static com.openenglish.core.TestData.Lessons.LESSONS_ALLERT_HEADER_TEXT;
@@ -25,10 +25,10 @@ import static com.openenglish.core.TestData.Lessons.LESSONS_SOME_TEXT_FOR_TEST;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.TalkNow.TALK_NOW_ENVIAR_UNA_PREGUNTA_TEXT;
+import static com.openenglish.core.TestData.TalkNow.TALK_NOW_HEADER_TEXT;
 import static com.openenglish.core.TestData.TalkNow.TALK_NOW_PREGUNTE_A_UN_PROFESOR_TEXT;
 import static com.openenglish.core.TestData.TalkNow.TALK_NOW_PREGUNTE_POPUP_INSTRUCTIONS_TEXT;
 import static com.openenglish.core.TestData.TalkNow.TALK_NOW_PREGUNTE_POPUP_MESSAGE_PLACEHOLDER_TEXT;
-import static com.openenglish.core.TestData.TalkNow.TALK_NOW_HEADER_TEXT;
 
 public class C109VerifyEnviarUnaPreguntaContentTextTest extends DriverBase {
 
