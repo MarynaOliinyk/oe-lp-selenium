@@ -5,9 +5,8 @@ import lombok.Getter;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
-
+@Getter
 public class HowToVideosPage {
-    @Getter
     private SelenideElement image = $(By.xpath(".//*[@class='heroShot']")),
             videoContent = $(By.id("row1")),
             video = $(By.id("video1")),
