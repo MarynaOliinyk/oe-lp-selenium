@@ -6,9 +6,8 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
+@Getter
 public class MyNotebookPage {
-
-    @Getter
     private SelenideElement headerText = $(By.xpath(".//*[@class='grid_8']/div/h1")),
             verElIndiceDelCursoLink = $(By.cssSelector(".more")),
             dataMyNotebookTable = $(By.xpath(".//*[@data-my-notebook-table='wrapper']")),
