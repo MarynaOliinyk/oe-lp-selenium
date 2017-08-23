@@ -11,8 +11,8 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
-import static com.openenglish.core.TestData.Inicio.COMENZAR_TEXT;
-import static com.openenglish.core.TestData.Inicio.HEADER_TEXT;
+import static com.openenglish.core.TestData.Inicio.INICIO_COMENZAR_TEXT;
+import static com.openenglish.core.TestData.Inicio.INICIO_HEADER_TEXT;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Login.USER_NAME;
@@ -31,7 +31,7 @@ public class C6VerifyInicioContentTest extends DriverBase {
         page.loginPage.getPassword().shouldBe(visible)
                 .shouldHave(attribute("type", "password"));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
-        page.inicioPage.getPlanDeEstudioText().should(visible, text(HEADER_TEXT));
+        page.inicioPage.getPlanDeEstudioText().should(visible, text(INICIO_HEADER_TEXT));
         // TODO bug LPTRIAGE-313 https://openenglish.jira.com/browse/LPTRIAGE-313
         page.inicioPage.getUserName().should(visible.text(USER_NAME));
         page.inicioPage.getUserPhoto().shouldBe(visible);
@@ -41,7 +41,7 @@ public class C6VerifyInicioContentTest extends DriverBase {
         assertTrue($$(page.inicioPage.getPracticeVideosBlocks()).size() > 0);
         assertFalse($$(page.inicioPage.getPracticeVideosBlocks()).isEmpty());
         assertTrue(page.inicioPage.verifyAtLeastOneElementTextIsEqual(
-                $$(page.inicioPage.getVideoBlocksContainer()), ".//a", COMENZAR_TEXT));
+                $$(page.inicioPage.getVideoBlocksContainer()), ".//a", INICIO_COMENZAR_TEXT));
         $$(page.inicioPage.getVideoBlocksContainer()).get(page.randomNumber($$(page.inicioPage.getVideoBlocksContainer()).size()))
                 .hover().click();
         page.inicioPage.getComenzarButtonVideoBlock().should(visible).click();

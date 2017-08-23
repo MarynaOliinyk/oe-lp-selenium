@@ -77,12 +77,12 @@ public class TestData {
 
     public static class Inicio {
         public static final String INICIO_LINK = getProperty("inicio.link.text"),
-                HEADER_TEXT = getProperty("inicio.header.text"),
-                COMENZAR_TEXT = getProperty("inicio.comenzar.text.on.video"),
-                MENSAJES_BUTTON_TEXT = getProperty("inicio.mensajes.link.text"),
-                USER_NICK_NAME = getProperty("inicio.nick.user.name"),
-                SALIR_BUTTON_TEXT = getProperty("inicio.salir.link.text"),
-                PREFERENCIAS_BUTTON_TEXT = getProperty("inicio.preferencias.link.text");
+                INICIO_HEADER_TEXT = getProperty("inicio.header.text"),
+                INICIO_COMENZAR_TEXT = getProperty("inicio.comenzar.text.on.video"),
+                INICIO_MENSAJES_BUTTON_TEXT = getProperty("inicio.mensajes.link.text"),
+                INICIO_USER_NICK_NAME = getProperty("inicio.nick.user.name"),
+                INICIO_SALIR_BUTTON_TEXT = getProperty("inicio.salir.link.text"),
+                INICIO_PREFERENCIAS_BUTTON_TEXT = getProperty("inicio.preferencias.link.text");
     }
 
     public static class LiveClasses {
@@ -117,36 +117,36 @@ public class TestData {
         public static final String LESSONS_PAGE_TITLE = getProperty("lessons.page.header.title.text"),
                 LESSONS_PAGE_HEADER_TITLE = getProperty("lessons.page.header.text"),
                 LESSONS_TEXT = getProperty("lessons.text"),
-                REMINDER_TITLE = getProperty("lessons.reminder.title.text"),
-                REMINDER_BODY = getProperty("lessons.reminder.body.text"),
-                REMINDER_LESSONS_LINK = getProperty("lessons.reminder.lessons.link.text"),
-                REMINDER_PRACTICA_LINK = getProperty("lessons.reminder.practica.link.text"),
-                REMINDER_LIVECLASSES_LINK = getProperty("lessons.reminder.liveclasses.link.text"),
-                BEGIN_LESSON_BUTTON = getProperty("lessons.reminder.begin.button.text"),
-                MENU_TITLE_TEXT = getProperty("lessons.menu.title.text"),
-                MENU_PROGRESS_TEXT = getProperty("lessons.menu.progress.text"),
-                MENU_MONSTRAR_TEXT = getProperty("lessons.menu.monstrar.text"),
-                MENU_OCULTAR_TEXT = getProperty("lessons.menu.ocultar.text"),
-                CONTINUAR_LESSON_TEXT = getProperty("lessons.continuar.lesson.link.text"),
+                LESSONS_REMINDER_TITLE = getProperty("lessons.reminder.title.text"),
+                LESSONS_REMINDER_BODY = getProperty("lessons.reminder.body.text"),
+                LESSONS_REMINDER_LESSONS_LINK = getProperty("lessons.reminder.lessons.link.text"),
+                LESSONS_REMINDER_PRACTICA_LINK = getProperty("lessons.reminder.practica.link.text"),
+                LESSONS_REMINDER_LIVECLASSES_LINK = getProperty("lessons.reminder.liveclasses.link.text"),
+                LESSONS_BEGIN_LESSON_BUTTON = getProperty("lessons.reminder.begin.button.text"),
+                LESSONS_MENU_TITLE_TEXT = getProperty("lessons.menu.title.text"),
+                LESSONS_MENU_PROGRESS_TEXT = getProperty("lessons.menu.progress.text"),
+                LESSONS_MENU_MONSTRAR_TEXT = getProperty("lessons.menu.monstrar.text"),
+                LESSONS_MENU_OCULTAR_TEXT = getProperty("lessons.menu.ocultar.text"),
+                LESSONS_CONTINUAR_LESSON_TEXT = getProperty("lessons.continuar.lesson.link.text"),
                 LESSONS_MENU_TEXT = getProperty("lessons.menu.header.text"),
-                ASK_TEACHER_HEADER_CLASS = getProperty("lessons.ask.teacher.header.class"),
-                ASK_TEACHER_HEADER_TEXT = getProperty("lessons.ask.teacher.header.text"),
-                ASK_TEACHER_SUBMIT_TEXT = getProperty("lessons.ask.teacher.submit.button.text"),
-                ALLERT_HEADER_TEXT = getProperty("lessons.ask.teacher.allert.header.text"),
-                ALLERT_BODY_TEXT = getProperty("lessons.ask.teacher.allert.body.text"),
-                ALLERT_CERRAR_TEXT = getProperty("lessons.ask.teacher.cerrar.button.text"),
-                MY_NOTES_HEADER_TEXT = getProperty("lessons.mis.notes.header.text"),
-                MY_NOTES_LIST_HEADER_TEXT = getProperty("lessons.mis.notes.list.header.text"),
-                MY_NOTES_GUARDAR_TEXT = getProperty("lessons.mis.notes.guardar.nota.button.text"),
-                INDICE_DEL_CURSO_URL = getProperty("lessons.indice.del.curso.url"),
-                SOME_TEXT_FOR_TEST = getProperty("base.sentence.for.some.text.test"),
-                LO_LOGRO_TITLE_TEXT = getProperty("lessons.popup.lo.logro.title.text"),
-                LO_LOGRO_SUS_LOGROS_TEXT = getProperty("lessons.popup.lo.logro.comparta.sus.logros.text"),
-                LO_LOGRO_TWITTER_BUTTON_URL = getProperty("lessons.popup.lo.logro.twitter.button.url"),
-                LO_LOGRO_FACEBOOK_BUTTON_URL = getProperty("lessons.popup.lo.logro.facebook.button.url"),
-                LO_LOGRO_GOOGLE_BUTTON_URL = getProperty("lessons.popup.lo.logro.google.button.url"),
-                LO_LOGRO_PROXIMA_BUTTON = getProperty("lessons.popup.lo.logro.proxima.button.text"),
-                TEXT_FOR_SPECIFIC_LESSON = getProperty("lessons.specific.text");
+                LESSONS_ASK_TEACHER_HEADER_CLASS = getProperty("lessons.ask.teacher.header.class"),
+                LESSONS_ASK_TEACHER_HEADER_TEXT = getProperty("lessons.ask.teacher.header.text"),
+                LESSONS_ASK_TEACHER_SUBMIT_TEXT = getProperty("lessons.ask.teacher.submit.button.text"),
+                LESSONS_ALLERT_HEADER_TEXT = getProperty("lessons.ask.teacher.allert.header.text"),
+                LESSONS_ALLERT_BODY_TEXT = getProperty("lessons.ask.teacher.allert.body.text"),
+                LESSONS_ALLERT_CERRAR_TEXT = getProperty("lessons.ask.teacher.cerrar.button.text"),
+                LESSONS_MY_NOTES_HEADER_TEXT = getProperty("lessons.mis.notes.header.text"),
+                LESSONS_MY_NOTES_LIST_HEADER_TEXT = getProperty("lessons.mis.notes.list.header.text"),
+                LESSONS_MY_NOTES_GUARDAR_TEXT = getProperty("lessons.mis.notes.guardar.nota.button.text"),
+                LESSONS_INDICE_DEL_CURSO_URL = getProperty("lessons.indice.del.curso.url"),
+                LESSONS_SOME_TEXT_FOR_TEST = getProperty("base.sentence.for.some.text.test"),
+                LESSONS_LO_LOGRO_TITLE_TEXT = getProperty("lessons.popup.lo.logro.title.text"),
+                LESSONS_LO_LOGRO_SUS_LOGROS_TEXT = getProperty("lessons.popup.lo.logro.comparta.sus.logros.text"),
+                LESSONS_LO_LOGRO_TWITTER_BUTTON_URL = getProperty("lessons.popup.lo.logro.twitter.button.url"),
+                LESSONS_LO_LOGRO_FACEBOOK_BUTTON_URL = getProperty("lessons.popup.lo.logro.facebook.button.url"),
+                LESSONS_LO_LOGRO_GOOGLE_BUTTON_URL = getProperty("lessons.popup.lo.logro.google.button.url"),
+                LESSONS_LO_LOGRO_PROXIMA_BUTTON = getProperty("lessons.popup.lo.logro.proxima.button.text"),
+                LESSONS_TEXT_FOR_SPECIFIC_LESSON = getProperty("lessons.specific.text");
     }
 
     public static class TalkNow {
@@ -155,13 +155,13 @@ public class TestData {
                 TALK_NOW_ASESOR_HOVER_TEXT = getProperty("talknow.asesor.img.hover.text"),
                 TALK_NOW_PROFESOR_TEXT = getProperty("talknow.profesor.text"),
                 TALK_NOW_PROFESOR_HOVER_TEXT = getProperty("talknow.profesor.img.hover.text"),
-                LIVEAGENT_ONLINE_TEXT = getProperty("talknow.liveagent.online.message.text"),
-                LIVEAGENT_OFFLINE_TEXT = getProperty("talknow.liveagent.offline.message.text"),
-                LIVEAGENT_PHONE = getProperty("talknow.liveagent.phone.nember"),
-                ENVIAR_UNA_PREGUNTA_TEXT = getProperty("talknow.enviar.una.pregunta.link.text"),
-                PREGUNTE_A_UN_PROFESOR_TEXT = getProperty("talknow.popup.pregunta.title.text"),
-                PREGUNTE_POPUP_INSTRUCTIONS_TEXT = getProperty("talknow.popup.pregunta.instructions.text"),
-                PREGUNTE_POPUP_MESSAGE_PLACEHOLDER_TEXT = getProperty("talknow.popup.pregunta.message.placeholder.text");
+                TALK_NOW_LIVEAGENT_ONLINE_TEXT = getProperty("talknow.liveagent.online.message.text"),
+                TALK_NOW_LIVEAGENT_OFFLINE_TEXT = getProperty("talknow.liveagent.offline.message.text"),
+                TALK_NOW_LIVEAGENT_PHONE = getProperty("talknow.liveagent.phone.nember"),
+                TALK_NOW_ENVIAR_UNA_PREGUNTA_TEXT = getProperty("talknow.enviar.una.pregunta.link.text"),
+                TALK_NOW_PREGUNTE_A_UN_PROFESOR_TEXT = getProperty("talknow.popup.pregunta.title.text"),
+                TALK_NOW_PREGUNTE_POPUP_INSTRUCTIONS_TEXT = getProperty("talknow.popup.pregunta.instructions.text"),
+                TALK_NOW_PREGUNTE_POPUP_MESSAGE_PLACEHOLDER_TEXT = getProperty("talknow.popup.pregunta.message.placeholder.text");
     }
 
     public static class TestYourSystem {
@@ -169,7 +169,8 @@ public class TestData {
     }
 
     public static class ParticipantsGuide {
-        public static final String CONTAINS_PDF_FILE = getProperty("contains.pdf.file");
+        public static final String PARTICIPANT_GUIDE_NAMES_PDF_FILE = getProperty("participantsGuide.names.pdf.file"),
+                PARTICIPANT_GUIDE_LINK = getProperty("participantsGuide.link");
     }
 
     public static class Meeting {

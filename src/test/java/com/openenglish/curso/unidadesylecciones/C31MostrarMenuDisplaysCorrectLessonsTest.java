@@ -20,12 +20,12 @@ import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
 import static com.openenglish.core.TestData.General.LP_URL;
-import static com.openenglish.core.TestData.Lessons.CONTINUAR_LESSON_TEXT;
-import static com.openenglish.core.TestData.Lessons.INDICE_DEL_CURSO_URL;
+import static com.openenglish.core.TestData.Lessons.LESSONS_CONTINUAR_LESSON_TEXT;
+import static com.openenglish.core.TestData.Lessons.LESSONS_INDICE_DEL_CURSO_URL;
 import static com.openenglish.core.TestData.Lessons.LESSONS_MENU_TEXT;
 import static com.openenglish.core.TestData.Lessons.LESSONS_TEXT;
-import static com.openenglish.core.TestData.Lessons.MENU_MONSTRAR_TEXT;
-import static com.openenglish.core.TestData.Lessons.MENU_OCULTAR_TEXT;
+import static com.openenglish.core.TestData.Lessons.LESSONS_MENU_MONSTRAR_TEXT;
+import static com.openenglish.core.TestData.Lessons.LESSONS_MENU_OCULTAR_TEXT;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Selenide.WAIT_UNTIL;
@@ -48,16 +48,16 @@ public class C31MostrarMenuDisplaysCorrectLessonsTest extends DriverBase {
         LessonsPage lessonsPage = new LessonsPage();
         lessonsPage.getText().should(visible).shouldHave(text(LESSONS_TEXT));
         scrollDown();
-        lessonsPage.getLessonMostrarMenu().shouldHave(exactText(MENU_MONSTRAR_TEXT));
+        lessonsPage.getLessonMostrarMenu().shouldHave(exactText(LESSONS_MENU_MONSTRAR_TEXT));
         lessonsPage.getLessonMostrarMenu().click();
 
-        lessonsPage.getContinuarLeccionLink().shouldHave(exactText(CONTINUAR_LESSON_TEXT));
+        lessonsPage.getContinuarLeccionLink().shouldHave(exactText(LESSONS_CONTINUAR_LESSON_TEXT));
         lessonsPage.getLessonsMenuHeader().waitUntil(not(empty), WAIT_UNTIL);
         lessonsPage.getLessonsMenuHeader().shouldHave(exactText(LESSONS_MENU_TEXT));
-        lessonsPage.getLessonOcultarMenu().shouldHave(exactText(MENU_OCULTAR_TEXT));
+        lessonsPage.getLessonOcultarMenu().shouldHave(exactText(LESSONS_MENU_OCULTAR_TEXT));
         List<String> lessonsListFromOcultar = listCreation(lessonsPage.getAllTheLessonsFromOcultarMenu());
 
-        openInNewTab(INDICE_DEL_CURSO_URL);
+        openInNewTab(LESSONS_INDICE_DEL_CURSO_URL);
         IndiceDelCursoPage indicePage = new IndiceDelCursoPage();
         switchTo().window(1);
         indicePage.getUnitOneLevelOne().click();
@@ -68,7 +68,7 @@ public class C31MostrarMenuDisplaysCorrectLessonsTest extends DriverBase {
         assertTrue(lessonsListFromOcultar.containsAll(lessonsListFromIndicePage));
         lessonsPage.getLessonOcultarMenu().click();
         lessonsPage.getLessonOcultarMenu().waitUntil(not(visible), WAIT_UNTIL);
-        lessonsPage.getLessonMostrarMenu().shouldHave(exactText(MENU_MONSTRAR_TEXT));
+        lessonsPage.getLessonMostrarMenu().shouldHave(exactText(LESSONS_MENU_MONSTRAR_TEXT));
     }
 
     private List<String> listCreation(By pathToSearch) {

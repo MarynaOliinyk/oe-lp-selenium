@@ -19,7 +19,7 @@ import static com.openenglish.core.TestData.Introduction.INTRODUSSION_DESCRIPTIO
 import static com.openenglish.core.TestData.Introduction.INTRODUSSION_HEADER_TEXT;
 import static com.openenglish.core.TestData.Introduction.INTRODUSSION_LESSON_AND_NUMBER;
 import static com.openenglish.core.TestData.Lessons.LESSONS_PAGE_HEADER_TITLE;
-import static com.openenglish.core.TestData.Lessons.TEXT_FOR_SPECIFIC_LESSON;
+import static com.openenglish.core.TestData.Lessons.LESSONS_TEXT_FOR_SPECIFIC_LESSON;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static org.testng.Assert.assertTrue;
@@ -45,6 +45,6 @@ public class C40VerifyDisplayedLessonsTest extends DriverBase {
         introductionPage.getLessonHolder().should(appear).hover();
         introductionPage.getAnyLesson().should(attribute(CLASS, HOVER_MASK), visible, text(INTRODUSSION_COMENZAR_BUTTON)).click();
         lessonsPage.getNameOfThePage().should(visible, text(LESSONS_PAGE_HEADER_TITLE));
-        lessonsPage.getLessonMenuTitle().should(visible, text(TEXT_FOR_SPECIFIC_LESSON));
+        lessonsPage.getLessonMenuTitle().should(visible, text(LESSONS_TEXT_FOR_SPECIFIC_LESSON));
     }
 }
