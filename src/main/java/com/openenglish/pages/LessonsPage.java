@@ -8,7 +8,6 @@ import static com.codeborne.selenide.Selenide.$;
 
 @Getter
 public class LessonsPage {
-
     private SelenideElement text = $(By.xpath(".//*[@class='instructions']")),
             nameOfThePage = $(By.xpath(".//*[@id='main-content']//div[@class='container']//h1")),
             reminderTab = $(By.xpath(".//div[@class='reminder']")),

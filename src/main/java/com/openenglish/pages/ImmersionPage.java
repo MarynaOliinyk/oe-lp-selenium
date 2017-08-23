@@ -7,19 +7,17 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
-
+@Getter
 public class ImmersionPage {
-
     private String allTheDisplayedVideoBlocksCommonPath = ".//*[@id='immersionResultsTable']//ul[@class='post-list']//li";
 
-    @Getter
     private SelenideElement headerText = $(By.xpath(".//*[@class='title-bar']//h1")),
             categoryFilterSection = $(By.xpath(".//*[@id='immersionRefinements']//span[contains(text(), 'Category')]")),
             typeFilterSection = $(By.xpath(".//*[@id='immersionRefinements']//span[contains(text(), 'Type')]")),
             holderForSelectedFilters = $(By.xpath(".//*[@id='immersionRefinements']//div[@class='holder']")),
             videoWithComenzarText = $(By.xpath(".//*[@id='immersionResultsTable']//img[@alt='comenzar']")),
             borrarTodoButton = $(By.xpath(".//*[@id='immersionRefinements']//a[@class='all']"));
-    @Getter
+
     private ElementsCollection allTheActiveFiltersValues = $$(By.xpath(".//*[@id='immersionRefinements']//li[@class='open-close active']//li/a")),
             allTheSelectedFiltersValues = $$(By.xpath(".//*[@id='immersionRefinements']//div[@class='tag-box']//span")),
             allTheDisplayedVideoBlocks = $$(By.xpath(allTheDisplayedVideoBlocksCommonPath)),
