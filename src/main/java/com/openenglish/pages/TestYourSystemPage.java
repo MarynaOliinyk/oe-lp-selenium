@@ -14,6 +14,11 @@ public class TestYourSystemPage {
             browserRequirements = $(By.xpath(String.format(browserReqirementsfield + "/span"))),
             otherRequirements = $(By.xpath(".//*[@id='other-requirements']/span")),
             verificarTuSistemaButton = $(By.id("test-button")),
-            browserReqirementsInput = $(By.xpath(String.format(browserReqirementsfield + ".//*[@id='browser-requirements']//dl//input"))),//checked="checked"
-            allRequirementsForBrowser = $(By.xpath(String.format(browserReqirementsfield + ".//*[@id='browser-requirements']/dl/dd")));
+            browserReqirementsInput = $(By.xpath(String.format(browserReqirementsfield + ".//*[@id='browser-requirements']//dl//input"))),
+            allRequirementsForBrowser = $(By.xpath(String.format(browserReqirementsfield + ".//*[@id='browser-requirements']/dl/dd"))),
+            windowsLinkOnOtros = $(By.xpath(".//*[@data-device='pc']")),
+            popUpConfiguration = $(By.xpath(".//*[@id='instructions']/div[2]/img")),
+            closePopupButton = $(By.xpath(".//*[@class='ui-icon ui-icon-closethick']")),
+            verificacionDeEquipoLinkOnOtros = $(By.id("checkEquipment")),
+            macLinkOnOtros = $(By.xpath(".//*[@data-device='mac']"));
 }
