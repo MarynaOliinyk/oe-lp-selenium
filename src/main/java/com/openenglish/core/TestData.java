@@ -245,7 +245,10 @@ public class TestData {
 
     public static class Preferences {
         public static final String MI_PERFIL_TAB_TEXT = getProperty("preferences.miperfil.tab.text"),
-                PREFERENCES_URL_END_WITH_TEXT = getProperty("preferences.page.url.endwith");
+                PREFERENCES_URL_END_WITH_TEXT = getProperty("preferences.page.url.endwith"),
+                OBLIGATORIO_TEXT = getProperty("preferences.miperfil.obligatorio.notification.text"),
+                NO_ES_NOMBRE_VALIDO_TEXT = getProperty("preferences.miperfil.no.es.nombre.valido.notification.text"),
+                SPECIAL_SYMBOLS = getProperty("preferences.miperfil.special.symbols.test");
     }
 
     public static class TempMail {
