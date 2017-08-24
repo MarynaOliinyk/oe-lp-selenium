@@ -165,7 +165,11 @@ public class TestData {
     }
 
     public static class TestYourSystem {
-        public static final String TEST_YOUR_SYSTEM_HEADER_TEXT = getProperty("testyoursystem.header.text");
+        public static final String TEST_YOUR_SYSTEM_HEADER_TEXT = getProperty("testyoursystem.header.text"),
+                TEST_YOUR_SYSTEM_REQUIREMENTS_SYSTEM_TEXT = getProperty("testyoursystem.system.requirements.text"),
+                TEST_YOUR_SYSTEM_REQUIREMENTS_BROWSER_TEXT = getProperty("testyoursystem.browser.requirements.text"),
+                TEST_YOUR_SYSTEM_OTHER_REQUIREMENTS_TEXT = getProperty("testyoursystem.other.requirements.text"),
+                TEST_YOUR_SYSTEM_VERIFICA_TU_SISTEMA_BUTTON_TEXT = getProperty("testyoursystem.verifica.tu.sistema.button.text");
     }
 
     public static class ParticipantsGuide {
