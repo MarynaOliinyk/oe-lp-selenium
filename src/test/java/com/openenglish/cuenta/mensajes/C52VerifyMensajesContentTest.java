@@ -52,4 +52,5 @@ public class C52VerifyMensajesContentTest extends DriverBase {
         mp.getTableFirstRowDeleteIcon().should(exist).hover().shouldBe(visible);
         mp.getTotalPagesAmount().shouldBe(visible, not(empty));
     }
+
 }
