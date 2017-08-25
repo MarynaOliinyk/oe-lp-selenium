@@ -165,98 +165,101 @@ public class TestData {
     }
 
     public static class TestYourSystem {
-        public static final String TEST_YOUR_SYSTEM_HEADER_TEXT = getProperty("testyoursystem.header.text");
+        public static final String TEST_YOUR_SYSTEM_HEADER_TEXT = getProperty("testyoursystem.header.text"),
+                TEST_YOUR_SYSTEM_REQUIREMENTS_SYSTEM_TEXT = getProperty("testyoursystem.system.requirements.text"),
+                TEST_YOUR_SYSTEM_REQUIREMENTS_BROWSER_TEXT = getProperty("testyoursystem.browser.requirements.text"),
+                TEST_YOUR_SYSTEM_OTHER_REQUIREMENTS_TEXT = getProperty("testyoursystem.other.requirements.text"),
+                TEST_YOUR_SYSTEM_VERIFICA_TU_SISTEMA_BUTTON_TEXT = getProperty("testyoursystem.verifica.tu.sistema.button.text");
     }
+        public static class ParticipantsGuide {
+            public static final String CONTAINS_PDF_FILE = getProperty("contains.pdf.file");
+        }
 
-    public static class ParticipantsGuide {
-        public static final String CONTAINS_PDF_FILE = getProperty("contains.pdf.file");
-    }
+        public static class Meeting {
+            public static final String MEETING_TEST_TEXT = getProperty("meeting.header.text");
+        }
 
-    public static class Meeting {
-        public static final String MEETING_TEST_TEXT = getProperty("meeting.header.text");
-    }
+        public static class Notifications {
+            public static final String NOTIFICATIONS_URL_END_WITH_TEXT = getProperty("notifications.page.url.endwith");
+        }
 
-    public static class Notifications {
-        public static final String NOTIFICATIONS_URL_END_WITH_TEXT = getProperty("notifications.page.url.endwith");
-    }
+        public static class Profile {
+            public static final String PROFILE_HEADER_TEXT = getProperty("profile.header.text"),
+                    PROFILE_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("profile.verelindice.del.curso.link"),
+                    PROFILE_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("profile.verelindice.del.curso.text"),
+                    PROFILE_LESSONS_HEADER_TEXT = getProperty("profile.lessons.header.text"),
+                    PROFILE_TOMAR_PRUEBA_DE_NIVEL_BUTTON = getProperty("profile.tomar.prueba.de.nivel.button.text"),
+                    PROFILE_ESTADISTICAS_HEADER_TEXT = getProperty("profile.estadisticas.header.text"),
+                    PROFILE_NIVEL_ACTUAL_COLUMN = getProperty("profile.nivel.actual.column"),
+                    PROFILE_ULTIMO_NIVEL_COMPLETADO_COLUMN = getProperty("profile.ultimo.nivel.completado.column"),
+                    PROFILE_PRUEBA_DE_NIVEL_COLUMN = getProperty("profile.prueba.de.nivel.column"),
+                    PROFILE_ULTIMO_INGRESO_COLUMN = getProperty("profile.ultimo.ingreso.column"),
+                    PROFILE_PRUEBA_DE_NIVEL_BUTTON = getProperty("profile.prueba.de.nivel.button"),
+                    PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE = getProperty("profile.message.over.actual.certificate"),
+                    PROFILE_ACTUAL_MONTH = getProperty("profile.actual.month"),
+                    PROFILE_PREVIOUS_MONTH = getProperty("profile.previous.month"),
+                    PROFILE_POP_UP_HEADER_TEXT = getProperty("profile.popup.header.text"),
+                    PROFILE_POP_UP_CANCEL_BUTTON_TEXT = getProperty("profile.popup.cancel.button.text"),
+                    PROFILE_POP_UP_CONTINUE_BUTTON_TEXT = getProperty("profile.popup.continue.button.text"),
+                    PROFILE_OVER_SEMANA_TEXT = getProperty("profile.over.semana.text");
+        }
 
-    public static class Profile {
-        public static final String PROFILE_HEADER_TEXT = getProperty("profile.header.text"),
-                PROFILE_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("profile.verelindice.del.curso.link"),
-                PROFILE_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("profile.verelindice.del.curso.text"),
-                PROFILE_LESSONS_HEADER_TEXT = getProperty("profile.lessons.header.text"),
-                PROFILE_TOMAR_PRUEBA_DE_NIVEL_BUTTON = getProperty("profile.tomar.prueba.de.nivel.button.text"),
-                PROFILE_ESTADISTICAS_HEADER_TEXT = getProperty("profile.estadisticas.header.text"),
-                PROFILE_NIVEL_ACTUAL_COLUMN = getProperty("profile.nivel.actual.column"),
-                PROFILE_ULTIMO_NIVEL_COMPLETADO_COLUMN = getProperty("profile.ultimo.nivel.completado.column"),
-                PROFILE_PRUEBA_DE_NIVEL_COLUMN = getProperty("profile.prueba.de.nivel.column"),
-                PROFILE_ULTIMO_INGRESO_COLUMN = getProperty("profile.ultimo.ingreso.column"),
-                PROFILE_PRUEBA_DE_NIVEL_BUTTON = getProperty("profile.prueba.de.nivel.button"),
-                PROFILE_MESSAGE_OVER_ACTUAL_CERTIFICATE = getProperty("profile.message.over.actual.certificate"),
-                PROFILE_ACTUAL_MONTH = getProperty("profile.actual.month"),
-                PROFILE_PREVIOUS_MONTH = getProperty("profile.previous.month"),
-                PROFILE_POP_UP_HEADER_TEXT = getProperty("profile.popup.header.text"),
-                PROFILE_POP_UP_CANCEL_BUTTON_TEXT = getProperty("profile.popup.cancel.button.text"),
-                PROFILE_POP_UP_CONTINUE_BUTTON_TEXT = getProperty("profile.popup.continue.button.text"),
-                PROFILE_OVER_SEMANA_TEXT = getProperty("profile.over.semana.text");
-    }
+        public static class TeacherFeedback {
+            public static final String TEACHER_FEEDBACK_HEADER_TEXT = getProperty("teacherfeedback.header.text"),
+                    TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("teacherfeedback.verelindice.del.curso.text"),
+                    TEACHER_FEEDBACK_FECHA_COLUMN = getProperty("teacherfeedback.fecha.column"),
+                    TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN = getProperty("teacherfeedback.sugerencia.solicitada.column"),
+                    TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN = getProperty("teacherfeedback.respuesta.del.profesor.column"),
+                    TEACHER_FEEDBACK_TEACHERS_NAME = getProperty("teacherfeedback.teachers.name"),
+                    TEACHER_FEEDBACK_POP_UP_HEADER_TEXT = getProperty("teacherfeedback.popup.header.text"),
+                    TEACHER_FEEDBACK_POP_UP_HEADER_TEXT_AFTER_SAD = getProperty("teacherfeedback.popup.header.text.sad"),
+                    TEACHER_FEEDBACK_POP_UP_MESSAGE = getProperty("teacherfeedback.popup.message");
+        }
 
-    public static class TeacherFeedback {
-        public static final String TEACHER_FEEDBACK_HEADER_TEXT = getProperty("teacherfeedback.header.text"),
-                TEACHER_FEEDBACK_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("teacherfeedback.verelindice.del.curso.text"),
-                TEACHER_FEEDBACK_FECHA_COLUMN = getProperty("teacherfeedback.fecha.column"),
-                TEACHER_FEEDBACK_SUGERENCIA_SOLICITADA_COLUMN = getProperty("teacherfeedback.sugerencia.solicitada.column"),
-                TEACHER_FEEDBACK_RESPUESTA_DEL_PROFESOR_COLUMN = getProperty("teacherfeedback.respuesta.del.profesor.column"),
-                TEACHER_FEEDBACK_TEACHERS_NAME = getProperty("teacherfeedback.teachers.name"),
-                TEACHER_FEEDBACK_POP_UP_HEADER_TEXT = getProperty("teacherfeedback.popup.header.text"),
-                TEACHER_FEEDBACK_POP_UP_HEADER_TEXT_AFTER_SAD = getProperty("teacherfeedback.popup.header.text.sad"),
-                TEACHER_FEEDBACK_POP_UP_MESSAGE = getProperty("teacherfeedback.popup.message");
-    }
+        public static class History {
+            public static final String HISTORY_HEADER_TEXT = getProperty("history.header.text"),
+                    HISTORY_HEADER_LINK_TEXT = getProperty("history.header.link.text"),
+                    HISTORY_BORRAR_TODO_TEXT = getProperty("history.borrartodo.text"),
+                    HISTORY_TABLE_HEADER_FECHA_TEXT = getProperty("history.table.header.fecha.text"),
+                    HISTORY_TABLE_HEADER_TIPO_TEXT = getProperty("history.table.header.tipo.text"),
+                    HISTORY_TABLE_HEADER_TITULO_TEXT = getProperty("history.table.header.titulo.text"),
+                    HISTORY_TABLE_HEADER_DESCRIPCION_TEXT = getProperty("history.table.header.descripcion.text"),
+                    HISTORY_TABLE_HEADER_RESULTS_TEXT = getProperty("history.table.header.results.text"),
+                    HISTORY_TABLE_RESULTS_REPRODUCIR_TEXT = getProperty("history.table.results.reproducir.text"),
+                    HISTORY_URL_ENDS_WITH = getProperty("history.url.endsWith"),
+                    HISTORY_TIPO_TEXT = getProperty("history.table.tipo.practice.text");
+        }
 
-    public static class History {
-        public static final String HISTORY_HEADER_TEXT = getProperty("history.header.text"),
-                HISTORY_HEADER_LINK_TEXT = getProperty("history.header.link.text"),
-                HISTORY_BORRAR_TODO_TEXT = getProperty("history.borrartodo.text"),
-                HISTORY_TABLE_HEADER_FECHA_TEXT = getProperty("history.table.header.fecha.text"),
-                HISTORY_TABLE_HEADER_TIPO_TEXT = getProperty("history.table.header.tipo.text"),
-                HISTORY_TABLE_HEADER_TITULO_TEXT = getProperty("history.table.header.titulo.text"),
-                HISTORY_TABLE_HEADER_DESCRIPCION_TEXT = getProperty("history.table.header.descripcion.text"),
-                HISTORY_TABLE_HEADER_RESULTS_TEXT = getProperty("history.table.header.results.text"),
-                HISTORY_TABLE_RESULTS_REPRODUCIR_TEXT = getProperty("history.table.results.reproducir.text"),
-                HISTORY_URL_ENDS_WITH = getProperty("history.url.endsWith"),
-                HISTORY_TIPO_TEXT = getProperty("history.table.tipo.practice.text");
-    }
+        public static class MyNotebook {
+            public static final String MY_NOTEBOOK_HEADER_TEXT = getProperty("mynotebook.header.text"),
+                    MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("mynotebook.verelindice.del.curso.text"),
+                    MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("mynotebook.verelindice.del.curso.link"),
+                    MY_NOTEBOOKTEXT_IF_NOT_NOTES = getProperty("mynotebook.text.if.not.notes");
+        }
 
-    public static class MyNotebook {
-        public static final String MY_NOTEBOOK_HEADER_TEXT = getProperty("mynotebook.header.text"),
-                MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_TEXT = getProperty("mynotebook.verelindice.del.curso.text"),
-                MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_LINK = getProperty("mynotebook.verelindice.del.curso.link"),
-                MY_NOTEBOOKTEXT_IF_NOT_NOTES = getProperty("mynotebook.text.if.not.notes");
-    }
+        public static class HowToVideos {
+            public static final String HOW_TO_VIDEOS_VIDEOS_TITLE_TEXT = getProperty("howtovideos.videos.title.text"),
+                    HOW_TO_VIDEOS_VIDEOS_DESCRIPTION_TEXT = getProperty("howtovideos.videos.description.text");
+        }
 
-    public static class HowToVideos {
-        public static final String HOW_TO_VIDEOS_VIDEOS_TITLE_TEXT = getProperty("howtovideos.videos.title.text"),
-                HOW_TO_VIDEOS_VIDEOS_DESCRIPTION_TEXT = getProperty("howtovideos.videos.description.text");
-    }
+        public static class Preferences {
+            public static final String MI_PERFIL_TAB_TEXT = getProperty("preferences.miperfil.tab.text"),
+                    PREFERENCES_URL_END_WITH_TEXT = getProperty("preferences.page.url.endwith");
+        }
 
-    public static class Preferences {
-        public static final String MI_PERFIL_TAB_TEXT = getProperty("preferences.miperfil.tab.text"),
-                PREFERENCES_URL_END_WITH_TEXT = getProperty("preferences.page.url.endwith");
-    }
+        public static class TempMail {
+            public static final String TEMP_MAIL_URL = getProperty("temp.mail.url"),
+                    TEMP_MAIL_TITLE = getProperty("temp.mail.title"),
+                    TEMP_MAIL_MESSAGE_TITLE = getProperty("temp.mail.message.title");
+            public static final long TEMP_MAIL_WAIT = Long.parseLong(getProperty("temp.mail.wait"));
+        }
 
-    public static class TempMail {
-        public static final String TEMP_MAIL_URL = getProperty("temp.mail.url"),
-                TEMP_MAIL_TITLE = getProperty("temp.mail.title"),
-                TEMP_MAIL_MESSAGE_TITLE = getProperty("temp.mail.message.title");
-        public static final long TEMP_MAIL_WAIT = Long.parseLong(getProperty("temp.mail.wait"));
-    }
+        public static class Comenzar {
+            public static final String THANKS_TEXT = getProperty("comenzar.thanks.text");
+        }
 
-    public static class Comenzar {
-        public static final String THANKS_TEXT = getProperty("comenzar.thanks.text");
+        public static class CourseIndex {
+            public static final String COURSE_INDEX_HEADER_TEXT = getProperty("courseindex.header.text"),
+                    COURSE_INDEX_FILTER_TEXT = getProperty("courseindex.filter.text");
+        }
     }
-
-    public static class CourseIndex {
-        public static final String COURSE_INDEX_HEADER_TEXT = getProperty("courseindex.header.text"),
-                COURSE_INDEX_FILTER_TEXT = getProperty("courseindex.filter.text");
-    }
-}

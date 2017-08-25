@@ -6,9 +6,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-
+@Getter
 public class ParticipantsGuidePage {
-    @Getter
     private SelenideElement pageTitle = $(By.id("plugin"));
-
 }

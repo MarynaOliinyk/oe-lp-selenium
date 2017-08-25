@@ -8,8 +8,6 @@ import static com.codeborne.selenide.Selenide.$;
 
 @Getter
 public class LiveClassesPage {
-
-
     private SelenideElement headerText = $(By.xpath(".//div[@class='title-bar']//h1")),
             dropBlock = $(By.xpath(".//*[@class='reminder-opener']")),
             dropBlockHeaderText = $(By.xpath(".//*[@class='reminder-drop']/strong")),
@@ -24,9 +22,7 @@ public class LiveClassesPage {
             dates = $(By.xpath(".//*[@class='date']")),
             imageOnVideo = $(By.xpath(".//*[@class='image-holder']"));
 
-
     private String dropBlockLessonLinkID = "lessonLink",
             dropBlockImmersionLinkID = "immersionLink",
             attribute = "href";
-
 }
