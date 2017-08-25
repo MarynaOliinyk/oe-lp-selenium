@@ -1,4 +1,4 @@
-package com.openenglish.ayuda.verificaTuSistema;
+package com.openenglish.ayuda.verificatusistema;
 
 import com.openenglish.core.DriverBase;
 import com.openenglish.pages.AbstractPage;
