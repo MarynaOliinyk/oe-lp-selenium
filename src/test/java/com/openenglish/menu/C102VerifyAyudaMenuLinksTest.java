@@ -14,14 +14,14 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
+import static com.openenglish.core.Attribute.SRC;
 import static com.openenglish.core.TestData.FAQ.FAQ_HEADER_TEXT;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Meeting.MEETING_TEST_TEXT;
-import static com.openenglish.core.TestData.ParticipantsGuide.CONTAINS_PDF_FILE;
+import static com.openenglish.core.TestData.ParticipantsGuide.PARTICIPANT_GUIDE_NAMES_PDF_FILE;
 import static com.openenglish.core.TestData.TalkNow.TALK_NOW_HEADER_TEXT;
-import static com.openenglish.core.TestData.TestYourSystem.TEST_YOUR_SYSTEM_HEADER_TEXT;
 import static org.testng.Assert.assertTrue;
 
 public class C102VerifyAyudaMenuLinksTest extends DriverBase {
@@ -66,7 +66,7 @@ public class C102VerifyAyudaMenuLinksTest extends DriverBase {
         page.inicioPage.getAdobeConnectGuiaRapida().click();
         switchTo().window(1);
         ParticipantsGuidePage participantsGuidePage = new ParticipantsGuidePage();
-        assertTrue(participantsGuidePage.getPageTitle().getAttribute("src").contains(CONTAINS_PDF_FILE));
+        assertTrue(participantsGuidePage.getPageTitle().getAttribute(SRC).contains(PARTICIPANT_GUIDE_NAMES_PDF_FILE));
     }
 
     @Test
@@ -85,5 +85,4 @@ public class C102VerifyAyudaMenuLinksTest extends DriverBase {
         FAQPage faqPage = new FAQPage();
         faqPage.getHeaderText().shouldHave(text(FAQ_HEADER_TEXT));
     }
-
 }

@@ -1,4 +1,4 @@
-package com.openenglish.ayuda.videosTutoriales;
+package com.openenglish.ayuda.videostutoriales;
 
 import com.openenglish.core.DriverBase;
 import com.openenglish.pages.AbstractPage;
