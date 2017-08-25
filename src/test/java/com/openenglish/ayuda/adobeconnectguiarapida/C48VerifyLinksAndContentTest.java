@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
 import static com.codeborne.selenide.WebDriverRunner.url;
+import static com.openenglish.core.Attribute.SRC;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
@@ -28,7 +29,7 @@ public class C48VerifyLinksAndContentTest extends DriverBase {
         page.inicioPage.getAyudaDropDown().hover();
         page.inicioPage.getAdobeConnectGuiaRapida().followLink();
         switchTo().window(1);
-        assertTrue(participantsGuidePage.getPageTitle().getAttribute("src").contains(PARTICIPANT_GUIDE_NAMES_PDF_FILE));
+        assertTrue(participantsGuidePage.getPageTitle().getAttribute(SRC).contains(PARTICIPANT_GUIDE_NAMES_PDF_FILE));
         assertTrue(url().contains(PARTICIPANT_GUIDE_LINK));
     }
 }

@@ -5,6 +5,8 @@ public class Attribute {
     public static final String HREF = "href",
             CLASS = "class",
             STYLE = "style",
-            PLACEHOLDER = "placeholder";
+            PLACEHOLDER = "placeholder",
+            SRC = "src",
+            TYPE = "type";
 }
 

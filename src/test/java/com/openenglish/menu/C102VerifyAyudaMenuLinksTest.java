@@ -14,6 +14,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
+import static com.openenglish.core.Attribute.SRC;
 import static com.openenglish.core.TestData.FAQ.FAQ_HEADER_TEXT;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
@@ -65,7 +66,7 @@ public class C102VerifyAyudaMenuLinksTest extends DriverBase {
         page.inicioPage.getAdobeConnectGuiaRapida().click();
         switchTo().window(1);
         ParticipantsGuidePage participantsGuidePage = new ParticipantsGuidePage();
-        assertTrue(participantsGuidePage.getPageTitle().getAttribute("src").contains(PARTICIPANT_GUIDE_NAMES_PDF_FILE));
+        assertTrue(participantsGuidePage.getPageTitle().getAttribute(SRC).contains(PARTICIPANT_GUIDE_NAMES_PDF_FILE));
     }
 
     @Test
@@ -84,5 +85,4 @@ public class C102VerifyAyudaMenuLinksTest extends DriverBase {
         FAQPage faqPage = new FAQPage();
         faqPage.getHeaderText().shouldHave(text(FAQ_HEADER_TEXT));
     }
-
 }

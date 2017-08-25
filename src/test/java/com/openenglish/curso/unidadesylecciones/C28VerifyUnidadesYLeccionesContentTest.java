@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Condition.not;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
+import static com.openenglish.core.Attribute.CLASS;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Lessons.LESSONS_ASK_TEACHER_HEADER_CLASS;
 import static com.openenglish.core.TestData.Lessons.LESSONS_ASK_TEACHER_HEADER_TEXT;
@@ -78,7 +79,7 @@ public class C28VerifyUnidadesYLeccionesContentTest extends DriverBase {
         loginExecutingC2AndExecutingC101Scenario2();
         scrollDown();
         lessonsPage.getAskTeacherTabHeader().should(exist, visible).
-                shouldHave(attribute("class", LESSONS_ASK_TEACHER_HEADER_CLASS));
+                shouldHave(attribute(CLASS, LESSONS_ASK_TEACHER_HEADER_CLASS));
         lessonsPage.getAskTeacherTabHeader().shouldHave(exactText(LESSONS_ASK_TEACHER_HEADER_TEXT));
         lessonsPage.getAskTeacherTabInstructions().should(exist).shouldBe(visible).shouldNotBe(empty);
         lessonsPage.getAskTeacherTabStoryBlock().should(exist, visible, empty);

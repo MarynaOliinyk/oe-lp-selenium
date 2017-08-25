@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.Attribute.CLASS;
-import static com.openenglish.core.AttributeValue.HOVER_MASK;
+import static com.openenglish.core.AttributeValue.IntroductionPage.HOVER_MASK;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Introduction.INTRODUSSION_COMENZAR_BUTTON;
 import static com.openenglish.core.TestData.Introduction.INTRODUSSION_DESCRIPTION_OF_EACH_LESSON;

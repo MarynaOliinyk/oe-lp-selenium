@@ -8,6 +8,7 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
+import static com.openenglish.core.Attribute.PLACEHOLDER;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.INVALID_PASSWORD;
@@ -28,7 +29,7 @@ public class C145VerifyIngreseTextoDeSeguridadTest extends DriverBase {
         page.logOut();
         page.loginPage.logInAndCheckText(REGISTERED_EMAIL, INVALID_PASSWORD, LOGIN_TOOLTIP_PASSWORD);
         page.loginPage.logInAndCheckText(REGISTERED_EMAIL, INVALID_PASSWORD, LOGIN_TOOLTIP_PASSWORD);
-        page.loginPage.getSecurityField().shouldHave(attribute("placeholder", SECURITY_PLACE_HOLDER_TEXT));
+        page.loginPage.getSecurityField().shouldHave(attribute(PLACEHOLDER, SECURITY_PLACE_HOLDER_TEXT));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.loginPage.getSecurityField().sendKeys(INVALID_SECURITY_CODE);
         page.loginPage.getLoginButton().click();

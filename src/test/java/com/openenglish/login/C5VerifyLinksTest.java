@@ -11,6 +11,8 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
+import static com.openenglish.core.Attribute.TYPE;
+import static com.openenglish.core.AttributeValue.LoginPage.PASSWORD;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.INVALID_PASSWORD;
@@ -46,7 +48,7 @@ public class C5VerifyLinksTest extends DriverBase {
     public void verifyRegisterFormIsOpenTestS3() {
         open(LP_URL);
         page.loginPage.getPassword()
-                .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute(TYPE, PASSWORD));
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getSignUp().click();
         RegisterPage regForm = new RegisterPage();
