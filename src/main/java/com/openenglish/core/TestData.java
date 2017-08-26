@@ -245,11 +245,12 @@ public class TestData {
     }
 
     public static class Preferences {
-        public static final String MI_PERFIL_TAB_TEXT = getProperty("preferences.miperfil.tab.text"),
+        public static final String PREFERENCES_MI_PERFIL_TAB_TEXT = getProperty("preferences.miperfil.tab.text"),
                 PREFERENCES_URL_END_WITH_TEXT = getProperty("preferences.page.url.endwith"),
-                OBLIGATORIO_TEXT = getProperty("preferences.miperfil.obligatorio.notification.text"),
-                NO_ES_NOMBRE_VALIDO_TEXT = getProperty("preferences.miperfil.no.es.nombre.valido.notification.text"),
-                SPECIAL_SYMBOLS = getProperty("preferences.miperfil.special.symbols.test");
+                PREFERENCES_OBLIGATORIO_TEXT = getProperty("preferences.miperfil.obligatorio.notification.text"),
+                PREFERENCES_NO_ES_NOMBRE_VALIDO_TEXT = getProperty("preferences.miperfil.no.es.nombre.valido.notification.text"),
+                PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT = getProperty("preferences.miperfil.no.es.apellido.valido.notification.text"),
+                PREFERENCES_SPECIAL_SYMBOLS = getProperty("preferences.miperfil.special.symbols.test");
     }
 
     public static class TempMail {
@@ -269,10 +270,11 @@ public class TestData {
     }
 
     public static class MensajesPage {
-        public static final String SIN_LEER = getProperty("mensajes.sin.leer.text"),
-                FECHA_HORA = getProperty("mensajes.fecha.hora.text"),
-                ENVIADO_POR = getProperty("mensajes.enviado.por.text"),
-                AVISO = getProperty("mensajes.aviso.text");
+        public static final String MENSAJES_PAGE_SIN_LEER = getProperty("mensajes.sin.leer.text"),
+                MENSAJES_PAGE_FECHA_HORA = getProperty("mensajes.fecha.hora.text"),
+                MENSAJES_PAGE_ENVIADO_POR = getProperty("mensajes.enviado.por.text"),
+                MENSAJES_PAGE_AVISO = getProperty("mensajes.aviso.text"),
+                MENSAJES_PAGE_MENSAJES_BUTTON_TEXT = getProperty("mensajes.mensajes.text");
     }
 
 }
