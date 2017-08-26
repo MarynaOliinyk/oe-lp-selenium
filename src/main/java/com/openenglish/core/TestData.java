@@ -178,7 +178,7 @@ public class TestData {
 
     public static class Meeting {
         public static final String MEETING_TEST_TEXT = getProperty("meeting.header.text"),
-                MEETING_HEADER_TEST_TEXT = getProperty("meeting.header.test.text");
+                MEETING_ADOBE_CONNECT_HEADER_TEST_TEXT = getProperty("meeting.adobe.connect.header.test.text");
     }
 
     public static class Notifications {

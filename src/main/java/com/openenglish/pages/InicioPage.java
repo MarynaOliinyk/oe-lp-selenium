@@ -31,7 +31,7 @@ public class InicioPage {
             oeLogo = $(By.xpath(".//*[@class='navbar-brand']")),
             verificaTuSistema = $(By.id("testYourSystem")),
             adobeConnectGuiaRapida = $(By.id("adobeQuickGuide")),
-            verifiqueSuConfiguracion = $(By.id("testSetupLink")),
+            verifiqueSuConfiguracion = $(By.id("test-setup-link")),
             preguntasFrecuentes = $(By.xpath(".//*[@class='dropdown-menu dropdown-menu-center']//a[@href='/support/faq.html']")),
             videoClickPlay = $(By.xpath(".//*[@id='video-popup']/div[2]/div[2]")),
             videoClickClose = $(By.xpath(".//*[@class='ui-dialog-titlebar-close ui-corner-all']")),

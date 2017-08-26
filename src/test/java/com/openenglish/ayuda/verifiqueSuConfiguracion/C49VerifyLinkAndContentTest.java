@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.switchTo;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
-import static com.openenglish.core.TestData.Meeting.MEETING_HEADER_TEST_TEXT;
+import static com.openenglish.core.TestData.Meeting.MEETING_ADOBE_CONNECT_HEADER_TEST_TEXT;
 import static com.openenglish.core.TestData.Meeting.MEETING_TEST_TEXT;
 
 public class C49VerifyLinkAndContentTest extends DriverBase {
@@ -29,7 +29,7 @@ public class C49VerifyLinkAndContentTest extends DriverBase {
         page.inicioPage.getVerifiqueSuConfiguracion().click();
         switchTo().window(1);
         meetingPage.getText().should(text(MEETING_TEST_TEXT));
-        meetingPage.getHeaderTestText().should(text(MEETING_HEADER_TEST_TEXT));
+        meetingPage.getAdobeConnectHeaderTestText().should(text(MEETING_ADOBE_CONNECT_HEADER_TEST_TEXT));
         meetingPage.getAdobeConnectTest().should(visible);
     }
 }

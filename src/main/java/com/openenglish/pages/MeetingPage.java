@@ -5,9 +5,10 @@ import lombok.Getter;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
+
 @Getter
 public class MeetingPage {
     private SelenideElement text = $(By.xpath(".//*[@id='gecko']/h1")),
-    headerTestText = $(By.xpath(".//*[@id='mainLogo']/h1/a")),
-    adobeConnectTest =  $(By.xpath(".//*[@id='test']/embed"));
+            adobeConnectHeaderTestText = $(By.xpath(".//*[@id='mainLogo']/h1/a")),
+            adobeConnectTest = $(By.xpath(".//*[@id='test']/embed"));
 }
