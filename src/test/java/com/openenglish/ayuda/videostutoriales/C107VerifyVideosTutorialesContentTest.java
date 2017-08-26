@@ -1,4 +1,4 @@
-package com.openenglish.ayuda.videosTutoriales;
+package com.openenglish.ayuda.videostutoriales;
 
 import com.openenglish.core.DriverBase;
 import com.openenglish.pages.AbstractPage;
@@ -20,7 +20,7 @@ public class C107VerifyVideosTutorialesContentTest extends DriverBase {
     private HowToVideosPage howToVideosPage = new HowToVideosPage();
 
     @Test
-    public void verifyContactenosTestS1() {
+    public void verifyVideosTutorialesContentTest() {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);

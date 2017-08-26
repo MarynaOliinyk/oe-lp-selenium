@@ -16,8 +16,8 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Lessons.LESSONS_PAGE_TITLE;
-import static com.openenglish.core.TestData.Lessons.MY_NOTES_GUARDAR_TEXT;
-import static com.openenglish.core.TestData.Lessons.SOME_TEXT_FOR_TEST;
+import static com.openenglish.core.TestData.Lessons.LESSONS_MY_NOTES_GUARDAR_TEXT;
+import static com.openenglish.core.TestData.Lessons.LESSONS_SOME_TEXT_FOR_TEST;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.pages.AbstractPage.scrollDown;
@@ -42,10 +42,10 @@ public class C33MisNotasNotesAreSavedCorrectlyTest extends DriverBase {
 
         lessonsPage.getMyNotesTabWholeBlock().should(exist, visible, not(empty));
         lessonsPage.getMyNotesTabGuardarNotaDisabledButton().should(exist, visible);
-        String stringToSave = SOME_TEXT_FOR_TEST + " " + page.randomNumber(10);
+        String stringToSave = LESSONS_SOME_TEXT_FOR_TEST + " " + page.randomNumber(10);
         lessonsPage.getMyNotesTabTextInputBlock().should(exist, visible).clear();
         lessonsPage.getMyNotesTabTextInputBlock().sendKeys(stringToSave);
-        lessonsPage.getMyNotesTabGuardarNotaVisibleButton().should(exist, visible, exactText(MY_NOTES_GUARDAR_TEXT)).click();
+        lessonsPage.getMyNotesTabGuardarNotaVisibleButton().should(exist, visible, exactText(LESSONS_MY_NOTES_GUARDAR_TEXT)).click();
         lessonsPage.getMyNotesTabVerMiCuadernoDeNotasLink().should(exist, visible).click();
 
         MyNotebookPage myNotebookPage = new MyNotebookPage();
@@ -65,10 +65,10 @@ public class C33MisNotasNotesAreSavedCorrectlyTest extends DriverBase {
 
         lessonsPage.getMyNotesTabWholeBlock().should(exist, visible, not(empty));
         lessonsPage.getMyNotesTabGuardarNotaDisabledButton().should(exist, visible);
-        String stringToSaveSecondOne = SOME_TEXT_FOR_TEST + " " + page.randomNumber(10);
+        String stringToSaveSecondOne = LESSONS_SOME_TEXT_FOR_TEST + " " + page.randomNumber(10);
         lessonsPage.getMyNotesTabTextInputBlock().should(exist, visible, value(stringToSave)).clear();
         lessonsPage.getMyNotesTabTextInputBlock().sendKeys(stringToSaveSecondOne);
-        lessonsPage.getMyNotesTabGuardarNotaVisibleButton().should(exist, visible, exactText(MY_NOTES_GUARDAR_TEXT)).click();
+        lessonsPage.getMyNotesTabGuardarNotaVisibleButton().should(exist, visible, exactText(LESSONS_MY_NOTES_GUARDAR_TEXT)).click();
         lessonsPage.getMyNotesTabVerMiCuadernoDeNotasLink().should(exist, visible).click();
 
         myNotebookPage.getDataMyNotebookTable().should(exist, visible, not(empty));

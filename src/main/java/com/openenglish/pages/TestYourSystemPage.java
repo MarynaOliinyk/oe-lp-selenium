@@ -8,14 +8,17 @@ import static com.codeborne.selenide.Selenide.$;
 
 @Getter
 public class TestYourSystemPage {
-    public String browserReqirementsfield = ".//*[@id='browser-requirements']";
+
+    public String browserReqirementsfield = ".//*[@id='%s-requirements']/span",
+            browserReqirements = ".//*[@id='browser-requirements']//dl";
+
     private SelenideElement headerText = $(By.xpath(".//*[@class='title-bar']//h1")),
-            systemRequirements = $(By.xpath(".//*[@id='system-requirements']/span")),
-            browserRequirements = $(By.xpath(String.format(browserReqirementsfield + "/span"))),
-            otherRequirements = $(By.xpath(".//*[@id='other-requirements']/span")),
+            systemRequirements = $(By.xpath(String.format(browserReqirementsfield, "system"))),
+            browserRequirements = $(By.xpath(String.format(browserReqirementsfield, "browser"))),
+            otherRequirements = $(By.xpath(String.format(browserReqirementsfield, "other"))),
             verificarTuSistemaButton = $(By.id("test-button")),
-            browserReqirementsInput = $(By.xpath(String.format(browserReqirementsfield + ".//*[@id='browser-requirements']//dl//input"))),
-            allRequirementsForBrowser = $(By.xpath(String.format(browserReqirementsfield + ".//*[@id='browser-requirements']/dl/dd"))),
+            browserReqirementsInput = $(By.xpath(browserReqirements + "//input")),
+            allRequirementsForBrowser = $(By.xpath(browserReqirements + "/dd")),
             windowsLinkOnOtros = $(By.xpath(".//*[@data-device='pc']")),
             popUpConfiguration = $(By.xpath(".//*[@id='instructions']/div[2]/img")),
             closePopupButton = $(By.xpath(".//*[@class='ui-icon ui-icon-closethick']")),

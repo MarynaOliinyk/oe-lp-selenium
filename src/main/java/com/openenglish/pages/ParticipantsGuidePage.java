@@ -8,5 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 @Getter
 public class ParticipantsGuidePage {
-    private SelenideElement pageTitle = $(By.id("plugin"));
+    private SelenideElement pageTitle = $(By.id("plugin")),
+            pageContainerFirstPage = $(By.xpath(".//*[@class='textLayer']")),
+            pageContainerSecondPage = $(By.xpath(".//*[@id='pageContainer2']/xhtml:div[2]"));
 }
