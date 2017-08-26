@@ -252,7 +252,19 @@ public class TestData {
                 PREFERENCES_SPECIAL_SYMBOLS = getProperty("preferences.miperfil.special.symbols.test"),
                 PREFERENCES_USER_NICK_NAME_AND_HOLA = getProperty("preferences.usernick.name.and.hola"),
                 PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK = getProperty("preferences.perfil.de.aprendizaje.link"),
-                PREFERENCES_MI_PERFIL_LINK = ("preferences.mi.perfil.link");
+                PREFERENCES_MI_PERFIL_LINK = ("preferences.mi.perfil.link"),
+                PREFERENCES_CAMBIAR_FOTO_TEXT = getProperty("preferences.cambiar.foto.text"),
+                PREFERENCES_NOMBRE_PLACEHOLDER_TEXT = getProperty("preferences.nombre.placeholder.text"),
+                PREFERENCES_APELLIDO_PLACEHOLDER_TEXT = getProperty("preferences.apellido.placeholder.text"),
+                PREFERENCES_SEXO_PLACEHOLDER_TEXT = getProperty("preferences.sexo.placeholder.text"),
+                PREFERENCES_FECHA_DE_NACIMIENTO_PLACEHOLDER_TEXT = getProperty("preferences.fechaDeNacimiento.placeholder.text"),
+                PREFERENCES_NOMBRE_VISIBLE_A_TODOS_PLACEHOLDER_TEXT = getProperty("preferences.nombreVisibleATodos.placeholder.text"),
+                PREFERENCES_NIVEL_ACADEMICO_PLACEHOLDER_TEXT = getProperty("preferences.nivelAcademico.placeholder.text"),
+                PREFERENCES_EMAIL_PLACEHOLDER_TEXT = getProperty("preferences.email.placeholder.text"),
+                PREFERENCES_CONTRASENA_PLACEHOLDER_TEXT = getProperty("preferences.contrasena.placeholder.text"),
+                PREFERENCES_CONFIRMAR_CONTRASENA_PLACEHOLDER_TEXT = getProperty("preferences.confirmarContrasena.placeholder.text"),
+                PREFERENCES_IDIOMA_DE_PREFERENCIA_PLACEHOLDER_TEXT = getProperty("preferences.idiomaDePreferencia.placeholder.text"),
+                PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT = getProperty("preferences.guardarCambiosButton.text");
     }
 
     public static class TempMail {

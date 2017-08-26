@@ -9,6 +9,9 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
+import static com.openenglish.core.Attribute.HREF;
+import static com.openenglish.core.Attribute.TYPE;
+import static com.openenglish.core.AttributeValue.LoginPage.PASSWORD;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
@@ -32,7 +35,7 @@ public class C92VerifyCuadernoDeNotasContentTest extends DriverBase {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
-                .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute(TYPE, PASSWORD));
         page.loginPage.logIn(EMAIL_WITHOUT_NOTES, PASSWORD_WITHOUT_NOTES);
         page.inicioPage.getVideoClickClose().click();
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
@@ -41,7 +44,7 @@ public class C92VerifyCuadernoDeNotasContentTest extends DriverBase {
         page.inicioPage.getCuadernoDeNotasLink().click();
         MyNotebookPage myNotebookPage = new MyNotebookPage();
         myNotebookPage.getHeaderText().shouldBe(visible).shouldHave(text(MY_NOTEBOOK_HEADER_TEXT + " " + USER_NAME_WITHOUT_NOTES));
-        assertTrue(myNotebookPage.getVerElIndiceDelCursoLink().should(text(MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_TEXT)).getAttribute("href")
+        assertTrue(myNotebookPage.getVerElIndiceDelCursoLink().should(text(MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_TEXT)).getAttribute(HREF)
                 .contains(MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_LINK));
         myNotebookPage.getTextIfNotNotes().should(visible, text(MY_NOTEBOOKTEXT_IF_NOT_NOTES));
     }
@@ -51,7 +54,7 @@ public class C92VerifyCuadernoDeNotasContentTest extends DriverBase {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
-                .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute(TYPE, PASSWORD));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
         page.inicioPage.getUserName().shouldHave(text(USER_NAME));
@@ -59,7 +62,7 @@ public class C92VerifyCuadernoDeNotasContentTest extends DriverBase {
         page.inicioPage.getCuadernoDeNotasLink().click();
         MyNotebookPage myNotebookPage = new MyNotebookPage();
         myNotebookPage.getHeaderText().shouldBe(visible).shouldHave(text(MY_NOTEBOOK_HEADER_TEXT + " " + USER_NAME));
-        assertTrue(myNotebookPage.getVerElIndiceDelCursoLink().should(text(MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_TEXT)).getAttribute("href")
+        assertTrue(myNotebookPage.getVerElIndiceDelCursoLink().should(text(MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_TEXT)).getAttribute(HREF)
                 .contains(MY_NOTEBOOK_VER_EL_INDICE_DEL_CURSO_LINK));
         myNotebookPage.getPagination().should(visible);
         myNotebookPage.getNotes().should(visible);
