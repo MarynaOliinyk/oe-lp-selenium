@@ -13,12 +13,17 @@ public class PreferencesPage {
 
     private String generalNotificationLocator = ".//*[@id='%s']/following-sibling::span",
             nombre = "firstName",
-            apelido = "lastName";
+            apelido = "lastName",
+            checkboxName = ".//div[@id='gender']//span[contains(text(),'%s')]";
 
     private SelenideElement miPerfilTab = $(By.xpath(".//*[@id='submenu']//li[@class='active']/a")),
             nombreField = $(By.id(nombre)),
             nombreFieldNotification = $(By.xpath(String.format(generalNotificationLocator, nombre))),
             apellidoField = $(By.id(apelido)),
             apellidoFieldNotification = $(By.xpath(String.format(generalNotificationLocator, apelido))),
-            guardarCambiosButton = $(By.id("personal-info-save"));
+            guardarCambiosButton = $(By.id("personal-info-save")),
+            femeninoField = $(By.xpath(String.format(checkboxName, "femenino"))),
+            femeninoCheckbox = $(By.id("female")),
+            masculinoField = $(By.xpath(String.format(checkboxName, "masculino"))),
+            masculinoCheckbox = $(By.id("male"));
 }
