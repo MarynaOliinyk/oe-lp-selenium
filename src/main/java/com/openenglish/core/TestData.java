@@ -264,7 +264,15 @@ public class TestData {
                 PREFERENCES_CONTRASENA_PLACEHOLDER_TEXT = getProperty("preferences.contrasena.placeholder.text"),
                 PREFERENCES_CONFIRMAR_CONTRASENA_PLACEHOLDER_TEXT = getProperty("preferences.confirmarContrasena.placeholder.text"),
                 PREFERENCES_IDIOMA_DE_PREFERENCIA_PLACEHOLDER_TEXT = getProperty("preferences.idiomaDePreferencia.placeholder.text"),
-                PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT = getProperty("preferences.guardarCambiosButton.text");
+                PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT = getProperty("preferences.guardarCambiosButton.text"),
+                PREFERENCES_DIRECTION_ONE_PLACEHOLDER_TEXT = getProperty("preferences.direction.one.placeholder.text"),
+                PREFERENCES_DIRECTION_TWO_PLACEHOLDER_TEXT = getProperty("preferences.direction.two.placeholder.text"),
+                PREFERENCES_CODIGO_POSTAL_PLACEHOLDER_TEXT = getProperty("preferences.codigo.postal.placeholder.text"),
+                PREFERENCES_ZONA_HORARIA_PLACEHOLDER_TEXT = getProperty("preferences.zona.horaria.placeholder.text"),
+                PREFERENCES_FECHA_Y_HORA_ACTUAL_PLACEHOLDER_TEXT = getProperty("preferences.fecha.y.hora.actual.placeholder.text"),
+                PREFERENCES_PAIS_PLACEHOLDER_TEXT = getProperty("preferences.pais.placeholder.text"),
+                PREFERENCES_TELEFONO_PRINCIPAL_PLACEHOLDER_TEXT = getProperty("preferences.telefono.principal.placeholder.text"),
+                PREFERENCES_TELEFONO_SECUNDARIO_PLACEHOLDER_TEXT = getProperty("preferences.telefono.secundario.placeholder.text");
     }
 
     public static class TempMail {

@@ -34,14 +34,14 @@ public class C150VerifyNombreFieldTest extends DriverBase {
 
         pp.getNombreField().clear();
         pp.getApellidoField().click();
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getNombreFieldNotification().shouldBe(visible, exactText(PREFERENCES_OBLIGATORIO_TEXT));
         pp.getNombreField().sendKeys(INVALID_PASSWORD);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getNombreFieldNotification().shouldBe(visible, exactText(PREFERENCES_NO_ES_NOMBRE_VALIDO_TEXT));
         pp.getNombreField().clear();
         pp.getNombreField().sendKeys(PREFERENCES_SPECIAL_SYMBOLS);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getNombreFieldNotification().shouldBe(visible, exactText(PREFERENCES_NO_ES_NOMBRE_VALIDO_TEXT));
     }
 
