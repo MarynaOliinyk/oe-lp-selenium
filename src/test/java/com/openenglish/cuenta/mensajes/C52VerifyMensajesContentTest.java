@@ -17,7 +17,11 @@ import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Login.USER_NAME;
-import static com.openenglish.core.TestData.MensajesPage.*;
+import static com.openenglish.core.TestData.MensajesPage.MENSAJES_PAGE_AVISO;
+import static com.openenglish.core.TestData.MensajesPage.MENSAJES_PAGE_ENVIADO_POR;
+import static com.openenglish.core.TestData.MensajesPage.MENSAJES_PAGE_FECHA_HORA;
+import static com.openenglish.core.TestData.MensajesPage.MENSAJES_PAGE_MENSAJES_BUTTON_TEXT;
+import static com.openenglish.core.TestData.MensajesPage.MENSAJES_PAGE_SIN_LEER;
 
 public class C52VerifyMensajesContentTest extends DriverBase {
 
