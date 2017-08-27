@@ -26,6 +26,7 @@ public class PreferencesPage {
             apellidoFieldNotification = $(By.xpath(String.format(generalNotificationLocator, apelido))),
             guardarCambiosButtonOnPersonalSection = $(By.id("personal-info-save")),
             guardarCambiosButtonOnContactoSection = $(By.id("info-button")),
+            guardarCambiosButtonOnInteresesSection = $(By.id("save-pref")),
             photoFrame = $(By.xpath(".//*[@class='photo-frame']")),
             cambiarFotoText = $(By.xpath(".//*[@class='orange-text']")),
             nombrePlaceholder = $(By.xpath(String.format(leftPlaceHolderPersonalSection, "1", "label"))),
@@ -47,5 +48,6 @@ public class PreferencesPage {
             fechaYHoraActualPlaseholder = $(By.xpath(String.format(leftPlaceHolderDeContactoSection, 5))),
             pais = $(By.xpath(".//*[@id='ph']/div[1]/div/label")),
             telefonoPrincipal = $(By.xpath(".//*[@id='primaryPhone']/div/label")),
-            telefonoSecundario = $(By.xpath(".//*[@id='secondaryPhone']/div/label"));
+            telefonoSecundario = $(By.xpath(".//*[@id='secondaryPhone']/div/label")),
+            interestsContainer = $(By.xpath(".//*[@class='button-list']/li/a/span"));
 }

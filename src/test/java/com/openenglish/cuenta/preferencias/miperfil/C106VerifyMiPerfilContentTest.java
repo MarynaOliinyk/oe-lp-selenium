@@ -100,4 +100,11 @@ public class C106VerifyMiPerfilContentTest extends DriverBase {
         preferencesPage.getTelefonoSecundario().should(visible, text(PREFERENCES_TELEFONO_SECUNDARIO_PLACEHOLDER_TEXT));
         preferencesPage.getGuardarCambiosButtonOnContactoSection().should(visible, attribute(VALUE, PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT));
     }
+
+    @Test
+    public void verifyMiPerfilContentTestInterestsSectionS4() {
+        loginWithCorrectCredentialsAndPagePreferenciasIsOpen();
+        preferencesPage.getInterestsContainer().should(visible);
+        preferencesPage.getGuardarCambiosButtonOnInteresesSection().should(visible, attribute(VALUE, PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT));
+    }
 }
