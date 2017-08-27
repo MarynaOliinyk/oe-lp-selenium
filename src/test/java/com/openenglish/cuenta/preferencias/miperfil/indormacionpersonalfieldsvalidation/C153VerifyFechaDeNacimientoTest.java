@@ -6,7 +6,10 @@ import com.openenglish.pages.LoginPage;
 import com.openenglish.pages.PreferencesPage;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Condition.*;
+
+import static com.codeborne.selenide.Condition.attribute;
+import static com.codeborne.selenide.Condition.exactText;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.Attribute.CLASS;
 import static com.openenglish.core.AttributeValue.PreferencesPage.PREFERENCES_PAGE_DATE_PICKER;
