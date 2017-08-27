@@ -25,5 +25,8 @@ public class PreferencesPage {
             femeninoField = $(By.xpath(String.format(checkboxName, "femenino"))),
             femeninoCheckbox = $(By.id("female")),
             masculinoField = $(By.xpath(String.format(checkboxName, "masculino"))),
-            masculinoCheckbox = $(By.id("male"));
+            masculinoCheckbox = $(By.id("male")),
+            fechaDeNacimientoField = $(By.id("dob-picker")),
+            calendar = $(By.id("ui-datepicker-div")),
+            firstAvailableDate = calendar.$(By.xpath("//a[@class='ui-state-default']"));
 }
