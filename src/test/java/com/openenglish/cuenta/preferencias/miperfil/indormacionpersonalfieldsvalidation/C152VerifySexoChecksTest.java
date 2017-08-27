@@ -6,23 +6,20 @@ import com.openenglish.pages.LoginPage;
 import com.openenglish.pages.PreferencesPage;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Condition.checked;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
-import static com.openenglish.core.TestData.Login.INVALID_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_MI_PERFIL_TAB_TEXT;
-import static com.openenglish.core.TestData.Preferences.PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT;
-import static com.openenglish.core.TestData.Preferences.PREFERENCES_OBLIGATORIO_TEXT;
-import static com.openenglish.core.TestData.Preferences.PREFERENCES_SPECIAL_SYMBOLS;
 
 
-public class C151VerifyApellidoFieldTest extends DriverBase {
+public class C152VerifySexoChecksTest extends DriverBase {
 
     @Test
-    public void verifyApellidoFieldTest() {
+    public void verifySexoChecksTest() {
         open(LP_URL);
         LoginPage lp = new LoginPage();
         lp.cookieBannerVisibility();
@@ -33,17 +30,11 @@ public class C151VerifyApellidoFieldTest extends DriverBase {
         PreferencesPage pp = new PreferencesPage();
         pp.getMiPerfilTab().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
 
-        pp.getApellidoField().clear();
-        pp.getNombreField().click();
-        pp.getGuardarCambiosButton().click();
-        pp.getApellidoFieldNotification().shouldBe(visible, exactText(PREFERENCES_OBLIGATORIO_TEXT));
-        pp.getApellidoField().sendKeys(INVALID_PASSWORD);
-        pp.getGuardarCambiosButton().click();
-        pp.getApellidoFieldNotification().shouldBe(visible, exactText(PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT));
-        pp.getApellidoField().clear();
-        pp.getApellidoField().sendKeys(PREFERENCES_SPECIAL_SYMBOLS);
-        pp.getGuardarCambiosButton().click();
-        pp.getApellidoFieldNotification().shouldBe(visible, exactText(PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT));
+        pp.getFemeninoField().shouldBe(visible).click();
+        pp.getFemeninoCheckbox().shouldBe(checked);
+
+        pp.getMasculinoField().shouldBe(visible).click();
+        pp.getMasculinoCheckbox().shouldBe(checked);
     }
 
 }
