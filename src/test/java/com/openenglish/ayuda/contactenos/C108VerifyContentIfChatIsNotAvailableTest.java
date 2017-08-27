@@ -14,10 +14,9 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
-import static com.openenglish.core.TestData.TalkNow.ENVIAR_UNA_PREGUNTA_TEXT;
-import static com.openenglish.core.TestData.TalkNow.LIVEAGENT_OFFLINE_TEXT;
-import static com.openenglish.core.TestData.TalkNow.LIVEAGENT_ONLINE_TEXT;
-import static com.openenglish.core.TestData.TalkNow.LIVEAGENT_PHONE;
+import static com.openenglish.core.TestData.TalkNow.TALK_NOW_ENVIAR_UNA_PREGUNTA_TEXT;
+import static com.openenglish.core.TestData.TalkNow.TALK_NOW_LIVEAGENT_ONLINE_TEXT;
+import static com.openenglish.core.TestData.TalkNow.TALK_NOW_LIVEAGENT_PHONE;
 
 public class C108VerifyContentIfChatIsNotAvailableTest extends DriverBase {
 
@@ -38,10 +37,10 @@ public class C108VerifyContentIfChatIsNotAvailableTest extends DriverBase {
         tNP.getAsesorImg().click();
         tNP.getProfesorImg().click();
         // TODO find out if it possible to automate chat turn off
-//        tNP.getLiveagentOfflineButton().shouldBe(visible, exactText(LIVEAGENT_OFFLINE_TEXT));
-        tNP.getLiveagentOnlineButton().shouldBe(visible, exactText(LIVEAGENT_ONLINE_TEXT));
-        tNP.getLiveagentPhoneNumber().shouldBe(visible, text(LIVEAGENT_PHONE));
-        tNP.getEnviarUnaPreguntaLink().shouldBe(visible, exactText(ENVIAR_UNA_PREGUNTA_TEXT));
+//        tNP.getLiveagentOfflineButton().shouldBe(visible, exactText(TALK_NOW_LIVEAGENT_OFFLINE_TEXT));
+        tNP.getLiveagentOnlineButton().shouldBe(visible, exactText(TALK_NOW_LIVEAGENT_ONLINE_TEXT));
+        tNP.getLiveagentPhoneNumber().shouldBe(visible, text(TALK_NOW_LIVEAGENT_PHONE));
+        tNP.getEnviarUnaPreguntaLink().shouldBe(visible, exactText(TALK_NOW_ENVIAR_UNA_PREGUNTA_TEXT));
     }
 
 }

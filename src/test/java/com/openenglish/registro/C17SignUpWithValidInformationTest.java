@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
-import static com.openenglish.core.TestData.Comenzar.THANKS_TEXT;
+import static com.openenglish.core.TestData.Comenzar.COMENZAR_THANKS_TEXT;
 import static com.openenglish.core.TestData.General.OE_URL;
 import static com.openenglish.core.TestData.Register.AGE;
 import static com.openenglish.core.TestData.Register.COUNTRY;
@@ -39,7 +39,7 @@ public class C17SignUpWithValidInformationTest extends DriverBase {
         regForm.getPopUpCloseButton().should(exist).click();
         regForm.fillAndSubmitRegistration(FIRST_NAME, LAST_NAME, mail, COUNTRY, MOBILE_SECTION_ONE, MOBILE_SECTION_TWO, MOBILE_SECTION_THREE, AGE);
         ComenzarPage comenzarPage = new ComenzarPage();
-        comenzarPage.getThanksText().should(text(THANKS_TEXT));
+        comenzarPage.getThanksText().should(text(COMENZAR_THANKS_TEXT));
         switchTo().window(TEMP_MAIL_TITLE);
         tempMail.getReceivedMail().waitUntil(exist, TEMP_MAIL_WAIT).should(text(TEMP_MAIL_MESSAGE_TITLE));
     }

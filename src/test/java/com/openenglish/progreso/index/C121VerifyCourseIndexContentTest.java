@@ -15,7 +15,6 @@ import static com.openenglish.core.TestData.CourseIndex.COURSE_INDEX_FILTER_TEXT
 import static com.openenglish.core.TestData.CourseIndex.COURSE_INDEX_HEADER_TEXT;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
-import static com.openenglish.core.TestData.Inicio.USER_NICK_NAME;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Login.USER_NAME;
