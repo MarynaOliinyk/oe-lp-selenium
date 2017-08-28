@@ -13,7 +13,8 @@ public class PreferencesPage {
 
     private String generalNotificationLocator = ".//*[@id='%s']/following-sibling::span",
             nombre = "firstName",
-            apelido = "lastName";
+            apelido = "lastName",
+            checkboxName = ".//div[@id='gender']//span[contains(text(),'%s')]";
 
     private SelenideElement miPerfilTabActive = $(By.xpath(".//*[@class='active']/a")),
             prefilDeAprendizajeTab = $(By.xpath(".//*[@id='submenu']/nav/ul/li[1]/a")),
@@ -26,4 +27,12 @@ public class PreferencesPage {
             cambiarFotoText = $(By.xpath(".//*[@class='orange-text']")),
             nombrePlaceholder = $(By.xpath(".//*[@for='firstName']")),
             userNameAndHolaText = $(By.xpath(".//*[@class='student-greeting']/h3"));
+            guardarCambiosButton = $(By.id("personal-info-save")),
+            femeninoField = $(By.xpath(String.format(checkboxName, "femenino"))),
+            femeninoCheckbox = $(By.id("female")),
+            masculinoField = $(By.xpath(String.format(checkboxName, "masculino"))),
+            masculinoCheckbox = $(By.id("male")),
+            fechaDeNacimientoField = $(By.id("dob-picker")),
+            calendar = $(By.id("ui-datepicker-div")),
+            firstAvailableDate = calendar.$(By.xpath("//a[@class='ui-state-default']"));
 }
