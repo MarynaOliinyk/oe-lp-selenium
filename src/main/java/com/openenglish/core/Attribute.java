@@ -7,6 +7,7 @@ public class Attribute {
             STYLE = "style",
             PLACEHOLDER = "placeholder",
             SRC = "src",
-            TYPE = "type";
+            TYPE = "type",
+            VALUE = "value";
 }
 

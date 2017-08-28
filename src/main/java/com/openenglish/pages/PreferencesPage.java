@@ -15,6 +15,7 @@ public class PreferencesPage {
             nombre = "firstName",
             apelido = "lastName",
             email = "email",
+            confirmEmail = "confirmEmail",
             contrasena = "newPassword",
             checkboxName = ".//div[@id='gender']//span[contains(text(),'%s')]";
 
@@ -25,6 +26,8 @@ public class PreferencesPage {
             apellidoFieldNotification = $(By.xpath(String.format(generalNotificationLocator, apelido))),
             emailField = $(By.id(email)),
             emailFieldNotification = $(By.xpath(String.format(generalNotificationLocator, email))),
+            confirmEmailField = $(By.id(confirmEmail)),
+            confirmEmailFieldNotification = $(By.xpath(String.format(generalNotificationLocator, confirmEmail))),
             contrasenaField = $(By.id(contrasena)),
             contrasenaFieldNotification = $(By.xpath(String.format(generalNotificationLocator, contrasena))),
             guardarCambiosButton = $(By.id("personal-info-save")),
