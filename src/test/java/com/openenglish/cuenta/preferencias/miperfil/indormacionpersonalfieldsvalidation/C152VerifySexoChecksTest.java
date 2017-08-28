@@ -17,6 +17,7 @@ import static com.openenglish.core.TestData.Preferences.PREFERENCES_MI_PERFIL_TA
 
 
 public class C152VerifySexoChecksTest extends DriverBase {
+    private PreferencesPage pp = new PreferencesPage();
 
     @Test
     public void verifySexoChecksTest() {
@@ -27,7 +28,6 @@ public class C152VerifySexoChecksTest extends DriverBase {
         InicioPage ip = new InicioPage();
         ip.getAccountMenu().hover();
         ip.getPreferenciasCuentaSuboptionButton().shouldBe(visible).click();
-        PreferencesPage pp = new PreferencesPage();
         pp.getMiPerfilTabActive().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
 
         pp.getFemeninoField().shouldBe(visible).click();

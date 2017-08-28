@@ -1,4 +1,4 @@
-package com.openenglish.ayuda.verifiqueSuConfiguracion;
+package com.openenglish.ayuda.verifiquesuconfiguracion;
 
 import com.openenglish.core.DriverBase;
 import com.openenglish.pages.AbstractPage;
