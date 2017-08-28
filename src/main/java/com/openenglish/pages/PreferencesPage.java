@@ -15,6 +15,7 @@ public class PreferencesPage {
             nombre = "firstName",
             apelido = "lastName",
             email = "email",
+            contrasena = "newPassword",
             checkboxName = ".//div[@id='gender']//span[contains(text(),'%s')]";
 
     private SelenideElement miPerfilTab = $(By.xpath(".//*[@id='submenu']//li[@class='active']/a")),
@@ -24,6 +25,8 @@ public class PreferencesPage {
             apellidoFieldNotification = $(By.xpath(String.format(generalNotificationLocator, apelido))),
             emailField = $(By.id(email)),
             emailFieldNotification = $(By.xpath(String.format(generalNotificationLocator, email))),
+            contrasenaField = $(By.id(contrasena)),
+            contrasenaFieldNotification = $(By.xpath(String.format(generalNotificationLocator, contrasena))),
             guardarCambiosButton = $(By.id("personal-info-save")),
             femeninoField = $(By.xpath(String.format(checkboxName, "femenino"))),
             femeninoCheckbox = $(By.id("female")),
