@@ -250,7 +250,10 @@ public class TestData {
                 PREFERENCES_OBLIGATORIO_TEXT = getProperty("preferences.miperfil.obligatorio.notification.text"),
                 PREFERENCES_NO_ES_NOMBRE_VALIDO_TEXT = getProperty("preferences.miperfil.no.es.nombre.valido.notification.text"),
                 PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT = getProperty("preferences.miperfil.no.es.apellido.valido.notification.text"),
-                PREFERENCES_SPECIAL_SYMBOLS = getProperty("preferences.miperfil.special.symbols.test");
+                PREFERENCES_SPECIAL_SYMBOLS = getProperty("preferences.miperfil.special.symbols.test"),
+                PREFERENCES_EMAIL_WITHOUT_AT = getProperty("preferences.miperfil.email.without.at"),
+                PREFERENCES_EMAIL_WITHOUT_COM = getProperty("preferences.miperfil.email.without.com"),
+                PREFERENCES_WRONG_EMAIL_NOTIFICATION_TEXT = getProperty("preferences.miperfil.wrong.email.notification.text");
     }
 
     public static class TempMail {
