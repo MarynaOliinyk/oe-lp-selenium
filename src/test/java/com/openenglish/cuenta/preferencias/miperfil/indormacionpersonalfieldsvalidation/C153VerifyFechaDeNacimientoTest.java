@@ -6,7 +6,6 @@ import com.openenglish.pages.LoginPage;
 import com.openenglish.pages.PreferencesPage;
 import org.testng.annotations.Test;
 
-
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.visible;
@@ -31,12 +30,11 @@ public class C153VerifyFechaDeNacimientoTest extends DriverBase {
         ip.getAccountMenu().hover();
         ip.getPreferenciasCuentaSuboptionButton().shouldBe(visible).click();
         PreferencesPage pp = new PreferencesPage();
-        pp.getMiPerfilTab().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
+        pp.getMiPerfilTabActive().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
 
-        pp.getFechaDeNacimientoField().shouldBe(visible, attribute(CLASS,  PREFERENCES_PAGE_DATE_PICKER)).click();
+        pp.getFechaDeNacimientoField().shouldBe(visible, attribute(CLASS, PREFERENCES_PAGE_DATE_PICKER)).click();
         pp.getCalendar().shouldBe(visible);
         pp.getFirstAvailableDate().shouldBe(visible).click();
         pp.getFechaDeNacimientoField().shouldBe(visible, attribute(CLASS, PREFERENCES_PAGE_DATE_PICKER_VALID));
     }
-
 }

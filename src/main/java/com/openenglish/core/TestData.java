@@ -249,8 +249,11 @@ public class TestData {
                 PREFERENCES_URL_END_WITH_TEXT = getProperty("preferences.page.url.endwith"),
                 PREFERENCES_OBLIGATORIO_TEXT = getProperty("preferences.miperfil.obligatorio.notification.text"),
                 PREFERENCES_NO_ES_NOMBRE_VALIDO_TEXT = getProperty("preferences.miperfil.no.es.nombre.valido.notification.text"),
+                PREFERENCES_SPECIAL_SYMBOLS = getProperty("preferences.miperfil.special.symbols.test"),
+                PREFERENCES_USER_NICK_NAME_AND_HOLA = getProperty("preferences.usernick.name.and.hola"),
                 PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT = getProperty("preferences.miperfil.no.es.apellido.valido.notification.text"),
-                PREFERENCES_SPECIAL_SYMBOLS = getProperty("preferences.miperfil.special.symbols.test");
+                PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK = getProperty("preferences.perfil.de.aprendizaje.link"),
+                PREFERENCES_MI_PERFIL_LINK = ("preferences.mi.perfil.link");
     }
 
     public static class TempMail {
@@ -261,7 +264,7 @@ public class TestData {
     }
 
     public static class Comenzar {
-        public static final String THANKS_TEXT = getProperty("comenzar.thanks.text");
+        public static final String COMENZAR_THANKS_TEXT = getProperty("comenzar.thanks.text");
     }
 
     public static class CourseIndex {
@@ -269,12 +272,11 @@ public class TestData {
                 COURSE_INDEX_FILTER_TEXT = getProperty("courseindex.filter.text");
     }
 
-    public static class MensajesPage {
-        public static final String MENSAJES_PAGE_SIN_LEER = getProperty("mensajes.sin.leer.text"),
-                MENSAJES_PAGE_FECHA_HORA = getProperty("mensajes.fecha.hora.text"),
-                MENSAJES_PAGE_ENVIADO_POR = getProperty("mensajes.enviado.por.text"),
-                MENSAJES_PAGE_AVISO = getProperty("mensajes.aviso.text"),
-                MENSAJES_PAGE_MENSAJES_BUTTON_TEXT = getProperty("mensajes.mensajes.text");
+    public static class Mensajes {
+        public static final String MENSAJES_SIN_LEER = getProperty("mensajes.sin.leer.text"),
+                MENSAJES_FECHA_HORA = getProperty("mensajes.fecha.hora.text"),
+                MENSAJES_ENVIADO_POR = getProperty("mensajes.enviado.por.text"),
+                MENSAJES_AVISO = getProperty("mensajes.aviso.text"),
+                MENSAJES_MENSAJES_BUTTON_TEXT = getProperty("mensajes.mensajes.text");
     }
-
 }
