@@ -14,14 +14,16 @@ import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.INVALID_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_MI_PERFIL_TAB_TEXT;
-import static com.openenglish.core.TestData.Preferences.PREFERENCES_NO_ES_NOMBRE_VALIDO_TEXT;
+import static com.openenglish.core.TestData.Preferences.PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_OBLIGATORIO_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_SPECIAL_SYMBOLS;
 
-public class C150VerifyNombreFieldTest extends DriverBase {
+
+public class C151VerifyApellidoFieldTest extends DriverBase {
+    private PreferencesPage pp = new PreferencesPage();
 
     @Test
-    public void verifyNombreFieldTest() {
+    public void verifyApellidoFieldTest() {
         open(LP_URL);
         LoginPage lp = new LoginPage();
         lp.cookieBannerVisibility();
@@ -29,20 +31,19 @@ public class C150VerifyNombreFieldTest extends DriverBase {
         InicioPage ip = new InicioPage();
         ip.getAccountMenu().hover();
         ip.getPreferenciasCuentaSuboptionButton().shouldBe(visible).click();
-        PreferencesPage pp = new PreferencesPage();
         pp.getMiPerfilTabActive().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
 
-        pp.getNombreField().clear();
-        pp.getApellidoField().click();
+        pp.getApellidoField().clear();
+        pp.getNombreField().click();
         pp.getGuardarCambiosButton().click();
-        pp.getNombreFieldNotification().shouldBe(visible, exactText(PREFERENCES_OBLIGATORIO_TEXT));
-        pp.getNombreField().sendKeys(INVALID_PASSWORD);
+        pp.getApellidoFieldNotification().shouldBe(visible, exactText(PREFERENCES_OBLIGATORIO_TEXT));
+        pp.getApellidoField().sendKeys(INVALID_PASSWORD);
         pp.getGuardarCambiosButton().click();
-        pp.getNombreFieldNotification().shouldBe(visible, exactText(PREFERENCES_NO_ES_NOMBRE_VALIDO_TEXT));
-        pp.getNombreField().clear();
-        pp.getNombreField().sendKeys(PREFERENCES_SPECIAL_SYMBOLS);
+        pp.getApellidoFieldNotification().shouldBe(visible, exactText(PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT));
+        pp.getApellidoField().clear();
+        pp.getApellidoField().sendKeys(PREFERENCES_SPECIAL_SYMBOLS);
         pp.getGuardarCambiosButton().click();
-        pp.getNombreFieldNotification().shouldBe(visible, exactText(PREFERENCES_NO_ES_NOMBRE_VALIDO_TEXT));
+        pp.getApellidoFieldNotification().shouldBe(visible, exactText(PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT));
     }
 
 }

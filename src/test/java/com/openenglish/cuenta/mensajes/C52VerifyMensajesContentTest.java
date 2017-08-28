@@ -14,16 +14,17 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
-import static com.openenglish.core.TestData.Inicio.MENSAJES_BUTTON_TEXT;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Login.USER_NAME;
 import static com.openenglish.core.TestData.Mensajes.MENSAJES_AVISO;
 import static com.openenglish.core.TestData.Mensajes.MENSAJES_ENVIADO_POR;
 import static com.openenglish.core.TestData.Mensajes.MENSAJES_FECHA_HORA;
+import static com.openenglish.core.TestData.Mensajes.MENSAJES_MENSAJES_BUTTON_TEXT;
 import static com.openenglish.core.TestData.Mensajes.MENSAJES_SIN_LEER;
 
 public class C52VerifyMensajesContentTest extends DriverBase {
+    private MensajesPage mp = new MensajesPage();
 
     @Test
     public void verifyMensajesContentTest() {
@@ -37,8 +38,7 @@ public class C52VerifyMensajesContentTest extends DriverBase {
         ip.getAccountMenu().hover();
         ip.getMensajesCuentaSuboptionButton().click();
 
-        MensajesPage mp = new MensajesPage();
-        mp.getPageTitle().shouldBe(visible, exactText(MENSAJES_BUTTON_TEXT));
+        mp.getPageTitle().shouldBe(visible, exactText(MENSAJES_MENSAJES_BUTTON_TEXT));
         mp.getSinLeer().shouldBe(visible, text(MENSAJES_SIN_LEER));
         mp.getAvisos().shouldBe(visible);
         mp.getFechaHoraColumnTitle().shouldBe(visible, exactText(MENSAJES_FECHA_HORA));
@@ -52,5 +52,4 @@ public class C52VerifyMensajesContentTest extends DriverBase {
         mp.getTableFirstRowDeleteIcon().should(exist).hover().shouldBe(visible);
         mp.getTotalPagesAmount().shouldBe(visible, not(empty));
     }
-
 }

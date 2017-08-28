@@ -14,4 +14,9 @@ public class AttributeValue {
                 ORANGE_BTN_DISABLED = ORANGE_BTN + " disabled",
                 ORANGE_BTN_CLOSE = ORANGE_BTN + " close-btn";
     }
+
+    public static class PreferencesPage {
+        public static final String PREFERENCES_PAGE_DATE_PICKER = "date-picker hasDatepicker",
+                PREFERENCES_PAGE_DATE_PICKER_VALID = "date-picker hasDatepicker field-valid";
+    }
 }
