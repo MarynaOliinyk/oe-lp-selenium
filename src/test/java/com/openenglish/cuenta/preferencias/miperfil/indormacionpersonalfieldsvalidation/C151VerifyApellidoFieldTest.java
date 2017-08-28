@@ -31,7 +31,7 @@ public class C151VerifyApellidoFieldTest extends DriverBase {
         ip.getAccountMenu().hover();
         ip.getPreferenciasCuentaSuboptionButton().shouldBe(visible).click();
         PreferencesPage pp = new PreferencesPage();
-        pp.getMiPerfilTab().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
+        pp.getMiPerfilTabActive().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
 
         pp.getApellidoField().clear();
         pp.getNombreField().click();
@@ -45,5 +45,4 @@ public class C151VerifyApellidoFieldTest extends DriverBase {
         pp.getGuardarCambiosButton().click();
         pp.getApellidoFieldNotification().shouldBe(visible, exactText(PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT));
     }
-
 }
