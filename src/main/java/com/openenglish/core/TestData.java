@@ -280,5 +280,4 @@ public class TestData {
                 MENSAJES_AVISO = getProperty("mensajes.aviso.text"),
                 MENSAJES_MENSAJES_BUTTON_TEXT = getProperty("mensajes.mensajes.text");
     }
-
 }
