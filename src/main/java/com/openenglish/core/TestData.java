@@ -276,12 +276,7 @@ public class TestData {
         public static final String MENSAJES_SIN_LEER = getProperty("mensajes.sin.leer.text"),
                 MENSAJES_FECHA_HORA = getProperty("mensajes.fecha.hora.text"),
                 MENSAJES_ENVIADO_POR = getProperty("mensajes.enviado.por.text"),
-                MENSAJES_AVISO = getProperty("mensajes.aviso.text");
-    public static class MensajesPage {
-        public static final String MENSAJES_PAGE_SIN_LEER = getProperty("mensajes.sin.leer.text"),
-                MENSAJES_PAGE_FECHA_HORA = getProperty("mensajes.fecha.hora.text"),
-                MENSAJES_PAGE_ENVIADO_POR = getProperty("mensajes.enviado.por.text"),
-                MENSAJES_PAGE_AVISO = getProperty("mensajes.aviso.text"),
-                MENSAJES_PAGE_MENSAJES_BUTTON_TEXT = getProperty("mensajes.mensajes.text");
+                MENSAJES_AVISO = getProperty("mensajes.aviso.text"),
+                MENSAJES_MENSAJES_BUTTON_TEXT = getProperty("mensajes.mensajes.text");
     }
 }
