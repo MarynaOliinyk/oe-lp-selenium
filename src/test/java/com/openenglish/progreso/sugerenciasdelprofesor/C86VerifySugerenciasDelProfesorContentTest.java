@@ -10,6 +10,8 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
+import static com.openenglish.core.Attribute.TYPE;
+import static com.openenglish.core.AttributeValue.LoginPage.PASSWORD;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
@@ -32,7 +34,7 @@ public class C86VerifySugerenciasDelProfesorContentTest extends DriverBase {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
-                .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute(TYPE, PASSWORD));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
         page.inicioPage.getUserName().shouldHave(text(USER_NAME));

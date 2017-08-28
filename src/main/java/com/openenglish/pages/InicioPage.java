@@ -20,7 +20,7 @@ public class InicioPage {
             mensajesCuentaSuboptionButton = $(By.id("messages")),
             preferenciasCuentaSuboptionButton = $(By.xpath(".//*[@class='dropdown-menu dropdown-menu-center']//a[text()='Preferencias']")),
             inicioLink = $(By.xpath(".//ul[@class='navbar-nav']//a[@class='nav-link']")),
-            cuentaSuboptions = $(By.xpath(".//div[@class='support-links collapse']//li[2]//div[@class='dropdown-menu dropdown-menu-center']")),
+            cuentaSuboptions = $(By.xpath(".//*[@id='account-menu-nav']")),
             headingElement = $(By.id("student-info")),
             planDeEstudioElement = $(By.xpath(".//*[@id='student-info']//div[@class='grid_6']//div")),
             planDeEstudioText = $(By.xpath(".//*[@id='index-holder']/lp2-title-bar/div/div/h1")),

@@ -30,7 +30,7 @@ public class C154VerifyEmailFieldTest extends DriverBase {
         ip.getAccountMenu().hover();
         ip.getPreferenciasCuentaSuboptionButton().shouldBe(visible).click();
         PreferencesPage pp = new PreferencesPage();
-        pp.getMiPerfilTab().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
+        pp.getMiPerfilTabActive().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
 
         pp.getEmailField().clear();
         pp.getApellidoField().click();
