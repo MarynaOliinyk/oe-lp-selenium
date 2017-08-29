@@ -250,14 +250,19 @@ public class TestData {
                 PREFERENCES_URL_END_WITH_TEXT = getProperty("preferences.page.url.endwith"),
                 PREFERENCES_OBLIGATORIO_TEXT = getProperty("preferences.miperfil.obligatorio.notification.text"),
                 PREFERENCES_NO_ES_NOMBRE_VALIDO_TEXT = getProperty("preferences.miperfil.no.es.nombre.valido.notification.text"),
+                PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT = getProperty("preferences.miperfil.no.es.apellido.valido.notification.text"),
                 PREFERENCES_SPECIAL_SYMBOLS = getProperty("preferences.miperfil.special.symbols.test"),
                 PREFERENCES_USER_NICK_NAME_AND_HOLA = getProperty("preferences.usernick.name.and.hola"),
-                PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT = getProperty("preferences.miperfil.no.es.apellido.valido.notification.text"),
                 PREFERENCES_EMAIL_WITHOUT_AT = getProperty("preferences.miperfil.email.without.at"),
                 PREFERENCES_EMAIL_WITHOUT_COM = getProperty("preferences.miperfil.email.without.com"),
                 PREFERENCES_WRONG_EMAIL_NOTIFICATION_TEXT = getProperty("preferences.miperfil.wrong.email.notification.text"),
                 PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK = getProperty("preferences.perfil.de.aprendizaje.link"),
-                PREFERENCES_MI_PERFIL_LINK = ("preferences.mi.perfil.link");
+                PREFERENCES_MI_PERFIL_LINK = ("preferences.mi.perfil.link"),
+                PREFERENCES_NEWPASSWORD_WITHOUT_NUMBERS = getProperty("preferences.miperfil.newpassword.no.numbers.pass"),
+                PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS = getProperty("preferences.miperfil.newpassword.less.then.six.chars.pass"),
+                PREFERENCES_NEWPASSWORD_WITHOUT_NUMBERS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.no.numbers.notification.text"),
+                PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.less.then.six.chars.notification.text"),
+                PREFERENCES_NEWPASSWORD_SPECIAL_SYMBOLS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.special.symbols.notification.text");
     }
 
     public static class TempMail {
