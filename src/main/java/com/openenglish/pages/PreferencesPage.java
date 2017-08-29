@@ -17,6 +17,7 @@ public class PreferencesPage {
             email = "email",
             confirmEmail = "confirmEmail",
             contrasena = "newPassword",
+            confirmaContrasena = "newPasswordCheck",
             checkboxName = ".//div[@id='gender']//span[contains(text(),'%s')]";
 
     private SelenideElement miPerfilTabActive = $(By.xpath(".//*[@class='active']/a")),
@@ -31,6 +32,8 @@ public class PreferencesPage {
             confirmEmailFieldNotification = $(By.xpath(String.format(generalNotificationLocator, confirmEmail))),
             contrasenaField = $(By.id(contrasena)),
             contrasenaFieldNotification = $(By.xpath(String.format(generalNotificationLocator, contrasena))),
+            confirmaContrasenaField = $(By.id(confirmaContrasena)),
+            confirmaContrasenaFieldNotification = $(By.xpath(String.format(generalNotificationLocator, confirmaContrasena))),
             guardarCambiosButton = $(By.id("personal-info-save")),
             photoFrame = $(By.xpath(".//*[@class='photo-frame']")),
             cambiarFotoText = $(By.xpath(".//*[@class='orange-text']")),

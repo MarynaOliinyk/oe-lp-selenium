@@ -264,7 +264,12 @@ public class TestData {
                 PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.less.then.six.chars.notification.text"),
                 PREFERENCES_NEWPASSWORD_SPECIAL_SYMBOLS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.special.symbols.notification.text"),
                 PREFERENCES_NEW_EMAIL_VALID = getProperty("preferences.miperfil.new.email.valid"),
-                PREFERENCES_NEW_EMAIL_NOT_CORESPONDENT_NOTIFICATION = getProperty("preferences.miperfil.new.email.not.corresponden.notification.text");
+                PREFERENCES_NEW_EMAIL_NOT_CORESPONDENT_NOTIFICATION = getProperty("preferences.miperfil.new.email.not.corresponden.notification.text"),
+                PREFERENCES_NEW_PASSWORD_VALID = getProperty("preferences.miperfil.newpassword.correct.password"),
+                PREFERENCES_CONFIRM_NEW_PASSWORD_NOTIFICATION = getProperty("preferences.miperfil.newpassword.confirm.newpassword.notification.text"),
+                PREFERENCES_PASSWORD_TEXT = getProperty("preferences.miperfil.newpassword.type.attribute.text"),
+                PREFERENCES_SECOND_NEW_PASSWORD_VALID = getProperty("preferences.miperfil.newpassword.correct.password.second"),
+                PREFERENCES_PASSWORDS_NOT_EQUALS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.and.old.passwords.different.notification.text");
     }
 
     public static class TempMail {
