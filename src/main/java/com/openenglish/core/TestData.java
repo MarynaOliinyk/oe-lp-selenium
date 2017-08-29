@@ -253,7 +253,9 @@ public class TestData {
                 PREFERENCES_USER_NICK_NAME_AND_HOLA = getProperty("preferences.usernick.name.and.hola"),
                 PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT = getProperty("preferences.miperfil.no.es.apellido.valido.notification.text"),
                 PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK = getProperty("preferences.perfil.de.aprendizaje.link"),
-                PREFERENCES_MI_PERFIL_LINK = ("preferences.mi.perfil.link");
+                PREFERENCES_MI_PERFIL_LINK = getProperty("preferences.mi.perfil.link"),
+                PREFERENCES_OBLIGATORIO_FIELD_ERROR_TEXT = getProperty("preferences.obligatorio.error.text"),
+                PREFERENCES_SPECIAL_CHARACTERS_ERROR_TEXT = getProperty("preferences.special.characters.error.text");
     }
 
     public static class TempMail {
