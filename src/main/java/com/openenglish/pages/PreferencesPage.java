@@ -14,6 +14,9 @@ public class PreferencesPage {
     private String generalNotificationLocator = ".//*[@id='%s']/following-sibling::span",
             nombre = "firstName",
             apelido = "lastName",
+            email = "email",
+            confirmEmail = "confirmEmail",
+            contrasena = "newPassword",
             checkboxName = ".//div[@id='gender']//span[contains(text(),'%s')]";
 
     private SelenideElement miPerfilTabActive = $(By.xpath(".//*[@class='active']/a")),
@@ -27,6 +30,12 @@ public class PreferencesPage {
             apellidoFieldNotification = $(By.xpath(String.format(generalNotificationLocator, apelido))),
             guardarCambiosButtonOnPersonalSection = $(By.id("personal-info-save")),
             guardarCambiosButtonOnContactoSection = $(By.id("info-button")),
+            emailField = $(By.id(email)),
+            emailFieldNotification = $(By.xpath(String.format(generalNotificationLocator, email))),
+            confirmEmailField = $(By.id(confirmEmail)),
+            confirmEmailFieldNotification = $(By.xpath(String.format(generalNotificationLocator, confirmEmail))),
+            contrasenaField = $(By.id(contrasena)),
+            contrasenaFieldNotification = $(By.xpath(String.format(generalNotificationLocator, contrasena))),
             photoFrame = $(By.xpath(".//*[@class='photo-frame']")),
             cambiarFotoText = $(By.xpath(".//*[@class='orange-text']")),
             nombrePlaceholder = $(By.xpath(".//*[@for='firstName']")),

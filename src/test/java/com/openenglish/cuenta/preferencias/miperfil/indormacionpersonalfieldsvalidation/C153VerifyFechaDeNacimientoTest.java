@@ -19,6 +19,7 @@ import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_MI_PERFIL_TAB_TEXT;
 
 public class C153VerifyFechaDeNacimientoTest extends DriverBase {
+    private PreferencesPage pp = new PreferencesPage();
 
     @Test
     public void verifyFechaDeNacimientoTest() {
@@ -29,7 +30,7 @@ public class C153VerifyFechaDeNacimientoTest extends DriverBase {
         InicioPage ip = new InicioPage();
         ip.getAccountMenu().hover();
         ip.getPreferenciasCuentaSuboptionButton().shouldBe(visible).click();
-        PreferencesPage pp = new PreferencesPage();
+
         pp.getMiPerfilTabActive().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
 
         pp.getFechaDeNacimientoField().shouldBe(visible, attribute(CLASS, PREFERENCES_PAGE_DATE_PICKER)).click();

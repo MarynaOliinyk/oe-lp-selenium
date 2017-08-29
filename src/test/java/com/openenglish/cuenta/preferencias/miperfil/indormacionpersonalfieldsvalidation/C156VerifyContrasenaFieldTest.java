@@ -11,19 +11,19 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
-import static com.openenglish.core.TestData.Login.INVALID_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_MI_PERFIL_TAB_TEXT;
-import static com.openenglish.core.TestData.Preferences.PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT;
-import static com.openenglish.core.TestData.Preferences.PREFERENCES_OBLIGATORIO_TEXT;
+import static com.openenglish.core.TestData.Preferences.PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS;
+import static com.openenglish.core.TestData.Preferences.PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS_NOTIFICATION;
+import static com.openenglish.core.TestData.Preferences.PREFERENCES_NEWPASSWORD_SPECIAL_SYMBOLS_NOTIFICATION;
+import static com.openenglish.core.TestData.Preferences.PREFERENCES_NEWPASSWORD_WITHOUT_NUMBERS;
+import static com.openenglish.core.TestData.Preferences.PREFERENCES_NEWPASSWORD_WITHOUT_NUMBERS_NOTIFICATION;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_SPECIAL_SYMBOLS;
 
-
-public class C151VerifyApellidoFieldTest extends DriverBase {
-    private PreferencesPage pp = new PreferencesPage();
+public class C156VerifyContrasenaFieldTest extends DriverBase {
 
     @Test
-    public void verifyApellidoFieldTest() {
+    public void verifyContrasenaFieldTest() {
         open(LP_URL);
         LoginPage lp = new LoginPage();
         lp.cookieBannerVisibility();
@@ -31,18 +31,20 @@ public class C151VerifyApellidoFieldTest extends DriverBase {
         InicioPage ip = new InicioPage();
         ip.getAccountMenu().hover();
         ip.getPreferenciasCuentaSuboptionButton().shouldBe(visible).click();
+        PreferencesPage pp = new PreferencesPage();
         pp.getMiPerfilTabActive().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
 
-        pp.getApellidoField().clear();
-        pp.getNombreField().click();
+        pp.getContrasenaField().clear();
+        pp.getContrasenaField().sendKeys(PREFERENCES_NEWPASSWORD_WITHOUT_NUMBERS);
         pp.getGuardarCambiosButtonOnPersonalSection().click();
-        pp.getApellidoFieldNotification().shouldBe(visible, exactText(PREFERENCES_OBLIGATORIO_TEXT));
-        pp.getApellidoField().sendKeys(INVALID_PASSWORD);
+        pp.getContrasenaFieldNotification().shouldBe(visible, exactText(PREFERENCES_NEWPASSWORD_WITHOUT_NUMBERS_NOTIFICATION));
+        pp.getContrasenaField().sendKeys(PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS);
         pp.getGuardarCambiosButtonOnPersonalSection().click();
-        pp.getApellidoFieldNotification().shouldBe(visible, exactText(PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT));
-        pp.getApellidoField().clear();
-        pp.getApellidoField().sendKeys(PREFERENCES_SPECIAL_SYMBOLS);
+        pp.getContrasenaFieldNotification().shouldBe(visible, exactText(PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS_NOTIFICATION));
+        pp.getContrasenaField().clear();
+        pp.getContrasenaField().sendKeys(PREFERENCES_SPECIAL_SYMBOLS);
         pp.getGuardarCambiosButtonOnPersonalSection().click();
-        pp.getApellidoFieldNotification().shouldBe(visible, exactText(PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT));
+        pp.getContrasenaFieldNotification().shouldBe(visible, exactText(PREFERENCES_NEWPASSWORD_SPECIAL_SYMBOLS_NOTIFICATION));
     }
+
 }

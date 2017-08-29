@@ -24,6 +24,7 @@ import static com.openenglish.core.TestData.Mensajes.MENSAJES_MENSAJES_BUTTON_TE
 import static com.openenglish.core.TestData.Mensajes.MENSAJES_SIN_LEER;
 
 public class C52VerifyMensajesContentTest extends DriverBase {
+    private MensajesPage mp = new MensajesPage();
 
     @Test
     public void verifyMensajesContentTest() {
@@ -37,7 +38,6 @@ public class C52VerifyMensajesContentTest extends DriverBase {
         ip.getAccountMenu().hover();
         ip.getMensajesCuentaSuboptionButton().click();
 
-        MensajesPage mp = new MensajesPage();
         mp.getPageTitle().shouldBe(visible, exactText(MENSAJES_MENSAJES_BUTTON_TEXT));
         mp.getSinLeer().shouldBe(visible, text(MENSAJES_SIN_LEER));
         mp.getAvisos().shouldBe(visible);
@@ -52,5 +52,4 @@ public class C52VerifyMensajesContentTest extends DriverBase {
         mp.getTableFirstRowDeleteIcon().should(exist).hover().shouldBe(visible);
         mp.getTotalPagesAmount().shouldBe(visible, not(empty));
     }
-
 }
