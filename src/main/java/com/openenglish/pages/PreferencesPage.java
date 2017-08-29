@@ -18,7 +18,7 @@ public class PreferencesPage {
             rightPlaceHolder = ".//*[@class='grid_5 suffix_1 holder right']/div/div[%s]/%s";
 
     private SelenideElement miPerfilTabActive = $(By.xpath(".//*[@class='active']/a")),
-            prefilDeAprendizajeTab = $(By.xpath(".//*[@id='submenu']/nav/ul/li[1]/a")),
+            prefilDeAprendizajeTab = $(By.xpath(".//*[@id='submenu']//li[2]/a")),
             nombreField = $(By.id(nombre)),
             nombreFieldNotification = $(By.xpath(String.format(generalNotificationLocator, nombre))),
             apellidoField = $(By.id(apelido)),
