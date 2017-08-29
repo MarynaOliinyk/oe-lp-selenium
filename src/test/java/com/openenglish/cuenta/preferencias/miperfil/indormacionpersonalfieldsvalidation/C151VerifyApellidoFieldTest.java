@@ -20,6 +20,7 @@ import static com.openenglish.core.TestData.Preferences.PREFERENCES_SPECIAL_SYMB
 
 
 public class C151VerifyApellidoFieldTest extends DriverBase {
+    private PreferencesPage pp = new PreferencesPage();
 
     @Test
     public void verifyApellidoFieldTest() {
@@ -30,7 +31,6 @@ public class C151VerifyApellidoFieldTest extends DriverBase {
         InicioPage ip = new InicioPage();
         ip.getAccountMenu().hover();
         ip.getPreferenciasCuentaSuboptionButton().shouldBe(visible).click();
-        PreferencesPage pp = new PreferencesPage();
         pp.getMiPerfilTabActive().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
 
         pp.getApellidoField().clear();
