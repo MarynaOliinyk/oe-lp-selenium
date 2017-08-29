@@ -1,11 +1,13 @@
 package com.openenglish.pages;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
 import lombok.experimental.Accessors;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 @Getter
 @Accessors(chain = true)
@@ -18,7 +20,8 @@ public class PreferencesPage {
             confirmEmail = "confirmEmail",
             contrasena = "newPassword",
             confirmaContrasena = "newPasswordCheck",
-            checkboxName = ".//div[@id='gender']//span[contains(text(),'%s')]";
+            checkboxName = ".//div[@id='gender']//span[contains(text(),'%s')]",
+            idiomaDePreferencia = ".//*[@id='pref-langSelectBoxItContainer']";
 
     private SelenideElement miPerfilTabActive = $(By.xpath(".//*[@class='active']/a")),
             prefilDeAprendizajeTab = $(By.xpath(".//*[@id='submenu']/nav/ul/li[1]/a")),
@@ -45,5 +48,8 @@ public class PreferencesPage {
             masculinoCheckbox = $(By.id("male")),
             fechaDeNacimientoField = $(By.id("dob-picker")),
             calendar = $(By.id("ui-datepicker-div")),
-            firstAvailableDate = calendar.$(By.xpath("//a[@class='ui-state-default']"));
+            firstAvailableDate = calendar.$(By.xpath("//a[@class='ui-state-default']")),
+            idiomaDePreferenciaField = $(By.xpath(idiomaDePreferencia));
+
+    private ElementsCollection allTheIdiomasList = $$(By.xpath(idiomaDePreferencia + "//a"));
 }
