@@ -178,7 +178,8 @@ public class TestData {
     }
 
     public static class Meeting {
-        public static final String MEETING_TEST_TEXT = getProperty("meeting.header.text");
+        public static final String MEETING_TEST_TEXT = getProperty("meeting.header.text"),
+                MEETING_ADOBE_CONNECT_HEADER_TEST_TEXT = getProperty("meeting.adobe.connect.header.test.text");
     }
 
     public static class Notifications {
@@ -249,10 +250,21 @@ public class TestData {
                 PREFERENCES_URL_END_WITH_TEXT = getProperty("preferences.page.url.endwith"),
                 PREFERENCES_OBLIGATORIO_TEXT = getProperty("preferences.miperfil.obligatorio.notification.text"),
                 PREFERENCES_NO_ES_NOMBRE_VALIDO_TEXT = getProperty("preferences.miperfil.no.es.nombre.valido.notification.text"),
+                PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT = getProperty("preferences.miperfil.no.es.apellido.valido.notification.text"),
                 PREFERENCES_SPECIAL_SYMBOLS = getProperty("preferences.miperfil.special.symbols.test"),
                 PREFERENCES_USER_NICK_NAME_AND_HOLA = getProperty("preferences.usernick.name.and.hola"),
+                PREFERENCES_EMAIL_WITHOUT_AT = getProperty("preferences.miperfil.email.without.at"),
+                PREFERENCES_EMAIL_WITHOUT_COM = getProperty("preferences.miperfil.email.without.com"),
+                PREFERENCES_WRONG_EMAIL_NOTIFICATION_TEXT = getProperty("preferences.miperfil.wrong.email.notification.text"),
                 PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK = getProperty("preferences.perfil.de.aprendizaje.link"),
-                PREFERENCES_MI_PERFIL_LINK = getProperty("preferences.mi.perfil.link"),
+                PREFERENCES_MI_PERFIL_LINK = ("preferences.mi.perfil.link"),
+                PREFERENCES_NEWPASSWORD_WITHOUT_NUMBERS = getProperty("preferences.miperfil.newpassword.no.numbers.pass"),
+                PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS = getProperty("preferences.miperfil.newpassword.less.then.six.chars.pass"),
+                PREFERENCES_NEWPASSWORD_WITHOUT_NUMBERS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.no.numbers.notification.text"),
+                PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.less.then.six.chars.notification.text"),
+                PREFERENCES_NEWPASSWORD_SPECIAL_SYMBOLS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.special.symbols.notification.text"),
+                PREFERENCES_NEW_EMAIL_VALID = getProperty("preferences.miperfil.new.email.valid"),
+                PREFERENCES_NEW_EMAIL_NOT_CORESPONDENT_NOTIFICATION = getProperty("preferences.miperfil.new.email.not.corresponden.notification.text"),
                 PREFERENCES_CAMBIAR_FOTO_TEXT = getProperty("preferences.cambiar.foto.text"),
                 PREFERENCES_NOMBRE_PLACEHOLDER_TEXT = getProperty("preferences.nombre.placeholder.text"),
                 PREFERENCES_APELLIDO_PLACEHOLDER_TEXT = getProperty("preferences.apellido.placeholder.text"),
@@ -287,6 +299,7 @@ public class TestData {
         public static final String MENSAJES_SIN_LEER = getProperty("mensajes.sin.leer.text"),
                 MENSAJES_FECHA_HORA = getProperty("mensajes.fecha.hora.text"),
                 MENSAJES_ENVIADO_POR = getProperty("mensajes.enviado.por.text"),
-                MENSAJES_AVISO = getProperty("mensajes.aviso.text");
+                MENSAJES_AVISO = getProperty("mensajes.aviso.text"),
+                MENSAJES_MENSAJES_BUTTON_TEXT = getProperty("mensajes.mensajes.text");
     }
 }
