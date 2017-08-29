@@ -6,11 +6,9 @@ import com.openenglish.pages.AbstractPage;
 import com.openenglish.pages.PreferencesPage;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.value;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.url;
