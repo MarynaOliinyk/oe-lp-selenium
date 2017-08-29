@@ -34,6 +34,7 @@ import static com.openenglish.core.TestData.Preferences.PREFERENCES_MI_PERFIL_TA
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_NIVEL_ACADEMICO_PLACEHOLDER_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_NOMBRE_PLACEHOLDER_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_PAIS_PLACEHOLDER_TEXT;
+import static com.openenglish.core.TestData.Preferences.PREFERENCES_NOMBRE_VISIBLE_A_OTROS_PLACEHOLDER_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_SEXO_PLACEHOLDER_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_TELEFONO_PRINCIPAL_PLACEHOLDER_TEXT;
@@ -64,26 +65,26 @@ public class C106VerifyMiPerfilContentTest extends DriverBase {
         loginWithCorrectCredentialsAndPagePreferenciasIsOpen();
         preferencesPage.getUserNameAndHolaText().should(visible, text(PREFERENCES_USER_NICK_NAME_AND_HOLA));
         preferencesPage.getPhotoFrame().should(visible);
-        preferencesPage.getMiPerfilTabActive().should(visible).getAttribute(HREF).contains(PREFERENCES_MI_PERFIL_LINK);
-        preferencesPage.getPrefilDeAprendizajeTab().should(visible).getAttribute(HREF).contains(PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK);
+        assertTrue(preferencesPage.getMiPerfilTabActive().should(visible).getAttribute(HREF).contains(PREFERENCES_MI_PERFIL_LINK));
+        assertTrue(preferencesPage.getPrefilDeAprendizajeTab().should(visible).getAttribute(HREF).contains(PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK));
     }
 
     @Test
     public void verifyMiPerfilContentTestInformationPersonalSectionS2() {
         loginWithCorrectCredentialsAndPagePreferenciasIsOpen();
         preferencesPage.getPhotoFrame().should(visible);
-        preferencesPage.getCambiarFotoText().should(visible, text(PREFERENCES_CAMBIAR_FOTO_TEXT));
-        preferencesPage.getNombrePlaceholder().should(visible, text(PREFERENCES_NOMBRE_PLACEHOLDER_TEXT));
-        preferencesPage.getApellidoPlaceholder().should(visible, text(PREFERENCES_APELLIDO_PLACEHOLDER_TEXT));
-        preferencesPage.getSexoPlaceholder().should(visible, text(PREFERENCES_SEXO_PLACEHOLDER_TEXT));
-        preferencesPage.getFechaDeNacimientoPlaceholder().should(visible, text(PREFERENCES_FECHA_DE_NACIMIENTO_PLACEHOLDER_TEXT));
-//        preferencesPage.getNombrePlaceholder().should(visible,text(PREFERENCES_NOMBRE_VISIBLE_A_TODOS_PLACEHOLDER_TEXT));
-        preferencesPage.getNivelAcademicoPlaceholder().should(visible, text(PREFERENCES_NIVEL_ACADEMICO_PLACEHOLDER_TEXT));
-        preferencesPage.getEmailPlaceholder().should(visible, text(PREFERENCES_EMAIL_PLACEHOLDER_TEXT));
-        preferencesPage.getContrasenaPlaceholder().should(visible, text(PREFERENCES_CONTRASENA_PLACEHOLDER_TEXT));
-        preferencesPage.getConfirmarContrasenaPlaceholder().should(visible, text(PREFERENCES_CONFIRMAR_CONTRASENA_PLACEHOLDER_TEXT));
-        preferencesPage.getIdiomaDePreferenciaPlaceholder().should(visible, text(PREFERENCES_IDIOMA_DE_PREFERENCIA_PLACEHOLDER_TEXT));
-        preferencesPage.getGuardarCambiosButtonOnPersonalSection().should(visible, attribute(VALUE, PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT));
+        preferencesPage.getCambiarFotoText().should(visible,text(PREFERENCES_CAMBIAR_FOTO_TEXT));
+        preferencesPage.getNombrePlaceholder().should(visible,text(PREFERENCES_NOMBRE_PLACEHOLDER_TEXT));
+        preferencesPage.getApellidoPlaceholder().should(visible,text(PREFERENCES_APELLIDO_PLACEHOLDER_TEXT));
+        preferencesPage.getSexoPlaceholder().should(visible,text(PREFERENCES_SEXO_PLACEHOLDER_TEXT));
+        preferencesPage.getFechaDeNacimientoPlaceholder().should(visible,text(PREFERENCES_FECHA_DE_NACIMIENTO_PLACEHOLDER_TEXT));
+        preferencesPage.getNombreVisibleATodosPlaceholder().should(visible,text(PREFERENCES_NOMBRE_VISIBLE_A_OTROS_PLACEHOLDER_TEXT));
+        preferencesPage.getNivelAcademicoPlaceholder().should(visible,text(PREFERENCES_NIVEL_ACADEMICO_PLACEHOLDER_TEXT));
+        preferencesPage.getEmailPlaceholder().should(visible,text(PREFERENCES_EMAIL_PLACEHOLDER_TEXT));
+        preferencesPage.getContrasenaPlaceholder().should(visible,text(PREFERENCES_CONTRASENA_PLACEHOLDER_TEXT));
+        preferencesPage.getConfirmarContrasenaPlaceholder().should(visible,text(PREFERENCES_CONFIRMAR_CONTRASENA_PLACEHOLDER_TEXT));
+        preferencesPage.getIdiomaDePreferenciaPlaceholder().should(visible,text(PREFERENCES_IDIOMA_DE_PREFERENCIA_PLACEHOLDER_TEXT));
+        preferencesPage.getGuardarCambiosButtonOnPersonalSection().should(visible,attribute(VALUE, PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT));
     }
 
     @Test

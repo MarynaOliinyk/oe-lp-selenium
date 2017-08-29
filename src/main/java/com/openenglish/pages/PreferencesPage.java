@@ -16,14 +16,24 @@ public class PreferencesPage {
             apelido = "lastName",
             leftPlaceHolderPersonalSection = ".//*[@class='grid_3 holder']/div[1]/div[%s]/%s",
             rightPlaceHolderPersonalSection = ".//*[@class='grid_5 suffix_1 holder right']/div/div[%s]/%s",
-            leftPlaceHolderDeContactoSection = ".//*[@class='input-holder address left']/div[%s]/label";
+            leftPlaceHolderDeContactoSection = ".//*[@class='input-holder address left']/div[%s]/label",
+            email = "email",
+            confirmEmail = "confirmEmail",
+            contrasena = "newPassword",
+            checkboxName = ".//div[@id='gender']//span[contains(text(),'%s')]";
 
     private SelenideElement miPerfilTabActive = $(By.xpath(".//*[@class='active']/a")),
-            prefilDeAprendizajeTab = $(By.xpath(".//*[@id='submenu']/nav/ul/li[1]/a")),
+            prefilDeAprendizajeTab = $(By.xpath(".//*[@id='submenu']//li[2]/a")),
             nombreField = $(By.id(nombre)),
             nombreFieldNotification = $(By.xpath(String.format(generalNotificationLocator, nombre))),
             apellidoField = $(By.id(apelido)),
             apellidoFieldNotification = $(By.xpath(String.format(generalNotificationLocator, apelido))),
+            emailField = $(By.id(email)),
+            emailFieldNotification = $(By.xpath(String.format(generalNotificationLocator, email))),
+            confirmEmailField = $(By.id(confirmEmail)),
+            confirmEmailFieldNotification = $(By.xpath(String.format(generalNotificationLocator, confirmEmail))),
+            contrasenaField = $(By.id(contrasena)),
+            contrasenaFieldNotification = $(By.xpath(String.format(generalNotificationLocator, contrasena))),
             guardarCambiosButtonOnPersonalSection = $(By.id("personal-info-save")),
             guardarCambiosButtonOnContactoSection = $(By.id("info-button")),
             photoFrame = $(By.xpath(".//*[@class='photo-frame']")),
@@ -47,5 +57,13 @@ public class PreferencesPage {
             fechaYHoraActualPlaseholder = $(By.xpath(String.format(leftPlaceHolderDeContactoSection, 5))),
             pais = $(By.xpath(".//*[@id='ph']/div[1]/div/label")),
             telefonoPrincipal = $(By.xpath(".//*[@id='primaryPhone']/div/label")),
-            telefonoSecundario = $(By.xpath(".//*[@id='secondaryPhone']/div/label"));
+            telefonoSecundario = $(By.xpath(".//*[@id='secondaryPhone']/div/label")),
+            femeninoField = $(By.xpath(String.format(checkboxName, "femenino"))),
+            femeninoCheckbox = $(By.id("female")),
+            masculinoField = $(By.xpath(String.format(checkboxName, "masculino"))),
+            masculinoCheckbox = $(By.id("male")),
+            fechaDeNacimientoField = $(By.id("dob-picker")),
+            calendar = $(By.id("ui-datepicker-div")),
+            firstAvailableDate = calendar.$(By.xpath("//a[@class='ui-state-default']"));
 }
+
