@@ -10,6 +10,11 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
+import static com.openenglish.core.Attribute.CLASS;
+import static com.openenglish.core.Attribute.TYPE;
+import static com.openenglish.core.AttributeValue.LoginPage.PASSWORD;
+import static com.openenglish.core.AttributeValue.TeacherFeedbackPage.HAPPY_NO_RATED;
+import static com.openenglish.core.AttributeValue.TeacherFeedbackPage.ORANGE_BTN_SUBMIT_BTN_DISABLED;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Inicio.INICIO_LINK;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
@@ -31,7 +36,7 @@ public class C88VerifySuggestionsTest extends DriverBase {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
         page.loginPage.getPassword().shouldBe(visible)
-                .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute(TYPE, PASSWORD));
         page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.inicioPage.getInicioLink().shouldHave(text(INICIO_LINK));
         page.inicioPage.getUserName().shouldHave(text(USER_NAME));
@@ -48,17 +53,17 @@ public class C88VerifySuggestionsTest extends DriverBase {
         teacherFeedbackPage.getClosePopUp().shouldBe(visible).click();
         //TODO BUG QAA-211 https://openenglish.jira.com/browse/QAA-211
         teacherFeedbackPage.getGoodRateFace().shouldBe(visible).click();
-        teacherFeedbackPage.getGoodRateFace().shouldHave(attribute("class", "happy no-rated"));
+        teacherFeedbackPage.getGoodRateFace().shouldHave(attribute(CLASS, HAPPY_NO_RATED));
         teacherFeedbackPage.getBadRateFace().shouldBe(visible).click();
         teacherFeedbackPage.getPopUpAfterSadFace().shouldBe(visible);
         teacherFeedbackPage.getPopUpHeaderTextAfterSadFace().shouldBe(visible).shouldHave(text(TEACHER_FEEDBACK_POP_UP_HEADER_TEXT_AFTER_SAD));
-        teacherFeedbackPage.getEnviarButtonOnPopUpIsDisabled().shouldHave(attribute("class", "orange-btn submit-btn disabled"));
+        teacherFeedbackPage.getEnviarButtonOnPopUpIsDisabled().shouldHave(attribute(CLASS, ORANGE_BTN_SUBMIT_BTN_DISABLED));
         teacherFeedbackPage.getCheckboxOnPopUp().shouldBe(visible).click();
         teacherFeedbackPage.getEnviarButtonOnPopUpVisible().shouldBe(visible).click();
         teacherFeedbackPage.getMessageOnPopUpSaveSuccsess().shouldBe(visible).shouldHave(text(TEACHER_FEEDBACK_POP_UP_MESSAGE));
         teacherFeedbackPage.getExitButtonOnPopUp().shouldBe(visible).click();
         teacherFeedbackPage.getSuggestionLink().shouldBe(visible);
-        teacherFeedbackPage.getGoodRateFace().shouldHave(attribute("class", "happy no-rated"));
+        teacherFeedbackPage.getGoodRateFace().shouldHave(attribute(CLASS, HAPPY_NO_RATED));
 
     }
 }

@@ -19,4 +19,8 @@ public class AttributeValue {
         public static final String PREFERENCES_PAGE_DATE_PICKER = "date-picker hasDatepicker",
                 PREFERENCES_PAGE_DATE_PICKER_VALID = "date-picker hasDatepicker field-valid";
     }
+    public static class TeacherFeedbackPage {
+        public static final String HAPPY_NO_RATED = "happy no-rated",
+                ORANGE_BTN_SUBMIT_BTN_DISABLED = "orange-btn submit-btn disabled";
+    }
 }

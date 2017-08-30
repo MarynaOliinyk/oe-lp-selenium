@@ -37,7 +37,7 @@ public class C5VerifyLinksTest extends DriverBase {
         page.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
         page.logOut();
         page.loginPage.getPassword()
-                .shouldHave(attribute("type", "password"));
+                .shouldHave(attribute(TYPE, PASSWORD));
         page.loginPage.getPasswordReset().click();
         RecoveryPage recoveryPage = new RecoveryPage();
         recoveryPage.getRequestFormTitle().shouldHave(text(RECOVERY_PASSWORD_FORM_TITLE));
