@@ -257,7 +257,7 @@ public class TestData {
                 PREFERENCES_EMAIL_WITHOUT_COM = getProperty("preferences.miperfil.email.without.com"),
                 PREFERENCES_WRONG_EMAIL_NOTIFICATION_TEXT = getProperty("preferences.miperfil.wrong.email.notification.text"),
                 PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK = getProperty("preferences.perfil.de.aprendizaje.link"),
-                PREFERENCES_MI_PERFIL_LINK = ("preferences.mi.perfil.link"),
+                PREFERENCES_MI_PERFIL_LINK = getProperty("preferences.mi.perfil.link"),
                 PREFERENCES_NEWPASSWORD_WITHOUT_NUMBERS = getProperty("preferences.miperfil.newpassword.no.numbers.pass"),
                 PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS = getProperty("preferences.miperfil.newpassword.less.then.six.chars.pass"),
                 PREFERENCES_NEWPASSWORD_WITHOUT_NUMBERS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.no.numbers.notification.text"),
