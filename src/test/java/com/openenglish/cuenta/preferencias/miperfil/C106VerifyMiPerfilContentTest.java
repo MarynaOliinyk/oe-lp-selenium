@@ -78,7 +78,7 @@ public class C106VerifyMiPerfilContentTest extends DriverBase {
         preferencesPage.getApellidoPlaceholder().should(visible,text(PREFERENCES_APELLIDO_PLACEHOLDER_TEXT));
         preferencesPage.getSexoPlaceholder().should(visible,text(PREFERENCES_SEXO_PLACEHOLDER_TEXT));
         preferencesPage.getFechaDeNacimientoPlaceholder().should(visible,text(PREFERENCES_FECHA_DE_NACIMIENTO_PLACEHOLDER_TEXT));
-        preferencesPage.getNombreVisibleATodosPlaceholder().should(visible,text(PREFERENCES_NOMBRE_VISIBLE_A_OTROS_PLACEHOLDER_TEXT));
+        preferencesPage.getNombreVisibleParaOtrosPlaceholder().should(visible,text(PREFERENCES_NOMBRE_VISIBLE_A_OTROS_PLACEHOLDER_TEXT));
         preferencesPage.getNivelAcademicoPlaceholder().should(visible,text(PREFERENCES_NIVEL_ACADEMICO_PLACEHOLDER_TEXT));
         preferencesPage.getEmailPlaceholder().should(visible,text(PREFERENCES_EMAIL_PLACEHOLDER_TEXT));
         preferencesPage.getContrasenaPlaceholder().should(visible,text(PREFERENCES_CONTRASENA_PLACEHOLDER_TEXT));
