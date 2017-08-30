@@ -34,14 +34,14 @@ public class C154VerifyEmailFieldTest extends DriverBase {
 
         pp.getEmailField().clear();
         pp.getApellidoField().click();
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getEmailFieldNotification().shouldBe(visible, exactText(PREFERENCES_OBLIGATORIO_TEXT));
         pp.getEmailField().sendKeys(PREFERENCES_EMAIL_WITHOUT_AT);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getEmailFieldNotification().shouldBe(visible, exactText(PREFERENCES_WRONG_EMAIL_NOTIFICATION_TEXT));
         pp.getEmailField().clear();
         pp.getEmailField().sendKeys(PREFERENCES_EMAIL_WITHOUT_COM);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getEmailFieldNotification().shouldBe(visible, exactText(PREFERENCES_WRONG_EMAIL_NOTIFICATION_TEXT));
     }
 }

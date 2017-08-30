@@ -36,14 +36,14 @@ public class C156VerifyContrasenaFieldTest extends DriverBase {
 
         pp.getContrasenaField().clear();
         pp.getContrasenaField().sendKeys(PREFERENCES_NEWPASSWORD_WITHOUT_NUMBERS);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getContrasenaFieldNotification().shouldBe(visible, exactText(PREFERENCES_NEWPASSWORD_WITHOUT_NUMBERS_NOTIFICATION));
         pp.getContrasenaField().sendKeys(PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getContrasenaFieldNotification().shouldBe(visible, exactText(PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS_NOTIFICATION));
         pp.getContrasenaField().clear();
         pp.getContrasenaField().sendKeys(PREFERENCES_SPECIAL_SYMBOLS);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getContrasenaFieldNotification().shouldBe(visible, exactText(PREFERENCES_NEWPASSWORD_SPECIAL_SYMBOLS_NOTIFICATION));
     }
 
