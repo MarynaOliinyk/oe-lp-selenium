@@ -65,8 +65,8 @@ public class C106VerifyMiPerfilContentTest extends DriverBase {
         loginWithCorrectCredentialsAndPagePreferenciasIsOpen();
         preferencesPage.getUserNameAndHolaText().should(visible, text(PREFERENCES_USER_NICK_NAME_AND_HOLA));
         preferencesPage.getPhotoFrame().should(visible);
-        preferencesPage.getMiPerfilTabActive().should(visible, attribute(HREF, PREFERENCES_MI_PERFIL_LINK));
-        preferencesPage.getPrefilDeAprendizajeTab().should(visible, attribute(HREF, PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK));
+        assertTrue(preferencesPage.getMiPerfilTabActive().should(visible).getAttribute(HREF).contains(PREFERENCES_MI_PERFIL_LINK));
+        assertTrue(preferencesPage.getPrefilDeAprendizajeTab().should(visible).getAttribute(HREF).contains(PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK));
     }
 
     @Test
