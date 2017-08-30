@@ -25,6 +25,9 @@ public class PreferencesPage {
     private SelenideElement miPerfilTabActive = $(By.xpath(".//*[@class='active']/a")),
             prefilDeAprendizajeTab = $(By.xpath(".//*[@id='submenu']//li[2]/a")),
             nombreField = $(By.id(nombre)),
+            direccionFirstField = $(By.id("address1")),
+            direccionSecondField = $(By.id("address2")),
+            errorMessage = $(By.xpath(".//*[@class='field-error']")),
             nombreFieldNotification = $(By.xpath(String.format(generalNotificationLocator, nombre))),
             apellidoField = $(By.id(apelido)),
             apellidoFieldNotification = $(By.xpath(String.format(generalNotificationLocator, apelido))),
@@ -68,4 +71,3 @@ public class PreferencesPage {
             firstAvailableDate = calendar.$(By.xpath("//a[@class='ui-state-default']")),
             interestsContainer = $(By.xpath(".//*[@class='button-list']/li/a/span"));
 }
-
