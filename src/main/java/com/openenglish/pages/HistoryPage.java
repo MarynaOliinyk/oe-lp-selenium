@@ -18,7 +18,7 @@ public class HistoryPage {
             tituloTableEllements = table + "//tr/td[3]";
 
     private SelenideElement headerBlock = $(By.xpath(".//*[@class='page-heading']")),
-            headerRegistroDeActividadesText = $(By.xpath(".//*[@id='content']//div[@class='grid_8']//h1")),
+            headerRegistroDeActividadesText = $(By.xpath(".//*[@class='title-bar']/div/h1")),
             headerVerIndiceDelCursoLink = $(By.xpath(".//*[@id='content']//div[@class='grid_2']//a")),
             paginationBlock = $(By.xpath(table + "//div[@class='history-paging paging2']")),
             searchBlock = $(By.id("twocolumns")),

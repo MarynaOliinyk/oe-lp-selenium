@@ -276,7 +276,7 @@ public class TestData {
                 PREFERENCES_CONTRASENA_PLACEHOLDER_TEXT = getProperty("preferences.contrasena.placeholder.text"),
                 PREFERENCES_CONFIRMAR_CONTRASENA_PLACEHOLDER_TEXT = getProperty("preferences.confirmarContrasena.placeholder.text"),
                 PREFERENCES_IDIOMA_DE_PREFERENCIA_PLACEHOLDER_TEXT = getProperty("preferences.idiomaDePreferencia.placeholder.text"),
-                PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT = getProperty("preferences.guardarCambiosButton.text"),
+                PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT = getProperty("preferences.guardar.cambios.button.text"),
                 PREFERENCES_DIRECTION_ONE_PLACEHOLDER_TEXT = getProperty("preferences.direction.one.placeholder.text"),
                 PREFERENCES_DIRECTION_TWO_PLACEHOLDER_TEXT = getProperty("preferences.direction.two.placeholder.text"),
                 PREFERENCES_CODIGO_POSTAL_PLACEHOLDER_TEXT = getProperty("preferences.codigo.postal.placeholder.text"),

@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 @Getter
 public class TeacherFeedbackPage {
-    private SelenideElement headerText = $(By.xpath(".//*[@class='grid_8']/div/h1")),
+    private SelenideElement headerText = $(By.xpath(".//*[@class='title-bar']/div/h1")),
             verElIndiceDelCursoLink = $(By.cssSelector(".more")),
             fechaColumn = $(By.xpath(".//*[@class='date']")),
             sugerenciaSolicitadaColumn = $(By.xpath(".//*[@class='feedback']")),

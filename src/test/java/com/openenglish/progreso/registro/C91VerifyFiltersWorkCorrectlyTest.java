@@ -37,7 +37,7 @@ public class C91VerifyFiltersWorkCorrectlyTest extends DriverBase {
         page.inicioPage.getProgresoLink().click();
         page.inicioPage.getRegistroLink().click();
         HistoryPage historyPage = new HistoryPage();
-        historyPage.getHeaderBlock().shouldBe(visible).shouldHave(text(HISTORY_HEADER_TEXT + " " + USER_NAME));
+        historyPage.getHeaderRegistroDeActividadesText().shouldBe(visible).shouldHave(text(HISTORY_HEADER_TEXT + " " + USER_NAME));
         historyPage.getTypeButton().should(visible).click();
         historyPage.getTypeList().should(visible);
         String firstSelectedType = historyPage.getFirstPracticeType().innerText();
