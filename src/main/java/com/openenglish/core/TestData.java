@@ -264,7 +264,9 @@ public class TestData {
                 PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.less.then.six.chars.notification.text"),
                 PREFERENCES_NEWPASSWORD_SPECIAL_SYMBOLS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.special.symbols.notification.text"),
                 PREFERENCES_NEW_EMAIL_VALID = getProperty("preferences.miperfil.new.email.valid"),
-                PREFERENCES_NEW_EMAIL_NOT_CORESPONDENT_NOTIFICATION = getProperty("preferences.miperfil.new.email.not.corresponden.notification.text");
+                PREFERENCES_NEW_EMAIL_NOT_CORESPONDENT_NOTIFICATION = getProperty("preferences.miperfil.new.email.not.corresponden.notification.text"),
+                PREFERENCES_OBLIGATORIO_FIELD_ERROR_TEXT = getProperty("preferences.obligatorio.error.text"),
+                PREFERENCES_SPECIAL_CHARACTERS_ERROR_TEXT = getProperty("preferences.special.characters.error.text");
     }
 
     public static class TempMail {
