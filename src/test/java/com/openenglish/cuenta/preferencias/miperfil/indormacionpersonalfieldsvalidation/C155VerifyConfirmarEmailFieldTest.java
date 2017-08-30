@@ -57,7 +57,7 @@ public class C155VerifyConfirmarEmailFieldTest extends DriverBase {
         postcondition(defaultEmail);
     }
 
-    private void postcondition (String emailToRollBack){
+    private void postcondition(String emailToRollBack) {
         pp.getEmailField().clear();
         pp.getEmailField().sendKeys(emailToRollBack);
         pp.getConfirmEmailField().sendKeys(emailToRollBack);
