@@ -31,8 +31,6 @@ public class PreferencesPage {
             nombreFieldNotification = $(By.xpath(String.format(generalNotificationLocator, nombre))),
             apellidoField = $(By.id(apelido)),
             apellidoFieldNotification = $(By.xpath(String.format(generalNotificationLocator, apelido))),
-            guardarCambiosButtonOnPersonalSection = $(By.id("personal-info-save")),
-            guardarCambiosButtonOnContactoSection = $(By.id("info-button")),
             emailField = $(By.id(email)),
             emailFieldNotification = $(By.xpath(String.format(generalNotificationLocator, email))),
             confirmEmailField = $(By.id(confirmEmail)),
