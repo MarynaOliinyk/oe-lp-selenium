@@ -19,7 +19,7 @@ public class HistoryPage {
 
     private SelenideElement headerBlock = $(By.xpath(".//*[@class='page-heading']")),
             headerRegistroDeActividadesText = $(By.xpath(".//*[@class='title-bar']/div/h1")),
-            headerVerIndiceDelCursoLink = $(By.xpath(".//*[@id='content']//div[@class='grid_2']//a")),
+            headerVerIndiceDelCursoLink = $(By.xpath(".//*[@id='content']/div[1]/header/div/div[2]/a")),
             paginationBlock = $(By.xpath(table + "//div[@class='history-paging paging2']")),
             searchBlock = $(By.id("twocolumns")),
             refinementsBlock = $(By.xpath(".//*[@id='searchRefinements']//*[@class='refinements']")),
