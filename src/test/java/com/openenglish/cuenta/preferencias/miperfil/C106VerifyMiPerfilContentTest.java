@@ -74,6 +74,7 @@ public class C106VerifyMiPerfilContentTest extends DriverBase {
         loginWithCorrectCredentialsAndPagePreferenciasIsOpen();
         preferencesPage.getPhotoFrame().should(visible);
         preferencesPage.getCambiarFotoText().should(visible,text(PREFERENCES_CAMBIAR_FOTO_TEXT));
+        //TODO https://openenglish.jira.com/browse/LPTRIAGE-327
         preferencesPage.getNombrePlaceholder().should(visible,text(PREFERENCES_NOMBRE_PLACEHOLDER_TEXT));
         preferencesPage.getApellidoPlaceholder().should(visible,text(PREFERENCES_APELLIDO_PLACEHOLDER_TEXT));
         preferencesPage.getSexoPlaceholder().should(visible,text(PREFERENCES_SEXO_PLACEHOLDER_TEXT));

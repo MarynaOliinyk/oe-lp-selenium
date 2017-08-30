@@ -42,7 +42,7 @@ public class PreferencesPage {
             apellidoPlaceholder = $(By.xpath(String.format(leftPlaceHolderPersonalSection, "2", "label"))),
             sexoPlaceholder = $(By.xpath(String.format(leftPlaceHolderPersonalSection, "3", "strong"))),
             fechaDeNacimientoPlaceholder = $(By.xpath(String.format(leftPlaceHolderPersonalSection, "4", "strong"))),
-            nombreVisibleATodosPlaceholder = $(By.xpath(String.format(leftPlaceHolderPersonalSection, "5", "strong"))),
+            nombreVisibleParaOtrosPlaceholder = $(By.xpath(String.format(leftPlaceHolderPersonalSection, "5", "strong"))),
             nivelAcademicoPlaceholder = $(By.xpath(String.format(leftPlaceHolderPersonalSection, "6", "strong"))),
             emailPlaceholder = $(By.xpath(String.format(rightPlaceHolderPersonalSection, 1, "label"))),
             contrasenaPlaceholder = $(By.xpath(String.format(rightPlaceHolderPersonalSection, 3, "label"))),
