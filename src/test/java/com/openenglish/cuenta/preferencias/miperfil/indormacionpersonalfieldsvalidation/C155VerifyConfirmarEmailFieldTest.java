@@ -40,28 +40,28 @@ public class C155VerifyConfirmarEmailFieldTest extends DriverBase {
         pp.getEmailField().sendKeys(PREFERENCES_NEW_EMAIL_VALID);
         pp.getConfirmEmailField().shouldBe(visible);
         pp.getConfirmEmailField().sendKeys(PREFERENCES_EMAIL_WITHOUT_AT);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getConfirmEmailFieldNotification().shouldBe(visible, exactText(PREFERENCES_WRONG_EMAIL_NOTIFICATION_TEXT));
         pp.getConfirmEmailField().clear();
         pp.getConfirmEmailField().sendKeys(PREFERENCES_EMAIL_WITHOUT_COM);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getConfirmEmailFieldNotification().shouldBe(visible, exactText(PREFERENCES_WRONG_EMAIL_NOTIFICATION_TEXT));
         pp.getConfirmEmailField().clear();
         pp.getConfirmEmailField().sendKeys(defaultEmail);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getConfirmEmailFieldNotification().shouldBe(visible, exactText(PREFERENCES_NEW_EMAIL_NOT_CORESPONDENT_NOTIFICATION));
         pp.getConfirmEmailField().clear();
         pp.getConfirmEmailField().sendKeys(PREFERENCES_NEW_EMAIL_VALID);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getConfirmEmailFieldNotification().shouldNotBe(visible);
         postcondition(defaultEmail);
     }
 
-    private void postcondition (String emailToRollBack){
+    private void postcondition(String emailToRollBack) {
         pp.getEmailField().clear();
         pp.getEmailField().sendKeys(emailToRollBack);
         pp.getConfirmEmailField().sendKeys(emailToRollBack);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getConfirmEmailFieldNotification().shouldNotBe(visible);
     }
 }
