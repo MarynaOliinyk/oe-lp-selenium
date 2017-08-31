@@ -21,6 +21,7 @@ public class TestData {
                 POP_UP_INVALID_SECURITY_CODE = getProperty("login.popup.invalid.security.code"),
                 USER_NAME = getProperty("login.user.name"),
                 REGISTERED_EMAIL = getProperty("login.correct.email"),
+                READ_ONLY_USER = getProperty("login.correct.email.readonly.user"),
                 CORRECT_PASSWORD = getProperty("login.correct.password"),
                 UNREGISTERED_EMAIL = getProperty("login.unregistered.email"),
                 INVALID_PASSWORD = getProperty("login.invalid.password"),
@@ -293,6 +294,11 @@ public class TestData {
                 MENSAJES_FECHA_HORA = getProperty("mensajes.fecha.hora.text"),
                 MENSAJES_ENVIADO_POR = getProperty("mensajes.enviado.por.text"),
                 MENSAJES_AVISO = getProperty("mensajes.aviso.text"),
-                MENSAJES_MENSAJES_BUTTON_TEXT = getProperty("mensajes.mensajes.text");
+                MENSAJES_MENSAJES_BUTTON_TEXT = getProperty("mensajes.mensajes.text"),
+                MENSAJES_MAX_MENSAJES_NUMBER = getProperty("mensajes.maximum.number.of.messages.on.one.page"),
+                MENSAJES_TWO_PEGES_VALUE = getProperty("mensajes.two.pages.with.messages"),
+                MENSAJES_ONE_PEGE_VALUE = getProperty("mensajes.minimum.pages.with.messages"),
+                MENSAJES_FIRST_PAGE_PAGINATION_BLOCK_TEXT = String.format(getProperty("mensajes.pagination.general.text"), "1"),
+                MENSAJES_SECOND_PAGE_PAGINATION_BLOCK_TEXT = String.format(getProperty("mensajes.pagination.general.text"), "2");
     }
 }
