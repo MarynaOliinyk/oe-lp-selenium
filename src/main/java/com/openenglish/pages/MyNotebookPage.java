@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 @Getter
 public class MyNotebookPage {
-    private SelenideElement headerText = $(By.xpath(".//*[@class='grid_8']/div/h1")),
+    private SelenideElement headerText = $(By.xpath(".//*[@class='title-bar']/div/h1")),
             verElIndiceDelCursoLink = $(By.cssSelector(".more")),
             dataMyNotebookTable = $(By.xpath(".//*[@data-my-notebook-table='wrapper']")),
             textIfNotNotes = $(By.xpath(".//*[@class='no-data']")),
