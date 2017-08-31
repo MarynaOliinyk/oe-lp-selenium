@@ -43,8 +43,8 @@ public class C158VerifyIdiomaDePreferenciaFieldTest extends DriverBase {
         pp.getIdiomaDePreferenciaField().shouldBe(visible).click();
         ElementsCollection idiomasList = pp.getAllTheIdiomasList();
         assertTrue(idiomasList.stream().allMatch(element -> element.is(not(empty))));
-        String firsrIdioma = idiomasList.get(0).getText();
-        idiomasList.get(0).click();
+        String firsrIdioma = idiomasList.stream().findFirst().get().getText();
+        idiomasList.stream().findFirst().get().click();
         pp.getIdiomaDePreferenciaField().shouldHave(text(firsrIdioma));
     }
 
