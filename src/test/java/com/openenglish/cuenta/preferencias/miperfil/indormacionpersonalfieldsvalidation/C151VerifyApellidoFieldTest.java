@@ -35,14 +35,14 @@ public class C151VerifyApellidoFieldTest extends DriverBase {
 
         pp.getApellidoField().clear();
         pp.getNombreField().click();
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getApellidoFieldNotification().shouldBe(visible, exactText(PREFERENCES_OBLIGATORIO_TEXT));
         pp.getApellidoField().sendKeys(INVALID_PASSWORD);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getApellidoFieldNotification().shouldBe(visible, exactText(PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT));
         pp.getApellidoField().clear();
         pp.getApellidoField().sendKeys(PREFERENCES_SPECIAL_SYMBOLS);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getApellidoFieldNotification().shouldBe(visible, exactText(PREFERENCES_NO_ES_APELLIDO_VALIDO_TEXT));
     }
 }

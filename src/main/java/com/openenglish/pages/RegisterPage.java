@@ -27,7 +27,7 @@ public class RegisterPage {
             startNowButton = $(By.id("submit-button")),
             iframe = $(By.xpath("//iframe")),
             countrySelect = $(By.id("country-select")),
-            cellularButton = $(By.xpath(".//div[@id='phone-format-selector']/label[1]")),
+            cellularButton = $(By.xpath(".//*[@id='phone-format-selector']/label[1]")),
             fijoButton = $(By.xpath(".//div[@id='phone-format-selector']/label[2]")),
             mobileSectionOne = $(By.xpath(String.format(mobileSection, "1"))),
             mobileSectionTwo = $(By.xpath(String.format(mobileSection,"2"))),
@@ -36,7 +36,7 @@ public class RegisterPage {
             ageOptions = $(By.xpath(".//*[@id='isforme-radio']/label[1]")),
             ageRangeSelect = $(By.id("agerange-select")),
             thanksPopUpText = $(By.xpath("//p[@class='text-center']")),
-            popUpCloseButton = $(By.xpath(".//button[@type='button'][@class='pum-close popmake-close']"));
+            popUpCloseButton = $(By.xpath(".//*[@id='popmake-1005']/button"));
 
     private ElementsCollection warningMessages = $$(By.xpath(".//*[@id='leadForm']//span")),
                                formatosPermitidos = $$(By.xpath(".//*[@id='format-modal']/div/div/p"));

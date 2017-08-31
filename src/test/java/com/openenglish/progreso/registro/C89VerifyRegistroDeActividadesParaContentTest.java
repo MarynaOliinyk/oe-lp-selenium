@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
+import static com.openenglish.core.Attribute.HREF;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.History.HISTORY_HEADER_TEXT;
 import static com.openenglish.core.TestData.History.HISTORY_HEADER_LINK_TEXT;
@@ -45,7 +46,7 @@ public class C89VerifyRegistroDeActividadesParaContentTest extends DriverBase {
                 .shouldHave(exactText(HISTORY_HEADER_TEXT + " " + USER_NAME));
         historyPage.getHeaderVerIndiceDelCursoLink().shouldBe(visible)
                 .shouldHave(exactText(HISTORY_HEADER_LINK_TEXT));
-        assertEquals(historyPage.getHeaderVerIndiceDelCursoLink().getAttribute("href"), LP_URL + HISTORY_URL_ENDS_WITH);
+        assertEquals(historyPage.getHeaderVerIndiceDelCursoLink().getAttribute(HREF), LP_URL + HISTORY_URL_ENDS_WITH);
 
         historyPage.getPaginationBlock().shouldBe(visible);
 
