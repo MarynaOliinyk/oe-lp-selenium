@@ -43,12 +43,12 @@ public class C157VerifyConfirmarContrasenaFieldTest extends DriverBase {
 
         pp.getContrasenaField().clear();
         pp.getContrasenaField().sendKeys(PREFERENCES_NEW_PASSWORD_VALID);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getConfirmaContrasenaFieldNotification().shouldBe(visible, exactText(PREFERENCES_CONFIRM_NEW_PASSWORD_NOTIFICATION));
         pp.getContrasenaField().shouldHave(attribute(TYPE, PREFERENCES_PASSWORD_TEXT));
         pp.getConfirmaContrasenaField().clear();
         pp.getConfirmaContrasenaField().sendKeys(PREFERENCES_SECOND_NEW_PASSWORD_VALID);
-        pp.getGuardarCambiosButton().click();
+        pp.getGuardarCambiosButtonOnPersonalSection().click();
         pp.getConfirmaContrasenaFieldNotification().shouldBe(visible, exactText(PREFERENCES_PASSWORDS_NOT_EQUALS_NOTIFICATION));
     }
 

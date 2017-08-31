@@ -288,7 +288,6 @@ public class TestData {
                 PREFERENCES_TELEFONO_SECUNDARIO_PLACEHOLDER_TEXT = getProperty("preferences.telefono.secundario.placeholder.text"),
                 PREFERENCES_OBLIGATORIO_FIELD_ERROR_TEXT = getProperty("preferences.obligatorio.error.text"),
                 PREFERENCES_SPECIAL_CHARACTERS_ERROR_TEXT = getProperty("preferences.special.characters.error.text"),
-                PREFERENCES_NEW_EMAIL_NOT_CORESPONDENT_NOTIFICATION = getProperty("preferences.miperfil.new.email.not.corresponden.notification.text"),
                 PREFERENCES_NEW_PASSWORD_VALID = getProperty("preferences.miperfil.newpassword.correct.password"),
                 PREFERENCES_CONFIRM_NEW_PASSWORD_NOTIFICATION = getProperty("preferences.miperfil.newpassword.confirm.newpassword.notification.text"),
                 PREFERENCES_PASSWORD_TEXT = getProperty("preferences.miperfil.newpassword.type.attribute.text"),

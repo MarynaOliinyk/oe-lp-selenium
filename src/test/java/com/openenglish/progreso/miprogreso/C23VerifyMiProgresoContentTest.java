@@ -46,7 +46,7 @@ public class C23VerifyMiProgresoContentTest extends DriverBase {
         page.inicioPage.getUserName().shouldHave(text(USER_NAME));
         page.inicioPage.getProgresoLink().click();
         page.inicioPage.getMiProgressoLink().click();
-        profilePage.getHeaderText().should(visible.text(PROFILE_HEADER_TEXT));
+        profilePage.getHeaderText().should(visible, text(PROFILE_HEADER_TEXT));
     }
 
     @Test
