@@ -28,7 +28,7 @@ public class C152VerifySexoChecksTest extends DriverBase {
         InicioPage ip = new InicioPage();
         ip.getAccountMenu().hover();
         ip.getPreferenciasCuentaSuboptionButton().shouldBe(visible).click();
-        pp.getMiPerfilTabActive().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
+        pp.getActiveTab().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
 
         pp.getFemeninoField().shouldBe(visible).click();
         pp.getFemeninoCheckbox().shouldBe(checked);

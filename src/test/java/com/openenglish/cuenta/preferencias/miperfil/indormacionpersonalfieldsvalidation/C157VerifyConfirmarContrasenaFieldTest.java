@@ -33,7 +33,7 @@ public class C157VerifyConfirmarContrasenaFieldTest extends DriverBase {
         ip.getAccountMenu().hover();
         ip.getPreferenciasCuentaSuboptionButton().shouldBe(visible).click();
         PreferencesPage pp = new PreferencesPage();
-        pp.getMiPerfilTabActive().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
+        pp.getActiveTab().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
 
         pp.getContrasenaField().clear();
         pp.getContrasenaField().sendKeys(PREFERENCES_NEW_PASSWORD_VALID);

@@ -36,7 +36,7 @@ public class C159VerifyDireccion1FieldTest extends DriverBase {
         page.inicioPage.getAccountMenu().hover();
         page.inicioPage.getCuentaSuboptions().should(visible);
         page.inicioPage.getPreferenciasCuentaSuboptionButton().should(visible, exactText(INICIO_PREFERENCIAS_BUTTON_TEXT)).click();
-        preferencesPage.getMiPerfilTabActive().should(visible, text(PREFERENCES_MI_PERFIL_TAB_TEXT));
+        preferencesPage.getActiveTab().should(visible, text(PREFERENCES_MI_PERFIL_TAB_TEXT));
         assertTrue(url().endsWith(PREFERENCES_URL_END_WITH_TEXT));
         preferencesPage.getDireccionFirstField().should(empty).click();
         preferencesPage.getDireccionSecondField().click();

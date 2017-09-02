@@ -291,7 +291,10 @@ public class TestData {
                 PREFERENCES_CONFIRM_NEW_PASSWORD_NOTIFICATION = getProperty("preferences.miperfil.newpassword.confirm.newpassword.notification.text"),
                 PREFERENCES_PASSWORD_TEXT = getProperty("preferences.miperfil.newpassword.type.attribute.text"),
                 PREFERENCES_SECOND_NEW_PASSWORD_VALID = getProperty("preferences.miperfil.newpassword.correct.password.second"),
-                PREFERENCES_PASSWORDS_NOT_EQUALS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.and.old.passwords.different.notification.text");
+                PREFERENCES_PASSWORDS_NOT_EQUALS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.and.old.passwords.different.notification.text"),
+                PREFERENCES_PERFIL_DE_APRENDIZAJE = getProperty("preferences.aprendizaje.tab.text"),
+                PREFERENCES_COMPROMISOS_Y_MOTIVACIONES = getProperty("preferences.aprendizaje.compromisos.y.motivaciones.text"),
+                PREFERENCES_GENERAL_TEXT = getProperty("preferences.aprendizaje.general.text");
     }
 
     public static class TempMail {
