@@ -75,8 +75,9 @@ public class PreferencesPage {
             fechaDeNacimientoField = $(By.id("dob-picker")),
             calendar = $(By.id("ui-datepicker-div")),
             firstAvailableDate = calendar.$(By.xpath("//a[@class='ui-state-default']")),
-            interestsContainer = $(By.xpath(".//*[@class='button-list']/li/a/span")),
-            idiomaDePreferenciaField = $(By.xpath(idiomaDePreferencia));
+            idiomaDePreferenciaField = $(By.xpath(idiomaDePreferencia)),
+            interestsContainer = $(By.xpath(".//*[@class='button-list']/li/a/span"));
 
     private ElementsCollection allTheIdiomasList = $$(By.xpath(idiomaDePreferencia + "//a"));
+
 }
