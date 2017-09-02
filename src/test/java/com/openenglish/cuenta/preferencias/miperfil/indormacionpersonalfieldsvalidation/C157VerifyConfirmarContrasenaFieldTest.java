@@ -16,16 +16,10 @@ import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_CONFIRM_NEW_PASSWORD_NOTIFICATION;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_MI_PERFIL_TAB_TEXT;
-import static com.openenglish.core.TestData.Preferences.PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS;
-import static com.openenglish.core.TestData.Preferences.PREFERENCES_NEWPASSWORD_LESS_THEN_SIX_CHARS_NOTIFICATION;
-import static com.openenglish.core.TestData.Preferences.PREFERENCES_NEWPASSWORD_SPECIAL_SYMBOLS_NOTIFICATION;
-import static com.openenglish.core.TestData.Preferences.PREFERENCES_NEWPASSWORD_WITHOUT_NUMBERS;
-import static com.openenglish.core.TestData.Preferences.PREFERENCES_NEWPASSWORD_WITHOUT_NUMBERS_NOTIFICATION;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_NEW_PASSWORD_VALID;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_PASSWORDS_NOT_EQUALS_NOTIFICATION;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_PASSWORD_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_SECOND_NEW_PASSWORD_VALID;
-import static com.openenglish.core.TestData.Preferences.PREFERENCES_SPECIAL_SYMBOLS;
 
 public class C157VerifyConfirmarContrasenaFieldTest extends DriverBase {
 
