@@ -65,7 +65,6 @@ public class PreferencesPage {
             contrasenaPlaceholder = $(By.xpath(String.format(rightPlaceHolderPersonalSection, 3, "label"))),
             confirmarContrasenaPlaceholder = $(By.xpath(String.format(rightPlaceHolderPersonalSection, 4, "label"))),
             idiomaDePreferenciaPlaceholder = $(By.xpath(String.format(rightPlaceHolderPersonalSection, 5, "label"))),
-            idiomaDePreferenciaField = $(By.xpath(".//*[@id='pref-langSelectBoxIt']/span[2]")),
             userNameAndHolaText = $(By.xpath(".//*[@class='student-greeting']/h3")),
             contactoSection = $(By.xpath(".//*[@id='content']/div[1]/div[2]/fieldset/div[2]")),
             direccionOnePlaceholder = $(By.xpath(String.format(leftPlaceHolderDeContactoSection, 1))),

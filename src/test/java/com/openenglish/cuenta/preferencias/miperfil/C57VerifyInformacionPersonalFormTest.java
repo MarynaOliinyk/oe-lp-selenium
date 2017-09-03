@@ -46,7 +46,7 @@ public class C57VerifyInformacionPersonalFormTest extends DriverBase {
         page.inicioPage.getAccountMenu().hover();
         page.inicioPage.getCuentaSuboptions().shouldBe(visible);
         page.inicioPage.getPreferenciasCuentaSuboptionButton().shouldBe(visible, exactText(INICIO_PREFERENCIAS_BUTTON_TEXT)).click();
-        preferencesPage.getMiPerfilTabActive().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
+        preferencesPage.getActiveTab().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
         assertTrue(url().endsWith(PREFERENCES_URL_END_WITH_TEXT));
         preferencesPage.getNombreField().should(visible, attribute(VALUE, PREFERENCES_NOMBRE_VALUE_TEXT));
         preferencesPage.getApellidoField().should(visible, attribute(VALUE, PREFERENCES_APELLIDO_VALUE_TEXT));

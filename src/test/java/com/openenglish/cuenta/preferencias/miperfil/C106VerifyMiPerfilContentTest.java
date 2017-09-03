@@ -113,7 +113,7 @@ public class C106VerifyMiPerfilContentTest extends DriverBase {
     }
 
     @Test
-    public void verifyMiPerfilContentTestInformationDeContactoSectionS5 () {
+    public void verifyMiPerfilContentTestInformationDeContactoSectionS5() {
         loginWithCorrectCredentialsAndPagePreferenciasIsOpen();
         preferencesPage.getContactoSection().scrollTo();
         preferencesPage.getPaisDrobDownInput().click();
@@ -125,7 +125,7 @@ public class C106VerifyMiPerfilContentTest extends DriverBase {
         preferencesPage.getCodidoPostalPlaseholder().should(visible, text(PREFERENCES_CODIGO_POSTAL_PLACEHOLDER_TEXT));
         preferencesPage.getZonaHorariaPlaseholder().should(visible, text(PREFERENCES_ZONA_HORARIA_PLACEHOLDER_TEXT));
         preferencesPage.getFechaYHoraActualPlaseholder().should(visible, text(PREFERENCES_FECHA_Y_HORA_ACTUAL_PLACEHOLDER_TEXT));
-        preferencesPage.getEstadoPlaceholder().should(visible,text(PREFERENCES_ESTADO_PLASEHOLDER_TEXT));
+        preferencesPage.getEstadoPlaceholder().should(visible, text(PREFERENCES_ESTADO_PLASEHOLDER_TEXT));
         preferencesPage.getGuardarCambiosButtonOnContactoSection().should(visible, attribute(VALUE, PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT));
     }
 }
