@@ -1,11 +1,13 @@
 package com.openenglish.pages;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
 import lombok.experimental.Accessors;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 @Getter
 @Accessors(chain = true)
@@ -20,7 +22,9 @@ public class PreferencesPage {
             email = "email",
             confirmEmail = "confirmEmail",
             contrasena = "newPassword",
-            checkboxName = ".//div[@id='gender']//span[contains(text(),'%s')]";
+            confirmaContrasena = "newPasswordCheck",
+            checkboxName = ".//div[@id='gender']//span[contains(text(),'%s')]",
+            idiomaDePreferencia = ".//*[@id='pref-langSelectBoxItContainer']";
 
     private SelenideElement miPerfilTabActive = $(By.xpath(".//*[@class='active']/a")),
             prefilDeAprendizajeTab = $(By.xpath(".//*[@id='submenu']//li[2]/a")),
@@ -40,6 +44,8 @@ public class PreferencesPage {
             guardarCambiosButtonOnPersonalSection = $(By.id("personal-info-save")),
             guardarCambiosButtonOnContactoSection = $(By.id("info-button")),
             guardarCambiosButtonOnInteresesSection = $(By.id("save-pref")),
+            confirmaContrasenaField = $(By.id(confirmaContrasena)),
+            confirmaContrasenaFieldNotification = $(By.xpath(String.format(generalNotificationLocator, confirmaContrasena))),
             photoFrame = $(By.xpath(".//*[@class='photo-frame']")),
             cambiarFotoText = $(By.xpath(".//*[@class='orange-text']")),
             nombrePlaceholder = $(By.xpath(String.format(leftPlaceHolderPersonalSection, "1", "label"))),
@@ -69,5 +75,8 @@ public class PreferencesPage {
             fechaDeNacimientoField = $(By.id("dob-picker")),
             calendar = $(By.id("ui-datepicker-div")),
             firstAvailableDate = calendar.$(By.xpath("//a[@class='ui-state-default']")),
+            idiomaDePreferenciaField = $(By.xpath(idiomaDePreferencia)),
             interestsContainer = $(By.xpath(".//*[@class='button-list']/li/a/span"));
+
+    private ElementsCollection allTheIdiomasList = $$(By.xpath(idiomaDePreferencia + "//a"));
 }

@@ -285,8 +285,12 @@ public class TestData {
                 PREFERENCES_PAIS_PLACEHOLDER_TEXT = getProperty("preferences.pais.placeholder.text"),
                 PREFERENCES_TELEFONO_PRINCIPAL_PLACEHOLDER_TEXT = getProperty("preferences.telefono.principal.placeholder.text"),
                 PREFERENCES_TELEFONO_SECUNDARIO_PLACEHOLDER_TEXT = getProperty("preferences.telefono.secundario.placeholder.text"),
-                PREFERENCES_OBLIGATORIO_FIELD_ERROR_TEXT = getProperty("preferences.obligatorio.error.text"),
-                PREFERENCES_SPECIAL_CHARACTERS_ERROR_TEXT = getProperty("preferences.special.characters.error.text");
+                PREFERENCES_SPECIAL_CHARACTERS_ERROR_TEXT = getProperty("preferences.special.characters.error.text"),
+                PREFERENCES_NEW_PASSWORD_VALID = getProperty("preferences.miperfil.newpassword.correct.password"),
+                PREFERENCES_CONFIRM_NEW_PASSWORD_NOTIFICATION = getProperty("preferences.miperfil.newpassword.confirm.newpassword.notification.text"),
+                PREFERENCES_PASSWORD_TEXT = getProperty("preferences.miperfil.newpassword.type.attribute.text"),
+                PREFERENCES_SECOND_NEW_PASSWORD_VALID = getProperty("preferences.miperfil.newpassword.correct.password.second"),
+                PREFERENCES_PASSWORDS_NOT_EQUALS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.and.old.passwords.different.notification.text");
     }
 
     public static class TempMail {
