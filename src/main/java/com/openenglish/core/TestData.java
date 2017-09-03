@@ -286,7 +286,12 @@ public class TestData {
                 PREFERENCES_TELEFONO_PRINCIPAL_PLACEHOLDER_TEXT = getProperty("preferences.telefono.principal.placeholder.text"),
                 PREFERENCES_TELEFONO_SECUNDARIO_PLACEHOLDER_TEXT = getProperty("preferences.telefono.secundario.placeholder.text"),
                 PREFERENCES_OBLIGATORIO_FIELD_ERROR_TEXT = getProperty("preferences.obligatorio.error.text"),
-                PREFERENCES_SPECIAL_CHARACTERS_ERROR_TEXT = getProperty("preferences.special.characters.error.text");
+                PREFERENCES_SPECIAL_CHARACTERS_ERROR_TEXT = getProperty("preferences.special.characters.error.text"),
+                PREFERENCES_NOMBRE_VALUE_TEXT = getProperty("preferences.nombre.value.text"),
+                PREFERENCES_APELLIDO_VALUE_TEXT = getProperty("preferences.apellido.value.text"),
+                PREFERENCES_EMAIL_VALUE_TEXT = getProperty("preferences.email.value.text"),
+                PREFERENCES_FECHA_DE_NACIMIENTO_VALUE_TEXT = getProperty("preferences.fecha.de.nacimiento.value.text"),
+                PREFERENCES_IDIOMA_DE_PREFERENCIA_VALUE_TEXT = getProperty("preferences.idioma.de.preferencia.value.text");
     }
 
     public static class TempMail {
