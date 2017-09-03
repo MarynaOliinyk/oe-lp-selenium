@@ -82,4 +82,5 @@ public class PreferencesPage {
             interestsContainer = $(By.xpath(".//*[@class='button-list']/li/a/span"));
 
     private ElementsCollection allTheIdiomasList = $$(By.xpath(idiomaDePreferencia + "//a"));
+
 }
