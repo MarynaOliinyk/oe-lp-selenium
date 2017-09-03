@@ -25,6 +25,7 @@ import static com.openenglish.core.TestData.Preferences.PREFERENCES_CONTRASENA_P
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_DIRECTION_ONE_PLACEHOLDER_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_DIRECTION_TWO_PLACEHOLDER_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_EMAIL_PLACEHOLDER_TEXT;
+import static com.openenglish.core.TestData.Preferences.PREFERENCES_ESTADO_PLASEHOLDER_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_FECHA_DE_NACIMIENTO_PLACEHOLDER_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_FECHA_Y_HORA_ACTUAL_PLACEHOLDER_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT;
@@ -35,6 +36,7 @@ import static com.openenglish.core.TestData.Preferences.PREFERENCES_NIVEL_ACADEM
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_NOMBRE_PLACEHOLDER_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_NOMBRE_VISIBLE_A_OTROS_PLACEHOLDER_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_PAIS_PLACEHOLDER_TEXT;
+import static com.openenglish.core.TestData.Preferences.PREFERENCES_PAIS_VALUE_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_SEXO_PLACEHOLDER_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_TELEFONO_PRINCIPAL_PLACEHOLDER_TEXT;
@@ -56,7 +58,7 @@ public class C106VerifyMiPerfilContentTest extends DriverBase {
         page.inicioPage.getAccountMenu().hover();
         page.inicioPage.getCuentaSuboptions().should(visible);
         page.inicioPage.getPreferenciasCuentaSuboptionButton().should(visible, exactText(INICIO_PREFERENCIAS_BUTTON_TEXT)).click();
-        preferencesPage.getMiPerfilTabActive().should(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
+        preferencesPage.getActiveTab().should(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
         assertTrue(url().endsWith(PREFERENCES_URL_END_WITH_TEXT));
     }
 
@@ -65,7 +67,7 @@ public class C106VerifyMiPerfilContentTest extends DriverBase {
         loginWithCorrectCredentialsAndPagePreferenciasIsOpen();
         preferencesPage.getUserNameAndHolaText().should(visible, text(PREFERENCES_USER_NICK_NAME_AND_HOLA));
         preferencesPage.getPhotoFrame().should(visible);
-        assertTrue(preferencesPage.getMiPerfilTabActive().should(visible).getAttribute(HREF).contains(PREFERENCES_MI_PERFIL_LINK));
+        assertTrue(preferencesPage.getActiveTab().should(visible).getAttribute(HREF).contains(PREFERENCES_MI_PERFIL_LINK));
         assertTrue(preferencesPage.getPrefilDeAprendizajeTab().should(visible).getAttribute(HREF).contains(PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK));
     }
 
@@ -108,5 +110,22 @@ public class C106VerifyMiPerfilContentTest extends DriverBase {
         loginWithCorrectCredentialsAndPagePreferenciasIsOpen();
         preferencesPage.getInterestsContainer().should(visible);
         preferencesPage.getGuardarCambiosButtonOnInteresesSection().should(visible, attribute(VALUE, PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT));
+    }
+
+    @Test
+    public void verifyMiPerfilContentTestInformationDeContactoSectionS5 () {
+        loginWithCorrectCredentialsAndPagePreferenciasIsOpen();
+        preferencesPage.getContactoSection().scrollTo();
+        preferencesPage.getPaisDrobDownInput().click();
+        preferencesPage.getPaisDrobDownInput().sendKeys(PREFERENCES_PAIS_VALUE_TEXT);
+        preferencesPage.getPaisBrasilOnDropDown().click();
+        preferencesPage.getDireccionOnePlaceholder().should(visible, text(PREFERENCES_DIRECTION_ONE_PLACEHOLDER_TEXT));
+        preferencesPage.getDireccionTwoPlaceholder().should(visible, text(PREFERENCES_DIRECTION_TWO_PLACEHOLDER_TEXT));
+        preferencesPage.getPais().should(visible, text(PREFERENCES_PAIS_PLACEHOLDER_TEXT));
+        preferencesPage.getCodidoPostalPlaseholder().should(visible, text(PREFERENCES_CODIGO_POSTAL_PLACEHOLDER_TEXT));
+        preferencesPage.getZonaHorariaPlaseholder().should(visible, text(PREFERENCES_ZONA_HORARIA_PLACEHOLDER_TEXT));
+        preferencesPage.getFechaYHoraActualPlaseholder().should(visible, text(PREFERENCES_FECHA_Y_HORA_ACTUAL_PLACEHOLDER_TEXT));
+        preferencesPage.getEstadoPlaceholder().should(visible,text(PREFERENCES_ESTADO_PLASEHOLDER_TEXT));
+        preferencesPage.getGuardarCambiosButtonOnContactoSection().should(visible, attribute(VALUE, PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT));
     }
 }

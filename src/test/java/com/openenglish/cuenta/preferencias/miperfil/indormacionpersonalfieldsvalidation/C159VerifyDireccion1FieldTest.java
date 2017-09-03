@@ -17,7 +17,7 @@ import static com.openenglish.core.TestData.Inicio.INICIO_PREFERENCIAS_BUTTON_TE
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_MI_PERFIL_TAB_TEXT;
-import static com.openenglish.core.TestData.Preferences.PREFERENCES_OBLIGATORIO_FIELD_ERROR_TEXT;
+import static com.openenglish.core.TestData.Preferences.PREFERENCES_OBLIGATORIO_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_SPECIAL_CHARACTERS_ERROR_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_URL_END_WITH_TEXT;
 import static com.openenglish.core.TestData.Register.SPECIAL_CHARACTERS;
@@ -36,11 +36,11 @@ public class C159VerifyDireccion1FieldTest extends DriverBase {
         page.inicioPage.getAccountMenu().hover();
         page.inicioPage.getCuentaSuboptions().should(visible);
         page.inicioPage.getPreferenciasCuentaSuboptionButton().should(visible, exactText(INICIO_PREFERENCIAS_BUTTON_TEXT)).click();
-        preferencesPage.getMiPerfilTabActive().should(visible, text(PREFERENCES_MI_PERFIL_TAB_TEXT));
+        preferencesPage.getActiveTab().should(visible, text(PREFERENCES_MI_PERFIL_TAB_TEXT));
         assertTrue(url().endsWith(PREFERENCES_URL_END_WITH_TEXT));
         preferencesPage.getDireccionFirstField().should(empty).click();
         preferencesPage.getDireccionSecondField().click();
-        assertTrue(preferencesPage.getErrorMessage().getText().equals(PREFERENCES_OBLIGATORIO_FIELD_ERROR_TEXT));
+        assertTrue(preferencesPage.getErrorMessage().getText().equals(PREFERENCES_OBLIGATORIO_TEXT));
         preferencesPage.getDireccionFirstField().sendKeys(SPECIAL_CHARACTERS);
         preferencesPage.getDireccionSecondField().click();
         assertTrue(preferencesPage.getErrorMessage().getText().equals(PREFERENCES_SPECIAL_CHARACTERS_ERROR_TEXT));

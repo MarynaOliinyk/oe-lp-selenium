@@ -21,6 +21,7 @@ public class TestData {
                 POP_UP_INVALID_SECURITY_CODE = getProperty("login.popup.invalid.security.code"),
                 USER_NAME = getProperty("login.user.name"),
                 REGISTERED_EMAIL = getProperty("login.correct.email"),
+                READ_ONLY_USER = getProperty("login.correct.email.readonly.user"),
                 CORRECT_PASSWORD = getProperty("login.correct.password"),
                 UNREGISTERED_EMAIL = getProperty("login.unregistered.email"),
                 INVALID_PASSWORD = getProperty("login.invalid.password"),
@@ -281,6 +282,8 @@ public class TestData {
                 PREFERENCES_DIRECTION_TWO_PLACEHOLDER_TEXT = getProperty("preferences.direction.two.placeholder.text"),
                 PREFERENCES_CODIGO_POSTAL_PLACEHOLDER_TEXT = getProperty("preferences.codigo.postal.placeholder.text"),
                 PREFERENCES_ZONA_HORARIA_PLACEHOLDER_TEXT = getProperty("preferences.zona.horaria.placeholder.text"),
+                PREFERENCES_PAIS_VALUE_TEXT = getProperty("preferences.pais.value.text"),
+                PREFERENCES_ESTADO_PLASEHOLDER_TEXT = getProperty("preferences.estado.placeholder.text"),
                 PREFERENCES_FECHA_Y_HORA_ACTUAL_PLACEHOLDER_TEXT = getProperty("preferences.fecha.y.hora.actual.placeholder.text"),
                 PREFERENCES_PAIS_PLACEHOLDER_TEXT = getProperty("preferences.pais.placeholder.text"),
                 PREFERENCES_TELEFONO_PRINCIPAL_PLACEHOLDER_TEXT = getProperty("preferences.telefono.principal.placeholder.text"),
@@ -291,7 +294,15 @@ public class TestData {
                 PREFERENCES_APELLIDO_VALUE_TEXT = getProperty("preferences.apellido.value.text"),
                 PREFERENCES_EMAIL_VALUE_TEXT = getProperty("preferences.email.value.text"),
                 PREFERENCES_FECHA_DE_NACIMIENTO_VALUE_TEXT = getProperty("preferences.fecha.de.nacimiento.value.text"),
-                PREFERENCES_IDIOMA_DE_PREFERENCIA_VALUE_TEXT = getProperty("preferences.idioma.de.preferencia.value.text");
+                PREFERENCES_IDIOMA_DE_PREFERENCIA_VALUE_TEXT = getProperty("preferences.idioma.de.preferencia.value.text"),
+                PREFERENCES_NEW_PASSWORD_VALID = getProperty("preferences.miperfil.newpassword.correct.password"),
+                PREFERENCES_CONFIRM_NEW_PASSWORD_NOTIFICATION = getProperty("preferences.miperfil.newpassword.confirm.newpassword.notification.text"),
+                PREFERENCES_PASSWORD_TEXT = getProperty("preferences.miperfil.newpassword.type.attribute.text"),
+                PREFERENCES_SECOND_NEW_PASSWORD_VALID = getProperty("preferences.miperfil.newpassword.correct.password.second"),
+                PREFERENCES_PASSWORDS_NOT_EQUALS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.and.old.passwords.different.notification.text"),
+                PREFERENCES_PERFIL_DE_APRENDIZAJE = getProperty("preferences.aprendizaje.tab.text"),
+                PREFERENCES_COMPROMISOS_Y_MOTIVACIONES = getProperty("preferences.aprendizaje.compromisos.y.motivaciones.text"),
+                PREFERENCES_GENERAL_TEXT = getProperty("preferences.aprendizaje.general.text");
     }
 
     public static class TempMail {
@@ -315,6 +326,11 @@ public class TestData {
                 MENSAJES_FECHA_HORA = getProperty("mensajes.fecha.hora.text"),
                 MENSAJES_ENVIADO_POR = getProperty("mensajes.enviado.por.text"),
                 MENSAJES_AVISO = getProperty("mensajes.aviso.text"),
-                MENSAJES_MENSAJES_BUTTON_TEXT = getProperty("mensajes.mensajes.text");
+                MENSAJES_MENSAJES_BUTTON_TEXT = getProperty("mensajes.mensajes.text"),
+                MENSAJES_MAX_MENSAJES_NUMBER = getProperty("mensajes.maximum.number.of.messages.on.one.page"),
+                MENSAJES_TWO_PEGES_VALUE = getProperty("mensajes.two.pages.with.messages"),
+                MENSAJES_ONE_PEGE_VALUE = getProperty("mensajes.minimum.pages.with.messages"),
+                MENSAJES_FIRST_PAGE_PAGINATION_BLOCK_TEXT = String.format(getProperty("mensajes.pagination.general.text"), "1"),
+                MENSAJES_SECOND_PAGE_PAGINATION_BLOCK_TEXT = String.format(getProperty("mensajes.pagination.general.text"), "2");
     }
 }
