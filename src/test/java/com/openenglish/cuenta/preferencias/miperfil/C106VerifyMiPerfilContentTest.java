@@ -58,7 +58,7 @@ public class C106VerifyMiPerfilContentTest extends DriverBase {
         page.inicioPage.getAccountMenu().hover();
         page.inicioPage.getCuentaSuboptions().should(visible);
         page.inicioPage.getPreferenciasCuentaSuboptionButton().should(visible, exactText(INICIO_PREFERENCIAS_BUTTON_TEXT)).click();
-        preferencesPage.getMiPerfilTabActive().should(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
+        preferencesPage.getActiveTab().should(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
         assertTrue(url().endsWith(PREFERENCES_URL_END_WITH_TEXT));
     }
 
@@ -67,7 +67,7 @@ public class C106VerifyMiPerfilContentTest extends DriverBase {
         loginWithCorrectCredentialsAndPagePreferenciasIsOpen();
         preferencesPage.getUserNameAndHolaText().should(visible, text(PREFERENCES_USER_NICK_NAME_AND_HOLA));
         preferencesPage.getPhotoFrame().should(visible);
-        assertTrue(preferencesPage.getMiPerfilTabActive().should(visible).getAttribute(HREF).contains(PREFERENCES_MI_PERFIL_LINK));
+        assertTrue(preferencesPage.getActiveTab().should(visible).getAttribute(HREF).contains(PREFERENCES_MI_PERFIL_LINK));
         assertTrue(preferencesPage.getPrefilDeAprendizajeTab().should(visible).getAttribute(HREF).contains(PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK));
     }
 

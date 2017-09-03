@@ -31,7 +31,7 @@ public class C153VerifyFechaDeNacimientoTest extends DriverBase {
         ip.getAccountMenu().hover();
         ip.getPreferenciasCuentaSuboptionButton().shouldBe(visible).click();
 
-        pp.getMiPerfilTabActive().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
+        pp.getActiveTab().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
 
         pp.getFechaDeNacimientoField().shouldBe(visible, attribute(CLASS, PREFERENCES_PAGE_DATE_PICKER)).click();
         pp.getCalendar().shouldBe(visible);

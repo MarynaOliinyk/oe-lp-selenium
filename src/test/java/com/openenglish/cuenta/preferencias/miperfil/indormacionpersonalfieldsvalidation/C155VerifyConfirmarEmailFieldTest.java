@@ -33,7 +33,7 @@ public class C155VerifyConfirmarEmailFieldTest extends DriverBase {
         InicioPage ip = new InicioPage();
         ip.getAccountMenu().hover();
         ip.getPreferenciasCuentaSuboptionButton().shouldBe(visible).click();
-        pp.getMiPerfilTabActive().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
+        pp.getActiveTab().shouldBe(visible, exactText(PREFERENCES_MI_PERFIL_TAB_TEXT));
 
         String defaultEmail = pp.getEmailField().getAttribute(VALUE);
         pp.getEmailField().clear();
