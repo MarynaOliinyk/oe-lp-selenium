@@ -35,6 +35,7 @@ public class PreferencesPage {
             direccionFirstField = $(By.id("address1")),
             direccionSecondField = $(By.id("address2")),
             errorMessage = $(By.xpath(".//*[@class='field-error']")),
+            errorMessageForDireccion2Field = $(By.xpath(".//*[@id='contact-info1']/div[1]/div[2]/div/span")),
             nombreFieldNotification = $(By.xpath(String.format(generalNotificationLocator, nombre))),
             apellidoField = $(By.id(apelido)),
             apellidoFieldNotification = $(By.xpath(String.format(generalNotificationLocator, apelido))),
