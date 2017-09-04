@@ -44,7 +44,7 @@ public class C163VerifyPaisFieldTest extends DriverBase {
         preferencesPage.getContactoSection().scrollTo();
         preferencesPage.getPaisDropDownButton().should(visible).click();
         List<SelenideElement> allPaisList = preferencesPage.getAllPaisList();
-        allPaisList.forEach(element -> element.should(exist, visible, not(empty)));
+        allPaisList.forEach(element -> element.should(exist, not(empty)));
         preferencesPage.getPaisDrobDownInput().click();
         preferencesPage.getPaisDrobDownInput().setValue(PREFERENCES_PAIS_VALUE_AFGANISTAN_TEXT);
         preferencesPage.getPaisValueOnDropDown().should(text(PREFERENCES_PAIS_VALUE_AFGANISTAN_TEXT)).click();
