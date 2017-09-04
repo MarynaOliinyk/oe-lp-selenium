@@ -88,7 +88,11 @@ public class PreferencesPage {
             compromisosYMotivacionesSectionGuardarCambiosButton = compromisosYMotivacionesSection.$(By.id(savePrefIdText)),
             generalSection = $(By.xpath(String.format(aprendizajeTabSectionsLocator, "211"))),
             generalSectionHeader = generalSection.find("h3"),
-            generalSectionGuardarCambiosButton = generalSection.$(By.id(savePrefIdText));
+            generalSectionGuardarCambiosButton = generalSection.$(By.id(savePrefIdText)),
+            telefonoPrincipalFirstField = $(By.id("phone_field-0")),
+            telefonoPrincipalSecondField = $(By.id("phone_field-1")),
+            codigoPostalField = $(By.id("postalCode")),
+            codigoPostalErrorText = $(By.xpath(".//*[@id='contact-info1']/div[1]/div[3]/div/span"));
 
     private ElementsCollection allTheIdiomasList = $$(By.xpath(idiomaDePreferencia + "//a"));
 
