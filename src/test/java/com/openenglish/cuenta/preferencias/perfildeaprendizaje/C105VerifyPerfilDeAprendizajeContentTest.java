@@ -37,7 +37,7 @@ public class C105VerifyPerfilDeAprendizajeContentTest extends DriverBase {
 
         pp.getNotActiveTab().shouldBe(visible, exactText(PREFERENCES_PERFIL_DE_APRENDIZAJE)).click();
         pp.getUserNameAndHolaText().should(visible, exactText(PREFERENCES_USER_NICK_NAME_AND_HOLA));
-        pp.getPhotoFrame().should(visible);
+        pp.getUserProfilePicture().should(visible);
         pp.getCompromisosYMotivacionesSection().should(visible);
         pp.getCompromisosYMotivacionesSectionHeader().should(visible, exactText(PREFERENCES_COMPROMISOS_Y_MOTIVACIONES));
         pp.getCompromisosYMotivacionesSectionGuardarCambiosButton()

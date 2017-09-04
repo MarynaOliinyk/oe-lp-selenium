@@ -62,6 +62,7 @@ public class PreferencesPage {
             confirmarContrasenaPlaceholder = $(By.xpath(String.format(rightPlaceHolderPersonalSection, 4, "label"))),
             idiomaDePreferenciaPlaceholder = $(By.xpath(String.format(rightPlaceHolderPersonalSection, 5, "label"))),
             userNameAndHolaText = $(By.xpath(".//*[@class='student-greeting']/h3")),
+            userProfilePicture = $(By.xpath(".//*[@id='main-content']//img[@class='rounded-circle img-thumbnail']")),
             contactoSection = $(By.xpath(".//*[@id='content']/div[1]/div[2]/fieldset/div[2]")),
             direccionOnePlaceholder = $(By.xpath(String.format(leftPlaceHolderDeContactoSection, 1))),
             direccionTwoPlaceholder = $(By.xpath(String.format(leftPlaceHolderDeContactoSection, 2))),
@@ -82,11 +83,14 @@ public class PreferencesPage {
             interestsContainer = $(By.xpath(".//*[@class='button-list']/li/a/span")),
             compromisosYMotivacionesSection = $(By.xpath(String.format(aprendizajeTabSectionsLocator, "210"))),
             compromisosYMotivacionesSectionHeader = compromisosYMotivacionesSection.find("h3"),
-            compromisosYMotivacionesSectionGuardarCambiosButton = compromisosYMotivacionesSection.$(By.id(savePrefIdText)),
+            compromisosYMotivacionesSectionGuardarCambiosButton = $(By.id(savePrefIdText)),
             generalSection = $(By.xpath(String.format(aprendizajeTabSectionsLocator, "211"))),
             generalSectionHeader = generalSection.find("h3"),
-            generalSectionGuardarCambiosButton = generalSection.$(By.id(savePrefIdText));
+            generalSectionGuardarCambiosButton = $(By.id(savePrefIdText));
 
-    private ElementsCollection allTheIdiomasList = $$(By.xpath(idiomaDePreferencia + "//a"));
+    private ElementsCollection allTheIdiomasList = $$(By.xpath(idiomaDePreferencia + "//a")),
+            listOfAllTheBoxesToChooseInAprendizajeTab = $$(By.xpath("//ul[@class='button-list']//a")),
+            listOfAllTheBoxesToChooseTextInAprendizajeTab = $$(By.xpath("//ul[@class='button-list']//a/span")),
+            listOfAllTheBoxesToChooseHoverTextInAprendizajeTab = $$(By.xpath("//ul[@class='button-list']//a/strong[@class='option-choose']"));
 
 }
