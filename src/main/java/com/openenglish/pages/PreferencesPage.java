@@ -26,7 +26,10 @@ public class PreferencesPage {
             checkboxName = ".//div[@id='gender']//span[contains(text(),'%s')]",
             idiomaDePreferencia = ".//*[@id='pref-langSelectBoxItContainer']",
             aprendizajeTabSectionsLocator = ".//*[@id='section-holder']//div[@data-qg-id='%s']",
-            savePrefIdText = "save-pref";
+            savePrefIdText = "save-pref",
+            telefonoPrincipalFields = "phone_field-%s",
+            telefonoSecundarioFields = "sec_phone_field-%s";
+
 
     private SelenideElement activeTab = $(By.xpath(".//*[@class='active']/a")),
             notActiveTab = $(By.xpath("//nav[@class='add-nav fourth']//li[not(contains(@class,'active'))]/a")),
@@ -73,7 +76,7 @@ public class PreferencesPage {
             zonaHorariaPlaseholder = $(By.xpath(String.format(leftPlaceHolderDeContactoSection, 4))),
             fechaYHoraActualPlaseholder = $(By.xpath(String.format(leftPlaceHolderDeContactoSection, 5))),
             pais = $(By.xpath(".//*[@id='ph']/div[1]/div/label")),
-            paisBrasilOnDropDown = $(By.xpath(".//*[@id='ui-id-3']/li/a")),
+            paisValueOnDropDown = $(By.xpath(".//*[@id='ui-id-3']/li/a")),
             paisDrobDownInput = $(By.xpath(".//*[@id='ph']/div[1]/div/div/span/input")),
             telefonoPrincipal = $(By.xpath(".//*[@id='primaryPhone']/div/label")),
             telefonoSecundario = $(By.xpath(".//*[@id='secondaryPhone']/div/label")),
@@ -92,8 +95,16 @@ public class PreferencesPage {
             compromisosYMotivacionesSectionGuardarCambiosButton = compromisosYMotivacionesSection.$(By.id(savePrefIdText)),
             generalSection = $(By.xpath(String.format(aprendizajeTabSectionsLocator, "211"))),
             generalSectionHeader = generalSection.find("h3"),
-            generalSectionGuardarCambiosButton = generalSection.$(By.id(savePrefIdText));
+            generalSectionGuardarCambiosButton = generalSection.$(By.id(savePrefIdText)),
+            telefonoPrincipalFirstField = $(By.id(String.format(telefonoPrincipalFields, "0"))),
+            telefonoPrincipalSecondField = $(By.id(String.format(telefonoPrincipalFields, "1"))),
+            telefonoPrincipalThirdField = $(By.id(String.format(telefonoPrincipalFields, "2"))),
+            telefonoSecundarioFirstField = $(By.id(String.format(telefonoSecundarioFields, "0"))),
+            telefonoSecundarioSecondField = $(By.id(String.format(telefonoSecundarioFields, "1"))),
+            telefonoSecundarioThirdField = $(By.id(String.format(telefonoSecundarioFields, "2"))),
+            paisDropDownButton = $(By.xpath(".//*[@id='ph']/div[1]/div/div/span/a"));
 
-    private ElementsCollection allTheIdiomasList = $$(By.xpath(idiomaDePreferencia + "//a"));
+    private ElementsCollection allTheIdiomasList = $$(By.xpath(idiomaDePreferencia + "//a")),
+            allPaisList = $$(By.xpath(".//*[@class='ui-menu-item']/a"));
 
 }
