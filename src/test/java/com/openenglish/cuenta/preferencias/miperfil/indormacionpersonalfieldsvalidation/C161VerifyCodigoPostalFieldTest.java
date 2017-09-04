@@ -25,6 +25,7 @@ import static com.openenglish.core.TestData.Preferences.PREFERENCES_SPECIAL_SYMB
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_TELEFONO_PRINCIPAL_VALUE_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_URL_END_WITH_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_VALUE_FOR_FIELD;
+import static com.openenglish.core.TestData.Selenide.TIMEOUT;
 import static org.testng.Assert.assertTrue;
 
 public class C161VerifyCodigoPostalFieldTest extends DriverBase {
@@ -50,7 +51,7 @@ public class C161VerifyCodigoPostalFieldTest extends DriverBase {
         preferencesPage.getContactoSection().scrollTo();
         preferencesPage.getGuardarCambiosButtonOnContactoSection().should(enabled).click();
         assertTrue(preferencesPage.getCodigoPostalField().getValue().equals(PREFERENCES_VALUE_FOR_FIELD));
-        preferencesPage.getCodigoPostalField().waitUntil(appear, 5000);
+        preferencesPage.getCodigoPostalField().waitUntil(appear, TIMEOUT);
         preferencesPage.getCodigoPostalField().setValue(PREFERENCES_SPECIAL_SYMBOLS);
         preferencesPage.getDireccionFirstField().click();
         preferencesPage.getCodigoPostalErrorText().should(exist, text(PREFERENCES_CODIGO_POSTAL_ERROR_TEXT));
