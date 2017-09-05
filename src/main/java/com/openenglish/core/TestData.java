@@ -303,7 +303,8 @@ public class TestData {
                 PREFERENCES_PASSWORDS_NOT_EQUALS_NOTIFICATION = getProperty("preferences.miperfil.newpassword.and.old.passwords.different.notification.text"),
                 PREFERENCES_PERFIL_DE_APRENDIZAJE = getProperty("preferences.aprendizaje.tab.text"),
                 PREFERENCES_COMPROMISOS_Y_MOTIVACIONES = getProperty("preferences.aprendizaje.compromisos.y.motivaciones.text"),
-                PREFERENCES_GENERAL_TEXT = getProperty("preferences.aprendizaje.general.text");
+                PREFERENCES_GENERAL_TEXT = getProperty("preferences.aprendizaje.general.text"),
+                PREFERENCES_VALUE_FOR_DIRRECCION_2_FIELD = getProperty("preferences.value.for.dirrection.2.field");
     }
 
     public static class TempMail {
