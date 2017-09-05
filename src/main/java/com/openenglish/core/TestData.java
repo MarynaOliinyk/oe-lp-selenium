@@ -282,6 +282,8 @@ public class TestData {
                 PREFERENCES_DIRECTION_TWO_PLACEHOLDER_TEXT = getProperty("preferences.direction.two.placeholder.text"),
                 PREFERENCES_CODIGO_POSTAL_PLACEHOLDER_TEXT = getProperty("preferences.codigo.postal.placeholder.text"),
                 PREFERENCES_ZONA_HORARIA_PLACEHOLDER_TEXT = getProperty("preferences.zona.horaria.placeholder.text"),
+                PREFERENCES_PAIS_VALUE_TEXT = getProperty("preferences.pais.value.text"),
+                PREFERENCES_ESTADO_PLASEHOLDER_TEXT = getProperty("preferences.estado.placeholder.text"),
                 PREFERENCES_FECHA_Y_HORA_ACTUAL_PLACEHOLDER_TEXT = getProperty("preferences.fecha.y.hora.actual.placeholder.text"),
                 PREFERENCES_PAIS_PLACEHOLDER_TEXT = getProperty("preferences.pais.placeholder.text"),
                 PREFERENCES_TELEFONO_PRINCIPAL_PLACEHOLDER_TEXT = getProperty("preferences.telefono.principal.placeholder.text"),
