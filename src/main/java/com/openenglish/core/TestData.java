@@ -304,6 +304,7 @@ public class TestData {
                 PREFERENCES_PERFIL_DE_APRENDIZAJE = getProperty("preferences.aprendizaje.tab.text"),
                 PREFERENCES_COMPROMISOS_Y_MOTIVACIONES = getProperty("preferences.aprendizaje.compromisos.y.motivaciones.text"),
                 PREFERENCES_GENERAL_TEXT = getProperty("preferences.aprendizaje.general.text"),
+                PREFERENCES_VALUE_FOR_DIRRECCION_2_FIELD = getProperty("preferences.value.for.dirrection.2.field"),
                 PREFERENCES_SELECCIONAR_TEXT = getProperty("preferences.aprendizaje.seleccionar.hover.text");
     }
 
