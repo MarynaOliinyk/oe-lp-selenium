@@ -95,7 +95,7 @@ public class PreferencesPage {
             interestsContainer = $(By.xpath(".//*[@class='button-list']/li/a/span")),
             compromisosYMotivacionesSection = $(By.xpath(String.format(aprendizajeTabSectionsLocator, "210"))),
             compromisosYMotivacionesSectionHeader = compromisosYMotivacionesSection.find("h3"),
-            compromisosYMotivacionesSectionGuardarCambiosButton = $(By.id(savePrefIdText)),
+            compromisosYMotivacionesSectionGuardarCambiosButton = $(By.xpath(".//*[@id='section-holder']/div[1]//*[@id='" + savePrefIdText + "']")),
             generalSection = $(By.xpath(String.format(aprendizajeTabSectionsLocator, "211"))),
             generalSectionHeader = generalSection.find("h3"),
             generalSectionGuardarCambiosButton = $(By.xpath(".//*[@id='section-holder']/div[2]//*[@id='" + savePrefIdText + "']")),
