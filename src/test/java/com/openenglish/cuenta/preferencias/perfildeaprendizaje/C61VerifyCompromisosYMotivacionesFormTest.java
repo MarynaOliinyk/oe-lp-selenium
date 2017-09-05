@@ -5,7 +5,6 @@ import com.openenglish.core.DriverBase;
 import com.openenglish.pages.InicioPage;
 import com.openenglish.pages.LoginPage;
 import com.openenglish.pages.PreferencesPage;
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.attribute;
@@ -26,7 +25,6 @@ import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
 import static com.openenglish.core.TestData.Login.READ_ONLY_USER;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_COMPROMISOS_Y_MOTIVACIONES;
-import static com.openenglish.core.TestData.Preferences.PREFERENCES_GENERAL_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_MI_PERFIL_TAB_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_PERFIL_DE_APRENDIZAJE;
@@ -38,7 +36,7 @@ import static org.testng.Assert.assertTrue;
 public class C61VerifyCompromisosYMotivacionesFormTest extends DriverBase {
 
     @Test
-    public void verifyPerfilDeAprendizajeContentTest() {
+    public void verifyCompromisosYMotivacionesFormTest() {
         open(LP_URL);
         LoginPage lp = new LoginPage();
         lp.cookieBannerVisibility();
@@ -56,26 +54,20 @@ public class C61VerifyCompromisosYMotivacionesFormTest extends DriverBase {
         pp.getCompromisosYMotivacionesSectionGuardarCambiosButton()
                 .should(visible, attribute(VALUE, PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT),
                         attribute(DISABLED), not(enabled));
-        pp.getGeneralSectionHeader().should(visible, exactText(PREFERENCES_GENERAL_TEXT));
-        pp.getGeneralSectionGuardarCambiosButton()
-                .should(visible, attribute(VALUE, PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT),
-                        attribute(DISABLED), not(enabled));
-
-        ElementsCollection listOfAllTheBoxesToChooseText = pp.getListOfAllTheBoxesToChooseTextInAprendizajeTab();
-        listOfAllTheBoxesToChooseText.forEach(elemet -> elemet.shouldBe(visible, not(empty),
+        ElementsCollection listOfAllTheBoxesTextInCompromisosYMotivacionesForm = pp.getListOfAllTheBoxesToChooseTextInCompromisosYMotivacionesOfAprendizajeTab();
+        listOfAllTheBoxesTextInCompromisosYMotivacionesForm.forEach(elemet -> elemet.shouldBe(visible, not(empty),
                 not(exactText(PREFERENCES_SELECCIONAR_TEXT)), attribute(CLASS)));
-        listOfAllTheBoxesToChooseText.stream().findFirst().get().hover().shouldNotBe(visible);
-
-        ElementsCollection listOfAllTheBoxesToChooseHoverText = pp.getListOfAllTheBoxesToChooseHoverTextInAprendizajeTab();
-        assertEquals(listOfAllTheBoxesToChooseText.size(), listOfAllTheBoxesToChooseHoverText.size());
-        listOfAllTheBoxesToChooseHoverText.stream().findFirst().get().should(not(empty),
+        listOfAllTheBoxesTextInCompromisosYMotivacionesForm.stream().findFirst().get().hover().shouldNotBe(visible);
+        ElementsCollection listOfAllTheBoxesHoverTextInCompromisosYMotivacionesForm = pp.getListOfAllTheBoxesToChooseHoverTextInCompromisosYMotivacionesOfAprendizajeTab();
+        assertEquals(listOfAllTheBoxesTextInCompromisosYMotivacionesForm.size(), listOfAllTheBoxesHoverTextInCompromisosYMotivacionesForm.size());
+        listOfAllTheBoxesHoverTextInCompromisosYMotivacionesForm.stream().findFirst().get().should(not(empty),
                 exactText(PREFERENCES_SELECCIONAR_TEXT), attribute(CLASS, PREFERENCES_PAGE_OPTION_CHOOSE_VALUE));
-        listOfAllTheBoxesToChooseHoverText.stream().findFirst().get().click();
-        ElementsCollection listOfAllTheBoxesToChooseAfterFirstPress = pp.getListOfAllTheBoxesToChooseInAprendizajeTab();
-        listOfAllTheBoxesToChooseAfterFirstPress.stream().findFirst().get().
+        listOfAllTheBoxesHoverTextInCompromisosYMotivacionesForm.stream().findFirst().get().click();
+        ElementsCollection listOfAllTheBoxesAfterFirstPressInCompromisosYMotivacionesForm = pp.getListOfAllTheBoxesToChooseInCompromisosYMotivacionesOfAprendizajeTab();
+        listOfAllTheBoxesAfterFirstPressInCompromisosYMotivacionesForm.stream().findFirst().get().
                 shouldHave(attribute(CLASS, PREFERENCES_PAGE_PRESSED_VALUE));
-        listOfAllTheBoxesToChooseText.get(1).click();
-        listOfAllTheBoxesToChooseAfterFirstPress.stream().findFirst().get().
+        listOfAllTheBoxesTextInCompromisosYMotivacionesForm.get(1).click();
+        listOfAllTheBoxesAfterFirstPressInCompromisosYMotivacionesForm.stream().findFirst().get().
                 shouldNotHave(attribute(CLASS, PREFERENCES_PAGE_PRESSED_VALUE));
         pp.getCompromisosYMotivacionesSectionGuardarCambiosButton()
                 .should(visible, enabled, attribute(VALUE, PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT)).

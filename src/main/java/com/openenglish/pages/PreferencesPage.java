@@ -109,8 +109,8 @@ public class PreferencesPage {
 
     private ElementsCollection allTheIdiomasList = $$(By.xpath(idiomaDePreferencia + "//a")),
             allPaisList = $$(By.xpath(".//*[@class='ui-menu-item']/a")),
-            listOfAllTheBoxesToChooseInAprendizajeTab = $$(By.xpath("//ul[@class='button-list']//a")),
-            listOfAllTheBoxesToChooseTextInAprendizajeTab = $$(By.xpath("//ul[@class='button-list']//a/span")),
-            listOfAllTheBoxesToChooseHoverTextInAprendizajeTab = $$(By.xpath("//ul[@class='button-list']//a/strong[@class='option-choose']"));
+            listOfAllTheBoxesToChooseInCompromisosYMotivacionesOfAprendizajeTab = $$(By.xpath("//*[@id='section-holder']/div[1]//a")),
+            listOfAllTheBoxesToChooseTextInCompromisosYMotivacionesOfAprendizajeTab = $$(By.xpath("//*[@id='section-holder']/div[1]//a/span")),
+            listOfAllTheBoxesToChooseHoverTextInCompromisosYMotivacionesOfAprendizajeTab = $$(By.xpath("//*[@id='section-holder']/div[1]//strong[@class='option-choose']"));
 
 }
