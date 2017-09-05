@@ -66,7 +66,7 @@ public class C106VerifyMiPerfilContentTest extends DriverBase {
     public void verifyMiPerfilContentTestUserSectionS1() {
         loginWithCorrectCredentialsAndPagePreferenciasIsOpen();
         preferencesPage.getUserNameAndHolaText().should(visible, text(PREFERENCES_USER_NICK_NAME_AND_HOLA));
-        preferencesPage.getPhotoFrame().should(visible);
+        preferencesPage.getPhotoFrameForMiPerfil().should(visible);
         assertTrue(preferencesPage.getActiveTab().should(visible).getAttribute(HREF).contains(PREFERENCES_MI_PERFIL_LINK));
         assertTrue(preferencesPage.getPrefilDeAprendizajeTab().should(visible).getAttribute(HREF).contains(PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK));
     }
@@ -74,7 +74,7 @@ public class C106VerifyMiPerfilContentTest extends DriverBase {
     @Test
     public void verifyMiPerfilContentTestInformationPersonalSectionS2() {
         loginWithCorrectCredentialsAndPagePreferenciasIsOpen();
-        preferencesPage.getPhotoFrame().should(visible);
+        preferencesPage.getPhotoFrameForMiPerfil().should(visible);
         preferencesPage.getCambiarFotoText().should(visible, text(PREFERENCES_CAMBIAR_FOTO_TEXT));
         //TODO https://openenglish.jira.com/browse/LPTRIAGE-327
         preferencesPage.getNombrePlaceholder().should(visible, text(PREFERENCES_NOMBRE_PLACEHOLDER_TEXT));

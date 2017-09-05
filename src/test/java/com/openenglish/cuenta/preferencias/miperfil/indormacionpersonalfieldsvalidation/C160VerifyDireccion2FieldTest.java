@@ -12,6 +12,8 @@ import static com.codeborne.selenide.WebDriverRunner.url;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Inicio.INICIO_PREFERENCIAS_BUTTON_TEXT;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
+import static com.openenglish.core.TestData.Login.EMAIL_WITHOUT_NOTES;
+import static com.openenglish.core.TestData.Login.PASSWORD_WITHOUT_NOTES;
 import static com.openenglish.core.TestData.Login.REGISTERED_EMAIL;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_MI_PERFIL_TAB_TEXT;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_SPECIAL_CHARACTERS_ERROR_TEXT;
@@ -29,7 +31,7 @@ public class C160VerifyDireccion2FieldTest extends DriverBase {
     public void verifyDireccion2FieldTest() {
         open(LP_URL);
         page.loginPage.cookieBannerVisibility();
-        page.loginPage.logIn(REGISTERED_EMAIL, CORRECT_PASSWORD);
+        page.loginPage.logIn(EMAIL_WITHOUT_NOTES, PASSWORD_WITHOUT_NOTES);
         page.inicioPage.getAccountMenu().hover();
         page.inicioPage.getCuentaSuboptions().shouldBe(visible);
         page.inicioPage.getPreferenciasCuentaSuboptionButton().shouldBe(visible, exactText(INICIO_PREFERENCIAS_BUTTON_TEXT)).click();
