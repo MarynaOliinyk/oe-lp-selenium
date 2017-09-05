@@ -7,6 +7,7 @@ import com.openenglish.pages.PreferencesPage;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.appear;
+import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.exist;
@@ -14,6 +15,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.url;
+import static com.openenglish.core.Attribute.VALUE;
 import static com.openenglish.core.TestData.General.LP_URL;
 import static com.openenglish.core.TestData.Inicio.INICIO_PREFERENCIAS_BUTTON_TEXT;
 import static com.openenglish.core.TestData.Login.CORRECT_PASSWORD;
@@ -50,7 +52,7 @@ public class C161VerifyCodigoPostalFieldTest extends DriverBase {
         preferencesPage.getDireccionFirstField().click();
         preferencesPage.getContactoSection().scrollTo();
         preferencesPage.getGuardarCambiosButtonOnContactoSection().should(enabled).click();
-        assertTrue(preferencesPage.getCodigoPostalField().getValue().equals(PREFERENCES_VALUE_FOR_FIELD));
+        preferencesPage.getCodigoPostalField().should(attribute(VALUE, PREFERENCES_VALUE_FOR_FIELD));
         preferencesPage.getCodigoPostalField().waitUntil(appear, TIMEOUT);
         preferencesPage.getCodigoPostalField().setValue(PREFERENCES_SPECIAL_SYMBOLS);
         preferencesPage.getDireccionFirstField().click();
