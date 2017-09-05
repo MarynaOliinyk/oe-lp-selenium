@@ -96,7 +96,7 @@ public class PreferencesPage {
             compromisosYMotivacionesSectionGuardarCambiosButton = $(By.id(savePrefIdText)),
             generalSection = $(By.xpath(String.format(aprendizajeTabSectionsLocator, "211"))),
             generalSectionHeader = generalSection.find("h3"),
-            generalSectionGuardarCambiosButton = generalSection.$(By.id(savePrefIdText)),
+            generalSectionGuardarCambiosButton = $(By.xpath(".//*[@id='section-holder']/div[2]//*[@id='" + savePrefIdText + "']")),
             telefonoPrincipalFirstField = $(By.id(String.format(telefonoPrincipalFields, "0"))),
             telefonoPrincipalSecondField = $(By.id(String.format(telefonoPrincipalFields, "1"))),
             telefonoPrincipalThirdField = $(By.id(String.format(telefonoPrincipalFields, "2"))),
