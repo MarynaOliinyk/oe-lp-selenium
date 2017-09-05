@@ -304,6 +304,10 @@ public class TestData {
                 PREFERENCES_PERFIL_DE_APRENDIZAJE = getProperty("preferences.aprendizaje.tab.text"),
                 PREFERENCES_COMPROMISOS_Y_MOTIVACIONES = getProperty("preferences.aprendizaje.compromisos.y.motivaciones.text"),
                 PREFERENCES_GENERAL_TEXT = getProperty("preferences.aprendizaje.general.text"),
+                PREFERENCES_DIRECTION_ONE_VALUE_TEXT = getProperty("preferences.direction.one.value.text"),
+                PREFERENCES_TELEFONO_PRINCIPAL_VALUE_TEXT = getProperty("preferences.telefono.principal.value.text"),
+                PREFERENCES_CODIGO_POSTAL_ERROR_TEXT = getProperty("preferences.codigo.postal.error.text"),
+                PREFERENCES_VALUE_FOR_FIELD = getProperty("preferences.value.for.field"),
                 PREFERENCES_VALUE_FOR_DIRRECCION_2_FIELD = getProperty("preferences.value.for.dirrection.2.field");
     }
 

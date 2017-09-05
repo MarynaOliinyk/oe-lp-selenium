@@ -104,7 +104,9 @@ public class PreferencesPage {
             telefonoSecundarioFirstField = $(By.id(String.format(telefonoSecundarioFields, "0"))),
             telefonoSecundarioSecondField = $(By.id(String.format(telefonoSecundarioFields, "1"))),
             telefonoSecundarioThirdField = $(By.id(String.format(telefonoSecundarioFields, "2"))),
-            paisDropDownButton = $(By.xpath(".//*[@id='ph']/div[1]/div/div/span/a"));
+            paisDropDownButton = $(By.xpath(".//*[@id='ph']/div[1]/div/div/span/a")),
+            codigoPostalField = $(By.id("postalCode")),
+            codigoPostalErrorText = $(By.xpath(".//*[@id='contact-info1']/div[1]/div[3]/div/span"));
 
     private ElementsCollection allTheIdiomasList = $$(By.xpath(idiomaDePreferencia + "//a")),
             allPaisList = $$(By.xpath(".//*[@class='ui-menu-item']/a"));
