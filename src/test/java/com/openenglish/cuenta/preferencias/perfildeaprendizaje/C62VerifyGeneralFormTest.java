@@ -29,7 +29,6 @@ import static com.openenglish.core.TestData.Preferences.PREFERENCES_MI_PERFIL_TA
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_PERFIL_DE_APRENDIZAJE;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_SELECCIONAR_TEXT;
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class C62VerifyGeneralFormTest extends DriverBase {
@@ -59,7 +58,7 @@ public class C62VerifyGeneralFormTest extends DriverBase {
                 not(exactText(PREFERENCES_SELECCIONAR_TEXT)), attribute(CLASS)));
         listOfAllTheBoxesTextInGeneralForm.stream().findFirst().get().hover().shouldNotBe(visible);
         ElementsCollection listOfAllTheBoxesHoverTextInGeneralForm = pp.getListOfAllTheBoxesToChooseHoverTextInGeneralOfAprendizajeTab();
-        assertEquals(listOfAllTheBoxesTextInGeneralForm.size(), listOfAllTheBoxesHoverTextInGeneralForm.size());
+        listOfAllTheBoxesTextInGeneralForm.shouldHaveSize(listOfAllTheBoxesHoverTextInGeneralForm.size());
         listOfAllTheBoxesHoverTextInGeneralForm.stream().findFirst().get().should(not(empty),
                 exactText(PREFERENCES_SELECCIONAR_TEXT), attribute(CLASS, PREFERENCES_PAGE_OPTION_CHOOSE_VALUE));
         listOfAllTheBoxesHoverTextInGeneralForm.stream().findFirst().get().click();
