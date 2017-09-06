@@ -29,6 +29,7 @@ import static com.openenglish.core.TestData.Preferences.PREFERENCES_MI_PERFIL_TA
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_PERFIL_DE_APRENDIZAJE;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_PERFIL_DE_APRENDIZAJE_LINK;
 import static com.openenglish.core.TestData.Preferences.PREFERENCES_SELECCIONAR_TEXT;
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class C61VerifyCompromisosYMotivacionesFormTest extends DriverBase {
@@ -57,7 +58,7 @@ public class C61VerifyCompromisosYMotivacionesFormTest extends DriverBase {
                 not(exactText(PREFERENCES_SELECCIONAR_TEXT)), attribute(CLASS)));
         listOfAllTheBoxesTextInCompromisosYMotivacionesForm.stream().findFirst().get().hover().shouldNotBe(visible);
         ElementsCollection listOfAllTheBoxesHoverTextInCompromisosYMotivacionesForm = pp.getListOfAllTheBoxesToChooseHoverTextInCompromisosYMotivacionesOfAprendizajeTab();
-        listOfAllTheBoxesTextInCompromisosYMotivacionesForm.shouldHaveSize(listOfAllTheBoxesHoverTextInCompromisosYMotivacionesForm.size());
+        assertEquals(listOfAllTheBoxesTextInCompromisosYMotivacionesForm.size(), listOfAllTheBoxesHoverTextInCompromisosYMotivacionesForm.size());
         listOfAllTheBoxesHoverTextInCompromisosYMotivacionesForm.stream().findFirst().get().should(not(empty),
                 exactText(PREFERENCES_SELECCIONAR_TEXT), attribute(CLASS, PREFERENCES_PAGE_OPTION_CHOOSE_VALUE));
         listOfAllTheBoxesHoverTextInCompromisosYMotivacionesForm.stream().findFirst().get().click();
