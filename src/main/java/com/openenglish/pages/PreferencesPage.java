@@ -28,7 +28,8 @@ public class PreferencesPage {
             aprendizajeTabSectionsLocator = ".//*[@id='section-holder']//div[@data-qg-id='%s']",
             savePrefIdText = "save-pref",
             telefonoPrincipalFields = "phone_field-%s",
-            telefonoSecundarioFields = "sec_phone_field-%s";
+            telefonoSecundarioFields = "sec_phone_field-%s",
+            sectionsLocator = "//*[@id='section-holder']/div[%s]";
 
 
     private SelenideElement activeTab = $(By.xpath(".//*[@class='active']/a")),
@@ -71,6 +72,7 @@ public class PreferencesPage {
             confirmarContrasenaPlaceholder = $(By.xpath(String.format(rightPlaceHolderPersonalSection, 4, "label"))),
             idiomaDePreferenciaPlaceholder = $(By.xpath(String.format(rightPlaceHolderPersonalSection, 5, "label"))),
             userNameAndHolaText = $(By.xpath(".//*[@class='student-greeting']/h3")),
+            userProfilePicture = $(By.xpath(".//*[@id='main-content']//img[@class='rounded-circle img-thumbnail']")),
             contactoSection = $(By.xpath(".//*[@id='content']/div[1]/div[2]/fieldset/div[2]")),
             direccionOnePlaceholder = $(By.xpath(String.format(leftPlaceHolderDeContactoSection, 1))),
             direccionTwoPlaceholder = $(By.xpath(String.format(leftPlaceHolderDeContactoSection, 2))),
@@ -94,10 +96,10 @@ public class PreferencesPage {
             interestsContainer = $(By.xpath(".//*[@class='button-list']/li/a/span")),
             compromisosYMotivacionesSection = $(By.xpath(String.format(aprendizajeTabSectionsLocator, "210"))),
             compromisosYMotivacionesSectionHeader = compromisosYMotivacionesSection.find("h3"),
-            compromisosYMotivacionesSectionGuardarCambiosButton = compromisosYMotivacionesSection.$(By.id(savePrefIdText)),
+            compromisosYMotivacionesSectionGuardarCambiosButton = $(By.xpath(String.format(sectionsLocator, "1") + "//*[@id='" + savePrefIdText + "']")),
             generalSection = $(By.xpath(String.format(aprendizajeTabSectionsLocator, "211"))),
             generalSectionHeader = generalSection.find("h3"),
-            generalSectionGuardarCambiosButton = generalSection.$(By.id(savePrefIdText)),
+            generalSectionGuardarCambiosButton = $(By.xpath(String.format(sectionsLocator, "2") + "//*[@id='" + savePrefIdText + "']")),
             telefonoPrincipalFirstField = $(By.id(String.format(telefonoPrincipalFields, "0"))),
             telefonoPrincipalSecondField = $(By.id(String.format(telefonoPrincipalFields, "1"))),
             telefonoPrincipalThirdField = $(By.id(String.format(telefonoPrincipalFields, "2"))),
@@ -109,6 +111,12 @@ public class PreferencesPage {
             codigoPostalErrorText = $(By.xpath(".//*[@id='contact-info1']/div[1]/div[3]/div/span"));
 
     private ElementsCollection allTheIdiomasList = $$(By.xpath(idiomaDePreferencia + "//a")),
-            allPaisList = $$(By.xpath(".//*[@class='ui-menu-item']/a"));
+            allPaisList = $$(By.xpath(".//*[@class='ui-menu-item']/a")),
+            listOfAllTheBoxesToChooseInCompromisosYMotivacionesOfAprendizajeTab = $$(By.xpath(String.format(sectionsLocator, "1") + "//a")),
+            listOfAllTheBoxesToChooseInGeneralOfAprendizajeTab = $$(By.xpath(String.format(sectionsLocator, "2") + "//a")),
+    listOfAllTheBoxesToChooseTextInCompromisosYMotivacionesOfAprendizajeTab = $$(By.xpath(String.format(sectionsLocator, "1") + "//a/span")),
+            listOfAllTheBoxesToChooseTextInGeneralOfAprendizajeTab = $$(By.xpath(String.format(sectionsLocator, "2") + "//a/span")),
+            listOfAllTheBoxesToChooseHoverTextInCompromisosYMotivacionesOfAprendizajeTab = $$(By.xpath(String.format(sectionsLocator, "1") + "//strong[@class='option-choose']")),
+            listOfAllTheBoxesToChooseHoverTextInGeneralOfAprendizajeTab = $$(By.xpath(String.format(sectionsLocator, "2") + "//strong[@class='option-choose']"));
 
 }

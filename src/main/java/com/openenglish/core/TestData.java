@@ -308,7 +308,9 @@ public class TestData {
                 PREFERENCES_TELEFONO_PRINCIPAL_VALUE_TEXT = getProperty("preferences.telefono.principal.value.text"),
                 PREFERENCES_CODIGO_POSTAL_ERROR_TEXT = getProperty("preferences.codigo.postal.error.text"),
                 PREFERENCES_VALUE_FOR_FIELD = getProperty("preferences.value.for.field"),
-                PREFERENCES_VALUE_FOR_DIRRECCION_2_FIELD = getProperty("preferences.value.for.dirrection.2.field");
+                PREFERENCES_VALUE_FOR_DIRRECCION_2_FIELD = getProperty("preferences.value.for.dirrection.2.field"),
+                PREFERENCES_VALUE_FOR_DIRRECCION_2_FIELD = getProperty("preferences.value.for.dirrection.2.field"),
+                PREFERENCES_SELECCIONAR_TEXT = getProperty("preferences.aprendizaje.seleccionar.hover.text");
     }
 
     public static class TempMail {

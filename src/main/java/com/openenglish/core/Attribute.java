@@ -8,6 +8,7 @@ public class Attribute {
             PLACEHOLDER = "placeholder",
             SRC = "src",
             TYPE = "type",
-            VALUE = "value";
+            VALUE = "value",
+            DISABLED = "disabled";
 }
 

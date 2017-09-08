@@ -43,12 +43,12 @@ public class C105VerifyPerfilDeAprendizajeContentTest extends DriverBase {
         pp.getCompromisosYMotivacionesSection().should(visible);
         pp.getCompromisosYMotivacionesSectionHeader().should(visible, exactText(PREFERENCES_COMPROMISOS_Y_MOTIVACIONES));
         //TODO: https://openenglish.jira.com/browse/LPTRIAGE-332
-//        pp.getCompromisosYMotivacionesSectionGuardarCambiosButton()
-//                .should(disabled, attribute(VALUE, PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT));
+        pp.getCompromisosYMotivacionesSectionGuardarCambiosButton()
+                .should(disabled, attribute(VALUE, PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT));
         pp.getGeneralSectionHeader().should(visible, exactText(PREFERENCES_GENERAL_TEXT));
         //TODO: https://openenglish.jira.com/browse/LPTRIAGE-332
-//        pp.getGeneralSectionGuardarCambiosButton()
-//                .should(visible, attribute(VALUE, PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT));
+        pp.getGeneralSectionGuardarCambiosButton()
+                .should(visible, attribute(VALUE, PREFERENCES_GUARDAR_CAMBIOS_BUTTON_TEXT));
     }
 
 }
