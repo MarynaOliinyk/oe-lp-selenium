@@ -15,22 +15,22 @@ public class LoginPage {
     private SelenideElement email = $(By.id("username")),
             password = $(By.id("password")),
             loginButton = $(By.id("login-btn")),
-            banner = $(By.xpath("//div[@class='banner-content']")),
-            bannerTitle = $(By.xpath(".//*[@id='login_content']//div[@class='banner-title']")),
-            rememberLogin = $(By.xpath(".//*[@id='login_content']//label[@for='rememberLogin']")),
-            continueButton = $(By.xpath(".//*[@id='login_content']//a[@class='black-btn migration-continue-btn']")),
-            closeCookieBannerChevron = $(By.xpath(".//*[@id='login_content']/div[1]/div[1]/i")),
-            questionIcon = $(By.xpath(".//*[@id='login_content']/div[3]/div/form/fieldset/div/div/div/div[3]/div[1]/span/i")),
+            banner = $(By.id("banner-content")),
+            bannerTitle = $(By.id("banner-title")),
+            rememberLogin = $(By.id("remember-login-label")),
+            continueButton = $(By.id("banner-continue-btn")),
+            closeCookieBannerChevron = $(By.id("banner-collapse")),
+            questionIcon = $(By.id("question-mark")),
             tooltip = $(By.xpath(".//div[@class='tooltipster-base tooltipster-default tooltipster-fade tooltipster-fade-show']")),
-            passwordReset = $(By.xpath(".//*[@id='login_content']/div[3]/div/form/fieldset/div/div/div/div[3]/div[2]/a")),
+            passwordReset = $(By.id("recovery-link")),
             signUp = $(By.id("sign-up")),
             tooltipText = $(By.xpath("//div[@class='tooltipster-content']")),
             recoverLink = $(By.xpath(".//*[@id='login_content']//a[@href='recovery.html']")),
             securityField = $(By.id("captcharesponse")),
-            popUpTextAfterIncorrectCode = $(By.xpath(".//*[@id='login-support-widget']/div[1]/h3")),
+            popUpTextAfterIncorrectCode = $(By.xpath("dialog-title")),
             popUpCloseAfterIncorrectCode = $(By.xpath("//*[@class='ui-icon ui-icon-closethick']")),
-            popUpResetPassword = $(By.xpath(".//*[@href='recovery.html']")),
-            loginForm = $(By.xpath(".//*[@id='login_content']//div[@class='login2-wrapper']"));
+            popUpResetPassword = $(By.id("recovery-link")),
+            loginForm = $(By.id("login-form"));
 
     public void logIn(String email, String password) {
         this.email.shouldBe(visible).val(email);
